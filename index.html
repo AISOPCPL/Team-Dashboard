@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Company Dashboard - Home</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <script>
+    if (sessionStorage.getItem('isLoggedIn') !== 'true') {
+      window.location.href = 'login.html';
+    }
+  </script>
+
+  <div class="app-container">
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+      <div>
+        <div class="sidebar-header">
+          <img src="LOGO.png" alt="Company Logo" class="logo" onerror="this.src='https://via.placeholder.com/180x50?text=Avaniysh+Interior'">
+        </div>
+        <nav class="sidebar-nav">
+          <ul>
+            <li>
+              <a href="index.html" class="nav-btn active">
+                <i class="fa-solid fa-house"></i> <span>Home</span>
+              </a>
+            </li>
+            <li>
+              <a href="employee.html" class="nav-btn">
+                <i class="fa-solid fa-users"></i> <span>Teams</span>
+              </a>
+            </li>
+            <li>
+              <a href="systems.html" class="nav-btn">
+                <i class="fa-solid fa-gears"></i> <span>Systems</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <!-- Sign Out Button -->
+      <div class="sidebar-footer">
+        <button class="btn-logout" onclick="logout()">
+          <i class="fa-solid fa-right-from-bracket"></i> <span>Sign Out</span>
+        </button>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+      
+      <!-- Home View -->
+      <section id="home-view" class="content-view active">
+        <header class="page-header flex-header">
+          <div>
+            <h1>Dashboard Overview</h1>
+            <div class="user-profile-badge">
+              Welcome, <strong id="logged-in-user-name">Guest</strong>!
+            </div>
+          </div>
+          <!-- New: Date Display Widget -->
+          <div class="date-widget" style="font-weight: 600; color: var(--text-muted);">
+            <i class="fa-solid fa-calendar-day" style="color: var(--primary-orange);"></i> 
+            <span id="current-date-display">Today</span>
+          </div>
+        </header>
+        <div class="header-divider"></div>
+
+        <!-- Metric Cards -->
+        <div class="metrics-grid" style="margin-top: 20px;">
+          <div class="metric-card">
+            <i class="fa-solid fa-user-group"></i>
+            <div>
+              <h3>Total Team</h3>
+              <p id="total-employees">11</p>
+            </div>
+          </div>
+          <div class="metric-card">
+            <i class="fa-solid fa-diagram-project"></i>
+            <div>
+              <h3>Active Projects</h3>
+              <p>8</p>
+            </div>
+          </div>
+          <div class="metric-card">
+            <i class="fa-solid fa-handshake"></i>
+            <div>
+              <h3>Esteemed Clients</h3>
+              <p>500+</p>
+            </div>
+          </div>
+          <div class="metric-card">
+            <i class="fa-solid fa-file-excel"></i>
+            <div>
+              <h3>Active Sheets</h3>
+              <p>37</p>
+            </div>
+          </div>
+        </div>
+<!-- 
+        
+        <div class="section-block" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
+          
+          Notice Board Card 
+          <div class="metric-card" style="border-top: 4px solid #3b82f6; flex-direction: column; align-items: flex-start;">
+            <h3 style="color: var(--text-dark); font-size: 1.1rem;">
+              <i class="fa-solid fa-bullhorn" style="color: #3b82f6; font-size: 1.2rem;"></i> Company Announcements
+            </h3>
+            <ul style="margin-top: 10px; padding-left: 20px; color: var(--text-muted); font-size: 0.9rem;">
+              <li>Please submit weekly site reports by Saturday evening.</li>
+              <li>Safety kit inspection scheduled for all site managers.</li>
+            </ul>
+          </div>
+
+      
+          <div class="metric-card" style="border-top: 4px solid #10b981; flex-direction: column; align-items: flex-start;">
+            <h3 style="color: var(--text-dark); font-size: 1.1rem;">
+              <i class="fa-solid fa-bolt" style="color: #10b981; font-size: 1.2rem;"></i> Quick Actions
+            </h3>
+            <div style="display: flex; gap: 10px; margin-top: 12px; flex-wrap: wrap;">
+              <a href="employee.html" class="btn-secondary" style="text-decoration: none; font-size: 0.8rem;">
+                <i class="fa-solid fa-plus"></i> Submit Report
+              </a>
+              <a href="systems.html" class="btn-secondary" style="text-decoration: none; font-size: 0.8rem; background: var(--primary-orange);">
+                <i class="fa-solid fa-magnifying-glass"></i> View Systems
+              </a>
+            </div>
+          </div>
+
+        </div> -->
+
+        <!-- Active Projects Gallery -->
+        <div class="section-block">
+          <h2>Active Project Photos</h2>
+          <div class="gallery-grid">
+            <div class="gallery-card">
+              <img src="Projects Images/Airtech.png" alt="Airtech Project Site, Goa" onerror="this.src='https://via.placeholder.com/300x160?text=Goa+Project'">
+              <span>Airtech Composite Material Pvt. Ltd.</span>
+            </div>
+            <div class="gallery-card">
+              <img src="Projects Images\Standex.png" alt="PCET College, Akurdi" onerror="this.src='https://via.placeholder.com/300x160?text=PCET+Akurdi'">
+              <span>Standex</span>
+            </div>
+            <div class="gallery-card">
+              <img src="Projects Images\Airlife.png" alt="AirLife Gases, Chakan" onerror="this.src='https://via.placeholder.com/300x160?text=AirLife+Chakan'">
+              <span>AirLife Gases Pvt. Ltd.</span>
+            </div>
+            <div class="gallery-card">
+              <img src="Projects Images\Revata.png" alt="PCU Dining Hall, Sate" onerror="this.src='https://via.placeholder.com/300x160?text=PCU+Sate'">
+              <span>Revata</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Clients -->
+        <!-- <div class="section-block">
+          <h2><i class="fa-solid fa-building-user"></i> Esteemed Clients</h2>
+          <div class="client-grid">
+            <div class="client-card"><span>Airtech Composite Material Pvt. Ltd.</span></div>
+            <div class="client-card"><span>AirLife Gases Pvt. Ltd.</span></div>
+            <div class="client-card"><span>PCET Akurdi</span></div>
+            <div class="client-card"><span>PCU University</span></div>
+          </div>
+        </div> -->
+      </section>
+
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    // Set Current Date Automatically
+    document.addEventListener('DOMContentLoaded', () => {
+      const dateElem = document.getElementById('current-date-display');
+      if (dateElem) {
+        const options = { weekday: 'short', year: 'numeric', month: 'short', day: 'numeric' };
+        dateElem.innerText = new Date().toLocaleDateString('en-US', options);
+      }
+    });
+
+    function logout() {
+      sessionStorage.removeItem('isLoggedIn');
+      window.location.href = 'login.html';
+    }
+  </script>
+</body>
+</html>
