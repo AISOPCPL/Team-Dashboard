@@ -21,6 +21,29 @@ const employeesData = [
       url: 'https://script.google.com/a/macros/avaniyshinterior.com/s/AKfycbxBqPiof-i02R7xg0VxjjLcl99fBL6MQZCfG0rUufBnBhAEYtJ2QIUKvrIkzFQwOIo/exec?page=fitout'
     }
   ],
+
+  projects: [
+      { 
+        name: 'Proforma Invoice', 
+        docId: '1JZaXvcCxkq0jj4PETPWuwhRza570xBVIa3YBnxqEW8Y', 
+        gid: '1013826524', 
+        selectedColumns: ['Sr.No.', 'Proforma Invoice No.', 'Project Name'] 
+      },
+       { 
+        name: 'Tax Invoice', 
+        docId: '1JZaXvcCxkq0jj4PETPWuwhRza570xBVIa3YBnxqEW8Y', 
+        gid: '665653959', 
+        selectedColumns: ['Sr.No.', 'Tax Invoice No.', 'Project Name'] 
+      },
+       { 
+        name: 'PO To Vendor', 
+        docId: '1JZaXvcCxkq0jj4PETPWuwhRza570xBVIa3YBnxqEW8Y', 
+        gid: '286319358', 
+        selectedColumns: ['Sr.No.', 'PO No.','Vendor Name', 'Project Name'] 
+      },
+      
+
+    ],
     sheets: [
       
       { name: 'Project Visit', formUrl:'https://forms.gle/ZRpDTA4KUkGnbwtX8', docId: '11TLkJxGV3EFz4ZdVqKpuX3O-8FV4TrlMIYjxyAZ0lqY', gid: '2045538987', selectedColumns: ['Date', 'Project Site Visitor', 'Project Name', 'Location', 'Visit Purpose', 'Observation'] },
@@ -47,6 +70,29 @@ const employeesData = [
     }
    
   ],
+   projects: [
+      { 
+        name: 'Proforma Invoice', 
+        docId: '1JZaXvcCxkq0jj4PETPWuwhRza570xBVIa3YBnxqEW8Y', 
+        gid: '1013826524', 
+        selectedColumns: ['Sr.No.', 'Proforma Invoice No.', 'Project Name'] 
+      },
+       { 
+        name: 'Tax Invoice', 
+        docId: '1JZaXvcCxkq0jj4PETPWuwhRza570xBVIa3YBnxqEW8Y', 
+        gid: '665653959', 
+        selectedColumns: ['Sr.No.', 'Tax Invoice No.', 'Project Name'] 
+      },
+       { 
+        name: 'PO To Vendor', 
+        docId: '1JZaXvcCxkq0jj4PETPWuwhRza570xBVIa3YBnxqEW8Y', 
+        gid: '286319358', 
+        selectedColumns: ['Sr.No.', 'PO No.','Vendor Name', 'Project Name'] 
+      },
+      
+
+    ],
+ 
     sheets: [
      { name: 'Project Visit', formUrl:'https://forms.gle/ZRpDTA4KUkGnbwtX8', docId: '11TLkJxGV3EFz4ZdVqKpuX3O-8FV4TrlMIYjxyAZ0lqY', gid: '2045538987', selectedColumns: ['Date', 'Project Site Visitor', 'Project Name', 'Location', 'Visit Purpose', 'Observation'] },
       { name: 'Office Expenses',formUrl:'https://docs.google.com/forms/d/e/1FAIpQLSeFG1ZBY4mstlGPDpcNhUb9vi2WiJGBr3aG2cuTtYqPNXf4Nw/viewform?usp=header', docId: '1N2DF6vzSoJcIxwL2makablsGtDlMB-rxhcWT3_VLHBY', gid: '1456510666', selectedColumns: ['Date', 'Name', 'Paid to', 'Amount', 'Reason', 'Categories'] },
@@ -203,6 +249,29 @@ const employeesData = [
     joiningDate: '25/04/2026',
     email: 'ea@avaniyshinterior.com',
     photo: 'https://lh3.googleusercontent.com/d/10owEBw3gPnFrCn7jYKFFI3UOvwHlVgxk',
+     projects: [
+      { 
+        name: 'Proforma Invoice', 
+        docId: '1JZaXvcCxkq0jj4PETPWuwhRza570xBVIa3YBnxqEW8Y', 
+        gid: '1013826524', 
+        selectedColumns: ['Sr.No.', 'Proforma Invoice No.', 'Project Name'] 
+      },
+       { 
+        name: 'Tax Invoice', 
+        docId: '1JZaXvcCxkq0jj4PETPWuwhRza570xBVIa3YBnxqEW8Y', 
+        gid: '665653959', 
+        selectedColumns: ['Sr.No.', 'Tax Invoice No.', 'Project Name'] 
+      },
+       { 
+        name: 'PO To Vendor', 
+        docId: '1JZaXvcCxkq0jj4PETPWuwhRza570xBVIa3YBnxqEW8Y', 
+        gid: '286319358', 
+        selectedColumns: ['Sr.No.', 'PO No.','Vendor Name', 'Project Name'] 
+      },
+      
+
+    ],
+ 
     sheets: [
       { name: 'Office Expenses',formUrl:'https://docs.google.com/forms/d/e/1FAIpQLSeFG1ZBY4mstlGPDpcNhUb9vi2WiJGBr3aG2cuTtYqPNXf4Nw/viewform?usp=header', docId: '1N2DF6vzSoJcIxwL2makablsGtDlMB-rxhcWT3_VLHBY', gid: '1456510666', selectedColumns: ['Date', 'Paid to', 'Amount', 'Reason', 'Categories'] },
       { name: 'Delegation Sheet Team',formUrl:'https://script.google.com/macros/s/AKfycbzC5FlAOwLsVB_FtxxqWfv4LwicmnUip04VkOu_Suu0yBvaL5lYvfLi0Lh_gC2b_uUj/exec', docId: '1680NhH8rKFTKeY3HSZGV_izgEi4QieHiirbcbRi7hTA', gid: '1184708924', selectedColumns: ['Name', 'Task', 'First Date', 'Revision 1','Revision 2', 'Total Revision','Status','Actual Completion Date'] },
@@ -227,7 +296,7 @@ const employeesData = [
     ]
   },
   {
-    id: 'harshada-s',
+    id: 'harshada-s', 
     name: 'Harshada Shirsale',
     designation: 'CRM & PC',
     joiningDate: '06/04/2026',
@@ -248,7 +317,30 @@ const employeesData = [
     joiningDate: '18/01/2022',
     email: 'accounts@avaniyshinterior.com',
     photo: 'https://lh3.googleusercontent.com/d/1gZ5VMVCvdmH4PjVik-qxWXH9ooSVJFcB',
-    sheets: [
+    
+     projects: [
+      { 
+        name: 'Proforma Invoice', 
+        docId: '1JZaXvcCxkq0jj4PETPWuwhRza570xBVIa3YBnxqEW8Y', 
+        gid: '1013826524', 
+        selectedColumns: ['Sr.No.', 'Proforma Invoice No.', 'Project Name'] 
+      },
+       { 
+        name: 'Tax Invoice', 
+        docId: '1JZaXvcCxkq0jj4PETPWuwhRza570xBVIa3YBnxqEW8Y', 
+        gid: '665653959', 
+        selectedColumns: ['Sr.No.', 'Tax Invoice No.', 'Project Name'] 
+      },
+       { 
+        name: 'PO To Vendor', 
+        docId: '1JZaXvcCxkq0jj4PETPWuwhRza570xBVIa3YBnxqEW8Y', 
+        gid: '286319358', 
+        selectedColumns: ['Sr.No.', 'PO No.','Vendor Name', 'Project Name'] 
+      },
+      
+
+    ],
+ sheets: [
       { name: 'Office Expenses',formUrl:'https://docs.google.com/forms/d/e/1FAIpQLSeFG1ZBY4mstlGPDpcNhUb9vi2WiJGBr3aG2cuTtYqPNXf4Nw/viewform?usp=header', docId: '1N2DF6vzSoJcIxwL2makablsGtDlMB-rxhcWT3_VLHBY', gid: '1456510666', selectedColumns: ['Date', 'Paid to', 'Amount', 'Reason', 'Categories'] },
       { name: 'Delegation Score PH', docId: '1JsKyve_bNF80c-D-jvLAmFGfDKE6xLzYBtiFep0UXlc', gid: '1184708924', selectedColumns: ['Name', 'Task', 'First Date', 'Revision 1','Revision 2', 'Total Revision','Status','Actual Completion Date'] },
       { name: 'Checklist', docId: '1m_P5_eP9FvD9eaYvanmLlV833cscTvk2xJk_c39cbZw', gid: '2092959791', selectedColumns: ['Task', 'Doer', 'Planned', 'Actual', 'Status'] }
@@ -428,6 +520,8 @@ function openEmployeeProfile(emp) {
     imgElem.onerror = () => { imgElem.src = 'https://via.placeholder.com/120?text=User'; };
   }
 
+
+  
  
 // 📊 SPECIAL DASHBOARD BUTTON CARD (कस्टमाइज्ड नावासह)
 const dashContainer = document.getElementById('profile-dashboard-container');
@@ -485,32 +579,36 @@ if (dashContainer) {
     dashContainer.style.display = 'none';
   }
 }
-  const sheetsGrid = document.getElementById('employee-sheets-grid');
-  if (sheetsGrid) {
-    sheetsGrid.innerHTML = '';
-    emp.sheets.forEach(sheet => {
+  // ==================== 1. PROJECT LIST GRID (नक्की संपूर्ण डेटा दिसण्यासाठी) ====================
+const projectsGrid = document.getElementById('employee-projects-grid');
+const projectBlock = document.getElementById('project-list-block');
+
+if (projectsGrid && projectBlock) {
+  projectsGrid.innerHTML = '';
+
+  // जर या कर्मचाऱ्याकडे 'projects' नावाचा array असेल तरच हा विभाग दिसेल
+  if (emp.projects && Array.isArray(emp.projects) && emp.projects.length > 0) {
+    projectBlock.style.display = 'block'; // ब्लॉक दाखवा
+
+    emp.projects.forEach(project => {
+      // 🎯 महत्त्वाचे: isProject = true सेट केल्यामुळे यातील डेटा नावाने फिल्टर न होता पूर्ण दिसेल
+      project.isProject = true;
+
       const card = document.createElement('div');
       card.className = 'sheet-card';
 
-      let formBtnHtml = '';
-      if (sheet.formUrl) {
-        formBtnHtml = `
-          <a href="${escapeHtml(sheet.formUrl)}" target="_blank" class="btn-action btn-open-form" title="Open Google Form">
+      let formBtnHtml = project.formUrl 
+        ? `<a href="${escapeHtml(project.formUrl)}" target="_blank" class="btn-action btn-open-form" title="Open Google Form">
             <i class="fa-solid fa-pen-to-square"></i> Open Form
-          </a>
-        `;
-      } else {
-        formBtnHtml = `
-          <button class="btn-action btn-disabled" disabled title="Form link not available">
+          </a>`
+        : `<button class="btn-action btn-disabled" disabled title="Form link not available">
             <i class="fa-solid fa-pen-to-square"></i> No Form
-          </button>
-        `;
-      }
+          </button>`;
 
       card.innerHTML = `
         <div class="sheet-card-title">
-          <i class="fa-solid fa-file-excel"></i>
-          <h4>${escapeHtml(sheet.name)}</h4>
+          <i class="fa-solid fa-folder-closed" style="color: #0284c7;"></i>
+          <h4>${escapeHtml(project.name)}</h4>
         </div>
         <div class="sheet-card-actions">
           <button class="btn-action btn-view-sheet">
@@ -522,18 +620,68 @@ if (dashContainer) {
 
       const viewDataBtn = card.querySelector('.btn-view-sheet');
       if (viewDataBtn) {
-        viewDataBtn.onclick = () => loadSheetDataJSONP(sheet);
+        viewDataBtn.onclick = () => loadSheetDataJSONP(project);
       }
 
-      sheetsGrid.appendChild(card);
+      projectsGrid.appendChild(card);
     });
+  } else {
+    projectBlock.style.display = 'none'; // प्रोजेक्ट्स नसतील तर ब्लॉक लपवा
   }
+}
+
+// ==================== 2. ASSIGNED WORKSHEETS GRID (तुमचा जुना अपडेटेड कोड) ====================
+const sheetsGrid = document.getElementById('employee-sheets-grid');
+if (sheetsGrid) {
+  sheetsGrid.innerHTML = '';
+  emp.sheets.forEach(sheet => {
+    // 🎯 नेहमीच्या वर्कशीट नावानेच फिल्टर होतील (isProject = false)
+    sheet.isProject = false;
+
+    const card = document.createElement('div');
+    card.className = 'sheet-card';
+
+    let formBtnHtml = '';
+    if (sheet.formUrl) {
+      formBtnHtml = `
+        <a href="${escapeHtml(sheet.formUrl)}" target="_blank" class="btn-action btn-open-form" title="Open Google Form">
+          <i class="fa-solid fa-pen-to-square"></i> Open Form
+        </a>
+      `;
+    } else {
+      formBtnHtml = `
+        <button class="btn-action btn-disabled" disabled title="Form link not available">
+          <i class="fa-solid fa-pen-to-square"></i> No Form
+        </button>
+      `;
+    }
+
+    card.innerHTML = `
+      <div class="sheet-card-title">
+        <i class="fa-solid fa-file-excel"></i>
+        <h4>${escapeHtml(sheet.name)}</h4>
+      </div>
+      <div class="sheet-card-actions">
+        <button class="btn-action btn-view-sheet">
+          <i class="fa-solid fa-table"></i> View Data
+        </button>
+        ${formBtnHtml}
+      </div>
+    `;
+
+    const viewDataBtn = card.querySelector('.btn-view-sheet');
+    if (viewDataBtn) {
+      viewDataBtn.onclick = () => loadSheetDataJSONP(sheet);
+    }
+
+    sheetsGrid.appendChild(card);
+  });
+}
 
   document.querySelectorAll('.content-view').forEach(v => v.classList.remove('active'));
   const profView = document.getElementById('profile-view');
   if (profView) profView.classList.add('active');
 }
-
 window.handleGvizResponse = function(response) {
   const scriptTag = document.getElementById('jsonp-gviz-script');
   if (scriptTag) scriptTag.remove();
@@ -568,18 +716,30 @@ window.handleGvizResponse = function(response) {
   const allHeaders = table.cols.map(c => c ? (c.label || c.id || '').trim() : '');
   const rows = table.rows || [];
 
-  const firstName = activeEmployee ? activeEmployee.name.split(' ')[0].toLowerCase() : '';
-  const fullName = activeEmployee ? activeEmployee.name.toLowerCase() : '';
+  let filteredRows = [];
 
-  let filteredRows = rows.filter(r => {
-    if (!r.c) return false;
-    return r.c.some(cell => {
-      if (!cell || cell.v === null || cell.v === undefined) return false;
-      const val = String(cell.v).toLowerCase();
-      return val.includes(fullName) || val.includes(firstName);
+  // 🎯 प्रोजेक्ट लिस्ट मधील शीट आहे का ते तपासणे (isProject Sheet check)
+  const isProjectSheet = currentActiveSheet && currentActiveSheet.isProject === true;
+
+  if (isProjectSheet) {
+    // 1️⃣ जर प्रोजेक्ट शीट असेल, तर नावाने फिल्टर न करता सर्व Rows दाखवा
+    filteredRows = rows;
+  } else {
+    // 2️⃣ जर नेहमीची Assigned Worksheet असेल, तर आधीप्रमाणेच कर्मचाऱ्याच्या नावाने फिल्टर करा
+    const firstName = activeEmployee ? activeEmployee.name.split(' ')[0].toLowerCase() : '';
+    const fullName = activeEmployee ? activeEmployee.name.toLowerCase() : '';
+
+    filteredRows = rows.filter(r => {
+      if (!r.c) return false;
+      return r.c.some(cell => {
+        if (!cell || cell.v === null || cell.v === undefined) return false;
+        const val = String(cell.v).toLowerCase();
+        return val.includes(fullName) || val.includes(firstName);
+      });
     });
-  });
+  }
 
+  // Checklist sheet असेल तर तारीख फिल्टर करणे
   if (currentActiveSheet && currentActiveSheet.name.toLowerCase().includes('checklist')) {
     const plannedColIdx = allHeaders.findIndex(h => 
       h.toLowerCase().includes('planned') || h.toLowerCase().includes('date')
@@ -605,7 +765,7 @@ window.handleGvizResponse = function(response) {
     container.innerHTML = `
       <div style="text-align:center; padding: 35px; color:#64748b;">
         <i class="fa-solid fa-folder-open" style="font-size: 2.5rem; margin-bottom: 12px; color: #cbd5e1;"></i>
-        <p>No pending or completed tasks till today found for <strong>${escapeHtml(activeEmployee ? activeEmployee.name : '')}</strong>.</p>
+        <p>No data found for <strong>${escapeHtml(activeEmployee ? activeEmployee.name : '')}</strong>.</p>
       </div>`;
     return;
   }
