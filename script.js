@@ -4,7 +4,7 @@ const employeesData = [
     id: 'akash-r',
     name: 'Akash Raut',
     designation: 'Project',
-    joiningDate: '18/08/2015',
+  
     email: 'akash@avaniyshinterior.com',
     photo: 'https://lh3.googleusercontent.com/d/1J0fEgUfvhprW7toPDCCWNswE___LjMge',
     dashboards: [
@@ -60,7 +60,7 @@ const employeesData = [
     id: 'mahavir-c',
     name: 'Mahavir Chabukswar',
     designation: 'Project',
-    joiningDate: '01/06/2022',
+   
     email: 'mahavir@avaniyshinterior.com',
     photo: 'https://lh3.googleusercontent.com/d/1-fJug9Xn7MBNGbl7M57Ap4YL_SFvzExN',
     dashboards: [
@@ -107,7 +107,7 @@ const employeesData = [
     id: 'sachin-m',
     name: 'Sachin Maharana',
     designation: 'Project',
-    joiningDate: '02/01/2024',
+   
     email: 'projects1@avaniyshinterior.com',
     photo: 'https://lh3.googleusercontent.com/d/18zLmgSBmGprsf970P_iaZK-k_2UD0R-8',
     dashboards: [
@@ -137,7 +137,7 @@ const employeesData = [
     id: 'shubham-p',
     name: 'Shubham Pawar',
     designation: 'Project',
-    joiningDate: '01/10/2022',
+    
     email: 'projects1@avaniyshinterior.com',
     photo: 'https://lh3.googleusercontent.com/d/1vUHQd3U07-6NieBDnLPeDlTKkseCbGxd',
       dashboards: [
@@ -168,7 +168,7 @@ const employeesData = [
     id: 'saurav-r',
     name: 'Saurav Rathod',
     designation: 'Project',
-    joiningDate: '15/04/2026',
+ 
     email: 'sauravrathod281@gmail.com',
     photo: 'https://lh3.googleusercontent.com/d/1AIjrFcKQZSCFbXTrc0dmqG0RVgJyXvun',
     sheets: [
@@ -190,7 +190,7 @@ const employeesData = [
     id: 'kiran-c',
     name: 'Kiran Chabukswar',
     designation: 'Project',
-    joiningDate: '10/10/2022',
+   
     email: 'chabukswarkiran73@gmail.com',
     photo: 'https://lh3.googleusercontent.com/d/1ZGkkyPPLjQ6ZQjufHvY39lSgpxkdFEwZ',
     sheets: [
@@ -212,7 +212,7 @@ const employeesData = [
     id: 'bhakti-b',
     name: 'Bhakti Bule',
     designation: 'Designer',
-    joiningDate: '10/06/2025',
+   
     email: 'design1@avaniyshinterior.com',
     photo: 'https://lh3.googleusercontent.com/d/1VLQ_MT-ER1OQqio7Nzx28VZ6WYUxd39m',
     sheets: [
@@ -229,7 +229,7 @@ const employeesData = [
     id: 'sakshi-b',
     name: 'Sakshi Makote',
     designation: 'Designer',
-    joiningDate: '18/11/2023',
+    
     email: 'design2@avaniyshinterior.com',
     photo: 'https://lh3.googleusercontent.com/d/10KJzpS3TIVgGh6DgQMW4mm6vz30fxInI',
     sheets: [
@@ -246,7 +246,7 @@ const employeesData = [
     id: 'namrata-r',
     name: 'Namrata Raut',
     designation: 'Executive Assistant',
-    joiningDate: '25/04/2026',
+   
     email: 'ea@avaniyshinterior.com',
     photo: 'https://lh3.googleusercontent.com/d/10owEBw3gPnFrCn7jYKFFI3UOvwHlVgxk',
      projects: [
@@ -284,7 +284,7 @@ const employeesData = [
     id: 'anuradha-s',
     name: 'Anuradha Bansode',
     designation: 'MIS Executive',
-    joiningDate: '06/04/2026',
+  
     email: 'mis@avaniyshinterior.com',
     photo: 'https://lh3.googleusercontent.com/d/1CITTMe060N0kMHO8SVGXomLI_US1yqpn',
     sheets: [
@@ -299,7 +299,7 @@ const employeesData = [
     id: 'harshada-s', 
     name: 'Harshada Shirsale',
     designation: 'CRM & PC',
-    joiningDate: '06/04/2026',
+  
     email: 'crm@avaniyshinterior.com',
     photo: 'https://lh3.googleusercontent.com/d/1Cvdn631tScsIiJkwYCRM6aJC60bRlR8d',
     sheets: [
@@ -314,7 +314,7 @@ const employeesData = [
     id: 'accounts-team',
     name: 'Kiran Hole',
     designation: 'Accounts',
-    joiningDate: '18/01/2022',
+  
     email: 'accounts@avaniyshinterior.com',
     photo: 'https://lh3.googleusercontent.com/d/1gZ5VMVCvdmH4PjVik-qxWXH9ooSVJFcB',
     
@@ -466,7 +466,6 @@ function renderEmployeeDirectory(data) {
         <img src="${emp.photo}" alt="${emp.name}" onerror="this.src='https://via.placeholder.com/85?text=User'">
         <h3>${escapeHtml(emp.name)}</h3>
         <p>${escapeHtml(emp.designation)}</p>
-        <p><i class="fa-solid fa-calendar-alt"></i> ${escapeHtml(emp.joiningDate)}</p>
       `;
       card.onclick = () => openEmployeeProfile(emp);
       cardsGrid.appendChild(card);
