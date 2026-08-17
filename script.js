@@ -505,12 +505,12 @@ function openEmployeeProfile(emp) {
 
   const nameElem = document.getElementById('profile-name');
   const desigElem = document.getElementById('profile-designation');
-  const joinElem = document.getElementById('profile-joining');
+ 
   const emailElem = document.getElementById('profile-email');
   
   if (nameElem) nameElem.innerText = emp.name;
   if (desigElem) desigElem.innerText = emp.designation;
-  if (joinElem) joinElem.innerText = emp.joiningDate;
+
   if (emailElem) emailElem.innerText = emp.email;
   
   const imgElem = document.getElementById('profile-img');
