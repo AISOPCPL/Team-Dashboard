@@ -277,12 +277,6 @@ const employeesData = [
         selectedColumns: ['Name','Task', 'Doer', 'Planned', 'Actual', 'Status'] 
       },
       { 
-        name: 'Checklist', 
-        docId: '1m_P5_eP9FvD9eaYvanmLlV833cscTvk2xJk_c39cbZw', 
-        gid: '2092959791', 
-        selectedColumns: ['Name','Task', 'Doer', 'Planned', 'Actual', 'Status'] 
-      },
-      { 
         name: 'Delegation Sheet Team',
         formUrl:'https://script.google.com/macros/s/AKfycbzC5FlAOwLsVB_FtxxqWfv4LwicmnUip04VkOu_Suu0yBvaL5lYvfLi0Lh_gC2b_uUj/exec', 
         docId: '1680NhH8rKFTKeY3HSZGV_izgEi4QieHiirbcbRi7hTA', 
@@ -300,7 +294,13 @@ const employeesData = [
     ],
  
     sheets: [
-      { name: 'Office Expenses',formUrl:'https://docs.google.com/forms/d/e/1FAIpQLSeFG1ZBY4mstlGPDpcNhUb9vi2WiJGBr3aG2cuTtYqPNXf4Nw/viewform?usp=header', docId: '1N2DF6vzSoJcIxwL2makablsGtDlMB-rxhcWT3_VLHBY', gid: '440445714', selectedColumns: ['Date', 'Paid to', 'Amount', 'Reason', 'Categories'] }
+      { name: 'Office Expenses',formUrl:'https://docs.google.com/forms/d/e/1FAIpQLSeFG1ZBY4mstlGPDpcNhUb9vi2WiJGBr3aG2cuTtYqPNXf4Nw/viewform?usp=header', docId: '1N2DF6vzSoJcIxwL2makablsGtDlMB-rxhcWT3_VLHBY', gid: '440445714', selectedColumns: ['Date', 'Paid to', 'Amount', 'Reason', 'Categories'] },
+      { 
+        name: 'Checklist', 
+        docId: '1m_P5_eP9FvD9eaYvanmLlV833cscTvk2xJk_c39cbZw', 
+        gid: '2092959791', 
+        selectedColumns: ['Name','Task', 'Doer', 'Planned', 'Actual', 'Status'] 
+      }
     ]
   },
   {
