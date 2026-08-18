@@ -249,7 +249,9 @@ const employeesData = [
    
     email: 'ea@avaniyshinterior.com',
     photo: 'https://lh3.googleusercontent.com/d/10owEBw3gPnFrCn7jYKFFI3UOvwHlVgxk',
-     projects: [
+    
+    
+    projects: [
       { 
         name: 'Proforma Invoice', 
         docId: '1JZaXvcCxkq0jj4PETPWuwhRza570xBVIa3YBnxqEW8Y', 
@@ -268,16 +270,37 @@ const employeesData = [
         gid: '286319358', 
         selectedColumns: ['Sr.No.', 'PO No.','Vendor Name', 'Project Name','Remarks','Created By'] 
       },
-      
+       { 
+        name: 'Insurance Checklist', 
+        docId: '1g6ZEWY32KmJlRhoBoxdEolQP_SPjwDbLlWCvmy7vPuk', 
+        gid: '2092959791', 
+        selectedColumns: ['Task', 'Doer', 'Planned', 'Actual', 'Status'] 
+      },
+      { 
+        name: 'Checklist', 
+        docId: '1m_P5_eP9FvD9eaYvanmLlV833cscTvk2xJk_c39cbZw', 
+        gid: '2092959791', 
+        selectedColumns: ['Task', 'Doer', 'Planned', 'Actual', 'Status'] 
+      },
+      { 
+        name: 'Delegation Sheet Team',
+        formUrl:'https://script.google.com/macros/s/AKfycbzC5FlAOwLsVB_FtxxqWfv4LwicmnUip04VkOu_Suu0yBvaL5lYvfLi0Lh_gC2b_uUj/exec', 
+        docId: '1680NhH8rKFTKeY3HSZGV_izgEi4QieHiirbcbRi7hTA', 
+        gid: '1184708924', 
+        selectedColumns: ['Name', 'Task', 'First Date', 'Revision 1','Revision 2', 'Total Revision','Status','Actual Completion Date'] 
+      },
+      { 
+        name: 'Delegation Sheet PH',
+        formUrl:'https://script.google.com/macros/s/AKfycbz4qv33ACzgoPFqJPE54Y7fTU_ivcBU7wQ2026MVZXglVMF0uqJcAdWGw5m8UP68QfZMA/exec', 
+        docId: '1JsKyve_bNF80c-D-jvLAmFGfDKE6xLzYBtiFep0UXlc', 
+        gid: '1184708924', 
+        selectedColumns: ['Name', 'Task', 'First Date', 'Revision 1','Revision 2', 'Total Revision','Status','Actual Completion Date'] 
+      } 
 
     ],
  
     sheets: [
-      { name: 'Office Expenses',formUrl:'https://docs.google.com/forms/d/e/1FAIpQLSeFG1ZBY4mstlGPDpcNhUb9vi2WiJGBr3aG2cuTtYqPNXf4Nw/viewform?usp=header', docId: '1N2DF6vzSoJcIxwL2makablsGtDlMB-rxhcWT3_VLHBY', gid: '1456510666', selectedColumns: ['Date', 'Paid to', 'Amount', 'Reason', 'Categories'] },
-      { name: 'Delegation Sheet Team',formUrl:'https://script.google.com/macros/s/AKfycbzC5FlAOwLsVB_FtxxqWfv4LwicmnUip04VkOu_Suu0yBvaL5lYvfLi0Lh_gC2b_uUj/exec', docId: '1680NhH8rKFTKeY3HSZGV_izgEi4QieHiirbcbRi7hTA', gid: '1184708924', selectedColumns: ['Name', 'Task', 'First Date', 'Revision 1','Revision 2', 'Total Revision','Status','Actual Completion Date'] },
-      { name: 'Delegation Sheet PH',formUrl:'https://script.google.com/macros/s/AKfycbz4qv33ACzgoPFqJPE54Y7fTU_ivcBU7wQ2026MVZXglVMF0uqJcAdWGw5m8UP68QfZMA/exec', docId: '1JsKyve_bNF80c-D-jvLAmFGfDKE6xLzYBtiFep0UXlc', gid: '1184708924', selectedColumns: ['Name', 'Task', 'First Date', 'Revision 1','Revision 2', 'Total Revision','Status','Actual Completion Date'] },
-      { name: 'Insurance Checklist', docId: '1g6ZEWY32KmJlRhoBoxdEolQP_SPjwDbLlWCvmy7vPuk', gid: '2092959791', selectedColumns: ['Task', 'Doer', 'Planned', 'Actual', 'Status'] },
-      { name: 'Checklist', docId: '1m_P5_eP9FvD9eaYvanmLlV833cscTvk2xJk_c39cbZw', gid: '2092959791', selectedColumns: ['Task', 'Doer', 'Planned', 'Actual', 'Status'] }
+      { name: 'Office Expenses',formUrl:'https://docs.google.com/forms/d/e/1FAIpQLSeFG1ZBY4mstlGPDpcNhUb9vi2WiJGBr3aG2cuTtYqPNXf4Nw/viewform?usp=header', docId: '1N2DF6vzSoJcIxwL2makablsGtDlMB-rxhcWT3_VLHBY', gid: '1456510666', selectedColumns: ['Date', 'Paid to', 'Amount', 'Reason', 'Categories'] }
     ]
   },
   {
