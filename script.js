@@ -274,13 +274,13 @@ const employeesData = [
         name: 'Insurance Checklist', 
         docId: '1g6ZEWY32KmJlRhoBoxdEolQP_SPjwDbLlWCvmy7vPuk', 
         gid: '2092959791', 
-        selectedColumns: ['Task', 'Doer', 'Planned', 'Actual', 'Status'] 
+        selectedColumns: ['Name','Task', 'Doer', 'Planned', 'Actual', 'Status'] 
       },
       { 
         name: 'Checklist', 
         docId: '1m_P5_eP9FvD9eaYvanmLlV833cscTvk2xJk_c39cbZw', 
         gid: '2092959791', 
-        selectedColumns: ['Task', 'Doer', 'Planned', 'Actual', 'Status'] 
+        selectedColumns: ['Name','Task', 'Doer', 'Planned', 'Actual', 'Status'] 
       },
       { 
         name: 'Delegation Sheet Team',
