@@ -8,7 +8,7 @@
   <!-- FontAwesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
-  /* सुरुवातीला प्रोफाईल पेज लपवण्यासाठी */
+ 
   #profile-view {
     display: none;
   }
@@ -16,7 +16,7 @@
     display: block;
   }
 
-  /* ==================== SPECIAL DASHBOARD CARD STYLES ==================== */
+ 
   .system-card {
     background: #ffffff;
     border: 1px solid #e2e8f0;
@@ -187,11 +187,11 @@
             </li>
             <li>
               <a href="employee.html" class="nav-btn active">
-                <i class="fa-solid fa-users"></i> <span>Team</span>
+                <i class="fa-solid fa-users"></i> <span>Teams</span>
               </a>
             </li>
             <li>
-              <a href="systems.html">
+              <a href="systems.html" class="nav-btn" data-target="system-view">
                 <i class="fa-solid fa-gears"></i> <span>Systems</span>
               </a>
             </li>
@@ -289,20 +289,6 @@
   </div>
 
   <script src="script.js"></script>
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      if (typeof renderEmployees === 'function') {
-        renderEmployees();
-      } else if (typeof initEmployeePage === 'function') {
-        initEmployeePage();
-      }
-    });
-
-    function logout() {
-      sessionStorage.removeItem('isLoggedIn');
-      window.location.href = 'login.html';
-    }
-    
-  </script>
+ 
 </body>
 </html>
