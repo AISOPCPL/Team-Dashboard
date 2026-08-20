@@ -105,7 +105,7 @@ const employeesData = [
       { name: 'Project Specification Changes',formUrl:'https://forms.gle/2Zew9NZYBjbF32bE6', docId: '1oOS8lE1JviRkNhbM7FP_0VUxPV9FZgMU70t_j0A_N2A', gid: '944341180', selectedColumns: ['Date', 'Project Name', 'Specific Changes / Additional Work', 'Cost Change (If Any)', 'Requested / Instructed By', 'Approval Status'] },
       { name: 'Delegation Score PH', docId: '1JsKyve_bNF80c-D-jvLAmFGfDKE6xLzYBtiFep0UXlc', gid: '1184708924', selectedColumns: ['Name', 'Task', 'First Date', 'Revision 1','Revision 2', 'Total Revision','Status','Actual Completion Date'] },
       { name: 'Checklist', docId: '1m_P5_eP9FvD9eaYvanmLlV833cscTvk2xJk_c39cbZw', gid: '2092959791', selectedColumns: ['Task', 'Doer', 'Planned', 'Actual', 'Status'] },
-      { name: 'Daily Video Call', docId: '16wXUF_fWDvbdBZf63sZiIU0hCkI-qjnFLGgFui9t4yY', gid: '2092959791', selectedColumns: ['Name', 'Task', 'Planned', 'Actual', 'Status'] },
+   
       ]
   },
   {
@@ -202,7 +202,6 @@ const employeesData = [
     ],
     sheets: [
       { name: 'Daily Report',formUrl:'https://forms.gle/YUV27rV5kPXKyn799',  docId: '1mrjfYpGMSMY-Em7Y4O4m9JZgfED0gdvbdPBD9qscgcM', gid: '799922129', selectedColumns: ['Date', 'Project Name', 'Location', 'In - Time ', 'Out- Time', 'Have you done site visit?','Described Days Activities (Mentioned by Points) In Office','Described Days Activities (Mentioned by Points) In Site'] },
-      { name: 'Daily Video Call', docId: '16wXUF_fWDvbdBZf63sZiIU0hCkI-qjnFLGgFui9t4yY', gid: '2092959791', selectedColumns: ['Name', 'Task', 'Planned', 'Actual', 'Status'] },
       { name: 'Petrol Allowance',formUrl:'https://forms.gle/2EmAJQdZ7f2BwMLF9', docId: '1qbbbN4uU0x1UFC3rIzkO6lekrFw3A7XD1lx7zZYxSxE', gid: '1266941161', selectedColumns: ['Date', 'Name', 'From', 'To', 'Km','Others','Upload'] },
       { name: 'Safety Check',formUrl:'https://forms.gle/gRj1gRTZSnvygyVV6', docId: '1Lub7fEdgOKBjfuLDpMhYQ4do78_DamGxLasxjIbf9Vo', gid: '1997998379', selectedColumns: ['Date', 'Project Member', 'Project Name', 'Location', 'Agency Name', 'Total Labour Count', 'PPE Kit', 'Gadgets Check'] },
       { name: 'Delivery Challan',formUrl:'https://forms.gle/EuBCvSYkfQVYjBYw7', docId: '1ssmVTMIvMmNcqm5oloGabxX6XrWd-qMWCxzb5QYdc6s', gid: '1102974409', selectedColumns: ['Date', 'Project Name', 'Name', 'Work', 'Challan', 'Returnable Materials List', 'Reason'] },
@@ -265,7 +264,6 @@ const employeesData = [
       { name: 'Site Expenses',formUrl:'https://forms.gle/9uuXgx6oF3okLmxb7', docId: '13Vo3YIrbPT06a4ClN-BS-eO1DOCSNzo5dnn-XfO0Tds', gid: '1142344274', selectedColumns: ['Date', 'Name', 'Project Name', 'Paid to', 'Amount', 'Reason', 'Approved From'] },
       { name: 'Safety Check',formUrl:'https://forms.gle/gRj1gRTZSnvygyVV6', docId: '1Lub7fEdgOKBjfuLDpMhYQ4do78_DamGxLasxjIbf9Vo', gid: '1997998379', selectedColumns: ['Date', 'Project Member', 'Project Name', 'Location', 'Agency Name', 'Total Labour Count', 'PPE Kit', 'Gadgets Check'] },
       { name: 'Delivery Challan',formUrl:'https://forms.gle/EuBCvSYkfQVYjBYw7', docId: '1ssmVTMIvMmNcqm5oloGabxX6XrWd-qMWCxzb5QYdc6s', gid: '1102974409', selectedColumns: ['Date', 'Project Name', 'Name', 'Work', 'Challan', 'Returnable Materials List', 'Reason'] }, 
-      { name: 'Daily Video Call', docId: '16wXUF_fWDvbdBZf63sZiIU0hCkI-qjnFLGgFui9t4yY', gid: '2092959791', selectedColumns: ['Name', 'Task', 'Planned', 'Actual', 'Status'] },
       { name: 'Upload URD',formUrl:'https://forms.gle/ojbkRA6NZ92w96mZ9', docId: '1ezKQET2dMdSkJ_rUmbMiWxFA0wSVmDrwM8XGDaajkF8', gid: '1029448347', selectedColumns: ['Date', 'Name', 'Project Name', 'Tax Invoice', 'URD Purchase'] },
       { name: 'Site Inspection Checklist',formUrl:'https://forms.gle/qfXppXnNK4JDP3tc8', docId: '1zpPnIESV3EBTrrGKMpjW2UNsbouv3bTA88YuN4XZEgs', gid: '1839387537', selectedColumns: ['Date', 'Name', 'Project Name', 'Work Activity', 'Upload'] },
       { name: 'Debit Note', formUrl:'https://forms.gle/RGcNHw5EjYBrrbfv9',docId: '1rc9AKbkiagJLYpNXvaxbzAhVAWhGJH4AuTENu1NknB0', gid: '12767300', selectedColumns: ['Date', 'Name', 'Project Name', 'Vendor Name', 'Debit To (Worker Name)', 'Reason', 'Amount', 'Approved By'] },
@@ -311,7 +309,6 @@ const employeesData = [
   ],
     sheets: [
        { name: 'Daily Report',formUrl:'https://docs.google.com/forms/d/e/1FAIpQLSf7y6FpZ4Ff4Ihi7Jq6SyqMXHEnvXkaWSQ24v6RPQCMcuqcGw/viewform', docId: '1mrjfYpGMSMY-Em7Y4O4m9JZgfED0gdvbdPBD9qscgcM', gid: '1518539535', selectedColumns: ['Date', 'Project', 'Location', 'In-Time', 'Out-time'] },
-      { name: 'Daily Video Call', docId: '16wXUF_fWDvbdBZf63sZiIU0hCkI-qjnFLGgFui9t4yY', gid: '2092959791', selectedColumns: ['Name', 'Task', 'Planned', 'Actual', 'Status'] },
       { name: 'Petrol Allowance',formUrl:'https://forms.gle/2EmAJQdZ7f2BwMLF9', docId: '1qbbbN4uU0x1UFC3rIzkO6lekrFw3A7XD1lx7zZYxSxE', gid: '1266941161', selectedColumns: ['Date', 'Name', 'From', 'To', 'Km','Others','Upload'] },
       { name: 'Site Expenses',formUrl:'https://forms.gle/9uuXgx6oF3okLmxb7', docId: '13Vo3YIrbPT06a4ClN-BS-eO1DOCSNzo5dnn-XfO0Tds', gid: '1142344274', selectedColumns: ['Date', 'Name', 'Project Name', 'Paid to', 'Amount', 'Reason', 'Approved From'] },
       { name: 'Delegation Sheet Team', docId: '1680NhH8rKFTKeY3HSZGV_izgEi4QieHiirbcbRi7hTA', gid: '1184708924', selectedColumns: ['Name', 'Task', 'First Date', 'Revision 1','Revision 2', 'Total Revision','Status','Actual Completion Date'] },
