@@ -116,6 +116,26 @@ const employeesData = [
       url: 'https://script.google.com/a/macros/avaniyshinterior.com/s/AKfycbxBqPiof-i02R7xg0VxjjLcl99fBL6MQZCfG0rUufBnBhAEYtJ2QIUKvrIkzFQwOIo/exec?page=pms'
     }
   ],
+    projects: [
+      { 
+        name: 'Proforma Invoice', 
+        docId: '1JZaXvcCxkq0jj4PETPWuwhRza570xBVIa3YBnxqEW8Y', 
+        gid: '1013826524', 
+        selectedColumns: ['Sr.No.', 'Proforma Invoice No.', 'Project Name','Authorized Signatory'] 
+      },
+       { 
+        name: 'Tax Invoice', 
+        docId: '1JZaXvcCxkq0jj4PETPWuwhRza570xBVIa3YBnxqEW8Y', 
+        gid: '665653959', 
+        selectedColumns: ['Sr.No.', 'Tax Invoice No.', 'Project Name','Authorized Signatory'] 
+      },
+       { 
+        name: 'PO To Vendor', 
+        docId: '1JZaXvcCxkq0jj4PETPWuwhRza570xBVIa3YBnxqEW8Y', 
+        gid: '286319358', 
+        selectedColumns: ['Sr.No.', 'PO No.','Vendor Name', 'Project Name','Remarks','Created By'] 
+      },
+    ],
     sheets: [
       { name: 'Daily Report',formUrl:'https://forms.gle/YUV27rV5kPXKyn799', docId: '1mrjfYpGMSMY-Em7Y4O4m9JZgfED0gdvbdPBD9qscgcM', gid: '799922129', selectedColumns: ['Date', 'Project Name', 'Location', 'In - Time ', 'Out- Time', 'Have you done site visit?','Described Days Activities (Mentioned by Points) In Office','Described Days Activities (Mentioned by Points) In Site'] },
       { name: 'Daily Video Call', docId: '16wXUF_fWDvbdBZf63sZiIU0hCkI-qjnFLGgFui9t4yY', gid: '2092959791', selectedColumns: ['Name', 'Task', 'Planned', 'Actual', 'Status'] },
@@ -147,6 +167,26 @@ const employeesData = [
     }
    
   ],
+    projects: [
+      { 
+        name: 'Proforma Invoice', 
+        docId: '1JZaXvcCxkq0jj4PETPWuwhRza570xBVIa3YBnxqEW8Y', 
+        gid: '1013826524', 
+        selectedColumns: ['Sr.No.', 'Proforma Invoice No.', 'Project Name','Authorized Signatory'] 
+      },
+       { 
+        name: 'Tax Invoice', 
+        docId: '1JZaXvcCxkq0jj4PETPWuwhRza570xBVIa3YBnxqEW8Y', 
+        gid: '665653959', 
+        selectedColumns: ['Sr.No.', 'Tax Invoice No.', 'Project Name','Authorized Signatory'] 
+      },
+       { 
+        name: 'PO To Vendor', 
+        docId: '1JZaXvcCxkq0jj4PETPWuwhRza570xBVIa3YBnxqEW8Y', 
+        gid: '286319358', 
+        selectedColumns: ['Sr.No.', 'PO No.','Vendor Name', 'Project Name','Remarks','Created By'] 
+      },
+    ],
     sheets: [
       { name: 'Daily Report',formUrl:'https://forms.gle/YUV27rV5kPXKyn799',  docId: '1mrjfYpGMSMY-Em7Y4O4m9JZgfED0gdvbdPBD9qscgcM', gid: '799922129', selectedColumns: ['Date', 'Project Name', 'Location', 'In - Time ', 'Out- Time', 'Have you done site visit?','Described Days Activities (Mentioned by Points) In Office','Described Days Activities (Mentioned by Points) In Site'] },
       { name: 'Daily Video Call', docId: '16wXUF_fWDvbdBZf63sZiIU0hCkI-qjnFLGgFui9t4yY', gid: '2092959791', selectedColumns: ['Name', 'Task', 'Planned', 'Actual', 'Status'] },
