@@ -19,6 +19,11 @@ const employeesData = [
     {
       title: 'Airtech Schedular',
       url: 'https://script.google.com/a/macros/avaniyshinterior.com/s/AKfycbxBqPiof-i02R7xg0VxjjLcl99fBL6MQZCfG0rUufBnBhAEYtJ2QIUKvrIkzFQwOIo/exec?page=fitout'
+    },
+
+    {
+      title: 'Checklist Dashboard',
+      url: 'https://datastudio.google.com/reporting/b30bad2f-4552-4c9f-8d9d-b8afd5056244/page/gcG5F'
     }
   ],
 
@@ -65,6 +70,10 @@ const employeesData = [
     {
       title: 'Airlife Gases Pvt. Ltd. Progress Dashboard',
       url: 'https://script.google.com/a/macros/avaniyshinterior.com/s/AKfycbxoo7jVxrxKUBRtqy05_b0T0EK676VBzEPpiK7ntxkTOO_LZdrN4gbEcIHECXni7wq_tg/exec'
+    },
+       {
+      title: 'Checklist Dashboard',
+      url: 'https://datastudio.google.com/reporting/b30bad2f-4552-4c9f-8d9d-b8afd5056244/page/gcG5F'
     }
    
   ],
@@ -110,6 +119,10 @@ const employeesData = [
     {
       title: 'Airtech Progress Dashboard',
       url: 'https://script.google.com/a/macros/avaniyshinterior.com/s/AKfycbxBqPiof-i02R7xg0VxjjLcl99fBL6MQZCfG0rUufBnBhAEYtJ2QIUKvrIkzFQwOIo/exec?page=pms'
+    },
+       {
+      title: 'Checklist Dashboard',
+      url: 'https://datastudio.google.com/reporting/b30bad2f-4552-4c9f-8d9d-b8afd5056244/page/gcG5F'
     }
   ],
     projects: [
@@ -160,6 +173,10 @@ const employeesData = [
     {
       title: 'Airlife Gases Pvt. Ltd. Progress Dashboard',
       url: 'https://script.google.com/a/macros/avaniyshinterior.com/s/AKfycbxoo7jVxrxKUBRtqy05_b0T0EK676VBzEPpiK7ntxkTOO_LZdrN4gbEcIHECXni7wq_tg/exec'
+    },
+         {
+      title: 'Checklist Dashboard',
+      url: 'https://datastudio.google.com/reporting/b30bad2f-4552-4c9f-8d9d-b8afd5056244/page/gcG5F'
     }
    
   ],
@@ -207,6 +224,13 @@ const employeesData = [
  
     email: 'sauravrathod281@gmail.com',
     photo: 'https://lh3.googleusercontent.com/d/1AIjrFcKQZSCFbXTrc0dmqG0RVgJyXvun',
+
+    dashboards: [
+         {
+      title: 'Checklist Dashboard',
+      url: 'https://datastudio.google.com/reporting/b30bad2f-4552-4c9f-8d9d-b8afd5056244/page/gcG5F'
+         }
+  ],
     sheets: [
       { name: 'Daily Report', formUrl:'https://forms.gle/YUV27rV5kPXKyn799', docId: '1mrjfYpGMSMY-Em7Y4O4m9JZgfED0gdvbdPBD9qscgcM', gid: '799922129', selectedColumns: ['Date', 'Project Name', 'Location', 'In - Time ', 'Out- Time', 'Have you done site visit?','Described Days Activities (Mentioned by Points) In Office','Described Days Activities (Mentioned by Points) In Site'] },
       { name: 'Petrol Allowance',formUrl:'https://forms.gle/2EmAJQdZ7f2BwMLF9', docId: '1qbbbN4uU0x1UFC3rIzkO6lekrFw3A7XD1lx7zZYxSxE', gid: '1266941161', selectedColumns: ['Date', 'Name', 'From', 'To', 'Km','Others','Upload'] },
@@ -229,6 +253,12 @@ const employeesData = [
    
     email: 'chabukswarkiran73@gmail.com',
     photo: 'https://lh3.googleusercontent.com/d/1ZGkkyPPLjQ6ZQjufHvY39lSgpxkdFEwZ',
+      dashboards: [
+         {
+      title: 'Checklist Dashboard',
+      url: 'https://datastudio.google.com/reporting/b30bad2f-4552-4c9f-8d9d-b8afd5056244/page/gcG5F'
+         }
+  ],
     sheets: [
       { name: 'Daily Report',formUrl:'https://forms.gle/YUV27rV5kPXKyn799',  docId: '1mrjfYpGMSMY-Em7Y4O4m9JZgfED0gdvbdPBD9qscgcM', gid: '799922129', selectedColumns: ['Date', 'Project Name', 'Location', 'In - Time ', 'Out- Time', 'Have you done site visit?','Described Days Activities (Mentioned by Points) In Office','Described Days Activities (Mentioned by Points) In Site'] },
       { name: 'Petrol Allowance',formUrl:'https://forms.gle/2EmAJQdZ7f2BwMLF9', docId: '1qbbbN4uU0x1UFC3rIzkO6lekrFw3A7XD1lx7zZYxSxE', gid: '1266941161', selectedColumns: ['Date', 'Name', 'From', 'To', 'Km','Others','Upload'] },
@@ -248,9 +278,14 @@ const employeesData = [
     id: 'bhakti-b',
     name: 'Bhakti Bule',
     designation: 'Designer',
-   
     email: 'design1@avaniyshinterior.com',
     photo: 'https://lh3.googleusercontent.com/d/1VLQ_MT-ER1OQqio7Nzx28VZ6WYUxd39m',
+      dashboards: [
+         {
+      title: 'Checklist Dashboard',
+      url: 'https://datastudio.google.com/reporting/b30bad2f-4552-4c9f-8d9d-b8afd5056244/page/gcG5F'
+         }
+  ],
     sheets: [
       { name: 'Daily Report',formUrl:'https://docs.google.com/forms/d/e/1FAIpQLSf7y6FpZ4Ff4Ihi7Jq6SyqMXHEnvXkaWSQ24v6RPQCMcuqcGw/viewform', docId: '1mrjfYpGMSMY-Em7Y4O4m9JZgfED0gdvbdPBD9qscgcM', gid: '1518539535', selectedColumns: ['Date', 'Project', 'Location', 'In-Time', 'Out-time'] },
       { name: 'Daily Video Call', docId: '16wXUF_fWDvbdBZf63sZiIU0hCkI-qjnFLGgFui9t4yY', gid: '2092959791', selectedColumns: ['Name', 'Task', 'Planned', 'Actual', 'Status'] },
@@ -268,6 +303,12 @@ const employeesData = [
     
     email: 'design2@avaniyshinterior.com',
     photo: 'https://lh3.googleusercontent.com/d/10KJzpS3TIVgGh6DgQMW4mm6vz30fxInI',
+      dashboards: [
+         {
+      title: 'Checklist Dashboard',
+      url: 'https://datastudio.google.com/reporting/b30bad2f-4552-4c9f-8d9d-b8afd5056244/page/gcG5F'
+         }
+  ],
     sheets: [
        { name: 'Daily Report',formUrl:'https://docs.google.com/forms/d/e/1FAIpQLSf7y6FpZ4Ff4Ihi7Jq6SyqMXHEnvXkaWSQ24v6RPQCMcuqcGw/viewform', docId: '1mrjfYpGMSMY-Em7Y4O4m9JZgfED0gdvbdPBD9qscgcM', gid: '1518539535', selectedColumns: ['Date', 'Project', 'Location', 'In-Time', 'Out-time'] },
       { name: 'Daily Video Call', docId: '16wXUF_fWDvbdBZf63sZiIU0hCkI-qjnFLGgFui9t4yY', gid: '2092959791', selectedColumns: ['Name', 'Task', 'Planned', 'Actual', 'Status'] },
@@ -286,7 +327,12 @@ const employeesData = [
     email: 'ea@avaniyshinterior.com',
     photo: 'https://lh3.googleusercontent.com/d/10owEBw3gPnFrCn7jYKFFI3UOvwHlVgxk',
     
-    
+      dashboards: [
+         {
+      title: 'Checklist Dashboard',
+      url: 'https://datastudio.google.com/reporting/b30bad2f-4552-4c9f-8d9d-b8afd5056244/page/gcG5F'
+         }
+  ],
     projects: [
       { 
         name: 'AISPL Proforma Invoice', 
@@ -346,6 +392,12 @@ const employeesData = [
   
     email: 'mis@avaniyshinterior.com',
     photo: 'https://lh3.googleusercontent.com/d/1CITTMe060N0kMHO8SVGXomLI_US1yqpn',
+      dashboards: [
+         {
+      title: 'Checklist Dashboard',
+      url: 'https://datastudio.google.com/reporting/b30bad2f-4552-4c9f-8d9d-b8afd5056244/page/gcG5F'
+         }
+  ],
     sheets: [
       { name: 'Daily Report',formUrl:'https://forms.gle/jL79VhahgCkduAYt6', docId: '1mrjfYpGMSMY-Em7Y4O4m9JZgfED0gdvbdPBD9qscgcM', gid: '1518539535', selectedColumns: ['Date', 'In-Time', 'Out-time'] },
       { name: 'Site Expenses',formUrl:'https://forms.gle/9uuXgx6oF3okLmxb7', docId: '13Vo3YIrbPT06a4ClN-BS-eO1DOCSNzo5dnn-XfO0Tds', gid: '1142344274', selectedColumns: ['Date', 'Name', 'Project Name', 'Paid to', 'Amount', 'Reason', 'Approved From'] },
@@ -361,6 +413,12 @@ const employeesData = [
   
     email: 'crm@avaniyshinterior.com',
     photo: 'https://lh3.googleusercontent.com/d/1Cvdn631tScsIiJkwYCRM6aJC60bRlR8d',
+      dashboards: [
+         {
+      title: 'Checklist Dashboard',
+      url: 'https://datastudio.google.com/reporting/b30bad2f-4552-4c9f-8d9d-b8afd5056244/page/gcG5F'
+         }
+  ],
     sheets: [
       { name: 'Daily Report',formUrl:'https://forms.gle/jL79VhahgCkduAYt6', docId: '1mrjfYpGMSMY-Em7Y4O4m9JZgfED0gdvbdPBD9qscgcM', gid: '1518539535', selectedColumns: ['Date', 'In-Time', 'Out-time'] },
       { name: 'Site Expenses',formUrl:'https://forms.gle/9uuXgx6oF3okLmxb7', docId: '13Vo3YIrbPT06a4ClN-BS-eO1DOCSNzo5dnn-XfO0Tds', gid: '1142344274', selectedColumns: ['Date', 'Name', 'Project Name', 'Paid to', 'Amount', 'Reason', 'Approved From'] },
@@ -376,6 +434,12 @@ const employeesData = [
   
     email: 'accounts@avaniyshinterior.com',
     photo: 'https://lh3.googleusercontent.com/d/1gZ5VMVCvdmH4PjVik-qxWXH9ooSVJFcB',
+      dashboards: [
+         {
+      title: 'Checklist Dashboard',
+      url: 'https://datastudio.google.com/reporting/b30bad2f-4552-4c9f-8d9d-b8afd5056244/page/gcG5F'
+         }
+  ],
     
     projects: [
       { 
