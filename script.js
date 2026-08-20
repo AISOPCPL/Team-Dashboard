@@ -105,7 +105,7 @@ const employeesData = [
       { name: 'Project Specification Changes',formUrl:'https://forms.gle/2Zew9NZYBjbF32bE6', docId: '1oOS8lE1JviRkNhbM7FP_0VUxPV9FZgMU70t_j0A_N2A', gid: '944341180', selectedColumns: ['Date', 'Project Name', 'Specific Changes / Additional Work', 'Cost Change (If Any)', 'Requested / Instructed By', 'Approval Status'] },
       { name: 'Delegation Score PH', docId: '1JsKyve_bNF80c-D-jvLAmFGfDKE6xLzYBtiFep0UXlc', gid: '1184708924', selectedColumns: ['Name', 'Task', 'First Date', 'Revision 1','Revision 2', 'Total Revision','Status','Actual Completion Date'] },
       { name: 'Checklist', docId: '1m_P5_eP9FvD9eaYvanmLlV833cscTvk2xJk_c39cbZw', gid: '2092959791', selectedColumns: ['Task', 'Doer', 'Planned', 'Actual', 'Status'] },
-      { name: 'Leave Application', formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScVKjl4j1wPbzV4QFAK9TlP8xpOkrHYxej75WTdFzt-lkV4Dg/viewform', docId: '1mrjfYpGMSMY-Em7Y4O4m9JZgfED0gdvbdPBD9qscgcM', gid: '148992', selectedColumns: ['Leave Type','Reason/Purpose', 'Half Day', 'Start Date of Leave', 'End Date of Leave'] }
+      { name: 'Leave Application', formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScVKjl4j1wPbzV4QFAK9TlP8xpOkrHYxej75WTdFzt-lkV4Dg/viewform'}
 
    
       ]
@@ -162,7 +162,7 @@ const employeesData = [
       { name: 'Help Slip',formUrl:'https://forms.gle/naMThh9BWnzcAme38', docId: '16R8q7J5kc3GYXgZC1q6KS4nVJyMIaHqfleFnT3l7v_4', gid: '1930440204', selectedColumns: ['Timestamp', 'Employee Name', 'Department', 'Required From (Person Name)', 'Challenge / Question', 'Solution 1'] },
       { name: 'Checklist', docId: '1m_P5_eP9FvD9eaYvanmLlV833cscTvk2xJk_c39cbZw', gid: '2092959791', selectedColumns: ['Task', 'Doer', 'Planned', 'Actual', 'Status'] },
       { name: 'Project Specification Changes',formUrl:'https://forms.gle/2Zew9NZYBjbF32bE6', docId: '1oOS8lE1JviRkNhbM7FP_0VUxPV9FZgMU70t_j0A_N2A', gid: '944341180', selectedColumns: ['Date', 'Project Name', 'Specific Changes / Additional Work', 'Cost Change (If Any)', 'Requested / Instructed By', 'Approval Status'] },
-            { name: 'Leave Application', formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScVKjl4j1wPbzV4QFAK9TlP8xpOkrHYxej75WTdFzt-lkV4Dg/viewform', docId: '1mrjfYpGMSMY-Em7Y4O4m9JZgfED0gdvbdPBD9qscgcM', gid: '148992', selectedColumns: ['Leave Type','Reason/Purpose', 'Half Day', 'Start Date of Leave', 'End Date of Leave'] }
+      { name: 'Leave Application', formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScVKjl4j1wPbzV4QFAK9TlP8xpOkrHYxej75WTdFzt-lkV4Dg/viewform'}
 
     ]
   },
@@ -218,7 +218,7 @@ const employeesData = [
       { name: 'Help Slip',formUrl:'https://forms.gle/naMThh9BWnzcAme38', docId: '16R8q7J5kc3GYXgZC1q6KS4nVJyMIaHqfleFnT3l7v_4', gid: '1930440204', selectedColumns: ['Timestamp', 'Employee Name', 'Department', 'Required From (Person Name)', 'Challenge / Question', 'Solution 1'] },
       { name: 'Checklist', docId: '1m_P5_eP9FvD9eaYvanmLlV833cscTvk2xJk_c39cbZw', gid: '2092959791', selectedColumns: ['Task', 'Doer', 'Planned', 'Actual', 'Status'] },
       { name: 'Project Specification Changes', formUrl:'https://forms.gle/2Zew9NZYBjbF32bE6',docId: '1oOS8lE1JviRkNhbM7FP_0VUxPV9FZgMU70t_j0A_N2A', gid: '944341180', selectedColumns: ['Date', 'Project Name', 'Specific Changes / Additional Work', 'Cost Change (If Any)', 'Requested / Instructed By', 'Approval Status'] },
-            { name: 'Leave Application', formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScVKjl4j1wPbzV4QFAK9TlP8xpOkrHYxej75WTdFzt-lkV4Dg/viewform', docId: '1mrjfYpGMSMY-Em7Y4O4m9JZgfED0gdvbdPBD9qscgcM', gid: '148992', selectedColumns: ['Leave Type','Reason/Purpose', 'Half Day', 'Start Date of Leave', 'End Date of Leave'] }
+      { name: 'Leave Application', formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScVKjl4j1wPbzV4QFAK9TlP8xpOkrHYxej75WTdFzt-lkV4Dg/viewform'}
 
     ]
   },
@@ -249,7 +249,7 @@ const employeesData = [
       { name: 'Delegation Sheet Team', docId: '1680NhH8rKFTKeY3HSZGV_izgEi4QieHiirbcbRi7hTA', gid: '1184708924', selectedColumns: ['Name', 'Task', 'First Date', 'Revision 1','Revision 2', 'Total Revision','Status','Actual Completion Date'] },
       { name: 'Help Slip',formUrl:'https://forms.gle/naMThh9BWnzcAme38', docId: '16R8q7J5kc3GYXgZC1q6KS4nVJyMIaHqfleFnT3l7v_4', gid: '1930440204', selectedColumns: ['Timestamp', 'Employee Name', 'Department', 'Required From (Person Name)', 'Challenge / Question', 'Solution 1'] },
       { name: 'Checklist', docId: '1m_P5_eP9FvD9eaYvanmLlV833cscTvk2xJk_c39cbZw', gid: '2092959791', selectedColumns: ['Task', 'Doer', 'Planned', 'Actual', 'Status'] },
-            { name: 'Leave Application', formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScVKjl4j1wPbzV4QFAK9TlP8xpOkrHYxej75WTdFzt-lkV4Dg/viewform', docId: '1mrjfYpGMSMY-Em7Y4O4m9JZgfED0gdvbdPBD9qscgcM', gid: '148992', selectedColumns: ['Leave Type','Reason/Purpose', 'Half Day', 'Start Date of Leave', 'End Date of Leave'] }
+      { name: 'Leave Application', formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScVKjl4j1wPbzV4QFAK9TlP8xpOkrHYxej75WTdFzt-lkV4Dg/viewform'}
 
     ]
   },
@@ -278,7 +278,7 @@ const employeesData = [
       { name: 'Delegation Sheet Team', docId: '1680NhH8rKFTKeY3HSZGV_izgEi4QieHiirbcbRi7hTA', gid: '1184708924', selectedColumns: ['Name', 'Task', 'First Date', 'Revision 1','Revision 2', 'Total Revision','Status','Actual Completion Date'] },
       { name: 'Help Slip',formUrl:'https://forms.gle/naMThh9BWnzcAme38', docId: '16R8q7J5kc3GYXgZC1q6KS4nVJyMIaHqfleFnT3l7v_4', gid: '1930440204', selectedColumns: ['Timestamp', 'Employee Name', 'Department', 'Required From (Person Name)', 'Challenge / Question', 'Solution 1'] },
       { name: 'Checklist', docId: '1m_P5_eP9FvD9eaYvanmLlV833cscTvk2xJk_c39cbZw', gid: '2092959791', selectedColumns: ['Task', 'Doer', 'Planned', 'Actual', 'Status'] },
-            { name: 'Leave Application', formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScVKjl4j1wPbzV4QFAK9TlP8xpOkrHYxej75WTdFzt-lkV4Dg/viewform', docId: '1mrjfYpGMSMY-Em7Y4O4m9JZgfED0gdvbdPBD9qscgcM', gid: '148992', selectedColumns: ['Leave Type','Reason/Purpose', 'Half Day', 'Start Date of Leave', 'End Date of Leave'] }
+      { name: 'Leave Application', formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScVKjl4j1wPbzV4QFAK9TlP8xpOkrHYxej75WTdFzt-lkV4Dg/viewform'}
 
     ]
   },
@@ -302,7 +302,7 @@ const employeesData = [
       { name: 'Delegation Sheet Team', docId: '1680NhH8rKFTKeY3HSZGV_izgEi4QieHiirbcbRi7hTA', gid: '1184708924', selectedColumns: ['Name', 'Task', 'First Date', 'Revision 1','Revision 2', 'Total Revision','Status','Actual Completion Date'] },
       { name: 'Checklist', docId: '1m_P5_eP9FvD9eaYvanmLlV833cscTvk2xJk_c39cbZw', gid: '2092959791', selectedColumns: ['Task', 'Doer', 'Planned', 'Actual', 'Status'] },
       { name: 'Help Slip',formUrl:'https://forms.gle/naMThh9BWnzcAme38', docId: '16R8q7J5kc3GYXgZC1q6KS4nVJyMIaHqfleFnT3l7v_4', gid: '1930440204', selectedColumns: ['Timestamp', 'Employee Name', 'Department', 'Required From (Person Name)', 'Challenge / Question', 'Solution 1'] },
-            { name: 'Leave Application', formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScVKjl4j1wPbzV4QFAK9TlP8xpOkrHYxej75WTdFzt-lkV4Dg/viewform', docId: '1mrjfYpGMSMY-Em7Y4O4m9JZgfED0gdvbdPBD9qscgcM', gid: '148992', selectedColumns: ['Leave Type','Reason/Purpose', 'Half Day', 'Start Date of Leave', 'End Date of Leave'] }
+      { name: 'Leave Application', formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScVKjl4j1wPbzV4QFAK9TlP8xpOkrHYxej75WTdFzt-lkV4Dg/viewform'}
 
     ]
   },
@@ -326,7 +326,7 @@ const employeesData = [
       { name: 'Delegation Sheet Team', docId: '1680NhH8rKFTKeY3HSZGV_izgEi4QieHiirbcbRi7hTA', gid: '1184708924', selectedColumns: ['Name', 'Task', 'First Date', 'Revision 1','Revision 2', 'Total Revision','Status','Actual Completion Date'] },
       { name: 'Checklist', docId: '1m_P5_eP9FvD9eaYvanmLlV833cscTvk2xJk_c39cbZw', gid: '2092959791', selectedColumns: ['Task', 'Doer', 'Planned', 'Actual', 'Status'] },
       { name: 'Help Slip',formUrl:'https://forms.gle/naMThh9BWnzcAme38', docId: '16R8q7J5kc3GYXgZC1q6KS4nVJyMIaHqfleFnT3l7v_4', gid: '1930440204', selectedColumns: ['Timestamp', 'Employee Name', 'Department', 'Required From (Person Name)', 'Challenge / Question', 'Solution 1'] },
-            { name: 'Leave Application', formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScVKjl4j1wPbzV4QFAK9TlP8xpOkrHYxej75WTdFzt-lkV4Dg/viewform', docId: '1mrjfYpGMSMY-Em7Y4O4m9JZgfED0gdvbdPBD9qscgcM', gid: '148992', selectedColumns: ['Leave Type','Reason/Purpose', 'Half Day', 'Start Date of Leave', 'End Date of Leave'] }
+      { name: 'Leave Application', formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScVKjl4j1wPbzV4QFAK9TlP8xpOkrHYxej75WTdFzt-lkV4Dg/viewform'}
 
     ]
   },
@@ -394,7 +394,7 @@ const employeesData = [
         gid: '2092959791', 
         selectedColumns: ['Task', 'Doer', 'Planned', 'Actual', 'Status'] 
       },
-      { name: 'Leave Application', formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScVKjl4j1wPbzV4QFAK9TlP8xpOkrHYxej75WTdFzt-lkV4Dg/viewform', docId: '1mrjfYpGMSMY-Em7Y4O4m9JZgfED0gdvbdPBD9qscgcM', gid: '148992', selectedColumns: ['Leave Type','Reason/Purpose', 'Half Day', 'Start Date of Leave', 'End Date of Leave'] }
+      { name: 'Leave Application', formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScVKjl4j1wPbzV4QFAK9TlP8xpOkrHYxej75WTdFzt-lkV4Dg/viewform'}
 
     ]
   },
@@ -417,7 +417,7 @@ const employeesData = [
       { name: 'Checklist', docId: '1m_P5_eP9FvD9eaYvanmLlV833cscTvk2xJk_c39cbZw', gid: '2092959791', selectedColumns: ['Task', 'Doer', 'Planned', 'Actual', 'Status'] },
       { name: 'Delegation Sheet Team', docId: '1680NhH8rKFTKeY3HSZGV_izgEi4QieHiirbcbRi7hTA', gid: '1184708924', selectedColumns: ['Name', 'Task', 'First Date', 'Revision 1','Revision 2', 'Total Revision','Status','Actual Completion Date'] },
       { name: 'Help Slip',formUrl:'https://forms.gle/naMThh9BWnzcAme38', docId: '16R8q7J5kc3GYXgZC1q6KS4nVJyMIaHqfleFnT3l7v_4', gid: '1930440204', selectedColumns: ['Timestamp', 'Employee Name', 'Department', 'Required From (Person Name)', 'Challenge / Question', 'Solution 1'] },
-            { name: 'Leave Application', formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScVKjl4j1wPbzV4QFAK9TlP8xpOkrHYxej75WTdFzt-lkV4Dg/viewform', docId: '1mrjfYpGMSMY-Em7Y4O4m9JZgfED0gdvbdPBD9qscgcM', gid: '148992', selectedColumns: ['Leave Type','Reason/Purpose', 'Half Day', 'Start Date of Leave', 'End Date of Leave'] }
+      { name: 'Leave Application', formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScVKjl4j1wPbzV4QFAK9TlP8xpOkrHYxej75WTdFzt-lkV4Dg/viewform'}
 
     ]
   },
@@ -440,7 +440,7 @@ const employeesData = [
       { name: 'Checklist', docId: '1m_P5_eP9FvD9eaYvanmLlV833cscTvk2xJk_c39cbZw', gid: '2092959791', selectedColumns: ['Task', 'Doer', 'Planned', 'Actual', 'Status'] },
       { name: 'Delegation Sheet Team', docId: '1680NhH8rKFTKeY3HSZGV_izgEi4QieHiirbcbRi7hTA', gid: '1184708924', selectedColumns: ['Name', 'Task', 'First Date', 'Revision 1','Revision 2', 'Total Revision','Status','Actual Completion Date'] },
       { name: 'Help Slip',formUrl:'https://forms.gle/naMThh9BWnzcAme38', docId: '16R8q7J5kc3GYXgZC1q6KS4nVJyMIaHqfleFnT3l7v_4', gid: '1930440204', selectedColumns: ['Timestamp', 'Employee Name', 'Department', 'Required From (Person Name)', 'Challenge / Question', 'Solution 1'] },
-            { name: 'Leave Application', formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScVKjl4j1wPbzV4QFAK9TlP8xpOkrHYxej75WTdFzt-lkV4Dg/viewform', docId: '1mrjfYpGMSMY-Em7Y4O4m9JZgfED0gdvbdPBD9qscgcM', gid: '148992', selectedColumns: ['Leave Type','Reason/Purpose', 'Half Day', 'Start Date of Leave', 'End Date of Leave'] }
+      { name: 'Leave Application', formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScVKjl4j1wPbzV4QFAK9TlP8xpOkrHYxej75WTdFzt-lkV4Dg/viewform'}
 
     ]
   },
@@ -482,7 +482,7 @@ const employeesData = [
       { name: 'Office Expenses',formUrl:'https://docs.google.com/forms/d/e/1FAIpQLSeFG1ZBY4mstlGPDpcNhUb9vi2WiJGBr3aG2cuTtYqPNXf4Nw/viewform?usp=header', docId: '1N2DF6vzSoJcIxwL2makablsGtDlMB-rxhcWT3_VLHBY', gid: '440445714', selectedColumns: ['Date', 'Paid to', 'Amount', 'Reason', 'Categories'] },
       { name: 'Delegation Score PH', docId: '1JsKyve_bNF80c-D-jvLAmFGfDKE6xLzYBtiFep0UXlc', gid: '1184708924', selectedColumns: ['Name', 'Task', 'First Date', 'Revision 1','Revision 2', 'Total Revision','Status','Actual Completion Date'] },
       { name: 'Checklist', docId: '1m_P5_eP9FvD9eaYvanmLlV833cscTvk2xJk_c39cbZw', gid: '2092959791', selectedColumns: ['Task', 'Doer', 'Planned', 'Actual', 'Status'] },
-         { name: 'Leave Application', formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScVKjl4j1wPbzV4QFAK9TlP8xpOkrHYxej75WTdFzt-lkV4Dg/viewform', docId: '1mrjfYpGMSMY-Em7Y4O4m9JZgfED0gdvbdPBD9qscgcM', gid: '148992', selectedColumns: ['Leave Type','Reason/Purpose', 'Half Day', 'Start Date of Leave', 'End Date of Leave'] }
+      { name: 'Leave Application', formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScVKjl4j1wPbzV4QFAK9TlP8xpOkrHYxej75WTdFzt-lkV4Dg/viewform'}
 
     ]
   }
