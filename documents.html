@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Company Dashboard - Documents</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" href="favicon/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="favicon/favicon.svg" />
+  <link rel="shortcut icon" href="favicon/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
+  <link rel="manifest" href="favicon/site.webmanifest" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <style>
+    .doc-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .doc-card {
+      background: #ffffff;
+      border-radius: 10px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+      border: 1px solid #e5e7eb;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      color: inherit;
+      cursor: pointer;
+    }
+
+    .doc-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+      border-color: var(--primary-orange, #f97316);
+    }
+
+    .doc-icon {
+      font-size: 2.2rem;
+      color: var(--primary-orange, #f97316);
+      margin-bottom: 15px;
+    }
+
+    .doc-title {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #1f2937;
+      margin-bottom: 8px;
+    }
+
+    .doc-desc {
+      font-size: 0.85rem;
+      color: #6b7280;
+      margin-bottom: 15px;
+    }
+
+    .doc-action {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #3b82f6;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+  </style>
+</head>
+<body>
+  <script>
+    if (sessionStorage.getItem('isLoggedIn') !== 'true') {
+      window.location.href = 'login.html';
+    }
+  </script>
+
+  <div class="app-container">
+    <aside class="sidebar">
+      <div>
+        <div class="sidebar-header">
+          <img src="LOGO.png" alt="Company Logo" class="logo" onerror="this.src='https://via.placeholder.com/180x50?text=Avaniysh+Interior'">
+        </div>
+        <nav class="sidebar-nav">
+          <ul>
+            <li>
+              <a href="index.html" class="nav-btn">
+                <i class="fa-solid fa-house"></i> <span>Home</span>
+              </a>
+            </li>
+            <li>
+              <a href="employee.html" class="nav-btn">
+                <i class="fa-solid fa-users"></i> <span>Teams</span>
+              </a>
+            </li>
+            <li>
+              <a href="systems.html" class="nav-btn" data-target="system-view">
+                <i class="fa-solid fa-gears"></i> <span>Systems</span>
+              </a>
+            </li>
+           
+            <li>
+              <a href="documents.html" class="nav-btn active">
+                <i class="fa-solid fa-file-contract"></i> <span>Company Information</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="sidebar-footer">
+        <button class="btn-logout" onclick="logout()">
+          <i class="fa-solid fa-right-from-bracket"></i> <span>Sign Out</span>
+        </button>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <section id="documents-view" class="content-view active">
+        <header class="page-header flex-header">
+  <div>
+    <h1>Company Information</h1>
+    <div class="header-divider"></div>
+    <div style="margin-top: 15px; color: #374151;">
+      <h5 style="font-weight: 600; margin-bottom: 4px; color: #1f2937;">
+        REGISTERED OFFICE:
+      </h5>
+      <p style="margin: 0 0 12px 0; font-size: 0.9rem; font-weight: normal; color: #4b5563;">
+        B - 705, Freshia, A. G. Road, Near Kirloskar Brothers Ltd.  
+Baner Annexe, Pune, Maharashtra - 411021
+      </p>
+
+      <h5 style="font-weight: 600; margin-bottom: 4px; color: #1f2937;">
+        CORPORATE OFFICE:
+      </h5>
+      <p style="margin: 0 0 12px 0; font-size: 0.9rem; font-weight: normal; color: #4b5563;">
+403, Treza - Business Hub, Near Mohan Nagar, Off - Pune Mumbai Highway,  
+Bitwise Lane, Baner, Pune, Maharashtra - 411045 
+      </p>
+
+      <h5 style="font-weight: 600; margin: 0; color: #1f2937;">
+        GST No.: <span style="font-weight: normal; color: #4b5563;">27ABCCA4759N1Z5</span>
+      </h5>
+    </div>
+  </div>
+</header>
+        
+
+        <div class="doc-grid">
+          
+            <a href="https://drive.google.com/file/d/158QeEfge1VPEpNlGc3BtA4Ik0ZC6B6Nu/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="doc-card">            <div>
+              <i class="fa-solid fa-shield-halved doc-icon"></i>
+              <div class="doc-title">WC Policy</div>
+            </div>
+            <div class="doc-action">
+              <span>View Document</span> <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </div>
+          </a>
+
+          <a href="https://drive.google.com/file/d/1rmBvsczH8tBYzwG9WFYTD4ZV5AH3yl8D/view?usp=sharing" target="_blank" class="doc-card">
+            <div>
+              <i class="fa-solid fa-file-lines doc-icon"></i>
+              <div class="doc-title">Safety Policy</div>
+              <div class="doc-desc">(Please change client name as per project)</div>
+            </div>
+            <div class="doc-action">
+              <span>View Document</span> <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </div>
+          </a>
+
+          <!-- Document Card 3: Example Safety Manual -->
+          <!-- <a href="YOUR_SAFETY_MANUAL_LINK_HERE" target="_blank" class="doc-card">
+            <div>
+              <i class="fa-solid fa-hard-hat doc-icon"></i>
+              <div class="doc-title">Site Safety Manual</div>
+              <div class="doc-desc">Standard safety protocols for active site projects.</div>
+            </div>
+            <div class="doc-action">
+              <span>View Document</span> <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </div>
+          </a> -->
+
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+  
+</body>
+</html>
