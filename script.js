@@ -50,7 +50,7 @@ const employeesData = [
     sheets: [
       
       { name: 'Project Visit', formUrl:'https://forms.gle/ZRpDTA4KUkGnbwtX8', docId: '11TLkJxGV3EFz4ZdVqKpuX3O-8FV4TrlMIYjxyAZ0lqY', gid: '2045538987', selectedColumns: ['Date', 'Project Site Visitor', 'Project Name', 'Location', 'Visit Purpose', 'Observation'] },
-      { name: 'Office Expenses',formUrl:'https://docs.google.com/forms/d/e/1FAIpQLSeFG1ZBY4mstlGPDpcNhUb9vi2WiJGBr3aG2cuTtYqPNXf4Nw/viewform?usp=header', docId: '1N2DF6vzSoJcIxwL2makablsGtDlMB-rxhcWT3_VLHBY', gid: '440445714', selectedColumns: ['Date', 'Name', 'Paid to', 'Amount', 'Reason', 'Categories'] },
+      { name: 'Office Expenses',formUrl:'https://docs.google.com/forms/d/e/1FAIpQLSeFG1ZBY4mstlGPDpcNhUb9vi2WiJGBr3aG2cuTtYqPNXf4Nw/viewform?usp=header', docId: '1N2DF6vzSoJcIxwL2makablsGtDlMB-rxhcWT3_VLHBY', gid: '440445714', selectedColumns: ['Date', 'Paid to', 'Amount', 'Reason', 'Categories','URD Purchase','Tax Invoice'] },
       { name: 'Site Expenses', formUrl:'https://forms.gle/9uuXgx6oF3okLmxb7',docId: '13Vo3YIrbPT06a4ClN-BS-eO1DOCSNzo5dnn-XfO0Tds', gid: '1142344274', selectedColumns: ['Date', 'Name', 'Project Name', 'Paid to', 'Amount', 'Reason'] },
       { name: 'Project Specification Changes',formUrl:'https://forms.gle/2Zew9NZYBjbF32bE6', docId: '1oOS8lE1JviRkNhbM7FP_0VUxPV9FZgMU70t_j0A_N2A', gid: '944341180', selectedColumns: ['Date', 'Project Name', 'Specific Changes / Additional Work', 'Cost Change (If Any)', 'Requested / Instructed By', 'Approval Status'] },
       { name: 'Delegation Score PH', docId: '1JsKyve_bNF80c-D-jvLAmFGfDKE6xLzYBtiFep0UXlc', gid: '1184708924', selectedColumns: ['Name', 'Task', 'First Date', 'Revision 1','Revision 2', 'Total Revision','Status','Actual Completion Date'] },
@@ -102,7 +102,7 @@ const employeesData = [
  
     sheets: [
      { name: 'Project Visit', formUrl:'https://forms.gle/ZRpDTA4KUkGnbwtX8', docId: '11TLkJxGV3EFz4ZdVqKpuX3O-8FV4TrlMIYjxyAZ0lqY', gid: '2045538987', selectedColumns: ['Date', 'Project Site Visitor', 'Project Name', 'Location', 'Visit Purpose', 'Observation'] },
-      { name: 'Office Expenses',formUrl:'https://docs.google.com/forms/d/e/1FAIpQLSeFG1ZBY4mstlGPDpcNhUb9vi2WiJGBr3aG2cuTtYqPNXf4Nw/viewform?usp=header', docId: '1N2DF6vzSoJcIxwL2makablsGtDlMB-rxhcWT3_VLHBY', gid: '440445714', selectedColumns: ['Date', 'Name', 'Paid to', 'Amount', 'Reason', 'Categories'] },
+      { name: 'Office Expenses',formUrl:'https://docs.google.com/forms/d/e/1FAIpQLSeFG1ZBY4mstlGPDpcNhUb9vi2WiJGBr3aG2cuTtYqPNXf4Nw/viewform?usp=header', docId: '1N2DF6vzSoJcIxwL2makablsGtDlMB-rxhcWT3_VLHBY', gid: '440445714', selectedColumns: ['Date', 'Paid to', 'Amount', 'Reason', 'Categories','URD Purchase'] },
       { name: 'Site Expenses', formUrl:'https://forms.gle/9uuXgx6oF3okLmxb7',docId: '13Vo3YIrbPT06a4ClN-BS-eO1DOCSNzo5dnn-XfO0Tds', gid: '1142344274', selectedColumns: ['Date', 'Name', 'Project Name', 'Paid to', 'Amount', 'Reason'] },
       { name: 'Project Specification Changes',formUrl:'https://forms.gle/2Zew9NZYBjbF32bE6', docId: '1oOS8lE1JviRkNhbM7FP_0VUxPV9FZgMU70t_j0A_N2A', gid: '944341180', selectedColumns: ['Date', 'Project Name', 'Specific Changes / Additional Work', 'Cost Change (If Any)', 'Requested / Instructed By', 'Approval Status'] },
       { name: 'Delegation Score PH', docId: '1JsKyve_bNF80c-D-jvLAmFGfDKE6xLzYBtiFep0UXlc', gid: '1184708924', selectedColumns: ['Name', 'Task', 'First Date', 'Revision 1','Revision 2', 'Total Revision','Status','Actual Completion Date'] },
@@ -389,7 +389,7 @@ const employeesData = [
     ],
  
     sheets: [
-      { name: 'Office Expenses',formUrl:'https://docs.google.com/forms/d/e/1FAIpQLSeFG1ZBY4mstlGPDpcNhUb9vi2WiJGBr3aG2cuTtYqPNXf4Nw/viewform?usp=header', docId: '1N2DF6vzSoJcIxwL2makablsGtDlMB-rxhcWT3_VLHBY', gid: '440445714', selectedColumns: ['Date', 'Paid to', 'Amount', 'Reason', 'Categories'] },
+      { name: 'Office Expenses',formUrl:'https://docs.google.com/forms/d/e/1FAIpQLSeFG1ZBY4mstlGPDpcNhUb9vi2WiJGBr3aG2cuTtYqPNXf4Nw/viewform?usp=header', docId: '1N2DF6vzSoJcIxwL2makablsGtDlMB-rxhcWT3_VLHBY', gid: '440445714', selectedColumns: ['Date', 'Paid to', 'Amount', 'Reason', 'Categories','URD Purchase'] },
       { 
         name: 'Checklist', 
         docId: '1m_P5_eP9FvD9eaYvanmLlV833cscTvk2xJk_c39cbZw', 
@@ -418,7 +418,7 @@ const employeesData = [
       { name: 'Site Expenses',formUrl:'https://forms.gle/9uuXgx6oF3okLmxb7', docId: '13Vo3YIrbPT06a4ClN-BS-eO1DOCSNzo5dnn-XfO0Tds', gid: '1142344274', selectedColumns: ['Date', 'Name', 'Project Name', 'Paid to', 'Amount', 'Reason', 'Approved From'] },
       { name: 'Checklist', docId: '1m_P5_eP9FvD9eaYvanmLlV833cscTvk2xJk_c39cbZw', gid: '2092959791', selectedColumns: ['Task', 'Doer', 'Planned', 'Actual', 'Status'] },
       { name: 'Delegation Sheet Team', docId: '1680NhH8rKFTKeY3HSZGV_izgEi4QieHiirbcbRi7hTA', gid: '1184708924', selectedColumns: ['Name', 'Task', 'First Date', 'Revision 1','Revision 2', 'Total Revision','Status','Actual Completion Date'] },
-      { name: 'Help Slip',formUrl:'https://forms.gle/naMThh9BWnzcAme38', docId: '16R8q7J5kc3GYXgZC1q6KS4nVJyMIaHqfleFnT3l7v_4', gid: '1930440204', selectedColumns: ['Timestamp', 'Employee Name', 'Department', 'Required From (Person Name)', 'Challenge / Question', 'Solution 1'] },
+      { name: 'Help Slip',formUrl:'https://forms.gle/naMThh9BWnzcAme38', docId: '16R8q7J5kc3GYXgZC1q6KS4nVJyMIaHqfleFnT3l7v_4', gid: '1930440204', selectedColumns: ['Timestamp', 'Employee Name', 'Department', 'Challenge / Question', 'Solution 1'] },
       { name: 'Leave Application', formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScVKjl4j1wPbzV4QFAK9TlP8xpOkrHYxej75WTdFzt-lkV4Dg/viewform',docId: '1mrjfYpGMSMY-Em7Y4O4m9JZgfED0gdvbdPBD9qscgcM', gid: '148992', selectedColumns: ['Employee Name', 'Leave Type', 'Reason/Purpose', 'Half Day', 'Start Date of Leave','End Date of Leave'] }
 
     ]
@@ -481,7 +481,7 @@ const employeesData = [
       },
     ],
  sheets: [
-      { name: 'Office Expenses',formUrl:'https://docs.google.com/forms/d/e/1FAIpQLSeFG1ZBY4mstlGPDpcNhUb9vi2WiJGBr3aG2cuTtYqPNXf4Nw/viewform?usp=header', docId: '1N2DF6vzSoJcIxwL2makablsGtDlMB-rxhcWT3_VLHBY', gid: '440445714', selectedColumns: ['Date', 'Paid to', 'Amount', 'Reason', 'Categories'] },
+      { name: 'Office Expenses',formUrl:'https://docs.google.com/forms/d/e/1FAIpQLSeFG1ZBY4mstlGPDpcNhUb9vi2WiJGBr3aG2cuTtYqPNXf4Nw/viewform?usp=header', docId: '1N2DF6vzSoJcIxwL2makablsGtDlMB-rxhcWT3_VLHBY', gid: '440445714', selectedColumns: ['Date', 'Paid to', 'Amount', 'Reason', 'Categories','URD Purchase'] },
       { name: 'Delegation Score PH', docId: '1JsKyve_bNF80c-D-jvLAmFGfDKE6xLzYBtiFep0UXlc', gid: '1184708924', selectedColumns: ['Name', 'Task', 'First Date', 'Revision 1','Revision 2', 'Total Revision','Status','Actual Completion Date'] },
       { name: 'Checklist', docId: '1m_P5_eP9FvD9eaYvanmLlV833cscTvk2xJk_c39cbZw', gid: '2092959791', selectedColumns: ['Task', 'Doer', 'Planned', 'Actual', 'Status'] },
       { name: 'Leave Application', formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScVKjl4j1wPbzV4QFAK9TlP8xpOkrHYxej75WTdFzt-lkV4Dg/viewform',docId: '1mrjfYpGMSMY-Em7Y4O4m9JZgfED0gdvbdPBD9qscgcM', gid: '148992', selectedColumns: ['Employee Name', 'Leave Type', 'Reason/Purpose', 'Half Day', 'Start Date of Leave','End Date of Leave'] }
@@ -651,7 +651,6 @@ function setupEmployeeSearch() {
   });
 }
 
-// Open Employee Profile View (With Dashboard Card + Original 2 Buttons for Sheets)
 function openEmployeeProfile(emp) {
   activeEmployee = emp;
 
@@ -677,7 +676,7 @@ function openEmployeeProfile(emp) {
 const dashContainer = document.getElementById('profile-dashboard-container');
 
 if (dashContainer) {
-  dashContainer.innerHTML = ''; // जुना डेटा साफ करा
+  dashContainer.innerHTML = ''; 
 
   if (emp.dashboards && emp.dashboards.length > 0) {
     let html = '<div class="dashboards-grid" style="display: flex; gap: 15px; flex-wrap: wrap;">';
@@ -728,19 +727,17 @@ if (dashContainer) {
     dashContainer.style.display = 'none';
   }
 }
-  // ==================== 1. PROJECT LIST GRID (नक्की संपूर्ण डेटा दिसण्यासाठी) ====================
 const projectsGrid = document.getElementById('employee-projects-grid');
 const projectBlock = document.getElementById('project-list-block');
 
 if (projectsGrid && projectBlock) {
   projectsGrid.innerHTML = '';
 
-  // जर या कर्मचाऱ्याकडे 'projects' नावाचा array असेल तरच हा विभाग दिसेल
+ 
   if (emp.projects && Array.isArray(emp.projects) && emp.projects.length > 0) {
-    projectBlock.style.display = 'block'; // ब्लॉक दाखवा
+    projectBlock.style.display = 'block'; 
 
     emp.projects.forEach(project => {
-      // 🎯 महत्त्वाचे: isProject = true सेट केल्यामुळे यातील डेटा नावाने फिल्टर न होता पूर्ण दिसेल
       project.isProject = true;
 
       const card = document.createElement('div');
@@ -775,16 +772,14 @@ if (projectsGrid && projectBlock) {
       projectsGrid.appendChild(card);
     });
   } else {
-    projectBlock.style.display = 'none'; // प्रोजेक्ट्स नसतील तर ब्लॉक लपवा
+    projectBlock.style.display = 'none'; 
   }
 }
 
-// ==================== 2. ASSIGNED WORKSHEETS GRID (तुमचा जुना अपडेटेड कोड) ====================
 const sheetsGrid = document.getElementById('employee-sheets-grid');
 if (sheetsGrid) {
   sheetsGrid.innerHTML = '';
   emp.sheets.forEach(sheet => {
-    // 🎯 नेहमीच्या वर्कशीट नावानेच फिल्टर होतील (isProject = false)
     sheet.isProject = false;
 
     const card = document.createElement('div');
@@ -831,6 +826,7 @@ if (sheetsGrid) {
   const profView = document.getElementById('profile-view');
   if (profView) profView.classList.add('active');
 }
+
 window.handleGvizResponse = function(response) {
   const scriptTag = document.getElementById('jsonp-gviz-script');
   if (scriptTag) scriptTag.remove();
@@ -871,11 +867,21 @@ window.handleGvizResponse = function(response) {
 
   if (isProjectSheet) {
     filteredRows = rows;
-  }  else {
+  } else {
     const firstName = activeEmployee ? activeEmployee.name.split(' ')[0].toLowerCase() : '';
     const fullName = activeEmployee ? activeEmployee.name.toLowerCase() : '';
 
-    const ignoreHeaders = ['approved from', 'approved by', 'paid to', 'debit to (worker name)', 'required from (person name)','Name of Colleague Work Handover','Required From','Mention Others Employee Name','Approved From',];
+    const ignoreHeaders = [
+      'approved from', 
+      'approved by', 
+      'paid to', 
+      'debit to (worker name)', 
+      'required from (person name)',
+      'name of colleague work handover', 
+      'reporting to',
+      'required from',
+      'mention others employee name'
+    ];
 
     const targetOwnerIndices = [];
     allHeaders.forEach((header, idx) => {
@@ -887,8 +893,23 @@ window.handleGvizResponse = function(response) {
       }
     });
 
-    filteredRows = rows.filter(r => {
+   filteredRows = rows.filter(r => {
       if (!r.c) return false;
+
+      if (currentActiveSheet && currentActiveSheet.name.toLowerCase().includes('leave')) {
+        const empNameIdx = allHeaders.findIndex(h => 
+          h.toLowerCase().includes('employee name') || h.toLowerCase() === 'name'
+        );
+
+        if (empNameIdx !== -1) {
+          const cell = r.c[empNameIdx];
+          if (!cell || cell.v === null || cell.v === undefined) return false;
+          const val = String(cell.v).toLowerCase();
+          return val.includes(fullName) || val.includes(firstName);
+        }
+      }
+
+   
       return targetOwnerIndices.some(idx => {
         const cell = r.c[idx];
         if (!cell || cell.v === null || cell.v === undefined) return false;
@@ -898,7 +919,6 @@ window.handleGvizResponse = function(response) {
     });
   }
 
-  // Checklist sheet असेल तर तारीख फिल्टर करणे
   if (currentActiveSheet && currentActiveSheet.name.toLowerCase().includes('checklist')) {
     const plannedColIdx = allHeaders.findIndex(h => 
       h.toLowerCase().includes('planned') || h.toLowerCase().includes('date')
