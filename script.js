@@ -1028,9 +1028,25 @@ function renderModalTable(headers, rows, indices, container) {
       const val = cell && cell.f ? cell.f : (cell && cell.v !== null && cell.v !== undefined ? cell.v : '');
       const strVal = String(val);
 
-      if (strVal.startsWith('http://') || strVal.startsWith('https://')) {
-        html += `<td><a href="${escapeHtml(strVal)}" target="_blank" style="color:#f38b1c; font-weight:600;"><i class="fa-solid fa-arrow-up-right-from-square"></i> Open Link</a></td>`;
+     
+      const urlRegex = /(https?:\/\/[^\s,]+)/g;
+      const matches = strVal.match(urlRegex);
+
+      if (matches && matches.length > 0) {
+      
+        let linksHtml = matches.map((url, index) => {
+        
+          const cleanUrl = url.replace(/[,.]$/, '');
+          const label = matches.length > 1 ? `Open Link ${index + 1}` : 'Open Link';
+          
+          return `<a href="${escapeHtml(cleanUrl)}" target="_blank" style="color:#f38b1c; font-weight:600; margin-right: 8px; display: inline-block;">
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i> ${label}
+                  </a>`;
+        }).join(' ');
+
+        html += `<td>${linksHtml}</td>`;
       } else {
+     
         html += `<td>${escapeHtml(strVal)}</td>`;
       }
     });
@@ -1040,7 +1056,6 @@ function renderModalTable(headers, rows, indices, container) {
   html += `</tbody></table>`;
   container.innerHTML = html;
 }
-
 function setupTableSearch() {
   const tableSearchInput = document.getElementById('table-search-input');
   if (!tableSearchInput) return;
