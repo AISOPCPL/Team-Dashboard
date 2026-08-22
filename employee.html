@@ -5,11 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Company Dashboard</title>
   <link rel="stylesheet" href="styles.css">
-<link rel="icon" type="image/png" href="favicon/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/png" href="favicon/favicon-96x96.png" sizes="96x96" />
 <link rel="icon" type="image/svg+xml" href="favicon/favicon.svg" />
 <link rel="shortcut icon" href="favicon/favicon.ico" />
 <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
 <link rel="manifest" href="favicon/site.webmanifest" />
+  <!-- FontAwesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
  
@@ -281,12 +282,54 @@
         <button class="close-modal-btn" id="close-modal-x">&times;</button>
       </div>
 
-      <div class="modal-toolbar" id="modal-toolbar" style="display: none;">
+      <div class="modal-toolbar" id="modal-toolbar" style="display: none; gap: 15px;">
         <div class="search-box table-search">
           <i class="fa-solid fa-filter"></i>
           <input type="text" id="table-search-input" placeholder="Filter sheet data...">
         </div>
+
+        <div id="modal-stats-summary"
+     style="
+       display: flex;
+       width: 100%;
+       justify-content: flex-end;
+       align-items: center;
+       gap: 15px;
+       font-weight: 600;
+       font-size: 0.95rem;
+       color: #334155;
+       box-sizing: border-box;
+       margin-left: auto;
+     ">
+
+    <span id="stat-record-count"
+          style="
+            padding: 6px 12px;
+            border-radius: 6px;
+            border: 3px solid #cbd5e1;
+            white-space: nowrap;
+          ">
+        Total Records:
+        <strong id="count-val" style="color: #0284c7;">0</strong>
+    </span>
+
+    <span id="stat-total-amount"
+          style="
+            padding: 6px 12px;
+            border-radius: 6px;
+            border: 3px solid #fde68a;
+            display: none;
+            white-space: nowrap;
+          ">
+        Total Amount: ₹
+        <strong id="amount-val" style="color: #d97706;">0</strong>
+    </span>
+
+</div>
+
       </div>
+
+    
 
       <div class="modal-body">
         <div id="modal-loader" class="loader">
