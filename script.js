@@ -836,7 +836,6 @@ window.handleGvizResponse = function(response) {
   const toolbar = document.getElementById('modal-toolbar');
 
   if (loader) loader.style.display = 'none';
-
   if (!container) return;
 
   if (!response || response.status === 'error') {
@@ -845,9 +844,6 @@ window.handleGvizResponse = function(response) {
       <div style="text-align:center; padding: 30px; color:#ef4444;">
         <i class="fa-solid fa-triangle-exclamation" style="font-size:2rem; margin-bottom:10px;"></i>
         <p><strong>Error Loading Sheet:</strong> ${escapeHtml(errorMsg)}</p>
-        <p style="font-size:0.85rem; color:#64748b; margin-top:8px;">
-          Make sure sheet access is set to: <strong>"Anyone with the link can view"</strong>.
-        </p>
       </div>`;
     return;
   }
@@ -862,7 +858,6 @@ window.handleGvizResponse = function(response) {
   const rows = table.rows || [];
 
   let filteredRows = [];
-
   const isProjectSheet = currentActiveSheet && currentActiveSheet.isProject === true;
 
   if (isProjectSheet) {
@@ -872,35 +867,25 @@ window.handleGvizResponse = function(response) {
     const fullName = activeEmployee ? activeEmployee.name.toLowerCase() : '';
 
     const ignoreHeaders = [
-      'approved from', 
-      'approved by', 
-      'paid to', 
-      'debit to (worker name)', 
-      'required from (person name)',
-      'name of colleague work handover', 
-      'reporting to',
-      'required from',
-      'mention others employee name'
+      'approved from', 'approved by', 'paid to', 'debit to (worker name)', 
+      'required from (person name)', 'name of colleague work handover', 
+      'reporting to', 'required from', 'mention others employee name'
     ];
 
     const targetOwnerIndices = [];
     allHeaders.forEach((header, idx) => {
       const headerLower = header.toLowerCase().trim();
       const shouldIgnore = ignoreHeaders.some(ig => headerLower.includes(ig));
-      
-      if (!shouldIgnore) {
-        targetOwnerIndices.push(idx);
-      }
+      if (!shouldIgnore) targetOwnerIndices.push(idx);
     });
 
-   filteredRows = rows.filter(r => {
+    filteredRows = rows.filter(r => {
       if (!r.c) return false;
 
       if (currentActiveSheet && currentActiveSheet.name.toLowerCase().includes('leave')) {
         const empNameIdx = allHeaders.findIndex(h => 
           h.toLowerCase().includes('employee name') || h.toLowerCase() === 'name'
         );
-
         if (empNameIdx !== -1) {
           const cell = r.c[empNameIdx];
           if (!cell || cell.v === null || cell.v === undefined) return false;
@@ -909,7 +894,6 @@ window.handleGvizResponse = function(response) {
         }
       }
 
-   
       return targetOwnerIndices.some(idx => {
         const cell = r.c[idx];
         if (!cell || cell.v === null || cell.v === undefined) return false;
@@ -919,28 +903,8 @@ window.handleGvizResponse = function(response) {
     });
   }
 
-  if (currentActiveSheet && currentActiveSheet.name.toLowerCase().includes('checklist')) {
-    const plannedColIdx = allHeaders.findIndex(h => 
-      h.toLowerCase().includes('planned') || h.toLowerCase().includes('date')
-    );
-
-    if (plannedColIdx !== -1) {
-      const today = new Date();
-      today.setHours(23, 59, 59, 999);
-
-      filteredRows = filteredRows.filter(r => {
-        const dateCell = r.c ? r.c[plannedColIdx] : null;
-        const taskDate = parseGvizDate(dateCell);
-
-        if (taskDate && taskDate > today) {
-          return false;
-        }
-        return true;
-      });
-    }
-  }
-
   if (filteredRows.length === 0) {
+    if (toolbar) toolbar.style.display = 'none';
     container.innerHTML = `
       <div style="text-align:center; padding: 35px; color:#64748b;">
         <i class="fa-solid fa-folder-open" style="font-size: 2.5rem; margin-bottom: 12px; color: #cbd5e1;"></i>
@@ -949,8 +913,47 @@ window.handleGvizResponse = function(response) {
     return;
   }
 
-  if (toolbar) toolbar.style.display = 'block';
+  // ==================== STATS CALCULATION LOGIC ====================
+  if (toolbar) toolbar.style.display = 'flex';
 
+  const countValElem = document.getElementById('count-val');
+  const amountValElem = document.getElementById('amount-val');
+  const totalAmountBox = document.getElementById('stat-total-amount');
+
+  if (countValElem) {
+    countValElem.innerText = filteredRows.length;
+  }
+
+  // Check if current sheet is Site Expenses or Office Expenses
+  const sheetNameLower = currentActiveSheet ? currentActiveSheet.name.toLowerCase() : '';
+  const isExpenseSheet = sheetNameLower.includes('site expenses') || sheetNameLower.includes('office expenses');
+
+  if (isExpenseSheet) {
+    // Find 'Amount' column index
+    const amountColIdx = allHeaders.findIndex(h => h.toLowerCase().trim() === 'amount');
+
+    if (amountColIdx !== -1) {
+      const totalAmount = filteredRows.reduce((sum, r) => {
+        const cell = r.c ? r.c[amountColIdx] : null;
+        if (!cell || cell.v === null || cell.v === undefined) return sum;
+        
+        // Clean numeric value (remove currency symbols or commas if text)
+        const numVal = parseFloat(String(cell.v).replace(/[^0-9.-]+/g, ''));
+        return sum + (isNaN(numVal) ? 0 : numVal);
+      }, 0);
+
+      if (amountValElem) {
+        amountValElem.innerText = totalAmount.toLocaleString('en-IN', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+      }
+      if (totalAmountBox) totalAmountBox.style.display = 'inline-block';
+    } else if (totalAmountBox) {
+      totalAmountBox.style.display = 'none';
+    }
+  } else if (totalAmountBox) {
+    totalAmountBox.style.display = 'none';
+  }
+
+  // ==================== RENDER TABLE ====================
   const selectedColsConfig = currentActiveSheet?.selectedColumns || [];
   let targetIndices = [];
   let displayHeaders = [];
@@ -1056,6 +1059,7 @@ function renderModalTable(headers, rows, indices, container) {
   html += `</tbody></table>`;
   container.innerHTML = html;
 }
+
 function setupTableSearch() {
   const tableSearchInput = document.getElementById('table-search-input');
   if (!tableSearchInput) return;
@@ -1066,10 +1070,34 @@ function setupTableSearch() {
     if (!table) return;
 
     const rows = table.querySelectorAll('tbody tr');
+    let visibleCount = 0;
+    let visibleAmount = 0;
+
+    const headers = Array.from(table.querySelectorAll('thead th')).map(th => th.textContent.toLowerCase().trim());
+    const amountIdx = headers.indexOf('amount');
+
     rows.forEach(row => {
       const text = row.textContent.toLowerCase();
-      row.style.display = text.includes(filter) ? '' : 'none';
+      const isVisible = text.includes(filter);
+      row.style.display = isVisible ? '' : 'none';
+
+      if (isVisible) {
+        visibleCount++;
+        if (amountIdx !== -1) {
+          const cellText = row.children[amountIdx]?.textContent || '';
+          const num = parseFloat(cellText.replace(/[^0-9.-]+/g, ''));
+          if (!isNaN(num)) visibleAmount += num;
+        }
+      }
     });
+
+    const countValElem = document.getElementById('count-val');
+    const amountValElem = document.getElementById('amount-val');
+
+    if (countValElem) countValElem.innerText = visibleCount;
+    if (amountValElem && amountIdx !== -1) {
+      amountValElem.innerText = visibleAmount.toLocaleString('en-IN', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+    }
   });
 }
 
@@ -1244,6 +1272,22 @@ function parseGvizDate(cell) {
         renderEmployees();
       } else if (typeof initEmployeePage === 'function') {
         initEmployeePage();
+      }
+    });
+
+    function logout() {
+      sessionStorage.removeItem('isLoggedIn');
+      window.location.href = 'login.html';
+    }
+
+ 
+
+    
+    document.addEventListener('DOMContentLoaded', () => {
+      const dateElem = document.getElementById('current-date-display');
+      if (dateElem) {
+        const options = { weekday: 'short', year: 'numeric', month: 'short', day: 'numeric' };
+        dateElem.innerText = new Date().toLocaleDateString('en-US', options);
       }
     });
 
