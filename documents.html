@@ -68,6 +68,18 @@
       align-items: center;
       gap: 5px;
     }
+
+    .company-social-link {
+      color: #f97316;
+      font-size: 1.3rem;
+      transition: transform 0.2s ease, opacity 0.2s ease;
+      text-decoration: none;
+    }
+
+    .company-social-link:hover {
+      transform: translateY(-2px);
+      opacity: 0.8;
+    }
   </style>
 </head>
 <body>
@@ -100,7 +112,6 @@
                 <i class="fa-solid fa-gears"></i> <span>Systems</span>
               </a>
             </li>
-           
             <li>
               <a href="documents.html" class="nav-btn active">
                 <i class="fa-solid fa-file-contract"></i> <span>Company Information</span>
@@ -120,37 +131,61 @@
     <main class="main-content">
       <section id="documents-view" class="content-view active">
         <header class="page-header flex-header">
-  <div>
-    <h1>Company Information</h1>
-    <div class="header-divider"></div>
-    <div style="margin-top: 15px; color: #374151;">
-      <h5 style="font-weight: 600; margin-bottom: 4px; color: #1f2937;">
-        REGISTERED OFFICE:
-      </h5>
-      <p style="margin: 0 0 12px 0; font-size: 0.9rem; font-weight: normal; color: #4b5563;">
-        B - 705, Freshia, A. G. Road, Near Kirloskar Brothers Ltd.  
-Baner Annexe, Pune, Maharashtra - 411021
-      </p>
+          <div>
+            <h1>Company Information</h1>
+            <div class="header-divider"></div>
+            <div style="margin-top: 15px; color: #374151;">
+              <h5 style="font-weight: 600; margin-bottom: 4px; color: #1f2937;">
+                REGISTERED OFFICE:
+              </h5>
+              <p style="margin: 0 0 12px 0; font-size: 0.9rem; font-weight: normal; color: #4b5563;">
+                B - 705, Freshia, A. G. Road, Near Kirloskar Brothers Ltd.  
+                Baner Annexe, Pune, Maharashtra - 411021
+              </p>
 
-      <h5 style="font-weight: 600; margin-bottom: 4px; color: #1f2937;">
-        CORPORATE OFFICE:
-      </h5>
-      <p style="margin: 0 0 12px 0; font-size: 0.9rem; font-weight: normal; color: #4b5563;">
-403, Treza - Business Hub, Near Mohan Nagar, Off - Pune Mumbai Highway,  
-Bitwise Lane, Baner, Pune, Maharashtra - 411045 
-      </p>
+              <h5 style="font-weight: 600; margin-bottom: 4px; color: #1f2937;">
+                CORPORATE OFFICE:
+              </h5>
+              <p style="margin: 0 0 12px 0; font-size: 0.9rem; font-weight: normal; color: #4b5563;">
+                403, Treza - Business Hub, Near Mohan Nagar, Off - Pune Mumbai Highway,  
+                Bitwise Lane, Baner, Pune, Maharashtra - 411045 
+              </p>
 
-      <h5 style="font-weight: 600; margin: 0; color: #1f2937;">
-        GST No.: <span style="font-weight: normal; color: #4b5563;">27ABCCA4759N1Z5</span>
-      </h5>
-    </div>
-  </div>
-</header>
-        
+              <h5 style="font-weight: 600; margin: 0 0 15px 0; color: #1f2937;">
+                GST No.: <span style="font-weight: normal; color: #4b5563;">27ABCCA4759N1Z5</span>
+              </h5>
+
+              <!-- Social Links inside Company Info -->
+              <div style="margin-top: 15px; padding-top: 15px; border-top: 1px solid #e5e7eb; display: flex; gap: 15px; align-items: center; flex-wrap: wrap;">
+                <span style="font-weight: 600; font-size: 0.9rem; color: #1f2937;">Connect / Links:</span>
+                
+                <!-- Website Link -->
+                <a href="https://www.avaniyshinterior.com/" target="_blank" rel="noopener noreferrer" class="company-social-link" title="Website">
+                  <i class="fa-solid fa-globe"></i>
+                </a>
+                
+                <!-- Instagram Link -->
+                <a href="https://www.instagram.com/avaniyshinterior?igsh=bmRmMm9wbzVwaW41" target="_blank" rel="noopener noreferrer" class="company-social-link" title="Instagram">
+                  <i class="fa-brands fa-instagram"></i>
+                </a>
+                
+                <!-- Facebook Link -->
+                <a href="https://www.facebook.com/AvaniyshInteriorSolutions#" target="_blank" rel="noopener noreferrer" class="company-social-link" title="Facebook">
+                  <i class="fa-brands fa-facebook"></i>
+                </a>
+                
+                <!-- LinkedIn Link --> 
+               <a href="https://www.linkedin.com/company/team-ais/?originalSubdomain=in" target="_blank" rel="noopener noreferrer" class="company-social-link" title="LinkedIn">
+                  <i class="fa-brands fa-linkedin"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </header>
 
         <div class="doc-grid">
-          
-            <a href="https://drive.google.com/file/d/158QeEfge1VPEpNlGc3BtA4Ik0ZC6B6Nu/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="doc-card">            <div>
+          <a href="https://drive.google.com/file/d/158QeEfge1VPEpNlGc3BtA4Ik0ZC6B6Nu/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="doc-card">
+            <div>
               <i class="fa-solid fa-shield-halved doc-icon"></i>
               <div class="doc-title">WC Policy</div>
             </div>
@@ -169,25 +204,11 @@ Bitwise Lane, Baner, Pune, Maharashtra - 411045
               <span>View Document</span> <i class="fa-solid fa-arrow-up-right-from-square"></i>
             </div>
           </a>
-
-          <!-- Document Card 3: Example Safety Manual -->
-          <!-- <a href="YOUR_SAFETY_MANUAL_LINK_HERE" target="_blank" class="doc-card">
-            <div>
-              <i class="fa-solid fa-hard-hat doc-icon"></i>
-              <div class="doc-title">Site Safety Manual</div>
-              <div class="doc-desc">Standard safety protocols for active site projects.</div>
-            </div>
-            <div class="doc-action">
-              <span>View Document</span> <i class="fa-solid fa-arrow-up-right-from-square"></i>
-            </div>
-          </a> -->
-
         </div>
       </section>
     </main>
   </div>
 
   <script src="script.js"></script>
-  
 </body>
 </html>
