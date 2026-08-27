@@ -1116,6 +1116,27 @@ function setupModalEvents() {
   window.onclick = (event) => {
     if (event.target === modal) closeModal();
   };
+
+  document.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape' || event.key === 'Esc') {
+
+    const modal = document.getElementById('sheet-modal');
+    if (modal && modal.classList.contains('show')) {
+      modal.classList.remove('show');
+
+    
+      const scriptTag = document.getElementById('jsonp-gviz-script');
+      if (scriptTag) scriptTag.remove();
+    }
+
+   
+    const activePopups = document.querySelectorAll('.image-popup.show, .popup.show, .modal.show');
+    activePopups.forEach(popup => {
+      popup.classList.remove('show');
+    });
+  }
+});
+  
 }
 
 const SHEET_CONFIG = {
