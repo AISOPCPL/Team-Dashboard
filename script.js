@@ -365,6 +365,32 @@ const employeesData = [
         gid: '286319358', 
         selectedColumns: ['Sr.No.', 'PO No.','Vendor Name', 'Project Name','Remarks','Created By'] 
       },
+      { 
+        name: 'Modulariti Proforma Invoice', 
+        docId: '1u8sqdtEeklS9AVx91oZVXMulcY73IGwQ4N6CHokeBFQ', 
+        gid: '1541680899', 
+        selectedColumns: ['Sr.No.', 'Proforma Invoice No.', 'Project Name'] 
+      },
+       { 
+        name: 'Modulariti Tax Invoice', 
+        docId: '1u8sqdtEeklS9AVx91oZVXMulcY73IGwQ4N6CHokeBFQ', 
+        gid: '842646558', 
+        selectedColumns: ['Sr.No.', 'Tax Invoice No.', 'Project Name'] 
+      },
+       { 
+        name: 'Modulariti PO To Vendor', 
+        docId: '1u8sqdtEeklS9AVx91oZVXMulcY73IGwQ4N6CHokeBFQ', 
+        gid: '1879062090', 
+        selectedColumns: ['Sr.No.', 'PO No.','Vendor Name', 'Project Name'] 
+      },
+
+       { 
+        name: 'Modulariti Delivery Challan', 
+        docId: '1u8sqdtEeklS9AVx91oZVXMulcY73IGwQ4N6CHokeBFQ', 
+        gid: '1982685191', 
+        selectedColumns: ['Sr.No.', 'Challan No.', 'Project Name'] 
+      },
+
        { 
         name: 'Insurance Checklist', 
         docId: '1g6ZEWY32KmJlRhoBoxdEolQP_SPjwDbLlWCvmy7vPuk', 
