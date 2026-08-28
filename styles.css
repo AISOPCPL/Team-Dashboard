@@ -853,3 +853,38 @@ body {
 .btn-open-system:hover {
   background-color: #d9740b; 
 }
+
+
+
+
+/* Social Links Base Style */
+.company-social-link {
+  font-size: 1.4rem;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.company-social-link:hover {
+  transform: translateY(-3px);
+  opacity: 0.85;
+}
+
+/* Real Brand Colors */
+.company-social-link.website {
+  color: #2563eb; /* Globe / Website Blue */
+}
+
+.company-social-link.instagram {
+  color: #e4405f; /* Instagram Pink/Red */
+}
+
+.company-social-link.facebook {
+  color: #1877f2; /* Facebook Blue */
+}
+
+.company-social-link.linkedin {
+  color: #0a66c2; /* LinkedIn Blue */
+}
