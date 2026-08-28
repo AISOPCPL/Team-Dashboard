@@ -1343,3 +1343,5 @@ function parseGvizDate(cell) {
       sessionStorage.removeItem('isLoggedIn');
       window.location.href = 'login.html';
     }
+
+ document.getElementById("year").textContent = new Date().getFullYear();
