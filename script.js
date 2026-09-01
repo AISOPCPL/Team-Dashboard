@@ -294,6 +294,10 @@ const employeesData = [
          {
       title: 'Checklist Dashboard',
       url: 'https://datastudio.google.com/reporting/b30bad2f-4552-4c9f-8d9d-b8afd5056244/page/gcG5F'
+         },
+          {
+      title: 'Work Schedule Dashboard',
+      url: 'https://script.google.com/a/macros/avaniyshinterior.com/s/AKfycbx7QmPt_kkpkLJ4eLb8gWYQhwc-0Y8LtTncdTvkZ37tvRs55m7NiLl97L0-Je3DAnREuA/exec'
          }
   ],
     sheets: [
@@ -319,6 +323,11 @@ const employeesData = [
          {
       title: 'Checklist Dashboard',
       url: 'https://datastudio.google.com/reporting/b30bad2f-4552-4c9f-8d9d-b8afd5056244/page/gcG5F'
+         },
+
+        {
+      title: 'Work Schedule Dashboard',
+      url: 'https://script.google.com/a/macros/avaniyshinterior.com/s/AKfycbx7QmPt_kkpkLJ4eLb8gWYQhwc-0Y8LtTncdTvkZ37tvRs55m7NiLl97L0-Je3DAnREuA/exec'
          }
   ],
     sheets: [
