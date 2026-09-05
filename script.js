@@ -351,8 +351,19 @@ const employeesData = [
     
       dashboards: [
          {
-      title: 'Checklist Dashboard',
+      title: 'AISPL Checklist Dashboard',
       url: 'https://datastudio.google.com/reporting/b30bad2f-4552-4c9f-8d9d-b8afd5056244/page/gcG5F'
+         },
+
+         {
+      title: 'Accounts Dashboard',
+      url: 'https://script.google.com/a/macros/avaniyshinterior.com/s/AKfycbylm14CrZ4cPQSO1AzCz0hmGTiM5aEWY_6KEUmngIJTNez-ZtCbBBi6CZ_K6-Y8fE2TnA/exec'
+         },
+        ,
+
+         {
+      title: 'Modulariti Checklist Dashboard',
+      url: 'https://datastudio.google.com/reporting/70796c57-2040-4126-82bd-41cc0bca2ccd'
          }
   ],
     projects: [
