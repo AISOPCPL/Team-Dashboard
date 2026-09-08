@@ -297,7 +297,7 @@ const employeesData = [
          },
           {
       title: 'Work Schedule Dashboard',
-      url: 'https://script.google.com/a/macros/avaniyshinterior.com/s/AKfycbx7QmPt_kkpkLJ4eLb8gWYQhwc-0Y8LtTncdTvkZ37tvRs55m7NiLl97L0-Je3DAnREuA/exec'
+      url: 'https://script.google.com/macros/s/AKfycbwVo7QspB47nnosKR9GW0UWxvvsK1NhuRCqUxXaVufFNNGgVY8d8RJXA-Y0VSNFoyP4pA/exec'
          }
   ],
     sheets: [
@@ -327,7 +327,7 @@ const employeesData = [
 
         {
       title: 'Work Schedule Dashboard',
-      url: 'https://script.google.com/a/macros/avaniyshinterior.com/s/AKfycbx7QmPt_kkpkLJ4eLb8gWYQhwc-0Y8LtTncdTvkZ37tvRs55m7NiLl97L0-Je3DAnREuA/exec'
+      url: 'https://script.google.com/macros/s/AKfycbwVo7QspB47nnosKR9GW0UWxvvsK1NhuRCqUxXaVufFNNGgVY8d8RJXA-Y0VSNFoyP4pA/exec'
          }
   ],
     sheets: [
