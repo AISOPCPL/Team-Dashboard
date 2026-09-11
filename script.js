@@ -46,6 +46,32 @@ const employeesData = [
         gid: '286319358', 
         selectedColumns: ['Sr.No.', 'PO No.','Vendor Name', 'Project Name','Remarks','Created By','Documents'] 
       },
+    { 
+        name: 'Modulariti Proforma Invoice', 
+        docId: '1u8sqdtEeklS9AVx91oZVXMulcY73IGwQ4N6CHokeBFQ', 
+        gid: '1541680899', 
+        selectedColumns: ['Sr.No.', 'Proforma Invoice No.', 'Project Name','Documents'] 
+      },
+       { 
+        name: 'Modulariti Tax Invoice', 
+        docId: '1u8sqdtEeklS9AVx91oZVXMulcY73IGwQ4N6CHokeBFQ', 
+        gid: '842646558', 
+        selectedColumns: ['Sr.No.', 'Tax Invoice No.', 'Project Name','Documents'] 
+      },
+       { 
+        name: 'Modulariti PO To Vendor', 
+        docId: '1u8sqdtEeklS9AVx91oZVXMulcY73IGwQ4N6CHokeBFQ', 
+        gid: '1879062090', 
+        selectedColumns: ['Sr.No.', 'PO No.','Vendor Name', 'Project Name','Documents'] 
+      },
+
+       { 
+        name: 'Modulariti Delivery Challan', 
+        docId: '1u8sqdtEeklS9AVx91oZVXMulcY73IGwQ4N6CHokeBFQ', 
+        gid: '1982685191', 
+        selectedColumns: ['Sr.No.', 'Challan No.', 'Project Name','Documents'] 
+      },
+
     ],
     sheets: [
       
@@ -98,6 +124,32 @@ const employeesData = [
         gid: '286319358', 
         selectedColumns: ['Sr.No.', 'PO No.','Vendor Name', 'Project Name','Remarks','Created By','Documents'] 
       },
+      { 
+        name: 'Modulariti Proforma Invoice', 
+        docId: '1u8sqdtEeklS9AVx91oZVXMulcY73IGwQ4N6CHokeBFQ', 
+        gid: '1541680899', 
+        selectedColumns: ['Sr.No.', 'Proforma Invoice No.', 'Project Name','Documents'] 
+      },
+       { 
+        name: 'Modulariti Tax Invoice', 
+        docId: '1u8sqdtEeklS9AVx91oZVXMulcY73IGwQ4N6CHokeBFQ', 
+        gid: '842646558', 
+        selectedColumns: ['Sr.No.', 'Tax Invoice No.', 'Project Name','Documents'] 
+      },
+       { 
+        name: 'Modulariti PO To Vendor', 
+        docId: '1u8sqdtEeklS9AVx91oZVXMulcY73IGwQ4N6CHokeBFQ', 
+        gid: '1879062090', 
+        selectedColumns: ['Sr.No.', 'PO No.','Vendor Name', 'Project Name','Documents'] 
+      },
+
+       { 
+        name: 'Modulariti Delivery Challan', 
+        docId: '1u8sqdtEeklS9AVx91oZVXMulcY73IGwQ4N6CHokeBFQ', 
+        gid: '1982685191', 
+        selectedColumns: ['Sr.No.', 'Challan No.', 'Project Name','Documents'] 
+      },
+
     ],
  
     sheets: [
@@ -395,26 +447,26 @@ const employeesData = [
         name: 'Modulariti Proforma Invoice', 
         docId: '1u8sqdtEeklS9AVx91oZVXMulcY73IGwQ4N6CHokeBFQ', 
         gid: '1541680899', 
-        selectedColumns: ['Sr.No.', 'Proforma Invoice No.', 'Project Name'] 
+        selectedColumns: ['Sr.No.', 'Proforma Invoice No.', 'Project Name','Documents'] 
       },
        { 
         name: 'Modulariti Tax Invoice', 
         docId: '1u8sqdtEeklS9AVx91oZVXMulcY73IGwQ4N6CHokeBFQ', 
         gid: '842646558', 
-        selectedColumns: ['Sr.No.', 'Tax Invoice No.', 'Project Name'] 
+        selectedColumns: ['Sr.No.', 'Tax Invoice No.', 'Project Name','Documents'] 
       },
        { 
         name: 'Modulariti PO To Vendor', 
         docId: '1u8sqdtEeklS9AVx91oZVXMulcY73IGwQ4N6CHokeBFQ', 
         gid: '1879062090', 
-        selectedColumns: ['Sr.No.', 'PO No.','Vendor Name', 'Project Name'] 
+        selectedColumns: ['Sr.No.', 'PO No.','Vendor Name', 'Project Name','Documents'] 
       },
 
        { 
         name: 'Modulariti Delivery Challan', 
         docId: '1u8sqdtEeklS9AVx91oZVXMulcY73IGwQ4N6CHokeBFQ', 
         gid: '1982685191', 
-        selectedColumns: ['Sr.No.', 'Challan No.', 'Project Name'] 
+        selectedColumns: ['Sr.No.', 'Challan No.', 'Project Name','Documents'] 
       },
 
      
@@ -531,6 +583,32 @@ const employeesData = [
         gid: '286319358', 
         selectedColumns: ['Sr.No.', 'PO No.','Vendor Name', 'Project Name','Remarks','Created By','Documents'] 
       },
+      { 
+        name: 'Modulariti Proforma Invoice', 
+        docId: '1u8sqdtEeklS9AVx91oZVXMulcY73IGwQ4N6CHokeBFQ', 
+        gid: '1541680899', 
+        selectedColumns: ['Sr.No.', 'Proforma Invoice No.', 'Project Name','Documents'] 
+      },
+       { 
+        name: 'Modulariti Tax Invoice', 
+        docId: '1u8sqdtEeklS9AVx91oZVXMulcY73IGwQ4N6CHokeBFQ', 
+        gid: '842646558', 
+        selectedColumns: ['Sr.No.', 'Tax Invoice No.', 'Project Name','Documents'] 
+      },
+       { 
+        name: 'Modulariti PO To Vendor', 
+        docId: '1u8sqdtEeklS9AVx91oZVXMulcY73IGwQ4N6CHokeBFQ', 
+        gid: '1879062090', 
+        selectedColumns: ['Sr.No.', 'PO No.','Vendor Name', 'Project Name','Documents'] 
+      },
+
+       { 
+        name: 'Modulariti Delivery Challan', 
+        docId: '1u8sqdtEeklS9AVx91oZVXMulcY73IGwQ4N6CHokeBFQ', 
+        gid: '1982685191', 
+        selectedColumns: ['Sr.No.', 'Challan No.', 'Project Name','Documents'] 
+      },
+
     ],
  sheets: [
       { name: 'Office Expenses',formUrl:'https://docs.google.com/forms/d/e/1FAIpQLSeFG1ZBY4mstlGPDpcNhUb9vi2WiJGBr3aG2cuTtYqPNXf4Nw/viewform?usp=header', docId: '1N2DF6vzSoJcIxwL2makablsGtDlMB-rxhcWT3_VLHBY', gid: '440445714', selectedColumns: ['Date', 'Paid to', 'Amount', 'Reason', 'Categories','URD Purchase'] },
