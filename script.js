@@ -406,13 +406,10 @@ const employeesData = [
       title: 'AISPL Checklist Dashboard',
       url: 'https://datastudio.google.com/reporting/b30bad2f-4552-4c9f-8d9d-b8afd5056244/page/gcG5F'
          },
-
          {
       title: 'Accounts Dashboard',
       url: 'https://script.google.com/a/macros/avaniyshinterior.com/s/AKfycbylm14CrZ4cPQSO1AzCz0hmGTiM5aEWY_6KEUmngIJTNez-ZtCbBBi6CZ_K6-Y8fE2TnA/exec'
          },
-        ,
-
          {
       title: 'Modulariti Checklist Dashboard',
       url: 'https://datastudio.google.com/reporting/70796c57-2040-4126-82bd-41cc0bca2ccd'
@@ -518,9 +515,7 @@ const employeesData = [
          {
       title: 'Modulariti Checklist Dashboard',
       url: 'https://datastudio.google.com/u/0/reporting/70796c57-2040-4126-82bd-41cc0bca2ccd/page/i877F'
-         }
-        
-        
+         }    
   ],
     sheets: [
       { name: 'Daily Report',formUrl:'https://forms.gle/jL79VhahgCkduAYt6', docId: '1mrjfYpGMSMY-Em7Y4O4m9JZgfED0gdvbdPBD9qscgcM', gid: '1518539535', selectedColumns: ['Date', 'In-Time', 'Out-time'] },
