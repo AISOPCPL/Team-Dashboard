@@ -518,7 +518,7 @@ const employeesData = [
          }    
   ],
     sheets: [
-      { name: 'Daily Report',formUrl:'https://forms.gle/jL79VhahgCkduAYt6', docId: '1mrjfYpGMSMY-Em7Y4O4m9JZgfED0gdvbdPBD9qscgcM', gid: '1518539535', selectedColumns: ['Date', 'In-Time', 'Out-time'] },
+      { name: 'Daily Report',formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScRyy4LtikZcJkmYYeaypXJJkR_pbR1YSz0Iso0N6f-L_hfDw/viewform', docId: '1mrjfYpGMSMY-Em7Y4O4m9JZgfED0gdvbdPBD9qscgcM', gid: '827729352', selectedColumns: ['Date', 'In-Time', 'Out-time'] },
       { name: 'Site Expenses', formUrl:'https://forms.gle/9uuXgx6oF3okLmxb7',docId: '13Vo3YIrbPT06a4ClN-BS-eO1DOCSNzo5dnn-XfO0Tds', gid: '1142344274', selectedColumns: ['Date', 'Project Name', 'Paid to', 'Amount', 'Reason','URD Purchase'] },
       { name: 'Checklist', docId: '1m_P5_eP9FvD9eaYvanmLlV833cscTvk2xJk_c39cbZw', gid: '2092959791', selectedColumns: ['Task', 'Doer', 'Planned', 'Actual', 'Status'] },
       { name: 'Delegation Sheet Team', docId: '1680NhH8rKFTKeY3HSZGV_izgEi4QieHiirbcbRi7hTA', gid: '1184708924', selectedColumns: ['Name', 'Task', 'First Date', 'Revision 1','Revision 2', 'Total Revision','Status','Actual Completion Date'] },
@@ -549,7 +549,7 @@ const employeesData = [
          }
   ],
     sheets: [
-      { name: 'Daily Report',formUrl:'https://forms.gle/jL79VhahgCkduAYt6', docId: '1mrjfYpGMSMY-Em7Y4O4m9JZgfED0gdvbdPBD9qscgcM', gid: '1518539535', selectedColumns: ['Date', 'In-Time', 'Out-time'] },
+      { name: 'Daily Report',formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScRyy4LtikZcJkmYYeaypXJJkR_pbR1YSz0Iso0N6f-L_hfDw/viewform', docId: '1mrjfYpGMSMY-Em7Y4O4m9JZgfED0gdvbdPBD9qscgcM', gid: '827729352', selectedColumns: ['Date', 'In-Time', 'Out-time'] },
       { name: 'Site Expenses', formUrl:'https://forms.gle/9uuXgx6oF3okLmxb7',docId: '13Vo3YIrbPT06a4ClN-BS-eO1DOCSNzo5dnn-XfO0Tds', gid: '1142344274', selectedColumns: ['Date', 'Project Name', 'Paid to', 'Amount', 'Reason','URD Purchase'] },
       { name: 'Checklist', docId: '1m_P5_eP9FvD9eaYvanmLlV833cscTvk2xJk_c39cbZw', gid: '2092959791', selectedColumns: ['Task', 'Doer', 'Planned', 'Actual', 'Status'] },
       { name: 'Delegation Sheet Team', docId: '1680NhH8rKFTKeY3HSZGV_izgEi4QieHiirbcbRi7hTA', gid: '1184708924', selectedColumns: ['Name', 'Task', 'First Date', 'Revision 1','Revision 2', 'Total Revision','Status','Actual Completion Date'] },
