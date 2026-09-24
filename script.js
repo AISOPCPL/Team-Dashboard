@@ -20,7 +20,10 @@ const employeesData = [
       title: 'Airtech Schedular',
       url: 'https://script.google.com/a/macros/avaniyshinterior.com/s/AKfycbxBqPiof-i02R7xg0VxjjLcl99fBL6MQZCfG0rUufBnBhAEYtJ2QIUKvrIkzFQwOIo/exec?page=fitout'
     },
-
+      {
+      title: 'Designer Dashboard',
+      url: 'https://script.google.com/macros/s/AKfycbwVo7QspB47nnosKR9GW0UWxvvsK1NhuRCqUxXaVufFNNGgVY8d8RJXA-Y0VSNFoyP4pA/exec'
+    },
     {
       title: 'Checklist Dashboard',
       url: 'https://datastudio.google.com/reporting/b30bad2f-4552-4c9f-8d9d-b8afd5056244/page/gcG5F'
@@ -348,9 +351,9 @@ const employeesData = [
       url: 'https://datastudio.google.com/reporting/b30bad2f-4552-4c9f-8d9d-b8afd5056244/page/gcG5F'
          },
           {
-      title: 'Work Schedule Dashboard',
+      title: 'Designer Dashboard',
       url: 'https://script.google.com/macros/s/AKfycbwVo7QspB47nnosKR9GW0UWxvvsK1NhuRCqUxXaVufFNNGgVY8d8RJXA-Y0VSNFoyP4pA/exec'
-         }
+    }
   ],
     sheets: [
       { name: 'Daily Report',formUrl:'https://docs.google.com/forms/d/e/1FAIpQLSf7y6FpZ4Ff4Ihi7Jq6SyqMXHEnvXkaWSQ24v6RPQCMcuqcGw/viewform', docId: '1mrjfYpGMSMY-Em7Y4O4m9JZgfED0gdvbdPBD9qscgcM', gid: '1518539535', selectedColumns: ['Date', 'Project', 'Location', 'In-Time', 'Out-time'] },
@@ -376,11 +379,10 @@ const employeesData = [
       title: 'Checklist Dashboard',
       url: 'https://datastudio.google.com/reporting/b30bad2f-4552-4c9f-8d9d-b8afd5056244/page/gcG5F'
          },
-
         {
-      title: 'Work Schedule Dashboard',
+      title: 'Designer Dashboard',
       url: 'https://script.google.com/macros/s/AKfycbwVo7QspB47nnosKR9GW0UWxvvsK1NhuRCqUxXaVufFNNGgVY8d8RJXA-Y0VSNFoyP4pA/exec'
-         }
+    }
   ],
     sheets: [
        { name: 'Daily Report',formUrl:'https://docs.google.com/forms/d/e/1FAIpQLSf7y6FpZ4Ff4Ihi7Jq6SyqMXHEnvXkaWSQ24v6RPQCMcuqcGw/viewform', docId: '1mrjfYpGMSMY-Em7Y4O4m9JZgfED0gdvbdPBD9qscgcM', gid: '1518539535', selectedColumns: ['Date', 'Project', 'Location', 'In-Time', 'Out-time'] },
