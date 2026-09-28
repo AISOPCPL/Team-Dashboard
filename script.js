@@ -796,17 +796,23 @@ function setupEmployeeSearch() {
   });
 }
 
+
 function openEmployeeProfile(emp) {
   activeEmployee = emp;
 
+  // १. Session मधून Login केलेल्या युजरची महिती घ्या
+  const loggedInEmpId = sessionStorage.getItem('loggedInEmpId');
+  const loggedInUserRole = sessionStorage.getItem('loggedInUserRole');
+
+  // २. चेक करा की युजर Admin आहे किंवा स्वतःचेच प्रोफाइल उघडत आहे का?
+  const isOwnerOrAdmin = (loggedInUserRole === 'admin') || (loggedInEmpId === emp.id);
+
   const nameElem = document.getElementById('profile-name');
   const desigElem = document.getElementById('profile-designation');
- 
   const emailElem = document.getElementById('profile-email');
   
   if (nameElem) nameElem.innerText = emp.name;
   if (desigElem) desigElem.innerText = emp.designation;
-
   if (emailElem) emailElem.innerText = emp.email;
   
   const imgElem = document.getElementById('profile-img');
@@ -815,91 +821,134 @@ function openEmployeeProfile(emp) {
     imgElem.onerror = () => { imgElem.src = 'https://via.placeholder.com/120?text=User'; };
   }
 
+  // ==================== DASHBOARDS SECTION ====================
+  const dashContainer = document.getElementById('profile-dashboard-container');
+  if (dashContainer) {
+    dashContainer.innerHTML = ''; 
 
-  
- 
-const dashContainer = document.getElementById('profile-dashboard-container');
+    if (emp.dashboards && emp.dashboards.length > 0) {
+      let html = '<div class="dashboards-grid" style="display: flex; gap: 15px; flex-wrap: wrap;">';
+      
+      emp.dashboards.forEach(dash => {
+        html += `
+          <div class="system-card" style="flex: 1; min-width: 280px; margin-bottom: 15px;">
+            <div class="system-card-header">
+              <div class="system-card-icon" style="background-color: #fff7ed; color: #ea580c;">
+                <i class="fa-solid fa-chart-line"></i>
+              </div>
+              <div class="system-card-info">
+                <h3>${escapeHtml(dash.title || 'Dashboard')}</h3>
+              </div>
+            </div>
+            <a href="${escapeHtml(dash.url)}" target="_blank" class="btn-open-system" style="background-color: #e37b0d;">
+              <span>Open Dashboard</span> <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+          </div>
+        `;
+      });
 
-if (dashContainer) {
-  dashContainer.innerHTML = ''; 
+      html += '</div>';
+      dashContainer.innerHTML = html;
+      dashContainer.style.display = 'block';
 
-  if (emp.dashboards && emp.dashboards.length > 0) {
-    let html = '<div class="dashboards-grid" style="display: flex; gap: 15px; flex-wrap: wrap;">';
-    
-    emp.dashboards.forEach(dash => {
-      html += `
-        <div class="system-card" style="flex: 1; min-width: 280px; margin-bottom: 15px;">
+    } else if (emp.dashboard) {
+      dashContainer.innerHTML = `
+        <div class="system-card">
           <div class="system-card-header">
             <div class="system-card-icon" style="background-color: #fff7ed; color: #ea580c;">
               <i class="fa-solid fa-chart-line"></i>
             </div>
             <div class="system-card-info">
-              <h3>${escapeHtml(dash.title || 'Dashboard')}</h3>
-              
+              <h3>${escapeHtml(emp.dashboardTitle || 'Dashboard')}</h3>
+              <p>Project Management System</p>
             </div>
           </div>
-       
-          <a href="${escapeHtml(dash.url)}" target="_blank" class="btn-open-system" style="background-color: #e37b0d;">
+          <a href="${escapeHtml(emp.dashboard)}" target="_blank" class="btn-open-system" style="background-color: #e37b0d;">
             <span>Open Dashboard</span> <i class="fa-solid fa-arrow-up-right-from-square"></i>
           </a>
         </div>
       `;
-    });
-
-    html += '</div>';
-    dashContainer.innerHTML = html;
-    dashContainer.style.display = 'block';
-
-  } else if (emp.dashboard) {
-    dashContainer.innerHTML = `
-      <div class="system-card">
-        <div class="system-card-header">
-          <div class="system-card-icon" style="background-color: #fff7ed; color: #ea580c;">
-            <i class="fa-solid fa-chart-line"></i>
-          </div>
-          <div class="system-card-info">
-            <h3>${escapeHtml(emp.dashboardTitle || 'Dashboard')}</h3>
-            <p>Project Management System</p>
-          </div>
-        </div>
-        <a href="${escapeHtml(emp.dashboard)}" target="_blank" class="btn-open-system" style="background-color: #e37b0d;">
-          <span>Open Dashboard</span> <i class="fa-solid fa-arrow-up-right-from-square"></i>
-        </a>
-      </div>
-    `;
-    dashContainer.style.display = 'block';
-  } else {
-    dashContainer.style.display = 'none';
+      dashContainer.style.display = 'block';
+    } else {
+      dashContainer.style.display = 'none';
+    }
   }
-}
-const projectsGrid = document.getElementById('employee-projects-grid');
-const projectBlock = document.getElementById('project-list-block');
 
-if (projectsGrid && projectBlock) {
-  projectsGrid.innerHTML = '';
+  // ==================== PROJECTS SECTION ====================
+  const projectsGrid = document.getElementById('employee-projects-grid');
+  const projectBlock = document.getElementById('project-list-block');
 
- 
-  if (emp.projects && Array.isArray(emp.projects) && emp.projects.length > 0) {
-    projectBlock.style.display = 'block'; 
+  if (projectsGrid && projectBlock) {
+    projectsGrid.innerHTML = '';
 
-    emp.projects.forEach(project => {
-      project.isProject = true;
+    if (emp.projects && Array.isArray(emp.projects) && emp.projects.length > 0) {
+      projectBlock.style.display = 'block'; 
+
+      emp.projects.forEach(project => {
+        project.isProject = true;
+
+        const card = document.createElement('div');
+        card.className = 'sheet-card';
+
+        // 🟢 जर Owner किंवा Admin असेल आणि Form Link उपलब्ध असेल तरच Form Button दाखवा
+        let formBtnHtml = '';
+        if (isOwnerOrAdmin && project.formUrl) {
+          formBtnHtml = `
+            <a href="${escapeHtml(project.formUrl)}" target="_blank" class="btn-action btn-open-form" title="Open Google Form">
+              <i class="fa-solid fa-pen-to-square"></i> Open Form
+            </a>
+          `;
+        }
+
+        card.innerHTML = `
+          <div class="sheet-card-title">
+            <i class="fa-solid fa-folder-closed" style="color: #0284c7;"></i>
+            <h4>${escapeHtml(project.name)}</h4>
+          </div>
+          <div class="sheet-card-actions">
+            <button class="btn-action btn-view-sheet">
+              <i class="fa-solid fa-table"></i> View Data
+            </button>
+            ${formBtnHtml}
+          </div>
+        `;
+
+        const viewDataBtn = card.querySelector('.btn-view-sheet');
+        if (viewDataBtn) {
+          viewDataBtn.onclick = () => loadSheetDataJSONP(project);
+        }
+
+        projectsGrid.appendChild(card);
+      });
+    } else {
+      projectBlock.style.display = 'none'; 
+    }
+  }
+
+  // ==================== SHEETS SECTION ====================
+  const sheetsGrid = document.getElementById('employee-sheets-grid');
+  if (sheetsGrid) {
+    sheetsGrid.innerHTML = '';
+    emp.sheets.forEach(sheet => {
+      sheet.isProject = false;
 
       const card = document.createElement('div');
       card.className = 'sheet-card';
 
-      let formBtnHtml = project.formUrl 
-        ? `<a href="${escapeHtml(project.formUrl)}" target="_blank" class="btn-action btn-open-form" title="Open Google Form">
+      // 🟢 जर Owner किंवा Admin असेल आणि Form Link उपलब्ध असेल तरच Form Button दाखवा
+      let formBtnHtml = '';
+      if (isOwnerOrAdmin && sheet.formUrl) {
+        formBtnHtml = `
+          <a href="${escapeHtml(sheet.formUrl)}" target="_blank" class="btn-action btn-open-form" title="Open Google Form">
             <i class="fa-solid fa-pen-to-square"></i> Open Form
-          </a>`
-        : `<button class="btn-action btn-disabled" disabled title="Form link not available">
-            <i class="fa-solid fa-pen-to-square"></i> No Form
-          </button>`;
+          </a>
+        `;
+      }
 
       card.innerHTML = `
         <div class="sheet-card-title">
-          <i class="fa-solid fa-folder-closed" style="color: #0284c7;"></i>
-          <h4>${escapeHtml(project.name)}</h4>
+          <i class="fa-solid fa-file-excel"></i>
+          <h4>${escapeHtml(sheet.name)}</h4>
         </div>
         <div class="sheet-card-actions">
           <button class="btn-action btn-view-sheet">
@@ -911,61 +960,12 @@ if (projectsGrid && projectBlock) {
 
       const viewDataBtn = card.querySelector('.btn-view-sheet');
       if (viewDataBtn) {
-        viewDataBtn.onclick = () => loadSheetDataJSONP(project);
+        viewDataBtn.onclick = () => loadSheetDataJSONP(sheet);
       }
 
-      projectsGrid.appendChild(card);
+      sheetsGrid.appendChild(card);
     });
-  } else {
-    projectBlock.style.display = 'none'; 
   }
-}
-
-const sheetsGrid = document.getElementById('employee-sheets-grid');
-if (sheetsGrid) {
-  sheetsGrid.innerHTML = '';
-  emp.sheets.forEach(sheet => {
-    sheet.isProject = false;
-
-    const card = document.createElement('div');
-    card.className = 'sheet-card';
-
-    let formBtnHtml = '';
-    if (sheet.formUrl) {
-      formBtnHtml = `
-        <a href="${escapeHtml(sheet.formUrl)}" target="_blank" class="btn-action btn-open-form" title="Open Google Form">
-          <i class="fa-solid fa-pen-to-square"></i> Open Form
-        </a>
-      `;
-    } else {
-      formBtnHtml = `
-        <button class="btn-action btn-disabled" disabled title="Form link not available">
-          <i class="fa-solid fa-pen-to-square"></i> No Form
-        </button>
-      `;
-    }
-
-    card.innerHTML = `
-      <div class="sheet-card-title">
-        <i class="fa-solid fa-file-excel"></i>
-        <h4>${escapeHtml(sheet.name)}</h4>
-      </div>
-      <div class="sheet-card-actions">
-        <button class="btn-action btn-view-sheet">
-          <i class="fa-solid fa-table"></i> View Data
-        </button>
-        ${formBtnHtml}
-      </div>
-    `;
-
-    const viewDataBtn = card.querySelector('.btn-view-sheet');
-    if (viewDataBtn) {
-      viewDataBtn.onclick = () => loadSheetDataJSONP(sheet);
-    }
-
-    sheetsGrid.appendChild(card);
-  });
-}
 
   document.querySelectorAll('.content-view').forEach(v => v.classList.remove('active'));
   const profView = document.getElementById('profile-view');
