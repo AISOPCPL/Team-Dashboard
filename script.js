@@ -205,7 +205,7 @@ const employeesData = [
       },
     ],
     sheets: [
-      { name: 'Daily Report',formUrl:'https://forms.gle/YUV27rV5kPXKyn799', docId: '1mrjfYpGMSMY-Em7Y4O4m9JZgfED0gdvbdPBD9qscgcM', gid: '799922129', selectedColumns: ['Date', 'Project Name', 'Location', 'In - Time ', 'Out- Time', 'Have you done site visit?','Described Days Activities (Mentioned by Points) In Office','Described Days Activities (Mentioned by Points) In Site'] },
+      { name: 'Daily Report',formUrl:'https://forms.gle/YUV27rV5kPXKyn799', docId: '1mrjfYpGMSMY-Em7Y4O4m9JZgfED0gdvbdPBD9qscgcM', gid: '799922129', selectedColumns: ['Date', 'Project Co-Ordinator','Project Name', 'Location', 'In - Time ', 'Out- Time', 'Have you done site visit?','Described Days Activities (Mentioned by Points) In Office','Described Days Activities (Mentioned by Points) In Site'] },
       { name: 'Daily Video Call', docId: '16wXUF_fWDvbdBZf63sZiIU0hCkI-qjnFLGgFui9t4yY', gid: '2092959791', selectedColumns: ['Name', 'Task', 'Planned', 'Actual', 'Status'] },
       { name: 'Petrol Allowance',formUrl:'https://forms.gle/2EmAJQdZ7f2BwMLF9', docId: '1qbbbN4uU0x1UFC3rIzkO6lekrFw3A7XD1lx7zZYxSxE', gid: '1266941161', selectedColumns: ['Date', 'Name', 'From', 'To', 'Km','Others','Upload'] },
       { name: 'Safety Check', formUrl:'https://forms.gle/gRj1gRTZSnvygyVV6',docId: '1Lub7fEdgOKBjfuLDpMhYQ4do78_DamGxLasxjIbf9Vo', gid: '1997998379', selectedColumns: ['Date', 'Project Member', 'Project Name', 'Location', 'Agency Name', 'Total Labour Count', 'PPE Kit', 'Gadgets Check'] },
@@ -262,7 +262,7 @@ const employeesData = [
       },
     ],
     sheets: [
-      { name: 'Daily Report',formUrl:'https://forms.gle/YUV27rV5kPXKyn799',  docId: '1mrjfYpGMSMY-Em7Y4O4m9JZgfED0gdvbdPBD9qscgcM', gid: '799922129', selectedColumns: ['Date', 'Project Name', 'Location', 'In - Time ', 'Out- Time', 'Have you done site visit?','Described Days Activities (Mentioned by Points) In Office','Described Days Activities (Mentioned by Points) In Site'] },
+      { name: 'Daily Report',formUrl:'https://forms.gle/YUV27rV5kPXKyn799', docId: '1mrjfYpGMSMY-Em7Y4O4m9JZgfED0gdvbdPBD9qscgcM', gid: '799922129', selectedColumns: ['Date', 'Project Co-Ordinator','Project Name', 'Location', 'In - Time ', 'Out- Time', 'Have you done site visit?','Described Days Activities (Mentioned by Points) In Office','Described Days Activities (Mentioned by Points) In Site'] },
       { name: 'Petrol Allowance',formUrl:'https://forms.gle/2EmAJQdZ7f2BwMLF9', docId: '1qbbbN4uU0x1UFC3rIzkO6lekrFw3A7XD1lx7zZYxSxE', gid: '1266941161', selectedColumns: ['Date', 'Name', 'From', 'To', 'Km','Others','Upload'] },
       { name: 'Safety Check',formUrl:'https://forms.gle/gRj1gRTZSnvygyVV6', docId: '1Lub7fEdgOKBjfuLDpMhYQ4do78_DamGxLasxjIbf9Vo', gid: '1997998379', selectedColumns: ['Date', 'Project Member', 'Project Name', 'Location', 'Agency Name', 'Total Labour Count', 'PPE Kit', 'Gadgets Check'] },
       { name: 'Delivery Challan',formUrl:'https://forms.gle/EuBCvSYkfQVYjBYw7', docId: '1ssmVTMIvMmNcqm5oloGabxX6XrWd-qMWCxzb5QYdc6s', gid: '1102974409', selectedColumns: ['Date', 'Project Name', 'Name', 'Work', 'Challan', 'Returnable Materials List', 'Reason'] },
@@ -294,7 +294,7 @@ const employeesData = [
          }
   ],
     sheets: [
-      { name: 'Daily Report', formUrl:'https://forms.gle/YUV27rV5kPXKyn799', docId: '1mrjfYpGMSMY-Em7Y4O4m9JZgfED0gdvbdPBD9qscgcM', gid: '799922129', selectedColumns: ['Date', 'Project Name', 'Location', 'In - Time ', 'Out- Time', 'Have you done site visit?','Described Days Activities (Mentioned by Points) In Office','Described Days Activities (Mentioned by Points) In Site'] },
+      { name: 'Daily Report',formUrl:'https://forms.gle/YUV27rV5kPXKyn799', docId: '1mrjfYpGMSMY-Em7Y4O4m9JZgfED0gdvbdPBD9qscgcM', gid: '799922129', selectedColumns: ['Date', 'Project Co-Ordinator','Project Name', 'Location', 'In - Time ', 'Out- Time', 'Have you done site visit?','Described Days Activities (Mentioned by Points) In Office','Described Days Activities (Mentioned by Points) In Site'] },
       { name: 'Petrol Allowance',formUrl:'https://forms.gle/2EmAJQdZ7f2BwMLF9', docId: '1qbbbN4uU0x1UFC3rIzkO6lekrFw3A7XD1lx7zZYxSxE', gid: '1266941161', selectedColumns: ['Date', 'Name', 'From', 'To', 'Km','Others','Upload'] },
       { name: 'Site Expenses', formUrl:'https://forms.gle/9uuXgx6oF3okLmxb7',docId: '13Vo3YIrbPT06a4ClN-BS-eO1DOCSNzo5dnn-XfO0Tds', gid: '1142344274', selectedColumns: ['Date', 'Project Name', 'Paid to', 'Amount', 'Reason','URD Purchase'] },
       { name: 'Safety Check',formUrl:'https://forms.gle/gRj1gRTZSnvygyVV6', docId: '1Lub7fEdgOKBjfuLDpMhYQ4do78_DamGxLasxjIbf9Vo', gid: '1997998379', selectedColumns: ['Date', 'Project Member', 'Project Name', 'Location', 'Agency Name', 'Total Labour Count', 'PPE Kit', 'Gadgets Check'] },
@@ -324,7 +324,7 @@ const employeesData = [
          }
   ],
     sheets: [
-      { name: 'Daily Report',formUrl:'https://forms.gle/YUV27rV5kPXKyn799',  docId: '1mrjfYpGMSMY-Em7Y4O4m9JZgfED0gdvbdPBD9qscgcM', gid: '799922129', selectedColumns: ['Date', 'Project Name', 'Location', 'In - Time ', 'Out- Time', 'Have you done site visit?','Described Days Activities (Mentioned by Points) In Office','Described Days Activities (Mentioned by Points) In Site'] },
+      { name: 'Daily Report',formUrl:'https://forms.gle/YUV27rV5kPXKyn799', docId: '1mrjfYpGMSMY-Em7Y4O4m9JZgfED0gdvbdPBD9qscgcM', gid: '799922129', selectedColumns: ['Date', 'Project Co-Ordinator','Project Name', 'Location', 'In - Time ', 'Out- Time', 'Have you done site visit?','Described Days Activities (Mentioned by Points) In Office','Described Days Activities (Mentioned by Points) In Site'] },
       { name: 'Petrol Allowance',formUrl:'https://forms.gle/2EmAJQdZ7f2BwMLF9', docId: '1qbbbN4uU0x1UFC3rIzkO6lekrFw3A7XD1lx7zZYxSxE', gid: '1266941161', selectedColumns: ['Date', 'Name', 'From', 'To', 'Km','Others','Upload'] },
       { name: 'Site Expenses', formUrl:'https://forms.gle/9uuXgx6oF3okLmxb7',docId: '13Vo3YIrbPT06a4ClN-BS-eO1DOCSNzo5dnn-XfO0Tds', gid: '1142344274', selectedColumns: ['Date', 'Project Name', 'Paid to', 'Amount', 'Reason','URD Purchase'] },
       { name: 'Safety Check',formUrl:'https://forms.gle/gRj1gRTZSnvygyVV6', docId: '1Lub7fEdgOKBjfuLDpMhYQ4do78_DamGxLasxjIbf9Vo', gid: '1997998379', selectedColumns: ['Date', 'Project Member', 'Project Name', 'Location', 'Agency Name', 'Total Labour Count', 'PPE Kit', 'Gadgets Check'] },
@@ -356,7 +356,7 @@ const employeesData = [
     }
   ],
     sheets: [
-      { name: 'Daily Report',formUrl:'https://docs.google.com/forms/d/e/1FAIpQLSf7y6FpZ4Ff4Ihi7Jq6SyqMXHEnvXkaWSQ24v6RPQCMcuqcGw/viewform', docId: '1mrjfYpGMSMY-Em7Y4O4m9JZgfED0gdvbdPBD9qscgcM', gid: '1518539535', selectedColumns: ['Date', 'Project', 'Location', 'In-Time', 'Out-time'] },
+      { name: 'Daily Report',formUrl:'https://docs.google.com/forms/d/e/1FAIpQLSf7y6FpZ4Ff4Ihi7Jq6SyqMXHEnvXkaWSQ24v6RPQCMcuqcGw/viewform', docId: '1mrjfYpGMSMY-Em7Y4O4m9JZgfED0gdvbdPBD9qscgcM', gid: '1518539535', selectedColumns: ['Date','Designer', 'Project', 'Location', 'In-Time', 'Out-time'] },
       { name: 'Daily Video Call', docId: '16wXUF_fWDvbdBZf63sZiIU0hCkI-qjnFLGgFui9t4yY', gid: '2092959791', selectedColumns: ['Name', 'Task', 'Planned', 'Actual', 'Status'] },
       { name: 'Petrol Allowance',formUrl:'https://forms.gle/2EmAJQdZ7f2BwMLF9', docId: '1qbbbN4uU0x1UFC3rIzkO6lekrFw3A7XD1lx7zZYxSxE', gid: '1266941161', selectedColumns: ['Date', 'Name', 'From', 'To', 'Km','Others','Upload'] },
       { name: 'Site Expenses', formUrl:'https://forms.gle/9uuXgx6oF3okLmxb7',docId: '13Vo3YIrbPT06a4ClN-BS-eO1DOCSNzo5dnn-XfO0Tds', gid: '1142344274', selectedColumns: ['Date', 'Project Name', 'Paid to', 'Amount', 'Reason','URD Purchase'] },
@@ -385,7 +385,7 @@ const employeesData = [
     }
   ],
     sheets: [
-       { name: 'Daily Report',formUrl:'https://docs.google.com/forms/d/e/1FAIpQLSf7y6FpZ4Ff4Ihi7Jq6SyqMXHEnvXkaWSQ24v6RPQCMcuqcGw/viewform', docId: '1mrjfYpGMSMY-Em7Y4O4m9JZgfED0gdvbdPBD9qscgcM', gid: '1518539535', selectedColumns: ['Date', 'Project', 'Location', 'In-Time', 'Out-time'] },
+      { name: 'Daily Report',formUrl:'https://docs.google.com/forms/d/e/1FAIpQLSf7y6FpZ4Ff4Ihi7Jq6SyqMXHEnvXkaWSQ24v6RPQCMcuqcGw/viewform', docId: '1mrjfYpGMSMY-Em7Y4O4m9JZgfED0gdvbdPBD9qscgcM', gid: '1518539535', selectedColumns: ['Date','Designer', 'Project', 'Location', 'In-Time', 'Out-time'] },
       { name: 'Petrol Allowance',formUrl:'https://forms.gle/2EmAJQdZ7f2BwMLF9', docId: '1qbbbN4uU0x1UFC3rIzkO6lekrFw3A7XD1lx7zZYxSxE', gid: '1266941161', selectedColumns: ['Date', 'Name', 'From', 'To', 'Km','Others','Upload'] },
       { name: 'Site Expenses', formUrl:'https://forms.gle/9uuXgx6oF3okLmxb7',docId: '13Vo3YIrbPT06a4ClN-BS-eO1DOCSNzo5dnn-XfO0Tds', gid: '1142344274', selectedColumns: ['Date', 'Project Name', 'Paid to', 'Amount', 'Reason','URD Purchase'] },
       { name: 'Delegation Sheet Team', docId: '1680NhH8rKFTKeY3HSZGV_izgEi4QieHiirbcbRi7hTA', gid: '1184708924', selectedColumns: ['Name', 'Task', 'First Date', 'Revision 1','Revision 2', 'Total Revision','Status','Actual Completion Date'] },
@@ -487,6 +487,7 @@ const employeesData = [
     ],
  
     sheets: [
+      
       { name: 'Office Expenses',formUrl:'https://docs.google.com/forms/d/e/1FAIpQLSeFG1ZBY4mstlGPDpcNhUb9vi2WiJGBr3aG2cuTtYqPNXf4Nw/viewform?usp=header', docId: '1N2DF6vzSoJcIxwL2makablsGtDlMB-rxhcWT3_VLHBY', gid: '440445714', selectedColumns: ['Date', 'Paid to', 'Amount', 'Reason', 'Categories','URD Purchase'] },
       { 
         name: 'Checklist', 
@@ -520,7 +521,7 @@ const employeesData = [
          }    
   ],
     sheets: [
-      { name: 'Daily Report',formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScRyy4LtikZcJkmYYeaypXJJkR_pbR1YSz0Iso0N6f-L_hfDw/viewform', docId: '1mrjfYpGMSMY-Em7Y4O4m9JZgfED0gdvbdPBD9qscgcM', gid: '827729352', selectedColumns: ['Date', 'In-Time', 'Out-time'] },
+      { name: 'Daily Report',formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScRyy4LtikZcJkmYYeaypXJJkR_pbR1YSz0Iso0N6f-L_hfDw/viewform', docId: '1mrjfYpGMSMY-Em7Y4O4m9JZgfED0gdvbdPBD9qscgcM', gid: '827729352', selectedColumns: ['Date','Name', 'In-Time', 'Out-time'] },
       { name: 'Site Expenses', formUrl:'https://forms.gle/9uuXgx6oF3okLmxb7',docId: '13Vo3YIrbPT06a4ClN-BS-eO1DOCSNzo5dnn-XfO0Tds', gid: '1142344274', selectedColumns: ['Date', 'Project Name', 'Paid to', 'Amount', 'Reason','URD Purchase'] },
       { name: 'Checklist', docId: '1m_P5_eP9FvD9eaYvanmLlV833cscTvk2xJk_c39cbZw', gid: '2092959791', selectedColumns: ['Task', 'Doer', 'Planned', 'Actual', 'Status'] },
       { name: 'Delegation Sheet Team', docId: '1680NhH8rKFTKeY3HSZGV_izgEi4QieHiirbcbRi7hTA', gid: '1184708924', selectedColumns: ['Name', 'Task', 'First Date', 'Revision 1','Revision 2', 'Total Revision','Status','Actual Completion Date'] },
@@ -551,7 +552,7 @@ const employeesData = [
          }
   ],
     sheets: [
-      { name: 'Daily Report',formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScRyy4LtikZcJkmYYeaypXJJkR_pbR1YSz0Iso0N6f-L_hfDw/viewform', docId: '1mrjfYpGMSMY-Em7Y4O4m9JZgfED0gdvbdPBD9qscgcM', gid: '827729352', selectedColumns: ['Date', 'In-Time', 'Out-time'] },
+      { name: 'Daily Report',formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScRyy4LtikZcJkmYYeaypXJJkR_pbR1YSz0Iso0N6f-L_hfDw/viewform', docId: '1mrjfYpGMSMY-Em7Y4O4m9JZgfED0gdvbdPBD9qscgcM', gid: '827729352', selectedColumns: ['Date','Name', 'In-Time', 'Out-time'] },
       { name: 'Site Expenses', formUrl:'https://forms.gle/9uuXgx6oF3okLmxb7',docId: '13Vo3YIrbPT06a4ClN-BS-eO1DOCSNzo5dnn-XfO0Tds', gid: '1142344274', selectedColumns: ['Date', 'Project Name', 'Paid to', 'Amount', 'Reason','URD Purchase'] },
       { name: 'Checklist', docId: '1m_P5_eP9FvD9eaYvanmLlV833cscTvk2xJk_c39cbZw', gid: '2092959791', selectedColumns: ['Task', 'Doer', 'Planned', 'Actual', 'Status'] },
       { name: 'Delegation Sheet Team', docId: '1680NhH8rKFTKeY3HSZGV_izgEi4QieHiirbcbRi7hTA', gid: '1184708924', selectedColumns: ['Name', 'Task', 'First Date', 'Revision 1','Revision 2', 'Total Revision','Status','Actual Completion Date'] },
@@ -1023,27 +1024,30 @@ window.handleGvizResponse = function(response) {
       const shouldIgnore = ignoreHeaders.some(ig => headerLower.includes(ig));
       if (!shouldIgnore) targetOwnerIndices.push(idx);
     });
-
-    filteredRows = rows.filter(r => {
+    
+filteredRows = rows.filter(r => {
       if (!r.c) return false;
 
-      if (currentActiveSheet && currentActiveSheet.name.toLowerCase().includes('leave')) {
-        const empNameIdx = allHeaders.findIndex(h => 
-          h.toLowerCase().includes('employee name') || h.toLowerCase() === 'name'
-        );
-        if (empNameIdx !== -1) {
-          const cell = r.c[empNameIdx];
-          if (!cell || cell.v === null || cell.v === undefined) return false;
-          const val = String(cell.v).toLowerCase();
-          return val.includes(fullName) || val.includes(firstName);
-        }
+      // १. आधी नाव दाखवणारा अचूक कॉलम शोधा
+      const empNameIdx = allHeaders.findIndex(h => {
+        const hLower = h.toLowerCase().trim();
+        return hLower === 'employee name' || hLower === 'name' || hLower === 'designer' || hLower === 'project site visitor';
+      });
+
+      // २. नावाचा कॉलम सापडल्यास फक्त त्यामध्येच मॅच करा
+      if (empNameIdx !== -1) {
+        const cell = r.c[empNameIdx];
+        if (!cell || cell.v === null || cell.v === undefined) return false;
+        const val = String(cell.v).toLowerCase().trim();
+        return val.includes(fullName) || val.includes(firstName);
       }
 
+      // ३. नावाचा स्वतंत्र कॉलम नसल्यास इतर कॉलम्समध्ये शोधा
       return targetOwnerIndices.some(idx => {
         const cell = r.c[idx];
         if (!cell || cell.v === null || cell.v === undefined) return false;
-        const val = String(cell.v).toLowerCase();
-        return val.includes(fullName) || val.includes(firstName);
+        const val = String(cell.v).toLowerCase().trim();
+        return val.includes(fullName);
       });
     });
   }
