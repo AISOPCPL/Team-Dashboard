@@ -3,48 +3,53 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="icon" type="image/png" href="favicon/favicon-96x96.png" sizes="96x96" />
-<link rel="icon" type="image/svg+xml" href="favicon/favicon.svg" />
-<link rel="shortcut icon" href="favicon/favicon.ico" />
-<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
-<link rel="manifest" href="favicon/site.webmanifest" />
-  <title>Company Dashboard</title>
+  <link rel="icon" type="image/png" href="favicon/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="favicon/favicon.svg" />
+  <link rel="shortcut icon" href="favicon/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
+  <link rel="manifest" href="favicon/site.webmanifest" />
+  <title>Company Dashboard - Systems</title>
   
   <!-- FontAwesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
   <style>
     :root {
-      --primary-orange: #f38b1c;
-      --primary-orange-hover: #d9740b;
-      --primary-orange-light: #fff5eb;
-      --primary-orange-glow: rgba(243, 139, 28, 0.25);
+      /* Brand & Accent Colors (Orange Theme) */
+      --primary-accent: #f68e1f;          /* Bright Orange */
+      --primary-accent-hover: #f7a54f;    /* Darker Orange for Hover */
+      --primary-accent-light: rgba(249, 115, 22, 0.1); /* Light Orange Tint */
+      --primary-accent-glow: rgba(249, 115, 22, 0.25);
       
-      --dark-sidebar: #1a1c23;
-      --dark-sidebar-header: #111217;
+      /* Modern Light Sidebar & Header Palette */
+      --dark-sidebar: #ffffff;            /* White Sidebar */
+      --dark-sidebar-header: #fff7ed;     /* Very Light Soft Orange Header */
       
-      --text-dark: #18181b;
+      /* Typography & Main Canvas */
+      --text-dark: #1e293b;
       --text-muted: #64748b;
-      --bg-main: #f8fafc;
+      --bg-main: #fffaf5;                 /* Soft Warm Background */
       --card-bg: #ffffff;
-      --border-color: #e2e8f0;
+      --border-color: #fed7aa;            /* Soft Orange Border */
       
-      --shadow-sm: 0 2px 4px rgba(0,0,0,0.04);
-      --shadow-md: 0 10px 25px -5px rgba(0, 0, 0, 0.08);
-      --shadow-glow: 0 10px 20px -3px var(--primary-orange-glow);
+      /* Modern Depth & Elevation */
+      --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05), 0 1px 2px rgba(0, 0, 0, 0.03);
+      --shadow-md: 0 10px 15px -3px rgba(249, 115, 22, 0.08), 0 4px 6px -2px rgba(0, 0, 0, 0.02);
+      --shadow-glow: 0 8px 25px -4px var(--primary-accent-glow);
     }
 
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
-      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     }
 
     body {
       background-color: var(--bg-main);
       color: var(--text-dark);
       overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
     }
 
     .app-container {
@@ -52,10 +57,10 @@
       min-height: 100vh;
     }
 
-    /* Sidebar Styling */
+    /* Sidebar Styling (Light Theme) */
     .sidebar {
-      width: 250px;
-      background-color: #ffffff;
+      width: 260px;
+      background-color: var(--dark-sidebar);
       border-right: 1px solid var(--border-color);
       display: flex;
       flex-direction: column;
@@ -64,11 +69,13 @@
       top: 0;
       height: 100vh;
       z-index: 100;
+      box-shadow: 2px 0 10px rgba(0,0,0,0.02);
     }
 
     .sidebar-header {
-      padding: 20px;
+      padding: 24px 20px;
       text-align: center;
+      background-color: var(--dark-sidebar-header);
       border-bottom: 1px solid var(--border-color);
     }
 
@@ -79,7 +86,7 @@
 
     .sidebar-nav ul {
       list-style: none;
-      padding: 15px 0;
+      padding: 16px 12px;
     }
 
     .sidebar-nav a, 
@@ -87,12 +94,14 @@
       display: flex;
       align-items: center;
       gap: 12px;
-      padding: 12px 24px;
-      color: var(--text-dark);
+      padding: 12px 16px;
+      color: #475569;
       text-decoration: none;
       font-weight: 500;
+      border-radius: 8px;
       position: relative;
-      transition: all 0.25s ease;
+      transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+      margin-bottom: 4px;
     }
 
     .sidebar-nav a::before,
@@ -100,75 +109,59 @@
       content: '';
       position: absolute;
       left: 0;
-      top: 0;
-      bottom: 0;
+      top: 50%;
+      transform: translateY(-50%) scaleY(0);
+      height: 60%;
       width: 4px;
-      background-color: var(--primary-orange);
-      transform: scaleY(0);
+      background-color: var(--primary-accent);
+      border-radius: 0 4px 4px 0;
       transition: transform 0.2s ease;
     }
 
     .sidebar-nav a:hover,
     .nav-btn:hover {
-      background-color: var(--primary-orange-light);
-      color: var(--primary-orange-hover);
+      background-color: var(--primary-accent-light);
+      color: var(--primary-accent);
     }
 
     .sidebar-nav a.active,
     .nav-btn.active {
-      background-color: var(--primary-orange-light);
-      color: var(--primary-orange);
+      background-color: var(--primary-accent-light);
+      color: var(--primary-accent);
       font-weight: 600;
     }
 
     .sidebar-nav a.active::before,
     .nav-btn.active::before {
-      transform: scaleY(1);
-    }
-
-    /* Sub-menu inside Systems */
-    .nav-section-title {
-      padding: 12px 24px 6px;
-      font-size: 0.75rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      color: var(--text-muted);
-      letter-spacing: 0.5px;
-    }
-
-    .sub-nav {
-      padding-left: 12px !important;
-    }
-
-    .sub-nav a {
-      font-size: 0.9rem;
-      padding: 10px 20px 10px 28px;
+      transform: translateY(-50%) scaleY(1);
     }
 
     .sidebar-footer {
-      padding: 1.5rem 1rem;
+      padding: 1.25rem 1rem;
       border-top: 1px solid var(--border-color);
     }
 
     .btn-logout {
       width: 100%;
       padding: 0.75rem 1rem;
-      background-color: var(--primary-orange);
-      color: #ffffff;
-      border: none;
+      background-color: rgba(239, 68, 68, 0.08);
+      color: #000000;
+      border: 1px solid rgba(239, 68, 68, 0.2);
       border-radius: 8px;
-      font-size: 0.95rem;
+      font-size: 0.9rem;
       font-weight: 600;
       cursor: pointer;
       display: flex;
       align-items: center;
       justify-content: center;
       gap: 0.5rem;
-      transition: background-color 0.2s ease, transform 0.1s ease;
+      transition: all 0.2s ease;
     }
 
     .btn-logout:hover {
-      background-color: var(--primary-orange-hover);
+      background-color: #f68e1f;
+      color: #ffffff;
+      border-color: #e87c08;
     }
 
     .btn-logout:active {
@@ -178,52 +171,86 @@
     /* Main Content Area */
     .main-content {
       flex: 1;
-      padding: 30px;
+      padding: 36px;
       max-width: calc(100vw - 260px);
     }
 
     .page-header {
-      margin-bottom: 25px;
+      margin-bottom: 28px;
     }
 
-    .page-header h1 {
-      font-size: 1.6rem;
-      color: var(--text-dark);
+    .flex-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
     }
 
     .header-divider {
       height: 3px;
-      width: 60px;
-      background-color: var(--primary-orange);
-      margin-top: 6px;
+      width: 48px;
+      background-color: var(--primary-accent);
+      margin-top: 8px;
       border-radius: 2px;
     }
 
-    /* System Quick Access Cards */
+    /* Search Box */
+    .search-box {
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+
+    .search-box i {
+      position: absolute;
+      left: 14px;
+      color: var(--text-muted);
+    }
+
+    .search-box input {
+      padding: 10px 16px 10px 40px;
+      border: 1px solid var(--border-color);
+      border-radius: 24px;
+      background-color: var(--card-bg);
+      outline: none;
+      width: 260px;
+      transition: all 0.25s ease;
+      font-size: 0.88rem;
+      color: var(--text-dark);
+    }
+
+    .search-box input:focus {
+      border-color: var(--primary-accent);
+      box-shadow: 0 0 0 3px var(--primary-accent-glow);
+      width: 310px;
+    }
+
+    /* Systems Grid Layout */
     .systems-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 24px;
-      margin-top: 20px;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 20px;
+      margin-top: 10px;
     }
 
     .system-card {
       background: var(--card-bg);
       border: 1px solid var(--border-color);
-      border-radius: 12px;
-      padding: 24px;
+      border-radius: 14px;
+      padding: 22px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       gap: 16px;
       box-shadow: var(--shadow-sm);
-      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
     }
 
     .system-card:hover {
       transform: translateY(-4px);
       box-shadow: var(--shadow-glow);
-      border-color: var(--primary-orange);
+      border-color: var(--primary-accent);
     }
 
     .system-card-header {
@@ -233,190 +260,121 @@
     }
 
     .system-card-icon {
-      width: 50px;
-      height: 50px;
-      border-radius: 10px;
-      background-color: var(--primary-orange-light);
-      color: var(--primary-orange);
+      width: 48px;
+      height: 48px;
+      background-color: var(--primary-accent-light);
+      color: var(--primary-accent);
+      border-radius: 12px;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 1.5rem;
+      font-size: 1.3rem;
+      flex-shrink: 0;
     }
 
     .system-card-info h3 {
-      font-size: 1.1rem;
+      font-size: 1.05rem;
+      font-weight: 700;
       color: var(--text-dark);
       margin-bottom: 4px;
     }
 
     .system-card-info p {
-      font-size: 0.85rem;
+      font-size: 0.83rem;
       color: var(--text-muted);
     }
 
     .btn-open-system {
       display: flex;
       align-items: center;
-      justify-content: center;
-      gap: 8px;
+      justify-content: space-between;
+      background-color: var(--primary-accent);
+      color: #ffffff !important;
       padding: 10px 16px;
-      background-color: var(--dark-sidebar);
-      color: #ffffff;
-      text-decoration: none;
       border-radius: 8px;
+      text-decoration: none;
+      font-size: 0.88rem;
       font-weight: 600;
-      font-size: 0.9rem;
-      transition: background-color 0.2s ease, transform 0.2s ease;
+      transition: background-color 0.2s ease, transform 0.1s ease;
     }
 
     .btn-open-system:hover {
-      background-color: var(--primary-orange);
-      color: #ffffff;
+      background-color: var(--primary-accent-hover);
     }
 
- 
-   
-@media (max-width: 768px) {
-  
-  .app-container {
-    flex-direction: column;
-  }
+    .btn-open-system:active {
+      transform: scale(0.98);
+    }
 
- 
-  .sidebar {
-    width: 100%;
-    height: auto;
-    min-height: auto;
-    position: relative;
-    border-right: none;
-    border-bottom: 1px solid var(--border-color);
-  }
+    /* Keyframe Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
 
-  .sidebar-header {
-    padding: 12px 20px;
-  }
+    /* Responsive Adjustments */
+    @media (max-width: 768px) {
+      .app-container {
+        flex-direction: column;
+      }
 
-  .sidebar-nav ul {
-    display: flex;
-    overflow-x: auto;
+      .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        border-right: none;
+        border-bottom: 1px solid var(--border-color);
+      }
 
-    padding: 8px 10px;
-    gap: 5px;
-  }
+      .sidebar-header {
+        padding: 16px 20px;
+      }
 
-  .sidebar-nav a, 
-  .nav-btn {
-    padding: 8px 14px;
-    white-space: nowrap;
-    font-size: 0.88rem;
-    border-radius: 6px;
-  }
+      .sidebar-nav ul {
+        display: flex;
+        overflow-x: auto;
+        padding: 10px;
+        gap: 6px;
+      }
 
-  
-  .sidebar-nav a::before,
-  .nav-btn::before {
-    display: none;
-  }
+      .sidebar-nav a, 
+      .nav-btn {
+        padding: 8px 14px;
+        white-space: nowrap;
+        font-size: 0.85rem;
+        margin-bottom: 0;
+      }
 
-  .sidebar-footer {
-    padding: 0.8rem 1rem;
-  }
+      .sidebar-nav a::before,
+      .nav-btn::before {
+        display: none;
+      }
 
-  
-  .main-content {
-    max-width: 100%;
-    width: 100%;
-    padding: 15px;
-  }
+      .main-content {
+        max-width: 100%;
+        padding: 20px 16px;
+      }
 
- 
-  .flex-header {
-    flex-direction: column;
-    align-items: stretch;
-  }
+      .flex-header {
+        flex-direction: column;
+        align-items: stretch;
+      }
 
-  .search-box, 
-  .search-box input {
-    width: 100%;
-  }
+      .search-box, 
+      .search-box input {
+        width: 100%;
+      }
 
-  .search-box input:focus {
-    width: 100%;
-  }
+      .search-box input:focus {
+        width: 100%;
+      }
+    }
 
-
-  .metrics-grid {
-    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-    gap: 12px;
-  }
-
-  .metric-card {
-    padding: 15px;
-    gap: 12px;
-  }
-
-  .metric-card i {
-    font-size: 1.6rem;
-  }
-
-  .metric-card p {
-    font-size: 1.3rem;
-  }
-
- 
-  .profile-card-header {
-    flex-direction: column;
-    text-align: center;
-    padding: 20px 15px;
-    gap: 15px;
-  }
-
-  
-  .sheet-tabs {
-    overflow-x: auto;
-    padding-bottom: 8px;
-    white-space: nowrap;
-  }
-
-  .tab-btn {
-    flex-shrink: 0;
-  }
-
-  /* Modals */
-  .modal-content {
-    width: 95%;
-    padding: 18px;
-    max-height: 90vh;
-  }
-
-  .placeholder-box {
-    padding: 30px 15px;
-  }
-}
-
-/* Small Mobile Screens (Max-Width: 480px) */
-@media (max-width: 480px) {
-  /* Enforce single column for cards on very small displays */
-  .metrics-grid,
-  .gallery-grid,
-  .client-grid,
-  .cards-grid,
-  .sheets-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .employee-card img {
-    width: 70px;
-    height: 70px;
-  }
-
-  .custom-data-table,
-  .custom-table {
-    font-size: 0.78rem;
-  }
-}
-
+    @media (max-width: 480px) {
+      .systems-grid {
+        grid-template-columns: 1fr;
+      }
+    }
   </style>
 </head>
 <body>
@@ -447,15 +405,13 @@
                 <i class="fa-solid fa-users"></i> <span>Teams</span>
               </a>
             </li>
-            
-            <!-- Systems Main Menu & Sub-Buttons -->
             <li>
-              <a href="#" class="active" data-target="system-view">
+              <a href="systems.html" class="active">
                 <i class="fa-solid fa-gears"></i> <span>Systems</span>
               </a>
-              </li>
-             <li>
-              <a href="documents.html" class="nav-btn">
+            </li>
+            <li>
+              <a href="documents.html">
                 <i class="fa-solid fa-file-contract"></i> <span>Company Information</span>
               </a>
             </li>
@@ -463,9 +419,8 @@
         </nav>
       </div>
 
-      <div class="sidebar-footer">
-      <p style="font-size: 11px; margin-bottom: 6px; text-align: center;">© <span id="year"></span> Avaniysh Interior Solutions Pvt. Ltd. All Rights Reserved.</p>
-
+       <div class="sidebar-footer">
+       <p style="font-size: 11px; margin-bottom: 6px; text-align: center;">© <span id="year"></span> Avaniysh Interior Solutions Pvt. Ltd. All Rights Reserved.</p>
         <button class="btn-logout" onclick="logout()">
           <i class="fa-solid fa-right-from-bracket"></i> <span>Sign Out</span>
         </button>
@@ -474,13 +429,21 @@
 
     <!-- Main Content Area -->
     <main class="main-content">
-      <header class="page-header">
-        <h1>Systems Dashboards</h1>
-        <div class="header-divider"></div>
+      <header class="page-header flex-header">
+        <div>
+          <h1 style="font-size: 1.5rem; font-weight: 700;">Systems Dashboards</h1>
+          <div class="header-divider"></div>
+        </div>
+        
+        <!-- Search Systems Filter -->
+        <div class="search-box">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" id="systemSearchInput" onkeyup="filterSystems()" placeholder="Search dashboard...">
+        </div>
       </header>
 
-      <!-- Dashboard Cards Section -->
-      <div class="systems-grid">
+      <!-- Dashboard Cards Grid Section -->
+      <div class="systems-grid" id="systemsGrid">
         
         <!-- 1. Checklist Dashboard Card -->
         <div class="system-card">
@@ -490,14 +453,12 @@
             </div>
             <div class="system-card-info">
               <h3>Checklist Dashboard</h3>
-              <p>Google Looker Studio Reporting System</p>
             </div>
           </div>
           <a href="https://datastudio.google.com/reporting/b30bad2f-4552-4c9f-8d9d-b8afd5056244/page/gcG5F" target="_blank" class="btn-open-system">
             <span>Open Dashboard</span> <i class="fa-solid fa-arrow-up-right-from-square"></i>
           </a>
         </div>
-
 
         <!-- 2. Airtech Dashboard Card -->
         <div class="system-card">
@@ -506,8 +467,7 @@
               <i class="fa-solid fa-diagram-project"></i>
             </div>
             <div class="system-card-info">
-              <h3>Airtech Dashboard</h3>
-              <p>Airtech Progress dashboard</p>
+              <h3>Airtech Progress Dashboard</h3>
             </div>
           </div>
           <a href="https://script.google.com/a/macros/avaniyshinterior.com/s/AKfycbxBqPiof-i02R7xg0VxjjLcl99fBL6MQZCfG0rUufBnBhAEYtJ2QIUKvrIkzFQwOIo/exec?page=pms" target="_blank" class="btn-open-system">
@@ -515,11 +475,11 @@
           </a>
         </div>
 
-
-         <div class="system-card">
+        <!-- 3. Designer Dashboard Card -->
+        <div class="system-card">
           <div class="system-card-header">
             <div class="system-card-icon">
-              <i class="fa-solid fa-diagram-project"></i>
+              <i class="fa-solid fa-compass-drafting"></i>
             </div>
             <div class="system-card-info">
               <h3>Designer Dashboard</h3>
@@ -530,10 +490,11 @@
           </a>
         </div>
 
-         <div class="system-card">
+        <!-- 4. PC CRM MIS Dashboard Card -->
+        <div class="system-card">
           <div class="system-card-header">
             <div class="system-card-icon">
-              <i class="fa-solid fa-diagram-project"></i>
+              <i class="fa-solid fa-chart-pie"></i>
             </div>
             <div class="system-card-info">
               <h3>PC CRM MIS Dashboard</h3>
@@ -544,11 +505,11 @@
           </a>
         </div>
 
-
-         <div class="system-card">
+        <!-- 5. Accounts Dashboard Card -->
+        <div class="system-card">
           <div class="system-card-header">
             <div class="system-card-icon">
-              <i class="fa-solid fa-diagram-project"></i>
+              <i class="fa-solid fa-file-invoice-dollar"></i>
             </div>
             <div class="system-card-info">
               <h3>Accounts Dashboard</h3>
@@ -559,14 +520,14 @@
           </a>
         </div>
 
-
+        <!-- 6. Team Scoring Card -->
         <div class="system-card">
           <div class="system-card-header">
             <div class="system-card-icon">
-              <i class="fa-solid fa-diagram-project"></i>
+              <i class="fa-solid fa-square-poll-vertical"></i>
             </div>
             <div class="system-card-info">
-              <h3>Team Scoring</h3>
+              <h3>MIS Scoring</h3>
             </div>
           </div>
           <a href="https://docs.google.com/spreadsheets/d/1V9R9rJ848xIzODTdFZ4f_-OJpZMNbIqpYhX_9WNLJbM/edit?gid=1835137696#gid=1835137696" target="_blank" class="btn-open-system">
@@ -574,33 +535,14 @@
           </a>
         </div>
 
-
-
-
-
-        <!-- <div class="system-card">
-          <div class="system-card-header">
-            <div class="system-card-icon">
-                   <i class="fa-solid fa-list-check"></i>
-            </div>
-            <div class="system-card-info">
-              <h3>Airtech Material Checklist </h3>  
-            </div>
-          </div>
-          <a href="https://script.google.com/macros/s/AKfycbyj1PuG5FaR1jtF-BA_DUe2klBDSWKDWYavXVAji0v7V7gY5aXYvk5hR7UF6QBWSQYsfw/exec" target="_blank" class="btn-open-system">
-            <span>Open Dashboard</span> <i class="fa-solid fa-arrow-up-right-from-square"></i>
-          </a>
-        </div> -->
-
-        <!-- 3. Airlife Dashboard Card -->
+        <!-- 7. Airlife Dashboard Card -->
         <div class="system-card">
           <div class="system-card-header">
             <div class="system-card-icon">
               <i class="fa-solid fa-wind"></i>
             </div>
             <div class="system-card-info">
-              <h3>Airlife Dashboard</h3>
-              <p>Airlife Gases Progress dashboard</p>
+              <h3>Airlife Gases Progress dashboard</h3>
             </div>
           </div>
           <a href="https://script.google.com/a/macros/avaniyshinterior.com/s/AKfycbxoo7jVxrxKUBRtqy05_b0T0EK676VBzEPpiK7ntxkTOO_LZdrN4gbEcIHECXni7wq_tg/exec" target="_blank" class="btn-open-system">
@@ -611,13 +553,31 @@
       </div>
     </main>
   </div>
-<script src="script.js"></script>
-  <!-- JavaScript Logic -->
+
   <script>
+    // Set Current Year dynamically
+    document.getElementById('year').textContent = new Date().getFullYear();
+
     // Logout Functionality
     function logout() {
       sessionStorage.removeItem('isLoggedIn');
       window.location.href = 'login.html';
+    }
+
+    // Dashboard Search Filter
+    function filterSystems() {
+      const input = document.getElementById('systemSearchInput').value.toLowerCase();
+      const cards = document.querySelectorAll('.systems-grid .system-card');
+
+      cards.forEach(card => {
+        const title = card.querySelector('h3').textContent.toLowerCase();
+        const desc = card.querySelector('p').textContent.toLowerCase();
+        if (title.includes(input) || desc.includes(input)) {
+          card.style.display = "flex";
+        } else {
+          card.style.display = "none";
+        }
+      });
     }
   </script>
 </body>
