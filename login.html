@@ -2,22 +2,25 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-   <link rel="icon" type="image/png" href="favicon/favicon-96x96.png" sizes="96x96" />
-<link rel="icon" type="image/svg+xml" href="favicon/favicon.svg" />
-<link rel="shortcut icon" href="favicon/favicon.ico" />
-<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
-<link rel="manifest" href="favicon/site.webmanifest" />
+    <link rel="icon" type="image/png" href="favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="favicon/favicon.svg" />
+    <link rel="shortcut icon" href="favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
+    <link rel="manifest" href="favicon/site.webmanifest" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AISPL - Login</title>
+    <title>AISPL - Premium Login</title>
     <style>
-        
         :root {
             --primary-orange: #f3821a;
             --primary-orange-hover: #d96f0f;
-            --dark-text: #1a1a1a;
-            --muted-text: #555555;
-            --border-color: #e2e8f0;
-            --bg-color: #f8f9fa;
+            --primary-orange-glow: rgba(243, 130, 26, 0.25);
+            --bg-light: #f8fafc;
+            --card-glass: rgba(255, 255, 255, 0.85);
+            --card-border: rgba(255, 255, 255, 0.9);
+            --text-dark: #0f172a;
+            --text-muted: #64748b;
+            --input-bg: rgba(241, 245, 249, 0.8);
+            --border-color: #cbd5e1;
         }
 
         * {
@@ -28,31 +31,90 @@
         }
 
         body {
-            background-color: var(--bg-color);
+            background-color: var(--bg-light);
+            min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            min-height: 100vh;
-            padding: 1rem;
+            overflow: hidden;
+            position: relative;
         }
 
-        .login-card {
-            background: #ffffff;
+        body::before {
+            content: '';
+            position: absolute;
             width: 100%;
-            max-width: 420px;
-            padding: 2.5rem 2rem;
-            border-radius: 12px;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
-            border-top: 5px solid var(--primary-orange);
+            height: 100%;
+            background-image: 
+                radial-gradient(rgba(243, 130, 26, 0.15) 1px, transparent 0),
+                linear-gradient(to right, rgba(203, 213, 225, 0.3) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(203, 213, 225, 0.3) 1px, transparent 1px);
+            background-size: 30px 30px, 40px 40px, 40px 40px;
+            z-index: 1;
         }
+
+        /* Animated Glowing Blobs behind Card */
+        .background-blob {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(80px);
+            z-index: 2;
+            animation: floatBlob 12s infinite alternate ease-in-out;
+        }
+
+        .blob-1 {
+            width: 380px;
+            height: 380px;
+            background: rgba(243, 130, 26, 0.25);
+            top: 10%;
+            left: 15%;
+        }
+
+        .blob-2 {
+            width: 320px;
+            height: 320px;
+            background: rgba(56, 189, 248, 0.2); /* Soft sky blue contrast */
+            bottom: 10%;
+            right: 15%;
+            animation-delay: -6s;
+        }
+
+        @keyframes floatBlob {
+            0% { transform: translate(0, 0) scale(1); }
+            100% { transform: translate(40px, -30px) scale(1.08); }
+        }
+
+        /* Premium Light Glass Card */
+        .login-card {
+            background: var(--card-glass);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid var(--card-border);
+            width: 100%;
+            max-width: 400px;
+            padding: 2.25rem 2rem;
+            border-radius: 20px;
+            box-shadow: 
+                0 20px 40px rgba(0, 0, 0, 0.06),
+                0 0 30px var(--primary-orange-glow);
+            position: relative;
+            z-index: 10;
+            animation: cardAppear 0.5s ease-out;
+        }
+
+        @keyframes cardAppear {
+            from { opacity: 0; transform: translateY(15px) scale(0.97); }
+            to { opacity: 1; transform: translateY(0) scale(1); }
+        }
+
 
         .logo-container {
             text-align: center;
-            margin-bottom: 1.5rem;
+            margin-bottom: 1.25rem;
         }
 
         .logo-container img {
-            max-width: 260px;
+            max-width: 180px;
             height: auto;
             display: block;
             margin: 0 auto;
@@ -64,101 +126,133 @@
         }
 
         .login-header h2 {
-            font-size: 1.5rem;
-            color: var(--dark-text);
+            font-size: 1.45rem;
+            color: var(--text-dark);
+            font-weight: 700;
             margin-bottom: 0.25rem;
+            letter-spacing: -0.01em;
         }
 
         .login-header p {
-            color: var(--muted-text);
-            font-size: 0.875rem;
+            color: var(--text-muted);
+            font-size: 0.85rem;
         }
 
         .form-group {
-            margin-bottom: 1.25rem;
-            position: relative;
+            margin-bottom: 1.2rem;
         }
 
         .form-group label {
             display: block;
-            font-size: 0.85rem;
-            font-weight: 600;
-            color: var(--dark-text);
-            margin-bottom: 0.5rem;
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 0.4rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
         }
 
         .form-group input {
             width: 100%;
             padding: 0.75rem 1rem;
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
+            background: var(--input-bg);
+            border: 1.5px solid var(--border-color);
+            border-radius: 10px;
             font-size: 0.95rem;
+            color: var(--text-dark);
             outline: none;
-            transition: border-color 0.2s ease, box-shadow 0.2s ease;
+            transition: all 0.25s ease;
+        }
+
+        .form-group input::placeholder {
+            color: #94a3b8;
         }
 
         .form-group input:focus {
             border-color: var(--primary-orange);
-            box-shadow: 0 0 0 3px rgba(243, 130, 26, 0.2);
+            box-shadow: 0 0 0 4px var(--primary-orange-glow);
+            background: #ffffff;
         }
 
         .password-wrapper {
             position: relative;
+            display: flex;
+            align-items: center;
+        }
+
+        .password-wrapper input {
+            padding-right: 4.5rem;
         }
 
         .toggle-password {
             position: absolute;
-            right: 12px;
-            top: 50%;
-            transform: translateY(-50%);
-            background: none;
+            right: 8px;
+            background: #e2e8f0;
             border: none;
-            color: var(--muted-text);
+            color: var(--text-dark);
+            padding: 5px 10px;
+            border-radius: 6px;
             cursor: pointer;
-            font-size: 0.8rem;
-            font-weight: 600;
+            font-size: 0.7rem;
+            font-weight: 700;
+            transition: all 0.2s ease;
         }
 
         .toggle-password:hover {
-            color: var(--dark-text);
+            background: var(--primary-orange);
+            color: #ffffff;
         }
 
         .error-message {
-            background-color: #fde8e8;
-            color: #9b1c1c;
-            border: 1px solid #f8b4b4;
-            padding: 0.75rem;
-            border-radius: 6px;
-            font-size: 0.85rem;
-            margin-bottom: 1.25rem;
+            background-color: #fef2f2;
+            color: #991b1b;
+            border: 1px solid #fecaca;
+            padding: 0.65rem;
+            border-radius: 8px;
+            font-size: 0.825rem;
+            margin-bottom: 1rem;
             display: none;
             text-align: center;
+            font-weight: 600;
         }
 
         .btn-submit {
             width: 100%;
             padding: 0.85rem;
-            background-color: var(--primary-orange);
+            margin-top: 0.5rem;
+            background: linear-gradient(135deg, #f3821a 0%, #d96f0f 100%);
             color: #ffffff;
             border: none;
-            border-radius: 8px;
-            font-size: 1rem;
-            font-weight: 600;
+            border-radius: 10px;
+            font-size: 0.95rem;
+            font-weight: 700;
             cursor: pointer;
-            transition: background-color 0.2s ease;
+            box-shadow: 0 4px 15px rgba(243, 130, 26, 0.35);
+            transition: all 0.25s ease;
         }
 
         .btn-submit:hover {
-            background-color: var(--primary-orange-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(243, 130, 26, 0.45);
+        }
+
+        .btn-submit:active {
+            transform: translateY(0);
         }
 
         .btn-submit:disabled {
-            background-color: #cbd5e1;
+            background: #cbd5e1;
+            box-shadow: none;
             cursor: not-allowed;
+            transform: none;
         }
     </style>
 </head>
 <body>
+
+    <!-- Animated Light Background Blobs -->
+    <div class="background-blob blob-1"></div>
+    <div class="background-blob blob-2"></div>
 
     <div class="login-card">
         <!-- Logo Header -->
@@ -167,8 +261,8 @@
         </div>
 
         <div class="login-header">
-            <h2>Login</h2>
-            <p>Please enter your credentials to access the dashboard</p>
+            <h2>Welcome Back</h2>
+            <p>Please enter your credentials to login</p>
         </div>
 
         <div id="errorMessage" class="error-message"></div>
@@ -191,87 +285,67 @@
         </form>
     </div>
 
-   
     <script>
-      const loginForm = document.getElementById('loginForm');
-const usernameInput = document.getElementById('username');
-const passwordInput = document.getElementById('password');
-const togglePasswordBtn = document.getElementById('togglePassword');
-const errorMessage = document.getElementById('errorMessage');
-const submitBtn = document.getElementById('submitBtn');
+        const loginForm = document.getElementById('loginForm');
+        const usernameInput = document.getElementById('username');
+        const passwordInput = document.getElementById('password');
+        const togglePasswordBtn = document.getElementById('togglePassword');
+        const errorMessage = document.getElementById('errorMessage');
+        const submitBtn = document.getElementById('submitBtn');
 
-togglePasswordBtn.addEventListener('click', () => {
-    const isPassword = passwordInput.type === 'password';
-    passwordInput.type = isPassword ? 'text' : 'password';
-    togglePasswordBtn.textContent = isPassword ? 'Hide' : 'Show';
-});
+        togglePasswordBtn.addEventListener('click', () => {
+            const isPassword = passwordInput.type === 'password';
+            passwordInput.type = isPassword ? 'text' : 'password';
+            togglePasswordBtn.textContent = isPassword ? 'Hide' : 'Show';
+        });
 
-loginForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    errorMessage.style.display = 'none';
+        loginForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            errorMessage.style.display = 'none';
 
-    const username = usernameInput.value.trim().toLowerCase();
-    const password = passwordInput.value.trim();
+            const username = usernameInput.value.trim().toLowerCase();
+            const password = passwordInput.value.trim();
 
-    // Users Database with Display Names
-    const USERS_DB = {
-        'admin': { 
-            pass: 'Aispl@2026', 
-            role: 'admin', 
-            empId: 'admin',
-            name: 'Admin'
-        },
-        'akash': { 
-            pass: 'Akash@1808', 
-            role: 'employee', 
-            empId: 'akash-r',
-            name: 'Akash Raut',
-            accessIds: ['akash-r', 'bhakti-b', 'sakshi-b','sachin-m','saurav-r']
-        },
-        'mahavir': { 
-            pass: 'Mahavir@0106', 
-            role: 'employee',
-            empId: 'mahavir-c',
-            name: 'Mahavir Chabukswar',
-            accessIds: ['mahavir-c', 'shubham-p','kiran-c'] 
-        },
-        'sachin': { pass: 'Sachin@0201', role: 'employee', empId: 'sachin-m', name: 'Sachin Maharana' },
-        'shubham': { pass: 'Shubham@0110', role: 'employee', empId: 'shubham-p', name: 'Shubham Pawar' },
-        'saurav': { pass: 'Saurav@1504', role: 'employee', empId: 'saurav-r', name: 'Saurav Rathod' },
-        'kiran': { pass: 'KiranC@1010', role: 'employee', empId: 'kiran-c', name: 'Kiran Chabukswar' },
-        'bhakti': { pass: 'Bhakti@1006', role: 'employee', empId: 'bhakti-b', name: 'Bhakti Bule' },
-        'sakshi': { pass: 'Sakshi@1811', role: 'employee', empId: 'sakshi-b', name: 'Sakshi Makote' },
-        'namrata': { pass: 'Namrata@2504', role: 'employee', empId: 'namrata-r', name: 'Namrata Raut' },
-        'anuradha': { pass: 'Anuradha@1228', role: 'employee', empId: 'anuradha-s', name: 'Anuradha Bansode' },
-        'harshada': { pass: 'Harshada@0604', role: 'employee', empId: 'harshada-s', name: 'Harshada Shirsale' },
-        'kiran h': { pass: 'Accounts@1801', role: 'employee', empId: 'accounts-team', name: 'Kiran Hole' }
-    };
+            const USERS_DB = {
+                'admin': { pass: 'Aispl@2026', role: 'admin', empId: 'admin', name: 'Admin'},
+                'akash': { pass: 'Akash@1808', role: 'employee', empId: 'akash-r', name: 'Akash Raut', accessIds: ['akash-r', 'bhakti-b', 'sakshi-b','sachin-m','saurav-r']},
+                'mahavir': { pass: 'Mahavir@0106', role: 'employee', empId: 'mahavir-c', name: 'Mahavir Chabukswar', accessIds: ['mahavir-c', 'shubham-p','kiran-c'] },
+                'sachin': { pass: 'Sachin@0201', role: 'employee', empId: 'sachin-m', name: 'Sachin Maharana' },
+                'shubham': { pass: 'Shubham@0110', role: 'employee', empId: 'shubham-p', name: 'Shubham Pawar' },
+                'saurav': { pass: 'Saurav@1504', role: 'employee', empId: 'saurav-r', name: 'Saurav Rathod' },
+                'kiran': { pass: 'KiranC@1010', role: 'employee', empId: 'kiran-c', name: 'Kiran Chabukswar' },
+                'bhakti': { pass: 'Bhakti@1006', role: 'employee', empId: 'bhakti-b', name: 'Bhakti Bule' },
+                'sakshi': { pass: 'Sakshi@1811', role: 'employee', empId: 'sakshi-b', name: 'Sakshi Makote' },
+                'namrata': { pass: 'Namrata@2504', role: 'employee', empId: 'namrata-r', name: 'Namrata Raut' },
+                'anuradha': { pass: 'Anuradha@1228', role: 'employee', empId: 'anuradha-s', name: 'Anuradha Bansode' },
+                'harshada': { pass: 'Harshada@0604', role: 'employee', empId: 'harshada-s', name: 'Harshada Shirsale' },
+                'kiran h': { pass: 'Accounts@1801', role: 'employee', empId: 'accounts-team', name: 'Kiran Hole' }
+            };
 
-    const user = USERS_DB[username];
+            const user = USERS_DB[username];
 
-    if (user && user.pass === password) {
-        submitBtn.disabled = true;
-        submitBtn.textContent = 'Redirecting...';
-        
-        // Save User Info in Session
-        sessionStorage.setItem('isLoggedIn', 'true');
-        sessionStorage.setItem('loggedInUserRole', user.role);
-        sessionStorage.setItem('loggedInEmpId', user.empId);
-        sessionStorage.setItem('loggedInUserName', user.name); // Display Name Save केला
+            if (user && user.pass === password) {
+                submitBtn.disabled = true;
+                submitBtn.textContent = 'Authenticating...';
+                
+                sessionStorage.setItem('isLoggedIn', 'true');
+                sessionStorage.setItem('loggedInUserRole', user.role);
+                sessionStorage.setItem('loggedInEmpId', user.empId);
+                sessionStorage.setItem('loggedInUserName', user.name);
 
-        const allowedIds = user.accessIds || [user.empId];
-        sessionStorage.setItem('accessIds', JSON.stringify(allowedIds));
+                const allowedIds = user.accessIds || [user.empId];
+                sessionStorage.setItem('accessIds', JSON.stringify(allowedIds));
 
-        window.location.href = 'index.html'; 
-    } else {
-        showError('Invalid Username or Password!');
-    }
-});
+                window.location.href = 'index.html'; 
+            } else {
+                showError('Invalid Username or Password!');
+            }
+        });
 
-function showError(msg) {
-    errorMessage.textContent = msg;
-    errorMessage.style.display = 'block';
-}
+        function showError(msg) {
+            errorMessage.textContent = msg;
+            errorMessage.style.display = 'block';
+        }
     </script>
 </body>
 </html>
