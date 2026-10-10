@@ -219,7 +219,9 @@ const employeesData = [
       { name: 'Help Slip',formUrl:'https://forms.gle/naMThh9BWnzcAme38', docId: '16R8q7J5kc3GYXgZC1q6KS4nVJyMIaHqfleFnT3l7v_4', gid: '1930440204', selectedColumns: ['Timestamp', 'Employee Name', 'Department', 'Required From', 'Challenge / Question', 'Solution 1'] },
       { name: 'Checklist', docId: '1m_P5_eP9FvD9eaYvanmLlV833cscTvk2xJk_c39cbZw', gid: '2092959791', selectedColumns: ['Task', 'Doer', 'Planned', 'Actual', 'Status'] },
       { name: 'Project Specification Changes',formUrl:'https://forms.gle/2Zew9NZYBjbF32bE6', docId: '1oOS8lE1JviRkNhbM7FP_0VUxPV9FZgMU70t_j0A_N2A', gid: '944341180', selectedColumns: ['Date', 'Project Name', 'Specific Changes / Additional Work', 'Cost Change (If Any)', 'Requested / Instructed By', 'Approval Status'] },
-      { name: 'Leave Application', formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScVKjl4j1wPbzV4QFAK9TlP8xpOkrHYxej75WTdFzt-lkV4Dg/viewform',docId: '1mrjfYpGMSMY-Em7Y4O4m9JZgfED0gdvbdPBD9qscgcM', gid: '148992', selectedColumns: ['Employee Name', 'Leave Type', 'Reason/Purpose', 'Half Day', 'Start Date of Leave','End Date of Leave'] }
+      { name: 'Leave Application', formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScVKjl4j1wPbzV4QFAK9TlP8xpOkrHYxej75WTdFzt-lkV4Dg/viewform',docId: '1mrjfYpGMSMY-Em7Y4O4m9JZgfED0gdvbdPBD9qscgcM', gid: '148992', selectedColumns: ['Employee Name', 'Leave Type', 'Reason/Purpose', 'Half Day', 'Start Date of Leave','End Date of Leave'] },
+            { name: 'Extra Work Approval',formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScYU-9h_f34xuHdSKpz5L3zTcu2VGWO9A5wqge_XL4KbW-3YA/viewform', docId: '1md6KnXHf-_70ndOwakmAD6ksWjd4xwglMJKBEMIzI8o', gid: '1681660272', selectedColumns: ['Employee Name','Extra Work Date', 'In Time', 'Out Time','Reason'] },
+      { name: 'Compensate Off',formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScc8kN-AbggkeAGHPIPaxMv4i8g5O9fs_tNKN39_SOXQ92e4w/viewform', docId: '14HlbjtN6USi61CfUJVAHZvfKA3jODWKDng8zbCuxoRg', gid: '544867416', selectedColumns: ['Employee Name','Compensatory Off Date','Extra Work Done Date', 'Reason'] }
 
     ]
   },
@@ -275,7 +277,9 @@ const employeesData = [
       { name: 'Help Slip',formUrl:'https://forms.gle/naMThh9BWnzcAme38', docId: '16R8q7J5kc3GYXgZC1q6KS4nVJyMIaHqfleFnT3l7v_4', gid: '1930440204', selectedColumns: ['Timestamp', 'Employee Name', 'Department', 'Required From', 'Challenge / Question', 'Solution 1'] },
       { name: 'Checklist', docId: '1m_P5_eP9FvD9eaYvanmLlV833cscTvk2xJk_c39cbZw', gid: '2092959791', selectedColumns: ['Task', 'Doer', 'Planned', 'Actual', 'Status'] },
       { name: 'Project Specification Changes', formUrl:'https://forms.gle/2Zew9NZYBjbF32bE6',docId: '1oOS8lE1JviRkNhbM7FP_0VUxPV9FZgMU70t_j0A_N2A', gid: '944341180', selectedColumns: ['Date', 'Project Name', 'Specific Changes / Additional Work', 'Cost Change (If Any)', 'Requested / Instructed By', 'Approval Status'] },
-      { name: 'Leave Application', formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScVKjl4j1wPbzV4QFAK9TlP8xpOkrHYxej75WTdFzt-lkV4Dg/viewform',docId: '1mrjfYpGMSMY-Em7Y4O4m9JZgfED0gdvbdPBD9qscgcM', gid: '148992', selectedColumns: ['Employee Name', 'Leave Type', 'Reason/Purpose', 'Half Day', 'Start Date of Leave','End Date of Leave'] }
+      { name: 'Leave Application', formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScVKjl4j1wPbzV4QFAK9TlP8xpOkrHYxej75WTdFzt-lkV4Dg/viewform',docId: '1mrjfYpGMSMY-Em7Y4O4m9JZgfED0gdvbdPBD9qscgcM', gid: '148992', selectedColumns: ['Employee Name', 'Leave Type', 'Reason/Purpose', 'Half Day', 'Start Date of Leave','End Date of Leave'] },
+            { name: 'Extra Work Approval',formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScYU-9h_f34xuHdSKpz5L3zTcu2VGWO9A5wqge_XL4KbW-3YA/viewform', docId: '1md6KnXHf-_70ndOwakmAD6ksWjd4xwglMJKBEMIzI8o', gid: '1681660272', selectedColumns: ['Employee Name','Extra Work Date', 'In Time', 'Out Time','Reason'] },
+      { name: 'Compensate Off',formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScc8kN-AbggkeAGHPIPaxMv4i8g5O9fs_tNKN39_SOXQ92e4w/viewform', docId: '14HlbjtN6USi61CfUJVAHZvfKA3jODWKDng8zbCuxoRg', gid: '544867416', selectedColumns: ['Employee Name','Compensatory Off Date','Extra Work Done Date', 'Reason'] }
 
     ]
   },
@@ -306,7 +310,9 @@ const employeesData = [
       { name: 'Delegation Sheet Team', docId: '1680NhH8rKFTKeY3HSZGV_izgEi4QieHiirbcbRi7hTA', gid: '1184708924', selectedColumns: ['Name', 'Task', 'First Date', 'Revision 1','Revision 2', 'Total Revision','Status','Actual Completion Date'] },
       { name: 'Help Slip',formUrl:'https://forms.gle/naMThh9BWnzcAme38', docId: '16R8q7J5kc3GYXgZC1q6KS4nVJyMIaHqfleFnT3l7v_4', gid: '1930440204', selectedColumns: ['Timestamp', 'Employee Name', 'Department', 'Required From', 'Challenge / Question', 'Solution 1'] },
       { name: 'Checklist', docId: '1m_P5_eP9FvD9eaYvanmLlV833cscTvk2xJk_c39cbZw', gid: '2092959791', selectedColumns: ['Task', 'Doer', 'Planned', 'Actual', 'Status'] },
-      { name: 'Leave Application', formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScVKjl4j1wPbzV4QFAK9TlP8xpOkrHYxej75WTdFzt-lkV4Dg/viewform',docId: '1mrjfYpGMSMY-Em7Y4O4m9JZgfED0gdvbdPBD9qscgcM', gid: '148992', selectedColumns: ['Employee Name', 'Leave Type', 'Reason/Purpose', 'Half Day', 'Start Date of Leave','End Date of Leave'] }
+      { name: 'Leave Application', formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScVKjl4j1wPbzV4QFAK9TlP8xpOkrHYxej75WTdFzt-lkV4Dg/viewform',docId: '1mrjfYpGMSMY-Em7Y4O4m9JZgfED0gdvbdPBD9qscgcM', gid: '148992', selectedColumns: ['Employee Name', 'Leave Type', 'Reason/Purpose', 'Half Day', 'Start Date of Leave','End Date of Leave'] },
+            { name: 'Extra Work Approval',formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScYU-9h_f34xuHdSKpz5L3zTcu2VGWO9A5wqge_XL4KbW-3YA/viewform', docId: '1md6KnXHf-_70ndOwakmAD6ksWjd4xwglMJKBEMIzI8o', gid: '1681660272', selectedColumns: ['Employee Name','Extra Work Date', 'In Time', 'Out Time','Reason'] },
+      { name: 'Compensate Off',formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScc8kN-AbggkeAGHPIPaxMv4i8g5O9fs_tNKN39_SOXQ92e4w/viewform', docId: '14HlbjtN6USi61CfUJVAHZvfKA3jODWKDng8zbCuxoRg', gid: '544867416', selectedColumns: ['Employee Name','Compensatory Off Date','Extra Work Done Date', 'Reason'] }
 
     ]
   },
@@ -335,7 +341,9 @@ const employeesData = [
       { name: 'Delegation Sheet Team', docId: '1680NhH8rKFTKeY3HSZGV_izgEi4QieHiirbcbRi7hTA', gid: '1184708924', selectedColumns: ['Name', 'Task', 'First Date', 'Revision 1','Revision 2', 'Total Revision','Status','Actual Completion Date'] },
       { name: 'Help Slip',formUrl:'https://forms.gle/naMThh9BWnzcAme38', docId: '16R8q7J5kc3GYXgZC1q6KS4nVJyMIaHqfleFnT3l7v_4', gid: '1930440204', selectedColumns: ['Timestamp', 'Employee Name', 'Department', 'Required From', 'Challenge / Question', 'Solution 1'] },
       { name: 'Checklist', docId: '1m_P5_eP9FvD9eaYvanmLlV833cscTvk2xJk_c39cbZw', gid: '2092959791', selectedColumns: ['Task', 'Doer', 'Planned', 'Actual', 'Status'] },
-      { name: 'Leave Application', formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScVKjl4j1wPbzV4QFAK9TlP8xpOkrHYxej75WTdFzt-lkV4Dg/viewform',docId: '1mrjfYpGMSMY-Em7Y4O4m9JZgfED0gdvbdPBD9qscgcM', gid: '148992', selectedColumns: ['Employee Name', 'Leave Type', 'Reason/Purpose', 'Half Day', 'Start Date of Leave','End Date of Leave'] }
+      { name: 'Leave Application', formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScVKjl4j1wPbzV4QFAK9TlP8xpOkrHYxej75WTdFzt-lkV4Dg/viewform',docId: '1mrjfYpGMSMY-Em7Y4O4m9JZgfED0gdvbdPBD9qscgcM', gid: '148992', selectedColumns: ['Employee Name', 'Leave Type', 'Reason/Purpose', 'Half Day', 'Start Date of Leave','End Date of Leave'] },
+            { name: 'Extra Work Approval',formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScYU-9h_f34xuHdSKpz5L3zTcu2VGWO9A5wqge_XL4KbW-3YA/viewform', docId: '1md6KnXHf-_70ndOwakmAD6ksWjd4xwglMJKBEMIzI8o', gid: '1681660272', selectedColumns: ['Employee Name','Extra Work Date', 'In Time', 'Out Time','Reason'] },
+      { name: 'Compensate Off',formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScc8kN-AbggkeAGHPIPaxMv4i8g5O9fs_tNKN39_SOXQ92e4w/viewform', docId: '14HlbjtN6USi61CfUJVAHZvfKA3jODWKDng8zbCuxoRg', gid: '544867416', selectedColumns: ['Employee Name','Compensatory Off Date','Extra Work Done Date', 'Reason'] }
 
     ]
   },
@@ -363,7 +371,9 @@ const employeesData = [
       { name: 'Delegation Sheet Team', docId: '1680NhH8rKFTKeY3HSZGV_izgEi4QieHiirbcbRi7hTA', gid: '1184708924', selectedColumns: ['Name', 'Task', 'First Date', 'Revision 1','Revision 2', 'Total Revision','Status','Actual Completion Date'] },
       { name: 'Checklist', docId: '1m_P5_eP9FvD9eaYvanmLlV833cscTvk2xJk_c39cbZw', gid: '2092959791', selectedColumns: ['Task', 'Doer', 'Planned', 'Actual', 'Status'] },
       { name: 'Help Slip',formUrl:'https://forms.gle/naMThh9BWnzcAme38', docId: '16R8q7J5kc3GYXgZC1q6KS4nVJyMIaHqfleFnT3l7v_4', gid: '1930440204', selectedColumns: ['Timestamp', 'Employee Name', 'Department', 'Required From', 'Challenge / Question', 'Solution 1'] },
-      { name: 'Leave Application', formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScVKjl4j1wPbzV4QFAK9TlP8xpOkrHYxej75WTdFzt-lkV4Dg/viewform',docId: '1mrjfYpGMSMY-Em7Y4O4m9JZgfED0gdvbdPBD9qscgcM', gid: '148992', selectedColumns: ['Employee Name', 'Leave Type', 'Reason/Purpose', 'Half Day', 'Start Date of Leave','End Date of Leave'] }
+      { name: 'Leave Application', formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScVKjl4j1wPbzV4QFAK9TlP8xpOkrHYxej75WTdFzt-lkV4Dg/viewform',docId: '1mrjfYpGMSMY-Em7Y4O4m9JZgfED0gdvbdPBD9qscgcM', gid: '148992', selectedColumns: ['Employee Name', 'Leave Type', 'Reason/Purpose', 'Half Day', 'Start Date of Leave','End Date of Leave'] },
+            { name: 'Extra Work Approval',formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScYU-9h_f34xuHdSKpz5L3zTcu2VGWO9A5wqge_XL4KbW-3YA/viewform', docId: '1md6KnXHf-_70ndOwakmAD6ksWjd4xwglMJKBEMIzI8o', gid: '1681660272', selectedColumns: ['Employee Name','Extra Work Date', 'In Time', 'Out Time','Reason'] },
+      { name: 'Compensate Off',formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScc8kN-AbggkeAGHPIPaxMv4i8g5O9fs_tNKN39_SOXQ92e4w/viewform', docId: '14HlbjtN6USi61CfUJVAHZvfKA3jODWKDng8zbCuxoRg', gid: '544867416', selectedColumns: ['Employee Name','Compensatory Off Date','Extra Work Done Date', 'Reason'] }
 
     ]
   },
@@ -391,7 +401,9 @@ const employeesData = [
       { name: 'Delegation Sheet Team', docId: '1680NhH8rKFTKeY3HSZGV_izgEi4QieHiirbcbRi7hTA', gid: '1184708924', selectedColumns: ['Name', 'Task', 'First Date', 'Revision 1','Revision 2', 'Total Revision','Status','Actual Completion Date'] },
       { name: 'Checklist', docId: '1m_P5_eP9FvD9eaYvanmLlV833cscTvk2xJk_c39cbZw', gid: '2092959791', selectedColumns: ['Task', 'Doer', 'Planned', 'Actual', 'Status'] },
       { name: 'Help Slip',formUrl:'https://forms.gle/naMThh9BWnzcAme38', docId: '16R8q7J5kc3GYXgZC1q6KS4nVJyMIaHqfleFnT3l7v_4', gid: '1930440204', selectedColumns: ['Timestamp', 'Employee Name', 'Department', 'Required From', 'Challenge / Question', 'Solution 1'] },
-      { name: 'Leave Application', formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScVKjl4j1wPbzV4QFAK9TlP8xpOkrHYxej75WTdFzt-lkV4Dg/viewform',docId: '1mrjfYpGMSMY-Em7Y4O4m9JZgfED0gdvbdPBD9qscgcM', gid: '148992', selectedColumns: ['Employee Name', 'Leave Type', 'Reason/Purpose', 'Half Day', 'Start Date of Leave','End Date of Leave'] }
+      { name: 'Leave Application', formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScVKjl4j1wPbzV4QFAK9TlP8xpOkrHYxej75WTdFzt-lkV4Dg/viewform',docId: '1mrjfYpGMSMY-Em7Y4O4m9JZgfED0gdvbdPBD9qscgcM', gid: '148992', selectedColumns: ['Employee Name', 'Leave Type', 'Reason/Purpose', 'Half Day', 'Start Date of Leave','End Date of Leave'] },
+            { name: 'Extra Work Approval',formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScYU-9h_f34xuHdSKpz5L3zTcu2VGWO9A5wqge_XL4KbW-3YA/viewform', docId: '1md6KnXHf-_70ndOwakmAD6ksWjd4xwglMJKBEMIzI8o', gid: '1681660272', selectedColumns: ['Employee Name','Extra Work Date', 'In Time', 'Out Time','Reason'] },
+      { name: 'Compensate Off',formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScc8kN-AbggkeAGHPIPaxMv4i8g5O9fs_tNKN39_SOXQ92e4w/viewform', docId: '14HlbjtN6USi61CfUJVAHZvfKA3jODWKDng8zbCuxoRg', gid: '544867416', selectedColumns: ['Employee Name','Compensatory Off Date','Extra Work Done Date', 'Reason'] }
 
     ]
   },
@@ -495,7 +507,9 @@ const employeesData = [
         gid: '2092959791', 
         selectedColumns: ['Task', 'Doer', 'Planned', 'Actual', 'Status'] 
       },
-      { name: 'Leave Application', formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScVKjl4j1wPbzV4QFAK9TlP8xpOkrHYxej75WTdFzt-lkV4Dg/viewform',docId: '1mrjfYpGMSMY-Em7Y4O4m9JZgfED0gdvbdPBD9qscgcM', gid: '148992', selectedColumns: ['Employee Name', 'Leave Type', 'Reason/Purpose', 'Half Day', 'Start Date of Leave','End Date of Leave'] }
+      { name: 'Leave Application', formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScVKjl4j1wPbzV4QFAK9TlP8xpOkrHYxej75WTdFzt-lkV4Dg/viewform',docId: '1mrjfYpGMSMY-Em7Y4O4m9JZgfED0gdvbdPBD9qscgcM', gid: '148992', selectedColumns: ['Employee Name', 'Leave Type', 'Reason/Purpose', 'Half Day', 'Start Date of Leave','End Date of Leave'] },
+            { name: 'Extra Work Approval',formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScYU-9h_f34xuHdSKpz5L3zTcu2VGWO9A5wqge_XL4KbW-3YA/viewform', docId: '1md6KnXHf-_70ndOwakmAD6ksWjd4xwglMJKBEMIzI8o', gid: '1681660272', selectedColumns: ['Employee Name','Extra Work Date', 'In Time', 'Out Time','Reason'] },
+      { name: 'Compensate Off',formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScc8kN-AbggkeAGHPIPaxMv4i8g5O9fs_tNKN39_SOXQ92e4w/viewform', docId: '14HlbjtN6USi61CfUJVAHZvfKA3jODWKDng8zbCuxoRg', gid: '544867416', selectedColumns: ['Employee Name','Compensatory Off Date','Extra Work Done Date', 'Reason'] }
 
     ]
   },
@@ -526,7 +540,9 @@ const employeesData = [
       { name: 'Checklist', docId: '1m_P5_eP9FvD9eaYvanmLlV833cscTvk2xJk_c39cbZw', gid: '2092959791', selectedColumns: ['Task', 'Doer', 'Planned', 'Actual', 'Status'] },
       { name: 'Delegation Sheet Team', docId: '1680NhH8rKFTKeY3HSZGV_izgEi4QieHiirbcbRi7hTA', gid: '1184708924', selectedColumns: ['Name', 'Task', 'First Date', 'Revision 1','Revision 2', 'Total Revision','Status','Actual Completion Date'] },
       { name: 'Help Slip',formUrl:'https://forms.gle/naMThh9BWnzcAme38', docId: '16R8q7J5kc3GYXgZC1q6KS4nVJyMIaHqfleFnT3l7v_4', gid: '1930440204', selectedColumns: ['Timestamp', 'Employee Name', 'Department', 'Required From', 'Challenge / Question', 'Solution 1'] },
-      { name: 'Leave Application', formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScVKjl4j1wPbzV4QFAK9TlP8xpOkrHYxej75WTdFzt-lkV4Dg/viewform',docId: '1mrjfYpGMSMY-Em7Y4O4m9JZgfED0gdvbdPBD9qscgcM', gid: '148992', selectedColumns: ['Employee Name', 'Leave Type', 'Reason/Purpose', 'Half Day', 'Start Date of Leave','End Date of Leave'] }
+      { name: 'Leave Application', formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScVKjl4j1wPbzV4QFAK9TlP8xpOkrHYxej75WTdFzt-lkV4Dg/viewform',docId: '1mrjfYpGMSMY-Em7Y4O4m9JZgfED0gdvbdPBD9qscgcM', gid: '148992', selectedColumns: ['Employee Name', 'Leave Type', 'Reason/Purpose', 'Half Day', 'Start Date of Leave','End Date of Leave'] },
+            { name: 'Extra Work Approval',formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScYU-9h_f34xuHdSKpz5L3zTcu2VGWO9A5wqge_XL4KbW-3YA/viewform', docId: '1md6KnXHf-_70ndOwakmAD6ksWjd4xwglMJKBEMIzI8o', gid: '1681660272', selectedColumns: ['Employee Name','Extra Work Date', 'In Time', 'Out Time','Reason'] },
+      { name: 'Compensate Off',formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScc8kN-AbggkeAGHPIPaxMv4i8g5O9fs_tNKN39_SOXQ92e4w/viewform', docId: '14HlbjtN6USi61CfUJVAHZvfKA3jODWKDng8zbCuxoRg', gid: '544867416', selectedColumns: ['Employee Name','Compensatory Off Date','Extra Work Done Date', 'Reason'] }
 
     ]
   },
@@ -557,7 +573,9 @@ const employeesData = [
       { name: 'Checklist', docId: '1m_P5_eP9FvD9eaYvanmLlV833cscTvk2xJk_c39cbZw', gid: '2092959791', selectedColumns: ['Task', 'Doer', 'Planned', 'Actual', 'Status'] },
       { name: 'Delegation Sheet Team', docId: '1680NhH8rKFTKeY3HSZGV_izgEi4QieHiirbcbRi7hTA', gid: '1184708924', selectedColumns: ['Name', 'Task', 'First Date', 'Revision 1','Revision 2', 'Total Revision','Status','Actual Completion Date'] },
       { name: 'Help Slip',formUrl:'https://forms.gle/naMThh9BWnzcAme38', docId: '16R8q7J5kc3GYXgZC1q6KS4nVJyMIaHqfleFnT3l7v_4', gid: '1930440204', selectedColumns: ['Timestamp', 'Employee Name', 'Department', 'Required From', 'Challenge / Question', 'Solution 1'] },
-      { name: 'Leave Application', formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScVKjl4j1wPbzV4QFAK9TlP8xpOkrHYxej75WTdFzt-lkV4Dg/viewform',docId: '1mrjfYpGMSMY-Em7Y4O4m9JZgfED0gdvbdPBD9qscgcM', gid: '148992', selectedColumns: ['Employee Name', 'Leave Type', 'Reason/Purpose', 'Half Day', 'Start Date of Leave','End Date of Leave'] }
+      { name: 'Leave Application', formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScVKjl4j1wPbzV4QFAK9TlP8xpOkrHYxej75WTdFzt-lkV4Dg/viewform',docId: '1mrjfYpGMSMY-Em7Y4O4m9JZgfED0gdvbdPBD9qscgcM', gid: '148992', selectedColumns: ['Employee Name', 'Leave Type', 'Reason/Purpose', 'Half Day', 'Start Date of Leave','End Date of Leave'] },
+            { name: 'Extra Work Approval',formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScYU-9h_f34xuHdSKpz5L3zTcu2VGWO9A5wqge_XL4KbW-3YA/viewform', docId: '1md6KnXHf-_70ndOwakmAD6ksWjd4xwglMJKBEMIzI8o', gid: '1681660272', selectedColumns: ['Employee Name','Extra Work Date', 'In Time', 'Out Time','Reason'] },
+      { name: 'Compensate Off',formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScc8kN-AbggkeAGHPIPaxMv4i8g5O9fs_tNKN39_SOXQ92e4w/viewform', docId: '14HlbjtN6USi61CfUJVAHZvfKA3jODWKDng8zbCuxoRg', gid: '544867416', selectedColumns: ['Employee Name','Compensatory Off Date','Extra Work Done Date', 'Reason'] }
 
     ]
   },
