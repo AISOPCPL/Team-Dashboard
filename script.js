@@ -4,34 +4,32 @@ const employeesData = [
     id: 'akash-r',
     name: 'Akash Raut',
     designation: 'Project',
-  
     email: 'akash@avaniyshinterior.com',
     photo: 'https://lh3.googleusercontent.com/d/1J0fEgUfvhprW7toPDCCWNswE___LjMge',
     dashboards: [
-    {
-      title: 'Airtech Progress Dashboard',
-      url: 'https://script.google.com/a/macros/avaniyshinterior.com/s/AKfycbxBqPiof-i02R7xg0VxjjLcl99fBL6MQZCfG0rUufBnBhAEYtJ2QIUKvrIkzFQwOIo/exec?page=pms'
-    },
-    {
-      title: 'Airtech Material Checklist',
-      url: 'https://script.google.com/macros/s/AKfycbyj1PuG5FaR1jtF-BA_DUe2klBDSWKDWYavXVAji0v7V7gY5aXYvk5hR7UF6QBWSQYsfw/exec'
-    },
-    {
-      title: 'Airtech Schedular',
-      url: 'https://script.google.com/a/macros/avaniyshinterior.com/s/AKfycbxBqPiof-i02R7xg0VxjjLcl99fBL6MQZCfG0rUufBnBhAEYtJ2QIUKvrIkzFQwOIo/exec?page=fitout'
-    },
       {
-      title: 'Designer Dashboard',
-      url: 'https://script.google.com/a/macros/avaniyshinterior.com/s/AKfycbxh54vuyFmTtDvJwXY88cnHYDAaZptFX063acXGG-9LAT_r3_GUQu1oCZmeM4gMRpnNXA/exec'
-    },
-    {
-      title: 'Checklist Dashboard',
-      url: 'https://datastudio.google.com/reporting/b30bad2f-4552-4c9f-8d9d-b8afd5056244/page/gcG5F'
-    }
-  ],
-
-  projects: [
-    { 
+        title: 'Airtech Progress Dashboard',
+        url: 'https://script.google.com/a/macros/avaniyshinterior.com/s/AKfycbxBqPiof-i02R7xg0VxjjLcl99fBL6MQZCfG0rUufBnBhAEYtJ2QIUKvrIkzFQwOIo/exec?page=pms'
+      },
+      {
+        title: 'Airtech Material Checklist',
+        url: 'https://script.google.com/macros/s/AKfycbyj1PuG5FaR1jtF-BA_DUe2klBDSWKDWYavXVAji0v7V7gY5aXYvk5hR7UF6QBWSQYsfw/exec'
+      },
+      {
+        title: 'Airtech Schedular',
+        url: 'https://script.google.com/a/macros/avaniyshinterior.com/s/AKfycbxBqPiof-i02R7xg0VxjjLcl99fBL6MQZCfG0rUufBnBhAEYtJ2QIUKvrIkzFQwOIo/exec?page=fitout'
+      },
+      {
+        title: 'Designer Dashboard',
+        url: 'https://script.google.com/a/macros/avaniyshinterior.com/s/AKfycbxh54vuyFmTtDvJwXY88cnHYDAaZptFX063acXGG-9LAT_r3_GUQu1oCZmeM4gMRpnNXA/exec'
+      },
+      {
+        title: 'Checklist Dashboard',
+        url: 'https://datastudio.google.com/reporting/b30bad2f-4552-4c9f-8d9d-b8afd5056244/page/gcG5F'
+      }
+    ],
+    projects: [
+      { 
         name: 'AISPL Client PO', 
         docId: '1JZaXvcCxkq0jj4PETPWuwhRza570xBVIa3YBnxqEW8Y', 
         gid: '0', 
@@ -43,83 +41,76 @@ const employeesData = [
         gid: '1013826524', 
         selectedColumns: ['Sr.No.', 'Proforma Invoice No.', 'Project Name','Authorized Signatory','Documents'] 
       },
-       { 
+      { 
         name: 'AISPL Tax Invoice', 
         docId: '1JZaXvcCxkq0jj4PETPWuwhRza570xBVIa3YBnxqEW8Y', 
         gid: '665653959', 
         selectedColumns: ['Sr.No.', 'Tax Invoice No.', 'Project Name','Authorized Signatory','Documents'] 
       },
-       { 
+      { 
         name: 'AISPL PO To Vendor', 
         docId: '1JZaXvcCxkq0jj4PETPWuwhRza570xBVIa3YBnxqEW8Y', 
         gid: '286319358', 
         selectedColumns: ['Sr.No.', 'PO No.','Vendor Name', 'Project Name','Remarks','Created By','Documents'] 
       },
-     { 
+      { 
         name: 'Modulariti Client PO', 
         docId: '1u8sqdtEeklS9AVx91oZVXMulcY73IGwQ4N6CHokeBFQ', 
         gid: '0', 
         selectedColumns: ['Sr.No.', 'Project No.', 'Project Name','Documents'] 
       },
-    { 
+      { 
         name: 'Modulariti Proforma Invoice', 
         docId: '1u8sqdtEeklS9AVx91oZVXMulcY73IGwQ4N6CHokeBFQ', 
         gid: '1541680899', 
         selectedColumns: ['Sr.No.', 'Proforma Invoice No.', 'Project Name','Documents'] 
       },
-       { 
+      { 
         name: 'Modulariti Tax Invoice', 
         docId: '1u8sqdtEeklS9AVx91oZVXMulcY73IGwQ4N6CHokeBFQ', 
         gid: '842646558', 
         selectedColumns: ['Sr.No.', 'Tax Invoice No.', 'Project Name','Documents'] 
       },
-       { 
+      { 
         name: 'Modulariti PO To Vendor', 
         docId: '1u8sqdtEeklS9AVx91oZVXMulcY73IGwQ4N6CHokeBFQ', 
         gid: '1879062090', 
         selectedColumns: ['Sr.No.', 'PO No.','Vendor Name', 'Project Name','Documents'] 
       },
-
-       { 
+      { 
         name: 'Modulariti Delivery Challan', 
         docId: '1u8sqdtEeklS9AVx91oZVXMulcY73IGwQ4N6CHokeBFQ', 
         gid: '1982685191', 
         selectedColumns: ['Sr.No.', 'Challan No.', 'Project Name','Documents'] 
-      },
-
+      }
     ],
     sheets: [
-      
       { name: 'Project Visit', formUrl:'https://forms.gle/ZRpDTA4KUkGnbwtX8', docId: '11TLkJxGV3EFz4ZdVqKpuX3O-8FV4TrlMIYjxyAZ0lqY', gid: '2045538987', selectedColumns: ['Date', 'Project Site Visitor', 'Project Name', 'Location', 'Visit Purpose', 'Observation'] },
-      { name: 'Office Expenses',formUrl:'https://docs.google.com/forms/d/e/1FAIpQLSeFG1ZBY4mstlGPDpcNhUb9vi2WiJGBr3aG2cuTtYqPNXf4Nw/viewform?usp=header', docId: '1N2DF6vzSoJcIxwL2makablsGtDlMB-rxhcWT3_VLHBY', gid: '440445714', selectedColumns: ['Date', 'Paid to', 'Amount', 'Reason', 'Categories','URD Purchase','Tax Invoice'] },
-      { name: 'Site Expenses', formUrl:'https://forms.gle/9uuXgx6oF3okLmxb7',docId: '13Vo3YIrbPT06a4ClN-BS-eO1DOCSNzo5dnn-XfO0Tds', gid: '1142344274', selectedColumns: ['Date', 'Project Name', 'Paid to', 'Amount', 'Reason','URD Purchase'] },
-      { name: 'Project Specification Changes',formUrl:'https://forms.gle/2Zew9NZYBjbF32bE6', docId: '1oOS8lE1JviRkNhbM7FP_0VUxPV9FZgMU70t_j0A_N2A', gid: '944341180', selectedColumns: ['Date', 'Project Name', 'Specific Changes / Additional Work', 'Cost Change (If Any)', 'Requested / Instructed By', 'Approval Status'] },
+      { name: 'Office Expenses', formUrl:'https://docs.google.com/forms/d/e/1FAIpQLSeFG1ZBY4mstlGPDpcNhUb9vi2WiJGBr3aG2cuTtYqPNXf4Nw/viewform?usp=header', docId: '1N2DF6vzSoJcIxwL2makablsGtDlMB-rxhcWT3_VLHBY', gid: '440445714', selectedColumns: ['Date', 'Paid to', 'Amount', 'Reason', 'Categories','URD Purchase','Tax Invoice'] },
+      { name: 'Site Expenses', formUrl:'https://forms.gle/9uuXgx6oF3okLmxb7', docId: '13Vo3YIrbPT06a4ClN-BS-eO1DOCSNzo5dnn-XfO0Tds', gid: '1142344274', selectedColumns: ['Date', 'Project Name', 'Paid to', 'Amount', 'Reason','URD Purchase'] },
+      { name: 'Project Specification Changes', formUrl:'https://forms.gle/2Zew9NZYBjbF32bE6', docId: '1oOS8lE1JviRkNhbM7FP_0VUxPV9FZgMU70t_j0A_N2A', gid: '944341180', selectedColumns: ['Date', 'Project Name', 'Specific Changes / Additional Work', 'Cost Change (If Any)', 'Requested / Instructed By', 'Approval Status'] },
       { name: 'Delegation Score PH', docId: '1JsKyve_bNF80c-D-jvLAmFGfDKE6xLzYBtiFep0UXlc', gid: '1184708924', selectedColumns: ['Name', 'Task', 'First Date', 'Revision 1','Revision 2', 'Total Revision','Status','Actual Completion Date'] },
       { name: 'Checklist', docId: '1m_P5_eP9FvD9eaYvanmLlV833cscTvk2xJk_c39cbZw', gid: '2092959791', selectedColumns: ['Task', 'Doer', 'Planned', 'Actual', 'Status'] },
       { name: 'Daily Video Call', docId: '1SRpvwpmsFH4xMU9Ntj_oyu-jUjb0Ky0D9VRseh1hu9o', gid: '2092959791', selectedColumns: ['Name', 'Task', 'Planned', 'Actual', 'Status'] },
-            { name: 'Leave Application', formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScVKjl4j1wPbzV4QFAK9TlP8xpOkrHYxej75WTdFzt-lkV4Dg/viewform',docId: '1mrjfYpGMSMY-Em7Y4O4m9JZgfED0gdvbdPBD9qscgcM', gid: '148992', selectedColumns: ['Employee Name', 'Leave Type', 'Reason/Purpose', 'Half Day', 'Start Date of Leave','End Date of Leave'] }
-
-     
+      { name: 'Leave Application', formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScVKjl4j1wPbzV4QFAK9TlP8xpOkrHYxej75WTdFzt-lkV4Dg/viewform', docId: '1mrjfYpGMSMY-Em7Y4O4m9JZgfED0gdvbdPBD9qscgcM', gid: '148992', selectedColumns: ['Employee Name', 'Leave Type', 'Reason/Purpose', 'Half Day', 'Start Date of Leave','End Date of Leave'] }
     ]
   },
   {
     id: 'mahavir-c',
     name: 'Mahavir Chabukswar',
     designation: 'Project',
-   
     email: 'mahavir@avaniyshinterior.com',
     photo: 'https://lh3.googleusercontent.com/d/1-fJug9Xn7MBNGbl7M57Ap4YL_SFvzExN',
     dashboards: [
-    {
-      title: 'Airlife Gases Pvt. Ltd. Progress Dashboard',
-      url: 'https://script.google.com/a/macros/avaniyshinterior.com/s/AKfycbxoo7jVxrxKUBRtqy05_b0T0EK676VBzEPpiK7ntxkTOO_LZdrN4gbEcIHECXni7wq_tg/exec'
-    },
-       {
-      title: 'Checklist Dashboard',
-      url: 'https://datastudio.google.com/reporting/b30bad2f-4552-4c9f-8d9d-b8afd5056244/page/gcG5F'
-    }
-   
-  ],
+      {
+        title: 'Airlife Gases Pvt. Ltd. Progress Dashboard',
+        url: 'https://script.google.com/a/macros/avaniyshinterior.com/s/AKfycbxoo7jVxrxKUBRtqy05_b0T0EK676VBzEPpiK7ntxkTOO_LZdrN4gbEcIHECXni7wq_tg/exec'
+      },
+      {
+        title: 'Checklist Dashboard',
+        url: 'https://datastudio.google.com/reporting/b30bad2f-4552-4c9f-8d9d-b8afd5056244/page/gcG5F'
+      }
+    ],
     projects: [
       { 
         name: 'AISPL Client PO', 
@@ -133,19 +124,19 @@ const employeesData = [
         gid: '1013826524', 
         selectedColumns: ['Sr.No.', 'Proforma Invoice No.', 'Project Name','Authorized Signatory','Documents'] 
       },
-       { 
+      { 
         name: 'AISPL Tax Invoice', 
         docId: '1JZaXvcCxkq0jj4PETPWuwhRza570xBVIa3YBnxqEW8Y', 
         gid: '665653959', 
         selectedColumns: ['Sr.No.', 'Tax Invoice No.', 'Project Name','Authorized Signatory','Documents'] 
       },
-       { 
+      { 
         name: 'AISPL PO To Vendor', 
         docId: '1JZaXvcCxkq0jj4PETPWuwhRza570xBVIa3YBnxqEW8Y', 
         gid: '286319358', 
         selectedColumns: ['Sr.No.', 'PO No.','Vendor Name', 'Project Name','Remarks','Created By','Documents'] 
       },
-       { 
+      { 
         name: 'Modulariti Client PO', 
         docId: '1u8sqdtEeklS9AVx91oZVXMulcY73IGwQ4N6CHokeBFQ', 
         gid: '0', 
@@ -157,57 +148,51 @@ const employeesData = [
         gid: '1541680899', 
         selectedColumns: ['Sr.No.', 'Proforma Invoice No.', 'Project Name','Documents'] 
       },
-       { 
+      { 
         name: 'Modulariti Tax Invoice', 
         docId: '1u8sqdtEeklS9AVx91oZVXMulcY73IGwQ4N6CHokeBFQ', 
         gid: '842646558', 
         selectedColumns: ['Sr.No.', 'Tax Invoice No.', 'Project Name','Documents'] 
       },
-       { 
+      { 
         name: 'Modulariti PO To Vendor', 
         docId: '1u8sqdtEeklS9AVx91oZVXMulcY73IGwQ4N6CHokeBFQ', 
         gid: '1879062090', 
         selectedColumns: ['Sr.No.', 'PO No.','Vendor Name', 'Project Name','Documents'] 
       },
-
-       { 
+      { 
         name: 'Modulariti Delivery Challan', 
         docId: '1u8sqdtEeklS9AVx91oZVXMulcY73IGwQ4N6CHokeBFQ', 
         gid: '1982685191', 
         selectedColumns: ['Sr.No.', 'Challan No.', 'Project Name','Documents'] 
-      },
-
+      }
     ],
- 
     sheets: [
-     { name: 'Project Visit', formUrl:'https://forms.gle/ZRpDTA4KUkGnbwtX8', docId: '11TLkJxGV3EFz4ZdVqKpuX3O-8FV4TrlMIYjxyAZ0lqY', gid: '2045538987', selectedColumns: ['Date', 'Project Site Visitor', 'Project Name', 'Location', 'Visit Purpose', 'Observation'] },
-      { name: 'Office Expenses',formUrl:'https://docs.google.com/forms/d/e/1FAIpQLSeFG1ZBY4mstlGPDpcNhUb9vi2WiJGBr3aG2cuTtYqPNXf4Nw/viewform?usp=header', docId: '1N2DF6vzSoJcIxwL2makablsGtDlMB-rxhcWT3_VLHBY', gid: '440445714', selectedColumns: ['Date', 'Paid to', 'Amount', 'Reason', 'Categories','URD Purchase'] },
-      { name: 'Site Expenses', formUrl:'https://forms.gle/9uuXgx6oF3okLmxb7',docId: '13Vo3YIrbPT06a4ClN-BS-eO1DOCSNzo5dnn-XfO0Tds', gid: '1142344274', selectedColumns: ['Date', 'Project Name', 'Paid to', 'Amount', 'Reason','URD Purchase'] },
-      { name: 'Project Specification Changes',formUrl:'https://forms.gle/2Zew9NZYBjbF32bE6', docId: '1oOS8lE1JviRkNhbM7FP_0VUxPV9FZgMU70t_j0A_N2A', gid: '944341180', selectedColumns: ['Date', 'Project Name', 'Specific Changes / Additional Work', 'Cost Change (If Any)', 'Requested / Instructed By', 'Approval Status'] },
+      { name: 'Project Visit', formUrl:'https://forms.gle/ZRpDTA4KUkGnbwtX8', docId: '11TLkJxGV3EFz4ZdVqKpuX3O-8FV4TrlMIYjxyAZ0lqY', gid: '2045538987', selectedColumns: ['Date', 'Project Site Visitor', 'Project Name', 'Location', 'Visit Purpose', 'Observation'] },
+      { name: 'Office Expenses', formUrl:'https://docs.google.com/forms/d/e/1FAIpQLSeFG1ZBY4mstlGPDpcNhUb9vi2WiJGBr3aG2cuTtYqPNXf4Nw/viewform?usp=header', docId: '1N2DF6vzSoJcIxwL2makablsGtDlMB-rxhcWT3_VLHBY', gid: '440445714', selectedColumns: ['Date', 'Paid to', 'Amount', 'Reason', 'Categories','URD Purchase'] },
+      { name: 'Site Expenses', formUrl:'https://forms.gle/9uuXgx6oF3okLmxb7', docId: '13Vo3YIrbPT06a4ClN-BS-eO1DOCSNzo5dnn-XfO0Tds', gid: '1142344274', selectedColumns: ['Date', 'Project Name', 'Paid to', 'Amount', 'Reason','URD Purchase'] },
+      { name: 'Project Specification Changes', formUrl:'https://forms.gle/2Zew9NZYBjbF32bE6', docId: '1oOS8lE1JviRkNhbM7FP_0VUxPV9FZgMU70t_j0A_N2A', gid: '944341180', selectedColumns: ['Date', 'Project Name', 'Specific Changes / Additional Work', 'Cost Change (If Any)', 'Requested / Instructed By', 'Approval Status'] },
       { name: 'Delegation Score PH', docId: '1JsKyve_bNF80c-D-jvLAmFGfDKE6xLzYBtiFep0UXlc', gid: '1184708924', selectedColumns: ['Name', 'Task', 'First Date', 'Revision 1','Revision 2', 'Total Revision','Status','Actual Completion Date'] },
       { name: 'Checklist', docId: '1m_P5_eP9FvD9eaYvanmLlV833cscTvk2xJk_c39cbZw', gid: '2092959791', selectedColumns: ['Task', 'Doer', 'Planned', 'Actual', 'Status'] },
-      { name: 'Leave Application', formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScVKjl4j1wPbzV4QFAK9TlP8xpOkrHYxej75WTdFzt-lkV4Dg/viewform',docId: '1mrjfYpGMSMY-Em7Y4O4m9JZgfED0gdvbdPBD9qscgcM', gid: '148992', selectedColumns: ['Employee Name', 'Leave Type', 'Reason/Purpose', 'Half Day', 'Start Date of Leave','End Date of Leave'] }
-
-   
-      ]
+      { name: 'Leave Application', formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScVKjl4j1wPbzV4QFAK9TlP8xpOkrHYxej75WTdFzt-lkV4Dg/viewform', docId: '1mrjfYpGMSMY-Em7Y4O4m9JZgfED0gdvbdPBD9qscgcM', gid: '148992', selectedColumns: ['Employee Name', 'Leave Type', 'Reason/Purpose', 'Half Day', 'Start Date of Leave','End Date of Leave'] }
+    ]
   },
   {
     id: 'sachin-m',
     name: 'Sachin Maharana',
     designation: 'Project',
-   
     email: 'projects1@avaniyshinterior.com',
     photo: 'https://lh3.googleusercontent.com/d/18zLmgSBmGprsf970P_iaZK-k_2UD0R-8',
     dashboards: [
-    {
-      title: 'Airtech Progress Dashboard',
-      url: 'https://script.google.com/a/macros/avaniyshinterior.com/s/AKfycbxBqPiof-i02R7xg0VxjjLcl99fBL6MQZCfG0rUufBnBhAEYtJ2QIUKvrIkzFQwOIo/exec?page=pms'
-    },
-       {
-      title: 'Checklist Dashboard',
-      url: 'https://datastudio.google.com/reporting/b30bad2f-4552-4c9f-8d9d-b8afd5056244/page/gcG5F'
-    }
-  ],
+      {
+        title: 'Airtech Progress Dashboard',
+        url: 'https://script.google.com/a/macros/avaniyshinterior.com/s/AKfycbxBqPiof-i02R7xg0VxjjLcl99fBL6MQZCfG0rUufBnBhAEYtJ2QIUKvrIkzFQwOIo/exec?page=pms'
+      },
+      {
+        title: 'Checklist Dashboard',
+        url: 'https://datastudio.google.com/reporting/b30bad2f-4552-4c9f-8d9d-b8afd5056244/page/gcG5F'
+      }
+    ],
     projects: [
       { 
         name: 'AISPL Client PO', 
@@ -221,58 +206,55 @@ const employeesData = [
         gid: '1013826524', 
         selectedColumns: ['Sr.No.', 'Proforma Invoice No.', 'Project Name','Authorized Signatory','Documents'] 
       },
-       { 
+      { 
         name: 'AISPL Tax Invoice', 
         docId: '1JZaXvcCxkq0jj4PETPWuwhRza570xBVIa3YBnxqEW8Y', 
         gid: '665653959', 
         selectedColumns: ['Sr.No.', 'Tax Invoice No.', 'Project Name','Authorized Signatory','Documents'] 
       },
-       { 
+      { 
         name: 'AISPL PO To Vendor', 
         docId: '1JZaXvcCxkq0jj4PETPWuwhRza570xBVIa3YBnxqEW8Y', 
         gid: '286319358', 
         selectedColumns: ['Sr.No.', 'PO No.','Vendor Name', 'Project Name','Remarks','Created By','Documents'] 
-      },
+      }
     ],
     sheets: [
-      { name: 'Daily Report',formUrl:'https://forms.gle/YUV27rV5kPXKyn799', docId: '1mrjfYpGMSMY-Em7Y4O4m9JZgfED0gdvbdPBD9qscgcM', gid: '799922129', selectedColumns: ['Date', 'Project Co-Ordinator','Project Name', 'Location', 'In - Time ', 'Out- Time', 'Have you done site visit?','Described Days Activities (Mentioned by Points) In Office','Described Days Activities (Mentioned by Points) In Site'] },
+      { name: 'Daily Report', formUrl:'https://forms.gle/YUV27rV5kPXKyn799', docId: '1mrjfYpGMSMY-Em7Y4O4m9JZgfED0gdvbdPBD9qscgcM', gid: '799922129', selectedColumns: ['Date', 'Project Co-Ordinator','Project Name', 'Location', 'In - Time ', 'Out- Time', 'Have you done site visit?','Described Days Activities (Mentioned by Points) In Office','Described Days Activities (Mentioned by Points) In Site'] },
       { name: 'Daily Video Call', docId: '1SRpvwpmsFH4xMU9Ntj_oyu-jUjb0Ky0D9VRseh1hu9o', gid: '2092959791', selectedColumns: ['Name', 'Task', 'Planned', 'Actual', 'Status'] },
-      { name: 'Petrol Allowance',formUrl:'https://forms.gle/2EmAJQdZ7f2BwMLF9', docId: '1qbbbN4uU0x1UFC3rIzkO6lekrFw3A7XD1lx7zZYxSxE', gid: '1266941161', selectedColumns: ['Date', 'Name', 'From', 'To', 'Km','Others','Upload'] },
-      { name: 'Safety Check', formUrl:'https://forms.gle/gRj1gRTZSnvygyVV6',docId: '1Lub7fEdgOKBjfuLDpMhYQ4do78_DamGxLasxjIbf9Vo', gid: '1997998379', selectedColumns: ['Date', 'Project Member', 'Project Name', 'Location', 'Agency Name', 'Total Labour Count', 'PPE Kit', 'Upload Photo'] },
-      { name: 'Delivery Challan',formUrl:'https://forms.gle/EuBCvSYkfQVYjBYw7', docId: '1ssmVTMIvMmNcqm5oloGabxX6XrWd-qMWCxzb5QYdc6s', gid: '1102974409', selectedColumns: ['Date', 'Project Name', 'Name', 'Work', 'Challan', 'Returnable Materials List', 'Reason'] },
-      { name: 'Project Visit',formUrl:'https://forms.gle/ZRpDTA4KUkGnbwtX8', docId: '11TLkJxGV3EFz4ZdVqKpuX3O-8FV4TrlMIYjxyAZ0lqY', gid: '2045538987', selectedColumns: ['Date', 'Project Site Visitor', 'Project Name', 'Location', 'Visit Purpose', 'Observation'] },
-      { name: 'Site Expenses', formUrl:'https://forms.gle/9uuXgx6oF3okLmxb7',docId: '13Vo3YIrbPT06a4ClN-BS-eO1DOCSNzo5dnn-XfO0Tds', gid: '1142344274', selectedColumns: ['Date', 'Project Name', 'Paid to', 'Amount', 'Reason','URD Purchase'] },
-      { name: 'Upload URD',formUrl:'https://forms.gle/ojbkRA6NZ92w96mZ9', docId: '1ezKQET2dMdSkJ_rUmbMiWxFA0wSVmDrwM8XGDaajkF8', gid: '1029448347', selectedColumns: ['Date', 'Name', 'Project Name', 'Tax Invoice', 'URD Purchase'] },
+      { name: 'Petrol Allowance', formUrl:'https://forms.gle/2EmAJQdZ7f2BwMLF9', docId: '1qbbbN4uU0x1UFC3rIzkO6lekrFw3A7XD1lx7zZYxSxE', gid: '1266941161', selectedColumns: ['Date', 'Name', 'From', 'To', 'Km','Others','Upload'] },
+      { name: 'Safety Check', formUrl:'https://forms.gle/gRj1gRTZSnvygyVV6', docId: '1Lub7fEdgOKBjfuLDpMhYQ4do78_DamGxLasxjIbf9Vo', gid: '1997998379', selectedColumns: ['Date', 'Project Member', 'Project Name', 'Location', 'Agency Name', 'Total Labour Count', 'PPE Kit', 'Upload Photo'] },
+      { name: 'Delivery Challan', formUrl:'https://forms.gle/EuBCvSYkfQVYjBYw7', docId: '1ssmVTMIvMmNcqm5oloGabxX6XrWd-qMWCxzb5QYdc6s', gid: '1102974409', selectedColumns: ['Date', 'Project Name', 'Name', 'Work', 'Challan', 'Returnable Materials List', 'Reason'] },
+      { name: 'Project Visit', formUrl:'https://forms.gle/ZRpDTA4KUkGnbwtX8', docId: '11TLkJxGV3EFz4ZdVqKpuX3O-8FV4TrlMIYjxyAZ0lqY', gid: '2045538987', selectedColumns: ['Date', 'Project Site Visitor', 'Project Name', 'Location', 'Visit Purpose', 'Observation'] },
+      { name: 'Site Expenses', formUrl:'https://forms.gle/9uuXgx6oF3okLmxb7', docId: '13Vo3YIrbPT06a4ClN-BS-eO1DOCSNzo5dnn-XfO0Tds', gid: '1142344274', selectedColumns: ['Date', 'Project Name', 'Paid to', 'Amount', 'Reason','URD Purchase'] },
+      { name: 'Upload URD', formUrl:'https://forms.gle/ojbkRA6NZ92w96mZ9', docId: '1ezKQET2dMdSkJ_rUmbMiWxFA0wSVmDrwM8XGDaajkF8', gid: '1029448347', selectedColumns: ['Date', 'Name', 'Project Name', 'Tax Invoice', 'URD Purchase'] },
       { name: 'Site Inspection Checklist', formUrl:'https://forms.gle/qfXppXnNK4JDP3tc8', docId: '1zpPnIESV3EBTrrGKMpjW2UNsbouv3bTA88YuN4XZEgs', gid: '1839387537', selectedColumns: ['Date', 'Name', 'Project Name', 'Work Activity', 'Upload'] },
-      { name: 'Debit Note',formUrl:'https://forms.gle/RGcNHw5EjYBrrbfv9', docId: '1rc9AKbkiagJLYpNXvaxbzAhVAWhGJH4AuTENu1NknB0', gid: '12767300', selectedColumns: ['Date', 'Name', 'Project Name', 'Vendor Name', 'Debit To (Worker Name)', 'Reason', 'Amount', 'Approved By'] },
+      { name: 'Debit Note', formUrl:'https://forms.gle/RGcNHw5EjYBrrbfv9', docId: '1rc9AKbkiagJLYpNXvaxbzAhVAWhGJH4AuTENu1NknB0', gid: '12767300', selectedColumns: ['Date', 'Name', 'Project Name', 'Vendor Name', 'Debit To (Worker Name)', 'Reason', 'Amount', 'Approved By'] },
       { name: 'Delegation Sheet Team', docId: '1680NhH8rKFTKeY3HSZGV_izgEi4QieHiirbcbRi7hTA', gid: '1184708924', selectedColumns: ['Name', 'Task', 'First Date', 'Revision 1','Revision 2', 'Total Revision','Status','Actual Completion Date'] },
-      { name: 'Help Slip',formUrl:'https://forms.gle/naMThh9BWnzcAme38', docId: '16R8q7J5kc3GYXgZC1q6KS4nVJyMIaHqfleFnT3l7v_4', gid: '1930440204', selectedColumns: ['Timestamp', 'Employee Name', 'Department', 'Required From', 'Challenge / Question', 'Solution 1'] },
+      { name: 'Help Slip', formUrl:'https://forms.gle/naMThh9BWnzcAme38', docId: '16R8q7J5kc3GYXgZC1q6KS4nVJyMIaHqfleFnT3l7v_4', gid: '1930440204', selectedColumns: ['Timestamp', 'Employee Name', 'Department', 'Required From', 'Challenge / Question', 'Solution 1'] },
       { name: 'Checklist', docId: '1m_P5_eP9FvD9eaYvanmLlV833cscTvk2xJk_c39cbZw', gid: '2092959791', selectedColumns: ['Task', 'Doer', 'Planned', 'Actual', 'Status'] },
-      { name: 'Project Specification Changes',formUrl:'https://forms.gle/2Zew9NZYBjbF32bE6', docId: '1oOS8lE1JviRkNhbM7FP_0VUxPV9FZgMU70t_j0A_N2A', gid: '944341180', selectedColumns: ['Date', 'Project Name', 'Specific Changes / Additional Work', 'Cost Change (If Any)', 'Requested / Instructed By', 'Approval Status'] },
-      { name: 'Leave Application', formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScVKjl4j1wPbzV4QFAK9TlP8xpOkrHYxej75WTdFzt-lkV4Dg/viewform',docId: '1mrjfYpGMSMY-Em7Y4O4m9JZgfED0gdvbdPBD9qscgcM', gid: '148992', selectedColumns: ['Employee Name', 'Leave Type', 'Reason/Purpose', 'Half Day', 'Start Date of Leave','End Date of Leave'] },
-            { name: 'Extra Work Approval',formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScYU-9h_f34xuHdSKpz5L3zTcu2VGWO9A5wqge_XL4KbW-3YA/viewform', docId: '1md6KnXHf-_70ndOwakmAD6ksWjd4xwglMJKBEMIzI8o', gid: '1681660272', selectedColumns: ['Employee Name','Extra Work Date', 'In Time', 'Out Time','Reason'] },
-      { name: 'Compensate Off',formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScc8kN-AbggkeAGHPIPaxMv4i8g5O9fs_tNKN39_SOXQ92e4w/viewform', docId: '14HlbjtN6USi61CfUJVAHZvfKA3jODWKDng8zbCuxoRg', gid: '544867416', selectedColumns: ['Employee Name','Compensatory Off Date','Extra Work Done Date', 'Reason'] }
-
+      { name: 'Project Specification Changes', formUrl:'https://forms.gle/2Zew9NZYBjbF32bE6', docId: '1oOS8lE1JviRkNhbM7FP_0VUxPV9FZgMU70t_j0A_N2A', gid: '944341180', selectedColumns: ['Date', 'Project Name', 'Specific Changes / Additional Work', 'Cost Change (If Any)', 'Requested / Instructed By', 'Approval Status'] },
+      { name: 'Leave Application', formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScVKjl4j1wPbzV4QFAK9TlP8xpOkrHYxej75WTdFzt-lkV4Dg/viewform', docId: '1mrjfYpGMSMY-Em7Y4O4m9JZgfED0gdvbdPBD9qscgcM', gid: '148992', selectedColumns: ['Employee Name', 'Leave Type', 'Reason/Purpose', 'Half Day', 'Start Date of Leave','End Date of Leave'] },
+      { name: 'Extra Work Approval', formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScYU-9h_f34xuHdSKpz5L3zTcu2VGWO9A5wqge_XL4KbW-3YA/viewform', docId: '1md6KnXHf-_70ndOwakmAD6ksWjd4xwglMJKBEMIzI8o', gid: '1681660272', selectedColumns: ['Employee Name','Extra Work Date', 'In Time', 'Out Time','Reason'] },
+      { name: 'Compensate Off', formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScc8kN-AbggkeAGHPIPaxMv4i8g5O9fs_tNKN39_SOXQ92e4w/viewform', docId: '14HlbjtN6USi61CfUJVAHZvfKA3jODWKDng8zbCuxoRg', gid: '544867416', selectedColumns: ['Employee Name','Compensatory Off Date','Extra Work Done Date', 'Reason'] }
     ]
   },
   {
     id: 'shubham-p',
     name: 'Shubham Pawar',
     designation: 'Project',
-    
     email: 'projects1@avaniyshinterior.com',
     photo: 'https://lh3.googleusercontent.com/d/1vUHQd3U07-6NieBDnLPeDlTKkseCbGxd',
-      dashboards: [
-    {
-      title: 'Airlife Gases Pvt. Ltd. Progress Dashboard',
-      url: 'https://script.google.com/a/macros/avaniyshinterior.com/s/AKfycbxoo7jVxrxKUBRtqy05_b0T0EK676VBzEPpiK7ntxkTOO_LZdrN4gbEcIHECXni7wq_tg/exec'
-    },
-         {
-      title: 'Checklist Dashboard',
-      url: 'https://datastudio.google.com/reporting/b30bad2f-4552-4c9f-8d9d-b8afd5056244/page/gcG5F'
-    }
-   
-  ],
+    dashboards: [
+      {
+        title: 'Airlife Gases Pvt. Ltd. Progress Dashboard',
+        url: 'https://script.google.com/a/macros/avaniyshinterior.com/s/AKfycbxoo7jVxrxKUBRtqy05_b0T0EK676VBzEPpiK7ntxkTOO_LZdrN4gbEcIHECXni7wq_tg/exec'
+      },
+      {
+        title: 'Checklist Dashboard',
+        url: 'https://datastudio.google.com/reporting/b30bad2f-4552-4c9f-8d9d-b8afd5056244/page/gcG5F'
+      }
+    ],
     projects: [
       { 
         name: 'AISPL Client PO', 
@@ -286,101 +268,95 @@ const employeesData = [
         gid: '1013826524', 
         selectedColumns: ['Sr.No.', 'Proforma Invoice No.', 'Project Name','Authorized Signatory','Documents'] 
       },
-       { 
+      { 
         name: 'AISPL Tax Invoice', 
         docId: '1JZaXvcCxkq0jj4PETPWuwhRza570xBVIa3YBnxqEW8Y', 
         gid: '665653959', 
         selectedColumns: ['Sr.No.', 'Tax Invoice No.', 'Project Name','Authorized Signatory','Documents'] 
       },
-       { 
+      { 
         name: 'AISPL PO To Vendor', 
         docId: '1JZaXvcCxkq0jj4PETPWuwhRza570xBVIa3YBnxqEW8Y', 
         gid: '286319358', 
         selectedColumns: ['Sr.No.', 'PO No.','Vendor Name', 'Project Name','Remarks','Created By','Documents'] 
-      },
+      }
     ],
     sheets: [
-      { name: 'Daily Report',formUrl:'https://forms.gle/YUV27rV5kPXKyn799', docId: '1mrjfYpGMSMY-Em7Y4O4m9JZgfED0gdvbdPBD9qscgcM', gid: '799922129', selectedColumns: ['Date', 'Project Co-Ordinator','Project Name', 'Location', 'In - Time ', 'Out- Time', 'Have you done site visit?','Described Days Activities (Mentioned by Points) In Office','Described Days Activities (Mentioned by Points) In Site'] },
-      { name: 'Petrol Allowance',formUrl:'https://forms.gle/2EmAJQdZ7f2BwMLF9', docId: '1qbbbN4uU0x1UFC3rIzkO6lekrFw3A7XD1lx7zZYxSxE', gid: '1266941161', selectedColumns: ['Date', 'Name', 'From', 'To', 'Km','Others','Upload'] },
-      { name: 'Safety Check',formUrl:'https://forms.gle/gRj1gRTZSnvygyVV6', docId: '1Lub7fEdgOKBjfuLDpMhYQ4do78_DamGxLasxjIbf9Vo', gid: '1997998379', selectedColumns: ['Date', 'Project Member', 'Project Name', 'Location', 'Agency Name', 'Total Labour Count', 'PPE Kit', 'Upload Photo'] },
-      { name: 'Delivery Challan',formUrl:'https://forms.gle/EuBCvSYkfQVYjBYw7', docId: '1ssmVTMIvMmNcqm5oloGabxX6XrWd-qMWCxzb5QYdc6s', gid: '1102974409', selectedColumns: ['Date', 'Project Name', 'Name', 'Work', 'Challan', 'Returnable Materials List', 'Reason'] },
-      { name: 'Project Visit',formUrl:'https://forms.gle/ZRpDTA4KUkGnbwtX8', docId: '11TLkJxGV3EFz4ZdVqKpuX3O-8FV4TrlMIYjxyAZ0lqY', gid: '2045538987', selectedColumns: ['Date', 'Project Site Visitor', 'Project Name', 'Location', 'Visit Purpose', 'Observation'] },
-      { name: 'Site Expenses', formUrl:'https://forms.gle/9uuXgx6oF3okLmxb7',docId: '13Vo3YIrbPT06a4ClN-BS-eO1DOCSNzo5dnn-XfO0Tds', gid: '1142344274', selectedColumns: ['Date', 'Project Name', 'Paid to', 'Amount', 'Reason','URD Purchase'] },
-      { name: 'Upload URD',formUrl:'https://forms.gle/ojbkRA6NZ92w96mZ9', docId: '1ezKQET2dMdSkJ_rUmbMiWxFA0wSVmDrwM8XGDaajkF8', gid: '1029448347', selectedColumns: ['Date', 'Name', 'Project Name', 'Tax Invoice', 'URD Purchase'] },
-      { name: 'Site Inspection Checklist', formUrl:'https://forms.gle/qfXppXnNK4JDP3tc8',docId: '1zpPnIESV3EBTrrGKMpjW2UNsbouv3bTA88YuN4XZEgs', gid: '1839387537', selectedColumns: ['Date', 'Name', 'Project Name', 'Work Activity', 'Upload'] },
-      { name: 'Debit Note',formUrl:'https://forms.gle/RGcNHw5EjYBrrbfv9', docId: '1rc9AKbkiagJLYpNXvaxbzAhVAWhGJH4AuTENu1NknB0', gid: '12767300', selectedColumns: ['Date', 'Name', 'Project Name', 'Vendor Name', 'Debit To (Worker Name)', 'Reason', 'Amount', 'Approved By'] },
+      { name: 'Daily Report', formUrl:'https://forms.gle/YUV27rV5kPXKyn799', docId: '1mrjfYpGMSMY-Em7Y4O4m9JZgfED0gdvbdPBD9qscgcM', gid: '799922129', selectedColumns: ['Date', 'Project Co-Ordinator','Project Name', 'Location', 'In - Time ', 'Out- Time', 'Have you done site visit?','Described Days Activities (Mentioned by Points) In Office','Described Days Activities (Mentioned by Points) In Site'] },
+      { name: 'Petrol Allowance', formUrl:'https://forms.gle/2EmAJQdZ7f2BwMLF9', docId: '1qbbbN4uU0x1UFC3rIzkO6lekrFw3A7XD1lx7zZYxSxE', gid: '1266941161', selectedColumns: ['Date', 'Name', 'From', 'To', 'Km','Others','Upload'] },
+      { name: 'Safety Check', formUrl:'https://forms.gle/gRj1gRTZSnvygyVV6', docId: '1Lub7fEdgOKBjfuLDpMhYQ4do78_DamGxLasxjIbf9Vo', gid: '1997998379', selectedColumns: ['Date', 'Project Member', 'Project Name', 'Location', 'Agency Name', 'Total Labour Count', 'PPE Kit', 'Upload Photo'] },
+      { name: 'Delivery Challan', formUrl:'https://forms.gle/EuBCvSYkfQVYjBYw7', docId: '1ssmVTMIvMmNcqm5oloGabxX6XrWd-qMWCxzb5QYdc6s', gid: '1102974409', selectedColumns: ['Date', 'Project Name', 'Name', 'Work', 'Challan', 'Returnable Materials List', 'Reason'] },
+      { name: 'Project Visit', formUrl:'https://forms.gle/ZRpDTA4KUkGnbwtX8', docId: '11TLkJxGV3EFz4ZdVqKpuX3O-8FV4TrlMIYjxyAZ0lqY', gid: '2045538987', selectedColumns: ['Date', 'Project Site Visitor', 'Project Name', 'Location', 'Visit Purpose', 'Observation'] },
+      { name: 'Site Expenses', formUrl:'https://forms.gle/9uuXgx6oF3okLmxb7', docId: '13Vo3YIrbPT06a4ClN-BS-eO1DOCSNzo5dnn-XfO0Tds', gid: '1142344274', selectedColumns: ['Date', 'Project Name', 'Paid to', 'Amount', 'Reason','URD Purchase'] },
+      { name: 'Upload URD', formUrl:'https://forms.gle/ojbkRA6NZ92w96mZ9', docId: '1ezKQET2dMdSkJ_rUmbMiWxFA0wSVmDrwM8XGDaajkF8', gid: '1029448347', selectedColumns: ['Date', 'Name', 'Project Name', 'Tax Invoice', 'URD Purchase'] },
+      { name: 'Site Inspection Checklist', formUrl:'https://forms.gle/qfXppXnNK4JDP3tc8', docId: '1zpPnIESV3EBTrrGKMpjW2UNsbouv3bTA88YuN4XZEgs', gid: '1839387537', selectedColumns: ['Date', 'Name', 'Project Name', 'Work Activity', 'Upload'] },
+      { name: 'Debit Note', formUrl:'https://forms.gle/RGcNHw5EjYBrrbfv9', docId: '1rc9AKbkiagJLYpNXvaxbzAhVAWhGJH4AuTENu1NknB0', gid: '12767300', selectedColumns: ['Date', 'Name', 'Project Name', 'Vendor Name', 'Debit To (Worker Name)', 'Reason', 'Amount', 'Approved By'] },
       { name: 'Delegation Sheet Team', docId: '1680NhH8rKFTKeY3HSZGV_izgEi4QieHiirbcbRi7hTA', gid: '1184708924', selectedColumns: ['Name', 'Task', 'First Date', 'Revision 1','Revision 2', 'Total Revision','Status','Actual Completion Date'] },
-      { name: 'Help Slip',formUrl:'https://forms.gle/naMThh9BWnzcAme38', docId: '16R8q7J5kc3GYXgZC1q6KS4nVJyMIaHqfleFnT3l7v_4', gid: '1930440204', selectedColumns: ['Timestamp', 'Employee Name', 'Department', 'Required From', 'Challenge / Question', 'Solution 1'] },
+      { name: 'Help Slip', formUrl:'https://forms.gle/naMThh9BWnzcAme38', docId: '16R8q7J5kc3GYXgZC1q6KS4nVJyMIaHqfleFnT3l7v_4', gid: '1930440204', selectedColumns: ['Timestamp', 'Employee Name', 'Department', 'Required From', 'Challenge / Question', 'Solution 1'] },
       { name: 'Checklist', docId: '1m_P5_eP9FvD9eaYvanmLlV833cscTvk2xJk_c39cbZw', gid: '2092959791', selectedColumns: ['Task', 'Doer', 'Planned', 'Actual', 'Status'] },
-      { name: 'Project Specification Changes', formUrl:'https://forms.gle/2Zew9NZYBjbF32bE6',docId: '1oOS8lE1JviRkNhbM7FP_0VUxPV9FZgMU70t_j0A_N2A', gid: '944341180', selectedColumns: ['Date', 'Project Name', 'Specific Changes / Additional Work', 'Cost Change (If Any)', 'Requested / Instructed By', 'Approval Status'] },
-      { name: 'Leave Application', formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScVKjl4j1wPbzV4QFAK9TlP8xpOkrHYxej75WTdFzt-lkV4Dg/viewform',docId: '1mrjfYpGMSMY-Em7Y4O4m9JZgfED0gdvbdPBD9qscgcM', gid: '148992', selectedColumns: ['Employee Name', 'Leave Type', 'Reason/Purpose', 'Half Day', 'Start Date of Leave','End Date of Leave'] },
-            { name: 'Extra Work Approval',formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScYU-9h_f34xuHdSKpz5L3zTcu2VGWO9A5wqge_XL4KbW-3YA/viewform', docId: '1md6KnXHf-_70ndOwakmAD6ksWjd4xwglMJKBEMIzI8o', gid: '1681660272', selectedColumns: ['Employee Name','Extra Work Date', 'In Time', 'Out Time','Reason'] },
-      { name: 'Compensate Off',formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScc8kN-AbggkeAGHPIPaxMv4i8g5O9fs_tNKN39_SOXQ92e4w/viewform', docId: '14HlbjtN6USi61CfUJVAHZvfKA3jODWKDng8zbCuxoRg', gid: '544867416', selectedColumns: ['Employee Name','Compensatory Off Date','Extra Work Done Date', 'Reason'] }
-
+      { name: 'Project Specification Changes', formUrl:'https://forms.gle/2Zew9NZYBjbF32bE6', docId: '1oOS8lE1JviRkNhbM7FP_0VUxPV9FZgMU70t_j0A_N2A', gid: '944341180', selectedColumns: ['Date', 'Project Name', 'Specific Changes / Additional Work', 'Cost Change (If Any)', 'Requested / Instructed By', 'Approval Status'] },
+      { name: 'Leave Application', formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScVKjl4j1wPbzV4QFAK9TlP8xpOkrHYxej75WTdFzt-lkV4Dg/viewform', docId: '1mrjfYpGMSMY-Em7Y4O4m9JZgfED0gdvbdPBD9qscgcM', gid: '148992', selectedColumns: ['Employee Name', 'Leave Type', 'Reason/Purpose', 'Half Day', 'Start Date of Leave','End Date of Leave'] },
+      { name: 'Extra Work Approval', formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScYU-9h_f34xuHdSKpz5L3zTcu2VGWO9A5wqge_XL4KbW-3YA/viewform', docId: '1md6KnXHf-_70ndOwakmAD6ksWjd4xwglMJKBEMIzI8o', gid: '1681660272', selectedColumns: ['Employee Name','Extra Work Date', 'In Time', 'Out Time','Reason'] },
+      { name: 'Compensate Off', formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScc8kN-AbggkeAGHPIPaxMv4i8g5O9fs_tNKN39_SOXQ92e4w/viewform', docId: '14HlbjtN6USi61CfUJVAHZvfKA3jODWKDng8zbCuxoRg', gid: '544867416', selectedColumns: ['Employee Name','Compensatory Off Date','Extra Work Done Date', 'Reason'] }
     ]
   },
   {
     id: 'saurav-r',
     name: 'Saurav Rathod',
     designation: 'Project',
- 
     email: 'sauravrathod281@gmail.com',
     photo: 'https://lh3.googleusercontent.com/d/1AIjrFcKQZSCFbXTrc0dmqG0RVgJyXvun',
-
     dashboards: [
-         {
-      title: 'Checklist Dashboard',
-      url: 'https://datastudio.google.com/reporting/b30bad2f-4552-4c9f-8d9d-b8afd5056244/page/gcG5F'
-         }
-  ],
+      {
+        title: 'Checklist Dashboard',
+        url: 'https://datastudio.google.com/reporting/b30bad2f-4552-4c9f-8d9d-b8afd5056244/page/gcG5F'
+      }
+    ],
     sheets: [
-      { name: 'Daily Report',formUrl:'https://forms.gle/YUV27rV5kPXKyn799', docId: '1mrjfYpGMSMY-Em7Y4O4m9JZgfED0gdvbdPBD9qscgcM', gid: '799922129', selectedColumns: ['Date', 'Project Co-Ordinator','Project Name', 'Location', 'In - Time ', 'Out- Time', 'Have you done site visit?','Described Days Activities (Mentioned by Points) In Office','Described Days Activities (Mentioned by Points) In Site'] },
-      { name: 'Petrol Allowance',formUrl:'https://forms.gle/2EmAJQdZ7f2BwMLF9', docId: '1qbbbN4uU0x1UFC3rIzkO6lekrFw3A7XD1lx7zZYxSxE', gid: '1266941161', selectedColumns: ['Date', 'Name', 'From', 'To', 'Km','Others','Upload'] },
-      { name: 'Site Expenses', formUrl:'https://forms.gle/9uuXgx6oF3okLmxb7',docId: '13Vo3YIrbPT06a4ClN-BS-eO1DOCSNzo5dnn-XfO0Tds', gid: '1142344274', selectedColumns: ['Date', 'Project Name', 'Paid to', 'Amount', 'Reason','URD Purchase'] },
-      { name: 'Safety Check',formUrl:'https://forms.gle/gRj1gRTZSnvygyVV6', docId: '1Lub7fEdgOKBjfuLDpMhYQ4do78_DamGxLasxjIbf9Vo', gid: '1997998379', selectedColumns: ['Date', 'Project Member', 'Project Name', 'Location', 'Agency Name', 'Total Labour Count', 'PPE Kit', 'Upload Photo'] },
-      { name: 'Delivery Challan',formUrl:'https://forms.gle/EuBCvSYkfQVYjBYw7', docId: '1ssmVTMIvMmNcqm5oloGabxX6XrWd-qMWCxzb5QYdc6s', gid: '1102974409', selectedColumns: ['Date', 'Project Name', 'Name', 'Work', 'Challan', 'Returnable Materials List', 'Reason'] }, 
+      { name: 'Daily Report', formUrl:'https://forms.gle/YUV27rV5kPXKyn799', docId: '1mrjfYpGMSMY-Em7Y4O4m9JZgfED0gdvbdPBD9qscgcM', gid: '799922129', selectedColumns: ['Date', 'Project Co-Ordinator','Project Name', 'Location', 'In - Time ', 'Out- Time', 'Have you done site visit?','Described Days Activities (Mentioned by Points) In Office','Described Days Activities (Mentioned by Points) In Site'] },
+      { name: 'Petrol Allowance', formUrl:'https://forms.gle/2EmAJQdZ7f2BwMLF9', docId: '1qbbbN4uU0x1UFC3rIzkO6lekrFw3A7XD1lx7zZYxSxE', gid: '1266941161', selectedColumns: ['Date', 'Name', 'From', 'To', 'Km','Others','Upload'] },
+      { name: 'Site Expenses', formUrl:'https://forms.gle/9uuXgx6oF3okLmxb7', docId: '13Vo3YIrbPT06a4ClN-BS-eO1DOCSNzo5dnn-XfO0Tds', gid: '1142344274', selectedColumns: ['Date', 'Project Name', 'Paid to', 'Amount', 'Reason','URD Purchase'] },
+      { name: 'Safety Check', formUrl:'https://forms.gle/gRj1gRTZSnvygyVV6', docId: '1Lub7fEdgOKBjfuLDpMhYQ4do78_DamGxLasxjIbf9Vo', gid: '1997998379', selectedColumns: ['Date', 'Project Member', 'Project Name', 'Location', 'Agency Name', 'Total Labour Count', 'PPE Kit', 'Upload Photo'] },
+      { name: 'Delivery Challan', formUrl:'https://forms.gle/EuBCvSYkfQVYjBYw7', docId: '1ssmVTMIvMmNcqm5oloGabxX6XrWd-qMWCxzb5QYdc6s', gid: '1102974409', selectedColumns: ['Date', 'Project Name', 'Name', 'Work', 'Challan', 'Returnable Materials List', 'Reason'] }, 
       { name: 'Daily Video Call', docId: '1SRpvwpmsFH4xMU9Ntj_oyu-jUjb0Ky0D9VRseh1hu9o', gid: '2092959791', selectedColumns: ['Name', 'Task', 'Planned', 'Actual', 'Status'] },
-      { name: 'Upload URD',formUrl:'https://forms.gle/ojbkRA6NZ92w96mZ9', docId: '1ezKQET2dMdSkJ_rUmbMiWxFA0wSVmDrwM8XGDaajkF8', gid: '1029448347', selectedColumns: ['Date', 'Name', 'Project Name', 'Tax Invoice', 'URD Purchase'] },
-      { name: 'Site Inspection Checklist',formUrl:'https://forms.gle/qfXppXnNK4JDP3tc8', docId: '1zpPnIESV3EBTrrGKMpjW2UNsbouv3bTA88YuN4XZEgs', gid: '1839387537', selectedColumns: ['Date', 'Name', 'Project Name', 'Work Activity', 'Upload'] },
-      { name: 'Debit Note', formUrl:'https://forms.gle/RGcNHw5EjYBrrbfv9',docId: '1rc9AKbkiagJLYpNXvaxbzAhVAWhGJH4AuTENu1NknB0', gid: '12767300', selectedColumns: ['Date', 'Name', 'Project Name', 'Vendor Name', 'Debit To (Worker Name)', 'Reason', 'Amount', 'Approved By'] },
+      { name: 'Upload URD', formUrl:'https://forms.gle/ojbkRA6NZ92w96mZ9', docId: '1ezKQET2dMdSkJ_rUmbMiWxFA0wSVmDrwM8XGDaajkF8', gid: '1029448347', selectedColumns: ['Date', 'Name', 'Project Name', 'Tax Invoice', 'URD Purchase'] },
+      { name: 'Site Inspection Checklist', formUrl:'https://forms.gle/qfXppXnNK4JDP3tc8', docId: '1zpPnIESV3EBTrrGKMpjW2UNsbouv3bTA88YuN4XZEgs', gid: '1839387537', selectedColumns: ['Date', 'Name', 'Project Name', 'Work Activity', 'Upload'] },
+      { name: 'Debit Note', formUrl:'https://forms.gle/RGcNHw5EjYBrrbfv9', docId: '1rc9AKbkiagJLYpNXvaxbzAhVAWhGJH4AuTENu1NknB0', gid: '12767300', selectedColumns: ['Date', 'Name', 'Project Name', 'Vendor Name', 'Debit To (Worker Name)', 'Reason', 'Amount', 'Approved By'] },
       { name: 'Delegation Sheet Team', docId: '1680NhH8rKFTKeY3HSZGV_izgEi4QieHiirbcbRi7hTA', gid: '1184708924', selectedColumns: ['Name', 'Task', 'First Date', 'Revision 1','Revision 2', 'Total Revision','Status','Actual Completion Date'] },
-      { name: 'Help Slip',formUrl:'https://forms.gle/naMThh9BWnzcAme38', docId: '16R8q7J5kc3GYXgZC1q6KS4nVJyMIaHqfleFnT3l7v_4', gid: '1930440204', selectedColumns: ['Timestamp', 'Employee Name', 'Department', 'Required From', 'Challenge / Question', 'Solution 1'] },
+      { name: 'Help Slip', formUrl:'https://forms.gle/naMThh9BWnzcAme38', docId: '16R8q7J5kc3GYXgZC1q6KS4nVJyMIaHqfleFnT3l7v_4', gid: '1930440204', selectedColumns: ['Timestamp', 'Employee Name', 'Department', 'Required From', 'Challenge / Question', 'Solution 1'] },
       { name: 'Checklist', docId: '1m_P5_eP9FvD9eaYvanmLlV833cscTvk2xJk_c39cbZw', gid: '2092959791', selectedColumns: ['Task', 'Doer', 'Planned', 'Actual', 'Status'] },
-      { name: 'Leave Application', formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScVKjl4j1wPbzV4QFAK9TlP8xpOkrHYxej75WTdFzt-lkV4Dg/viewform',docId: '1mrjfYpGMSMY-Em7Y4O4m9JZgfED0gdvbdPBD9qscgcM', gid: '148992', selectedColumns: ['Employee Name', 'Leave Type', 'Reason/Purpose', 'Half Day', 'Start Date of Leave','End Date of Leave'] },
-            { name: 'Extra Work Approval',formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScYU-9h_f34xuHdSKpz5L3zTcu2VGWO9A5wqge_XL4KbW-3YA/viewform', docId: '1md6KnXHf-_70ndOwakmAD6ksWjd4xwglMJKBEMIzI8o', gid: '1681660272', selectedColumns: ['Employee Name','Extra Work Date', 'In Time', 'Out Time','Reason'] },
-      { name: 'Compensate Off',formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScc8kN-AbggkeAGHPIPaxMv4i8g5O9fs_tNKN39_SOXQ92e4w/viewform', docId: '14HlbjtN6USi61CfUJVAHZvfKA3jODWKDng8zbCuxoRg', gid: '544867416', selectedColumns: ['Employee Name','Compensatory Off Date','Extra Work Done Date', 'Reason'] }
-
+      { name: 'Leave Application', formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScVKjl4j1wPbzV4QFAK9TlP8xpOkrHYxej75WTdFzt-lkV4Dg/viewform', docId: '1mrjfYpGMSMY-Em7Y4O4m9JZgfED0gdvbdPBD9qscgcM', gid: '148992', selectedColumns: ['Employee Name', 'Leave Type', 'Reason/Purpose', 'Half Day', 'Start Date of Leave','End Date of Leave'] },
+      { name: 'Extra Work Approval', formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScYU-9h_f34xuHdSKpz5L3zTcu2VGWO9A5wqge_XL4KbW-3YA/viewform', docId: '1md6KnXHf-_70ndOwakmAD6ksWjd4xwglMJKBEMIzI8o', gid: '1681660272', selectedColumns: ['Employee Name','Extra Work Date', 'In Time', 'Out Time','Reason'] },
+      { name: 'Compensate Off', formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScc8kN-AbggkeAGHPIPaxMv4i8g5O9fs_tNKN39_SOXQ92e4w/viewform', docId: '14HlbjtN6USi61CfUJVAHZvfKA3jODWKDng8zbCuxoRg', gid: '544867416', selectedColumns: ['Employee Name','Compensatory Off Date','Extra Work Done Date', 'Reason'] }
     ]
   },
   {
     id: 'kiran-c',
     name: 'Kiran Chabukswar',
     designation: 'Project',
-   
     email: 'chabukswarkiran73@gmail.com',
     photo: 'https://lh3.googleusercontent.com/d/1ZGkkyPPLjQ6ZQjufHvY39lSgpxkdFEwZ',
-      dashboards: [
-         {
-      title: 'Checklist Dashboard',
-      url: 'https://datastudio.google.com/reporting/b30bad2f-4552-4c9f-8d9d-b8afd5056244/page/gcG5F'
-         }
-  ],
+    dashboards: [
+      {
+        title: 'Checklist Dashboard',
+        url: 'https://datastudio.google.com/reporting/b30bad2f-4552-4c9f-8d9d-b8afd5056244/page/gcG5F'
+      }
+    ],
     sheets: [
-      { name: 'Daily Report',formUrl:'https://forms.gle/YUV27rV5kPXKyn799', docId: '1mrjfYpGMSMY-Em7Y4O4m9JZgfED0gdvbdPBD9qscgcM', gid: '799922129', selectedColumns: ['Date', 'Project Co-Ordinator','Project Name', 'Location', 'In - Time ', 'Out- Time', 'Have you done site visit?','Described Days Activities (Mentioned by Points) In Office','Described Days Activities (Mentioned by Points) In Site'] },
-      { name: 'Petrol Allowance',formUrl:'https://forms.gle/2EmAJQdZ7f2BwMLF9', docId: '1qbbbN4uU0x1UFC3rIzkO6lekrFw3A7XD1lx7zZYxSxE', gid: '1266941161', selectedColumns: ['Date', 'Name', 'From', 'To', 'Km','Others','Upload'] },
-      { name: 'Site Expenses', formUrl:'https://forms.gle/9uuXgx6oF3okLmxb7',docId: '13Vo3YIrbPT06a4ClN-BS-eO1DOCSNzo5dnn-XfO0Tds', gid: '1142344274', selectedColumns: ['Date', 'Project Name', 'Paid to', 'Amount', 'Reason','URD Purchase'] },
-      { name: 'Safety Check',formUrl:'https://forms.gle/gRj1gRTZSnvygyVV6', docId: '1Lub7fEdgOKBjfuLDpMhYQ4do78_DamGxLasxjIbf9Vo', gid: '1997998379', selectedColumns: ['Date', 'Project Member', 'Project Name', 'Location', 'Agency Name', 'Total Labour Count', 'PPE Kit', 'Upload Photo'] },
-      { name: 'Delivery Challan',formUrl:'https://forms.gle/EuBCvSYkfQVYjBYw7', docId: '1ssmVTMIvMmNcqm5oloGabxX6XrWd-qMWCxzb5QYdc6s', gid: '1102974409', selectedColumns: ['Date', 'Project Name', 'Name', 'Work', 'Challan', 'Returnable Materials List', 'Reason'] }, 
-      { name: 'Upload URD',formUrl:'https://forms.gle/ojbkRA6NZ92w96mZ9', docId: '1ezKQET2dMdSkJ_rUmbMiWxFA0wSVmDrwM8XGDaajkF8', gid: '1029448347', selectedColumns: ['Date', 'Name', 'Project Name', 'Tax Invoice', 'URD Purchase'] },
-      { name: 'Site Inspection Checklist',formUrl:'https://forms.gle/qfXppXnNK4JDP3tc8', docId: '1zpPnIESV3EBTrrGKMpjW2UNsbouv3bTA88YuN4XZEgs', gid: '1839387537', selectedColumns: ['Date', 'Name', 'Project Name', 'Work Activity', 'Upload'] },
-      { name: 'Debit Note', formUrl:'https://forms.gle/RGcNHw5EjYBrrbfv9',docId: '1rc9AKbkiagJLYpNXvaxbzAhVAWhGJH4AuTENu1NknB0', gid: '12767300', selectedColumns: ['Date', 'Name', 'Project Name', 'Vendor Name', 'Debit To (Worker Name)', 'Reason', 'Amount', 'Approved By'] },
+      { name: 'Daily Report', formUrl:'https://forms.gle/YUV27rV5kPXKyn799', docId: '1mrjfYpGMSMY-Em7Y4O4m9JZgfED0gdvbdPBD9qscgcM', gid: '799922129', selectedColumns: ['Date', 'Project Co-Ordinator','Project Name', 'Location', 'In - Time ', 'Out- Time', 'Have you done site visit?','Described Days Activities (Mentioned by Points) In Office','Described Days Activities (Mentioned by Points) In Site'] },
+      { name: 'Petrol Allowance', formUrl:'https://forms.gle/2EmAJQdZ7f2BwMLF9', docId: '1qbbbN4uU0x1UFC3rIzkO6lekrFw3A7XD1lx7zZYxSxE', gid: '1266941161', selectedColumns: ['Date', 'Name', 'From', 'To', 'Km','Others','Upload'] },
+      { name: 'Site Expenses', formUrl:'https://forms.gle/9uuXgx6oF3okLmxb7', docId: '13Vo3YIrbPT06a4ClN-BS-eO1DOCSNzo5dnn-XfO0Tds', gid: '1142344274', selectedColumns: ['Date', 'Project Name', 'Paid to', 'Amount', 'Reason','URD Purchase'] },
+      { name: 'Safety Check', formUrl:'https://forms.gle/gRj1gRTZSnvygyVV6', docId: '1Lub7fEdgOKBjfuLDpMhYQ4do78_DamGxLasxjIbf9Vo', gid: '1997998379', selectedColumns: ['Date', 'Project Member', 'Project Name', 'Location', 'Agency Name', 'Total Labour Count', 'PPE Kit', 'Upload Photo'] },
+      { name: 'Delivery Challan', formUrl:'https://forms.gle/EuBCvSYkfQVYjBYw7', docId: '1ssmVTMIvMmNcqm5oloGabxX6XrWd-qMWCxzb5QYdc6s', gid: '1102974409', selectedColumns: ['Date', 'Project Name', 'Name', 'Work', 'Challan', 'Returnable Materials List', 'Reason'] }, 
+      { name: 'Upload URD', formUrl:'https://forms.gle/ojbkRA6NZ92w96mZ9', docId: '1ezKQET2dMdSkJ_rUmbMiWxFA0wSVmDrwM8XGDaajkF8', gid: '1029448347', selectedColumns: ['Date', 'Name', 'Project Name', 'Tax Invoice', 'URD Purchase'] },
+      { name: 'Site Inspection Checklist', formUrl:'https://forms.gle/qfXppXnNK4JDP3tc8', docId: '1zpPnIESV3EBTrrGKMpjW2UNsbouv3bTA88YuN4XZEgs', gid: '1839387537', selectedColumns: ['Date', 'Name', 'Project Name', 'Work Activity', 'Upload'] },
+      { name: 'Debit Note', formUrl:'https://forms.gle/RGcNHw5EjYBrrbfv9', docId: '1rc9AKbkiagJLYpNXvaxbzAhVAWhGJH4AuTENu1NknB0', gid: '12767300', selectedColumns: ['Date', 'Name', 'Project Name', 'Vendor Name', 'Debit To (Worker Name)', 'Reason', 'Amount', 'Approved By'] },
       { name: 'Delegation Sheet Team', docId: '1680NhH8rKFTKeY3HSZGV_izgEi4QieHiirbcbRi7hTA', gid: '1184708924', selectedColumns: ['Name', 'Task', 'First Date', 'Revision 1','Revision 2', 'Total Revision','Status','Actual Completion Date'] },
-      { name: 'Help Slip',formUrl:'https://forms.gle/naMThh9BWnzcAme38', docId: '16R8q7J5kc3GYXgZC1q6KS4nVJyMIaHqfleFnT3l7v_4', gid: '1930440204', selectedColumns: ['Timestamp', 'Employee Name', 'Department', 'Required From', 'Challenge / Question', 'Solution 1'] },
+      { name: 'Help Slip', formUrl:'https://forms.gle/naMThh9BWnzcAme38', docId: '16R8q7J5kc3GYXgZC1q6KS4nVJyMIaHqfleFnT3l7v_4', gid: '1930440204', selectedColumns: ['Timestamp', 'Employee Name', 'Department', 'Required From', 'Challenge / Question', 'Solution 1'] },
       { name: 'Checklist', docId: '1m_P5_eP9FvD9eaYvanmLlV833cscTvk2xJk_c39cbZw', gid: '2092959791', selectedColumns: ['Task', 'Doer', 'Planned', 'Actual', 'Status'] },
-      { name: 'Leave Application', formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScVKjl4j1wPbzV4QFAK9TlP8xpOkrHYxej75WTdFzt-lkV4Dg/viewform',docId: '1mrjfYpGMSMY-Em7Y4O4m9JZgfED0gdvbdPBD9qscgcM', gid: '148992', selectedColumns: ['Employee Name', 'Leave Type', 'Reason/Purpose', 'Half Day', 'Start Date of Leave','End Date of Leave'] },
-            { name: 'Extra Work Approval',formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScYU-9h_f34xuHdSKpz5L3zTcu2VGWO9A5wqge_XL4KbW-3YA/viewform', docId: '1md6KnXHf-_70ndOwakmAD6ksWjd4xwglMJKBEMIzI8o', gid: '1681660272', selectedColumns: ['Employee Name','Extra Work Date', 'In Time', 'Out Time','Reason'] },
-      { name: 'Compensate Off',formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScc8kN-AbggkeAGHPIPaxMv4i8g5O9fs_tNKN39_SOXQ92e4w/viewform', docId: '14HlbjtN6USi61CfUJVAHZvfKA3jODWKDng8zbCuxoRg', gid: '544867416', selectedColumns: ['Employee Name','Compensatory Off Date','Extra Work Done Date', 'Reason'] }
-
+      { name: 'Leave Application', formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScVKjl4j1wPbzV4QFAK9TlP8xpOkrHYxej75WTdFzt-lkV4Dg/viewform', docId: '1mrjfYpGMSMY-Em7Y4O4m9JZgfED0gdvbdPBD9qscgcM', gid: '148992', selectedColumns: ['Employee Name', 'Leave Type', 'Reason/Purpose', 'Half Day', 'Start Date of Leave','End Date of Leave'] },
+      { name: 'Extra Work Approval', formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScYU-9h_f34xuHdSKpz5L3zTcu2VGWO9A5wqge_XL4KbW-3YA/viewform', docId: '1md6KnXHf-_70ndOwakmAD6ksWjd4xwglMJKBEMIzI8o', gid: '1681660272', selectedColumns: ['Employee Name','Extra Work Date', 'In Time', 'Out Time','Reason'] },
+      { name: 'Compensate Off', formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScc8kN-AbggkeAGHPIPaxMv4i8g5O9fs_tNKN39_SOXQ92e4w/viewform', docId: '14HlbjtN6USi61CfUJVAHZvfKA3jODWKDng8zbCuxoRg', gid: '544867416', selectedColumns: ['Employee Name','Compensatory Off Date','Extra Work Done Date', 'Reason'] }
     ]
   },
   {
@@ -389,82 +365,77 @@ const employeesData = [
     designation: 'Designer',
     email: 'design1@avaniyshinterior.com',
     photo: 'https://lh3.googleusercontent.com/d/1VLQ_MT-ER1OQqio7Nzx28VZ6WYUxd39m',
-      dashboards: [
-         {
-      title: 'Checklist Dashboard',
-      url: 'https://datastudio.google.com/reporting/b30bad2f-4552-4c9f-8d9d-b8afd5056244/page/gcG5F'
-         },
-          {
-      title: 'Designer Dashboard',
-      url: 'https://script.google.com/macros/s/AKfycbwVo7QspB47nnosKR9GW0UWxvvsK1NhuRCqUxXaVufFNNGgVY8d8RJXA-Y0VSNFoyP4pA/exec'
-    }
-  ],
+    dashboards: [
+      {
+        title: 'Checklist Dashboard',
+        url: 'https://datastudio.google.com/reporting/b30bad2f-4552-4c9f-8d9d-b8afd5056244/page/gcG5F'
+      },
+      {
+        title: 'Designer Dashboard',
+        url: 'https://script.google.com/macros/s/AKfycbwVo7QspB47nnosKR9GW0UWxvvsK1NhuRCqUxXaVufFNNGgVY8d8RJXA-Y0VSNFoyP4pA/exec'
+      }
+    ],
     sheets: [
-      { name: 'Daily Report',formUrl:'https://docs.google.com/forms/d/e/1FAIpQLSf7y6FpZ4Ff4Ihi7Jq6SyqMXHEnvXkaWSQ24v6RPQCMcuqcGw/viewform', docId: '1mrjfYpGMSMY-Em7Y4O4m9JZgfED0gdvbdPBD9qscgcM', gid: '1518539535', selectedColumns: ['Date','Designer', 'Project', 'Location', 'In-Time', 'Out-time'] },
+      { name: 'Daily Report', formUrl:'https://docs.google.com/forms/d/e/1FAIpQLSf7y6FpZ4Ff4Ihi7Jq6SyqMXHEnvXkaWSQ24v6RPQCMcuqcGw/viewform', docId: '1mrjfYpGMSMY-Em7Y4O4m9JZgfED0gdvbdPBD9qscgcM', gid: '1518539535', selectedColumns: ['Date','Designer', 'Project', 'Location', 'In-Time', 'Out-time'] },
       { name: 'Daily Video Call', docId: '1SRpvwpmsFH4xMU9Ntj_oyu-jUjb0Ky0D9VRseh1hu9o', gid: '2092959791', selectedColumns: ['Name', 'Task', 'Planned', 'Actual', 'Status'] },
-      { name: 'Petrol Allowance',formUrl:'https://forms.gle/2EmAJQdZ7f2BwMLF9', docId: '1qbbbN4uU0x1UFC3rIzkO6lekrFw3A7XD1lx7zZYxSxE', gid: '1266941161', selectedColumns: ['Date', 'Name', 'From', 'To', 'Km','Others','Upload'] },
-      { name: 'Site Expenses', formUrl:'https://forms.gle/9uuXgx6oF3okLmxb7',docId: '13Vo3YIrbPT06a4ClN-BS-eO1DOCSNzo5dnn-XfO0Tds', gid: '1142344274', selectedColumns: ['Date', 'Project Name', 'Paid to', 'Amount', 'Reason','URD Purchase'] },
+      { name: 'Petrol Allowance', formUrl:'https://forms.gle/2EmAJQdZ7f2BwMLF9', docId: '1qbbbN4uU0x1UFC3rIzkO6lekrFw3A7XD1lx7zZYxSxE', gid: '1266941161', selectedColumns: ['Date', 'Name', 'From', 'To', 'Km','Others','Upload'] },
+      { name: 'Site Expenses', formUrl:'https://forms.gle/9uuXgx6oF3okLmxb7', docId: '13Vo3YIrbPT06a4ClN-BS-eO1DOCSNzo5dnn-XfO0Tds', gid: '1142344274', selectedColumns: ['Date', 'Project Name', 'Paid to', 'Amount', 'Reason','URD Purchase'] },
       { name: 'Delegation Sheet Team', docId: '1680NhH8rKFTKeY3HSZGV_izgEi4QieHiirbcbRi7hTA', gid: '1184708924', selectedColumns: ['Name', 'Task', 'First Date', 'Revision 1','Revision 2', 'Total Revision','Status','Actual Completion Date'] },
       { name: 'Checklist', docId: '1m_P5_eP9FvD9eaYvanmLlV833cscTvk2xJk_c39cbZw', gid: '2092959791', selectedColumns: ['Task', 'Doer', 'Planned', 'Actual', 'Status'] },
-      { name: 'Help Slip',formUrl:'https://forms.gle/naMThh9BWnzcAme38', docId: '16R8q7J5kc3GYXgZC1q6KS4nVJyMIaHqfleFnT3l7v_4', gid: '1930440204', selectedColumns: ['Timestamp', 'Employee Name', 'Department', 'Required From', 'Challenge / Question', 'Solution 1'] },
-      { name: 'Leave Application', formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScVKjl4j1wPbzV4QFAK9TlP8xpOkrHYxej75WTdFzt-lkV4Dg/viewform',docId: '1mrjfYpGMSMY-Em7Y4O4m9JZgfED0gdvbdPBD9qscgcM', gid: '148992', selectedColumns: ['Employee Name', 'Leave Type', 'Reason/Purpose', 'Half Day', 'Start Date of Leave','End Date of Leave'] },
-            { name: 'Extra Work Approval',formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScYU-9h_f34xuHdSKpz5L3zTcu2VGWO9A5wqge_XL4KbW-3YA/viewform', docId: '1md6KnXHf-_70ndOwakmAD6ksWjd4xwglMJKBEMIzI8o', gid: '1681660272', selectedColumns: ['Employee Name','Extra Work Date', 'In Time', 'Out Time','Reason'] },
-      { name: 'Compensate Off',formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScc8kN-AbggkeAGHPIPaxMv4i8g5O9fs_tNKN39_SOXQ92e4w/viewform', docId: '14HlbjtN6USi61CfUJVAHZvfKA3jODWKDng8zbCuxoRg', gid: '544867416', selectedColumns: ['Employee Name','Compensatory Off Date','Extra Work Done Date', 'Reason'] }
-
+      { name: 'Help Slip', formUrl:'https://forms.gle/naMThh9BWnzcAme38', docId: '16R8q7J5kc3GYXgZC1q6KS4nVJyMIaHqfleFnT3l7v_4', gid: '1930440204', selectedColumns: ['Timestamp', 'Employee Name', 'Department', 'Required From', 'Challenge / Question', 'Solution 1'] },
+      { name: 'Leave Application', formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScVKjl4j1wPbzV4QFAK9TlP8xpOkrHYxej75WTdFzt-lkV4Dg/viewform', docId: '1mrjfYpGMSMY-Em7Y4O4m9JZgfED0gdvbdPBD9qscgcM', gid: '148992', selectedColumns: ['Employee Name', 'Leave Type', 'Reason/Purpose', 'Half Day', 'Start Date of Leave','End Date of Leave'] },
+      { name: 'Extra Work Approval', formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScYU-9h_f34xuHdSKpz5L3zTcu2VGWO9A5wqge_XL4KbW-3YA/viewform', docId: '1md6KnXHf-_70ndOwakmAD6ksWjd4xwglMJKBEMIzI8o', gid: '1681660272', selectedColumns: ['Employee Name','Extra Work Date', 'In Time', 'Out Time','Reason'] },
+      { name: 'Compensate Off', formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScc8kN-AbggkeAGHPIPaxMv4i8g5O9fs_tNKN39_SOXQ92e4w/viewform', docId: '14HlbjtN6USi61CfUJVAHZvfKA3jODWKDng8zbCuxoRg', gid: '544867416', selectedColumns: ['Employee Name','Compensatory Off Date','Extra Work Done Date', 'Reason'] }
     ]
   },
   {
     id: 'sakshi-b',
     name: 'Sakshi Makote',
     designation: 'Designer',
-    
     email: 'design2@avaniyshinterior.com',
     photo: 'https://lh3.googleusercontent.com/d/10KJzpS3TIVgGh6DgQMW4mm6vz30fxInI',
-      dashboards: [
-         {
-      title: 'Checklist Dashboard',
-      url: 'https://datastudio.google.com/reporting/b30bad2f-4552-4c9f-8d9d-b8afd5056244/page/gcG5F'
-         },
-        {
-      title: 'Designer Dashboard',
-      url: 'https://script.google.com/macros/s/AKfycbwVo7QspB47nnosKR9GW0UWxvvsK1NhuRCqUxXaVufFNNGgVY8d8RJXA-Y0VSNFoyP4pA/exec'
-    }
-  ],
+    dashboards: [
+      {
+        title: 'Checklist Dashboard',
+        url: 'https://datastudio.google.com/reporting/b30bad2f-4552-4c9f-8d9d-b8afd5056244/page/gcG5F'
+      },
+      {
+        title: 'Designer Dashboard',
+        url: 'https://script.google.com/macros/s/AKfycbwVo7QspB47nnosKR9GW0UWxvvsK1NhuRCqUxXaVufFNNGgVY8d8RJXA-Y0VSNFoyP4pA/exec'
+      }
+    ],
     sheets: [
-      { name: 'Daily Report',formUrl:'https://docs.google.com/forms/d/e/1FAIpQLSf7y6FpZ4Ff4Ihi7Jq6SyqMXHEnvXkaWSQ24v6RPQCMcuqcGw/viewform', docId: '1mrjfYpGMSMY-Em7Y4O4m9JZgfED0gdvbdPBD9qscgcM', gid: '1518539535', selectedColumns: ['Date','Designer', 'Project', 'Location', 'In-Time', 'Out-time'] },
-      { name: 'Petrol Allowance',formUrl:'https://forms.gle/2EmAJQdZ7f2BwMLF9', docId: '1qbbbN4uU0x1UFC3rIzkO6lekrFw3A7XD1lx7zZYxSxE', gid: '1266941161', selectedColumns: ['Date', 'Name', 'From', 'To', 'Km','Others','Upload'] },
-      { name: 'Site Expenses', formUrl:'https://forms.gle/9uuXgx6oF3okLmxb7',docId: '13Vo3YIrbPT06a4ClN-BS-eO1DOCSNzo5dnn-XfO0Tds', gid: '1142344274', selectedColumns: ['Date', 'Project Name', 'Paid to', 'Amount', 'Reason','URD Purchase'] },
+      { name: 'Daily Report', formUrl:'https://docs.google.com/forms/d/e/1FAIpQLSf7y6FpZ4Ff4Ihi7Jq6SyqMXHEnvXkaWSQ24v6RPQCMcuqcGw/viewform', docId: '1mrjfYpGMSMY-Em7Y4O4m9JZgfED0gdvbdPBD9qscgcM', gid: '1518539535', selectedColumns: ['Date','Designer', 'Project', 'Location', 'In-Time', 'Out-time'] },
+      { name: 'Petrol Allowance', formUrl:'https://forms.gle/2EmAJQdZ7f2BwMLF9', docId: '1qbbbN4uU0x1UFC3rIzkO6lekrFw3A7XD1lx7zZYxSxE', gid: '1266941161', selectedColumns: ['Date', 'Name', 'From', 'To', 'Km','Others','Upload'] },
+      { name: 'Site Expenses', formUrl:'https://forms.gle/9uuXgx6oF3okLmxb7', docId: '13Vo3YIrbPT06a4ClN-BS-eO1DOCSNzo5dnn-XfO0Tds', gid: '1142344274', selectedColumns: ['Date', 'Project Name', 'Paid to', 'Amount', 'Reason','URD Purchase'] },
       { name: 'Delegation Sheet Team', docId: '1680NhH8rKFTKeY3HSZGV_izgEi4QieHiirbcbRi7hTA', gid: '1184708924', selectedColumns: ['Name', 'Task', 'First Date', 'Revision 1','Revision 2', 'Total Revision','Status','Actual Completion Date'] },
       { name: 'Checklist', docId: '1m_P5_eP9FvD9eaYvanmLlV833cscTvk2xJk_c39cbZw', gid: '2092959791', selectedColumns: ['Task', 'Doer', 'Planned', 'Actual', 'Status'] },
-      { name: 'Help Slip',formUrl:'https://forms.gle/naMThh9BWnzcAme38', docId: '16R8q7J5kc3GYXgZC1q6KS4nVJyMIaHqfleFnT3l7v_4', gid: '1930440204', selectedColumns: ['Timestamp', 'Employee Name', 'Department', 'Required From', 'Challenge / Question', 'Solution 1'] },
-      { name: 'Leave Application', formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScVKjl4j1wPbzV4QFAK9TlP8xpOkrHYxej75WTdFzt-lkV4Dg/viewform',docId: '1mrjfYpGMSMY-Em7Y4O4m9JZgfED0gdvbdPBD9qscgcM', gid: '148992', selectedColumns: ['Employee Name', 'Leave Type', 'Reason/Purpose', 'Half Day', 'Start Date of Leave','End Date of Leave'] },
-            { name: 'Extra Work Approval',formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScYU-9h_f34xuHdSKpz5L3zTcu2VGWO9A5wqge_XL4KbW-3YA/viewform', docId: '1md6KnXHf-_70ndOwakmAD6ksWjd4xwglMJKBEMIzI8o', gid: '1681660272', selectedColumns: ['Employee Name','Extra Work Date', 'In Time', 'Out Time','Reason'] },
-      { name: 'Compensate Off',formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScc8kN-AbggkeAGHPIPaxMv4i8g5O9fs_tNKN39_SOXQ92e4w/viewform', docId: '14HlbjtN6USi61CfUJVAHZvfKA3jODWKDng8zbCuxoRg', gid: '544867416', selectedColumns: ['Employee Name','Compensatory Off Date','Extra Work Done Date', 'Reason'] }
-
+      { name: 'Help Slip', formUrl:'https://forms.gle/naMThh9BWnzcAme38', docId: '16R8q7J5kc3GYXgZC1q6KS4nVJyMIaHqfleFnT3l7v_4', gid: '1930440204', selectedColumns: ['Timestamp', 'Employee Name', 'Department', 'Required From', 'Challenge / Question', 'Solution 1'] },
+      { name: 'Leave Application', formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScVKjl4j1wPbzV4QFAK9TlP8xpOkrHYxej75WTdFzt-lkV4Dg/viewform', docId: '1mrjfYpGMSMY-Em7Y4O4m9JZgfED0gdvbdPBD9qscgcM', gid: '148992', selectedColumns: ['Employee Name', 'Leave Type', 'Reason/Purpose', 'Half Day', 'Start Date of Leave','End Date of Leave'] },
+      { name: 'Extra Work Approval', formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScYU-9h_f34xuHdSKpz5L3zTcu2VGWO9A5wqge_XL4KbW-3YA/viewform', docId: '1md6KnXHf-_70ndOwakmAD6ksWjd4xwglMJKBEMIzI8o', gid: '1681660272', selectedColumns: ['Employee Name','Extra Work Date', 'In Time', 'Out Time','Reason'] },
+      { name: 'Compensate Off', formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScc8kN-AbggkeAGHPIPaxMv4i8g5O9fs_tNKN39_SOXQ92e4w/viewform', docId: '14HlbjtN6USi61CfUJVAHZvfKA3jODWKDng8zbCuxoRg', gid: '544867416', selectedColumns: ['Employee Name','Compensatory Off Date','Extra Work Done Date', 'Reason'] }
     ]
   },
   {
     id: 'namrata-r',
     name: 'Namrata Raut',
     designation: 'Executive Assistant',
-   
     email: 'ea@avaniyshinterior.com',
     photo: 'https://lh3.googleusercontent.com/d/10owEBw3gPnFrCn7jYKFFI3UOvwHlVgxk',
-    
-      dashboards: [
-         {
-      title: 'AISPL Checklist Dashboard',
-      url: 'https://datastudio.google.com/reporting/b30bad2f-4552-4c9f-8d9d-b8afd5056244/page/gcG5F'
-         },
-         {
-      title: 'Accounts Dashboard',
-      url: 'https://script.google.com/a/macros/avaniyshinterior.com/s/AKfycbylm14CrZ4cPQSO1AzCz0hmGTiM5aEWY_6KEUmngIJTNez-ZtCbBBi6CZ_K6-Y8fE2TnA/exec'
-         },
-         {
-      title: 'Modulariti Checklist Dashboard',
-      url: 'https://datastudio.google.com/reporting/70796c57-2040-4126-82bd-41cc0bca2ccd'
-         }
-  ],
+    dashboards: [
+      {
+        title: 'AISPL Checklist Dashboard',
+        url: 'https://datastudio.google.com/reporting/b30bad2f-4552-4c9f-8d9d-b8afd5056244/page/gcG5F'
+      },
+      {
+        title: 'Accounts Dashboard',
+        url: 'https://script.google.com/a/macros/avaniyshinterior.com/s/AKfycbylm14CrZ4cPQSO1AzCz0hmGTiM5aEWY_6KEUmngIJTNez-ZtCbBBi6CZ_K6-Y8fE2TnA/exec'
+      },
+      {
+        title: 'Modulariti Checklist Dashboard',
+        url: 'https://datastudio.google.com/reporting/70796c57-2040-4126-82bd-41cc0bca2ccd'
+      }
+    ],
     projects: [
       { 
         name: 'AISPL Client PO', 
@@ -478,25 +449,25 @@ const employeesData = [
         gid: '1013826524', 
         selectedColumns: ['Sr.No.', 'Proforma Invoice No.', 'Project Name','Authorized Signatory','Documents'] 
       },
-       { 
+      { 
         name: 'AISPL Tax Invoice', 
         docId: '1JZaXvcCxkq0jj4PETPWuwhRza570xBVIa3YBnxqEW8Y', 
         gid: '665653959', 
         selectedColumns: ['Sr.No.', 'Tax Invoice No.', 'Project Name','Authorized Signatory','Documents'] 
       },
-       { 
+      { 
         name: 'AISPL PO To Vendor', 
         docId: '1JZaXvcCxkq0jj4PETPWuwhRza570xBVIa3YBnxqEW8Y', 
         gid: '286319358', 
         selectedColumns: ['Sr.No.', 'PO No.','Vendor Name', 'Project Name','Remarks','Created By','Documents'] 
       },
-        { 
+      { 
         name: 'Insurance Checklist', 
         docId: '1g6ZEWY32KmJlRhoBoxdEolQP_SPjwDbLlWCvmy7vPuk', 
         gid: '2092959791', 
         selectedColumns: ['Name','Task', 'Doer', 'Planned', 'Actual', 'Status'] 
       },
-       { 
+      { 
         name: 'Modulariti Client PO', 
         docId: '1u8sqdtEeklS9AVx91oZVXMulcY73IGwQ4N6CHokeBFQ', 
         gid: '0', 
@@ -508,27 +479,24 @@ const employeesData = [
         gid: '1541680899', 
         selectedColumns: ['Sr.No.', 'Proforma Invoice No.', 'Project Name','Documents'] 
       },
-       { 
+      { 
         name: 'Modulariti Tax Invoice', 
         docId: '1u8sqdtEeklS9AVx91oZVXMulcY73IGwQ4N6CHokeBFQ', 
         gid: '842646558', 
         selectedColumns: ['Sr.No.', 'Tax Invoice No.', 'Project Name','Documents'] 
       },
-       { 
+      { 
         name: 'Modulariti PO To Vendor', 
         docId: '1u8sqdtEeklS9AVx91oZVXMulcY73IGwQ4N6CHokeBFQ', 
         gid: '1879062090', 
         selectedColumns: ['Sr.No.', 'PO No.','Vendor Name', 'Project Name','Documents'] 
       },
-
-       { 
+      { 
         name: 'Modulariti Delivery Challan', 
         docId: '1u8sqdtEeklS9AVx91oZVXMulcY73IGwQ4N6CHokeBFQ', 
         gid: '1982685191', 
         selectedColumns: ['Sr.No.', 'Challan No.', 'Project Name','Documents'] 
       },
-
-     
       { 
         name: 'Delegation Sheet Team',
         formUrl:'https://script.google.com/macros/s/AKfycbzC5FlAOwLsVB_FtxxqWfv4LwicmnUip04VkOu_Suu0yBvaL5lYvfLi0Lh_gC2b_uUj/exec', 
@@ -543,109 +511,98 @@ const employeesData = [
         gid: '1184708924', 
         selectedColumns: ['Name', 'Task', 'First Date', 'Revision 1','Revision 2', 'Total Revision','Status','Actual Completion Date'] 
       } 
-
     ],
- 
     sheets: [
-      
-      { name: 'Office Expenses',formUrl:'https://docs.google.com/forms/d/e/1FAIpQLSeFG1ZBY4mstlGPDpcNhUb9vi2WiJGBr3aG2cuTtYqPNXf4Nw/viewform?usp=header', docId: '1N2DF6vzSoJcIxwL2makablsGtDlMB-rxhcWT3_VLHBY', gid: '440445714', selectedColumns: ['Date', 'Paid to', 'Amount', 'Reason', 'Categories','URD Purchase'] },
+      { name: 'Office Expenses', formUrl:'https://docs.google.com/forms/d/e/1FAIpQLSeFG1ZBY4mstlGPDpcNhUb9vi2WiJGBr3aG2cuTtYqPNXf4Nw/viewform?usp=header', docId: '1N2DF6vzSoJcIxwL2makablsGtDlMB-rxhcWT3_VLHBY', gid: '440445714', selectedColumns: ['Date', 'Paid to', 'Amount', 'Reason', 'Categories','URD Purchase'] },
       { 
         name: 'Checklist', 
         docId: '1m_P5_eP9FvD9eaYvanmLlV833cscTvk2xJk_c39cbZw', 
         gid: '2092959791', 
         selectedColumns: ['Task', 'Doer', 'Planned', 'Actual', 'Status'] 
       },
-      { name: 'Leave Application', formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScVKjl4j1wPbzV4QFAK9TlP8xpOkrHYxej75WTdFzt-lkV4Dg/viewform',docId: '1mrjfYpGMSMY-Em7Y4O4m9JZgfED0gdvbdPBD9qscgcM', gid: '148992', selectedColumns: ['Employee Name', 'Leave Type', 'Reason/Purpose', 'Half Day', 'Start Date of Leave','End Date of Leave'] },
-            { name: 'Extra Work Approval',formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScYU-9h_f34xuHdSKpz5L3zTcu2VGWO9A5wqge_XL4KbW-3YA/viewform', docId: '1md6KnXHf-_70ndOwakmAD6ksWjd4xwglMJKBEMIzI8o', gid: '1681660272', selectedColumns: ['Employee Name','Extra Work Date', 'In Time', 'Out Time','Reason'] },
-      { name: 'Compensate Off',formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScc8kN-AbggkeAGHPIPaxMv4i8g5O9fs_tNKN39_SOXQ92e4w/viewform', docId: '14HlbjtN6USi61CfUJVAHZvfKA3jODWKDng8zbCuxoRg', gid: '544867416', selectedColumns: ['Employee Name','Compensatory Off Date','Extra Work Done Date', 'Reason'] }
-
+      { name: 'Leave Application', formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScVKjl4j1wPbzV4QFAK9TlP8xpOkrHYxej75WTdFzt-lkV4Dg/viewform', docId: '1mrjfYpGMSMY-Em7Y4O4m9JZgfED0gdvbdPBD9qscgcM', gid: '148992', selectedColumns: ['Employee Name', 'Leave Type', 'Reason/Purpose', 'Half Day', 'Start Date of Leave','End Date of Leave'] },
+      { name: 'Extra Work Approval', formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScYU-9h_f34xuHdSKpz5L3zTcu2VGWO9A5wqge_XL4KbW-3YA/viewform', docId: '1md6KnXHf-_70ndOwakmAD6ksWjd4xwglMJKBEMIzI8o', gid: '1681660272', selectedColumns: ['Employee Name','Extra Work Date', 'In Time', 'Out Time','Reason'] },
+      { name: 'Compensate Off', formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScc8kN-AbggkeAGHPIPaxMv4i8g5O9fs_tNKN39_SOXQ92e4w/viewform', docId: '14HlbjtN6USi61CfUJVAHZvfKA3jODWKDng8zbCuxoRg', gid: '544867416', selectedColumns: ['Employee Name','Compensatory Off Date','Extra Work Done Date', 'Reason'] }
     ]
   },
   {
     id: 'anuradha-s',
     name: 'Anuradha Bansode',
     designation: 'MIS Executive',
-  
     email: 'mis@avaniyshinterior.com',
     photo: 'https://lh3.googleusercontent.com/d/1CITTMe060N0kMHO8SVGXomLI_US1yqpn',
-      dashboards: [
-         {
-      title: 'Checklist Dashboard',
-      url: 'https://datastudio.google.com/reporting/b30bad2f-4552-4c9f-8d9d-b8afd5056244/page/gcG5F'
-         },
-         {
-      title: 'System Checklist Dashboard',
-      url: 'https://datastudio.google.com/u/0/reporting/195d25b9-fb7c-43cc-ad29-16f042bd4135/page/mrw8F'
-         },
-         {
-      title: 'Modulariti Checklist Dashboard',
-      url: 'https://datastudio.google.com/u/0/reporting/70796c57-2040-4126-82bd-41cc0bca2ccd/page/i877F'
-         }    
-  ],
+    dashboards: [
+      {
+        title: 'Checklist Dashboard',
+        url: 'https://datastudio.google.com/reporting/b30bad2f-4552-4c9f-8d9d-b8afd5056244/page/gcG5F'
+      },
+      {
+        title: 'System Checklist Dashboard',
+        url: 'https://datastudio.google.com/u/0/reporting/195d25b9-fb7c-43cc-ad29-16f042bd4135/page/mrw8F'
+      },
+      {
+        title: 'Modulariti Checklist Dashboard',
+        url: 'https://datastudio.google.com/u/0/reporting/70796c57-2040-4126-82bd-41cc0bca2ccd/page/i877F'
+      }    
+    ],
     sheets: [
-      { name: 'Daily Report',formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScRyy4LtikZcJkmYYeaypXJJkR_pbR1YSz0Iso0N6f-L_hfDw/viewform', docId: '1mrjfYpGMSMY-Em7Y4O4m9JZgfED0gdvbdPBD9qscgcM', gid: '827729352', selectedColumns: ['Date','Name', 'In-Time', 'Out-time'] },
-      { name: 'Site Expenses', formUrl:'https://forms.gle/9uuXgx6oF3okLmxb7',docId: '13Vo3YIrbPT06a4ClN-BS-eO1DOCSNzo5dnn-XfO0Tds', gid: '1142344274', selectedColumns: ['Date', 'Project Name', 'Paid to', 'Amount', 'Reason','URD Purchase'] },
+      { name: 'Daily Report', formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScRyy4LtikZcJkmYYeaypXJJkR_pbR1YSz0Iso0N6f-L_hfDw/viewform', docId: '1mrjfYpGMSMY-Em7Y4O4m9JZgfED0gdvbdPBD9qscgcM', gid: '827729352', selectedColumns: ['Date','Name', 'In-Time', 'Out-time'] },
+      { name: 'Site Expenses', formUrl:'https://forms.gle/9uuXgx6oF3okLmxb7', docId: '13Vo3YIrbPT06a4ClN-BS-eO1DOCSNzo5dnn-XfO0Tds', gid: '1142344274', selectedColumns: ['Date', 'Project Name', 'Paid to', 'Amount', 'Reason','URD Purchase'] },
       { name: 'Checklist', docId: '1m_P5_eP9FvD9eaYvanmLlV833cscTvk2xJk_c39cbZw', gid: '2092959791', selectedColumns: ['Task', 'Doer', 'Planned', 'Actual', 'Status'] },
       { name: 'Delegation Sheet Team', docId: '1680NhH8rKFTKeY3HSZGV_izgEi4QieHiirbcbRi7hTA', gid: '1184708924', selectedColumns: ['Name', 'Task', 'First Date', 'Revision 1','Revision 2', 'Total Revision','Status','Actual Completion Date'] },
-      { name: 'Help Slip',formUrl:'https://forms.gle/naMThh9BWnzcAme38', docId: '16R8q7J5kc3GYXgZC1q6KS4nVJyMIaHqfleFnT3l7v_4', gid: '1930440204', selectedColumns: ['Timestamp', 'Employee Name', 'Department', 'Required From', 'Challenge / Question', 'Solution 1'] },
-      { name: 'Leave Application', formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScVKjl4j1wPbzV4QFAK9TlP8xpOkrHYxej75WTdFzt-lkV4Dg/viewform',docId: '1mrjfYpGMSMY-Em7Y4O4m9JZgfED0gdvbdPBD9qscgcM', gid: '148992', selectedColumns: ['Employee Name', 'Leave Type', 'Reason/Purpose', 'Half Day', 'Start Date of Leave','End Date of Leave'] },
-            { name: 'Extra Work Approval',formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScYU-9h_f34xuHdSKpz5L3zTcu2VGWO9A5wqge_XL4KbW-3YA/viewform', docId: '1md6KnXHf-_70ndOwakmAD6ksWjd4xwglMJKBEMIzI8o', gid: '1681660272', selectedColumns: ['Employee Name','Extra Work Date', 'In Time', 'Out Time','Reason'] },
-      { name: 'Compensate Off',formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScc8kN-AbggkeAGHPIPaxMv4i8g5O9fs_tNKN39_SOXQ92e4w/viewform', docId: '14HlbjtN6USi61CfUJVAHZvfKA3jODWKDng8zbCuxoRg', gid: '544867416', selectedColumns: ['Employee Name','Compensatory Off Date','Extra Work Done Date', 'Reason'] }
-
+      { name: 'Help Slip', formUrl:'https://forms.gle/naMThh9BWnzcAme38', docId: '16R8q7J5kc3GYXgZC1q6KS4nVJyMIaHqfleFnT3l7v_4', gid: '1930440204', selectedColumns: ['Timestamp', 'Employee Name', 'Department', 'Required From', 'Challenge / Question', 'Solution 1'] },
+      { name: 'Leave Application', formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScVKjl4j1wPbzV4QFAK9TlP8xpOkrHYxej75WTdFzt-lkV4Dg/viewform', docId: '1mrjfYpGMSMY-Em7Y4O4m9JZgfED0gdvbdPBD9qscgcM', gid: '148992', selectedColumns: ['Employee Name', 'Leave Type', 'Reason/Purpose', 'Half Day', 'Start Date of Leave','End Date of Leave'] },
+      { name: 'Extra Work Approval', formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScYU-9h_f34xuHdSKpz5L3zTcu2VGWO9A5wqge_XL4KbW-3YA/viewform', docId: '1md6KnXHf-_70ndOwakmAD6ksWjd4xwglMJKBEMIzI8o', gid: '1681660272', selectedColumns: ['Employee Name','Extra Work Date', 'In Time', 'Out Time','Reason'] },
+      { name: 'Compensate Off', formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScc8kN-AbggkeAGHPIPaxMv4i8g5O9fs_tNKN39_SOXQ92e4w/viewform', docId: '14HlbjtN6USi61CfUJVAHZvfKA3jODWKDng8zbCuxoRg', gid: '544867416', selectedColumns: ['Employee Name','Compensatory Off Date','Extra Work Done Date', 'Reason'] }
     ]
   },
   {
     id: 'harshada-s', 
     name: 'Harshada Shirsale',
     designation: 'CRM & PC',
-  
     email: 'crm@avaniyshinterior.com',
     photo: 'https://lh3.googleusercontent.com/d/1Cvdn631tScsIiJkwYCRM6aJC60bRlR8d',
-      dashboards: [
-         {
-      title: 'Checklist Dashboard',
-      url: 'https://datastudio.google.com/reporting/b30bad2f-4552-4c9f-8d9d-b8afd5056244/page/gcG5F'
-         },
-         {
-      title: 'System Checklist Dashboard',
-      url: 'https://datastudio.google.com/u/0/reporting/195d25b9-fb7c-43cc-ad29-16f042bd4135/page/mrw8F'
-         },
-         {
-      title: 'Modulariti Checklist Dashboard',
-      url: 'https://datastudio.google.com/u/0/reporting/70796c57-2040-4126-82bd-41cc0bca2ccd/page/i877F'
-         }
-  ],
+    dashboards: [
+      {
+        title: 'Checklist Dashboard',
+        url: 'https://datastudio.google.com/reporting/b30bad2f-4552-4c9f-8d9d-b8afd5056244/page/gcG5F'
+      },
+      {
+        title: 'System Checklist Dashboard',
+        url: 'https://datastudio.google.com/u/0/reporting/195d25b9-fb7c-43cc-ad29-16f042bd4135/page/mrw8F'
+      },
+      {
+        title: 'Modulariti Checklist Dashboard',
+        url: 'https://datastudio.google.com/u/0/reporting/70796c57-2040-4126-82bd-41cc0bca2ccd/page/i877F'
+      }
+    ],
     sheets: [
-      { name: 'Daily Report',formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScRyy4LtikZcJkmYYeaypXJJkR_pbR1YSz0Iso0N6f-L_hfDw/viewform', docId: '1mrjfYpGMSMY-Em7Y4O4m9JZgfED0gdvbdPBD9qscgcM', gid: '827729352', selectedColumns: ['Date','Name', 'In-Time', 'Out-time'] },
-      { name: 'Site Expenses', formUrl:'https://forms.gle/9uuXgx6oF3okLmxb7',docId: '13Vo3YIrbPT06a4ClN-BS-eO1DOCSNzo5dnn-XfO0Tds', gid: '1142344274', selectedColumns: ['Date', 'Project Name', 'Paid to', 'Amount', 'Reason','URD Purchase'] },
+      { name: 'Daily Report', formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScRyy4LtikZcJkmYYeaypXJJkR_pbR1YSz0Iso0N6f-L_hfDw/viewform', docId: '1mrjfYpGMSMY-Em7Y4O4m9JZgfED0gdvbdPBD9qscgcM', gid: '827729352', selectedColumns: ['Date','Name', 'In-Time', 'Out-time'] },
+      { name: 'Site Expenses', formUrl:'https://forms.gle/9uuXgx6oF3okLmxb7', docId: '13Vo3YIrbPT06a4ClN-BS-eO1DOCSNzo5dnn-XfO0Tds', gid: '1142344274', selectedColumns: ['Date', 'Project Name', 'Paid to', 'Amount', 'Reason','URD Purchase'] },
       { name: 'Checklist', docId: '1m_P5_eP9FvD9eaYvanmLlV833cscTvk2xJk_c39cbZw', gid: '2092959791', selectedColumns: ['Task', 'Doer', 'Planned', 'Actual', 'Status'] },
       { name: 'Delegation Sheet Team', docId: '1680NhH8rKFTKeY3HSZGV_izgEi4QieHiirbcbRi7hTA', gid: '1184708924', selectedColumns: ['Name', 'Task', 'First Date', 'Revision 1','Revision 2', 'Total Revision','Status','Actual Completion Date'] },
-      { name: 'Help Slip',formUrl:'https://forms.gle/naMThh9BWnzcAme38', docId: '16R8q7J5kc3GYXgZC1q6KS4nVJyMIaHqfleFnT3l7v_4', gid: '1930440204', selectedColumns: ['Timestamp', 'Employee Name', 'Department', 'Required From', 'Challenge / Question', 'Solution 1'] },
-      { name: 'Leave Application', formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScVKjl4j1wPbzV4QFAK9TlP8xpOkrHYxej75WTdFzt-lkV4Dg/viewform',docId: '1mrjfYpGMSMY-Em7Y4O4m9JZgfED0gdvbdPBD9qscgcM', gid: '148992', selectedColumns: ['Employee Name', 'Leave Type', 'Reason/Purpose', 'Half Day', 'Start Date of Leave','End Date of Leave'] },
-            { name: 'Extra Work Approval',formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScYU-9h_f34xuHdSKpz5L3zTcu2VGWO9A5wqge_XL4KbW-3YA/viewform', docId: '1md6KnXHf-_70ndOwakmAD6ksWjd4xwglMJKBEMIzI8o', gid: '1681660272', selectedColumns: ['Employee Name','Extra Work Date', 'In Time', 'Out Time','Reason'] },
-      { name: 'Compensate Off',formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScc8kN-AbggkeAGHPIPaxMv4i8g5O9fs_tNKN39_SOXQ92e4w/viewform', docId: '14HlbjtN6USi61CfUJVAHZvfKA3jODWKDng8zbCuxoRg', gid: '544867416', selectedColumns: ['Employee Name','Compensatory Off Date','Extra Work Done Date', 'Reason'] }
-
+      { name: 'Help Slip', formUrl:'https://forms.gle/naMThh9BWnzcAme38', docId: '16R8q7J5kc3GYXgZC1q6KS4nVJyMIaHqfleFnT3l7v_4', gid: '1930440204', selectedColumns: ['Timestamp', 'Employee Name', 'Department', 'Required From', 'Challenge / Question', 'Solution 1'] },
+      { name: 'Leave Application', formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScVKjl4j1wPbzV4QFAK9TlP8xpOkrHYxej75WTdFzt-lkV4Dg/viewform', docId: '1mrjfYpGMSMY-Em7Y4O4m9JZgfED0gdvbdPBD9qscgcM', gid: '148992', selectedColumns: ['Employee Name', 'Leave Type', 'Reason/Purpose', 'Half Day', 'Start Date of Leave','End Date of Leave'] },
+      { name: 'Extra Work Approval', formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScYU-9h_f34xuHdSKpz5L3zTcu2VGWO9A5wqge_XL4KbW-3YA/viewform', docId: '1md6KnXHf-_70ndOwakmAD6ksWjd4xwglMJKBEMIzI8o', gid: '1681660272', selectedColumns: ['Employee Name','Extra Work Date', 'In Time', 'Out Time','Reason'] },
+      { name: 'Compensate Off', formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScc8kN-AbggkeAGHPIPaxMv4i8g5O9fs_tNKN39_SOXQ92e4w/viewform', docId: '14HlbjtN6USi61CfUJVAHZvfKA3jODWKDng8zbCuxoRg', gid: '544867416', selectedColumns: ['Employee Name','Compensatory Off Date','Extra Work Done Date', 'Reason'] }
     ]
   },
   {
     id: 'accounts-team',
     name: 'Kiran Hole',
     designation: 'Accounts',
-  
     email: 'accounts@avaniyshinterior.com',
     photo: 'https://lh3.googleusercontent.com/d/1gZ5VMVCvdmH4PjVik-qxWXH9ooSVJFcB',
-      dashboards: [
-         {
-      title: 'Checklist Dashboard',
-      url: 'https://datastudio.google.com/reporting/b30bad2f-4552-4c9f-8d9d-b8afd5056244/page/gcG5F'
-         },
-
-         {
-      title: 'Accounts Dashboard',
-      url: 'https://script.google.com/a/macros/avaniyshinterior.com/s/AKfycbylm14CrZ4cPQSO1AzCz0hmGTiM5aEWY_6KEUmngIJTNez-ZtCbBBi6CZ_K6-Y8fE2TnA/exec'
-         }
-  ],
-    
+    dashboards: [
+      {
+        title: 'Checklist Dashboard',
+        url: 'https://datastudio.google.com/reporting/b30bad2f-4552-4c9f-8d9d-b8afd5056244/page/gcG5F'
+      },
+      {
+        title: 'Accounts Dashboard',
+        url: 'https://script.google.com/a/macros/avaniyshinterior.com/s/AKfycbylm14CrZ4cPQSO1AzCz0hmGTiM5aEWY_6KEUmngIJTNez-ZtCbBBi6CZ_K6-Y8fE2TnA/exec'
+      }
+    ],
     projects: [
       { 
         name: 'AISPL Client PO', 
@@ -659,19 +616,19 @@ const employeesData = [
         gid: '1013826524', 
         selectedColumns: ['Sr.No.', 'Proforma Invoice No.', 'Project Name','Authorized Signatory','Documents'] 
       },
-       { 
+      { 
         name: 'AISPL Tax Invoice', 
         docId: '1JZaXvcCxkq0jj4PETPWuwhRza570xBVIa3YBnxqEW8Y', 
         gid: '665653959', 
         selectedColumns: ['Sr.No.', 'Tax Invoice No.', 'Project Name','Authorized Signatory','Documents'] 
       },
-       { 
+      { 
         name: 'AISPL PO To Vendor', 
         docId: '1JZaXvcCxkq0jj4PETPWuwhRza570xBVIa3YBnxqEW8Y', 
         gid: '286319358', 
         selectedColumns: ['Sr.No.', 'PO No.','Vendor Name', 'Project Name','Remarks','Created By','Documents'] 
       },
-       { 
+      { 
         name: 'Modulariti Client PO', 
         docId: '1u8sqdtEeklS9AVx91oZVXMulcY73IGwQ4N6CHokeBFQ', 
         gid: '0', 
@@ -683,33 +640,30 @@ const employeesData = [
         gid: '1541680899', 
         selectedColumns: ['Sr.No.', 'Proforma Invoice No.', 'Project Name','Documents'] 
       },
-       { 
+      { 
         name: 'Modulariti Tax Invoice', 
         docId: '1u8sqdtEeklS9AVx91oZVXMulcY73IGwQ4N6CHokeBFQ', 
         gid: '842646558', 
         selectedColumns: ['Sr.No.', 'Tax Invoice No.', 'Project Name','Documents'] 
       },
-       { 
+      { 
         name: 'Modulariti PO To Vendor', 
         docId: '1u8sqdtEeklS9AVx91oZVXMulcY73IGwQ4N6CHokeBFQ', 
         gid: '1879062090', 
         selectedColumns: ['Sr.No.', 'PO No.','Vendor Name', 'Project Name','Documents'] 
       },
-
-       { 
+      { 
         name: 'Modulariti Delivery Challan', 
         docId: '1u8sqdtEeklS9AVx91oZVXMulcY73IGwQ4N6CHokeBFQ', 
         gid: '1982685191', 
         selectedColumns: ['Sr.No.', 'Challan No.', 'Project Name','Documents'] 
-      },
-
+      }
     ],
- sheets: [
-      { name: 'Office Expenses',formUrl:'https://docs.google.com/forms/d/e/1FAIpQLSeFG1ZBY4mstlGPDpcNhUb9vi2WiJGBr3aG2cuTtYqPNXf4Nw/viewform?usp=header', docId: '1N2DF6vzSoJcIxwL2makablsGtDlMB-rxhcWT3_VLHBY', gid: '440445714', selectedColumns: ['Date', 'Paid to', 'Amount', 'Reason', 'Categories','URD Purchase'] },
+    sheets: [
+      { name: 'Office Expenses', formUrl:'https://docs.google.com/forms/d/e/1FAIpQLSeFG1ZBY4mstlGPDpcNhUb9vi2WiJGBr3aG2cuTtYqPNXf4Nw/viewform?usp=header', docId: '1N2DF6vzSoJcIxwL2makablsGtDlMB-rxhcWT3_VLHBY', gid: '440445714', selectedColumns: ['Date', 'Paid to', 'Amount', 'Reason', 'Categories','URD Purchase'] },
       { name: 'Delegation Score PH', docId: '1JsKyve_bNF80c-D-jvLAmFGfDKE6xLzYBtiFep0UXlc', gid: '1184708924', selectedColumns: ['Name', 'Task', 'First Date', 'Revision 1','Revision 2', 'Total Revision','Status','Actual Completion Date'] },
       { name: 'Checklist', docId: '1m_P5_eP9FvD9eaYvanmLlV833cscTvk2xJk_c39cbZw', gid: '2092959791', selectedColumns: ['Task', 'Doer', 'Planned', 'Actual', 'Status'] },
-      { name: 'Leave Application', formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScVKjl4j1wPbzV4QFAK9TlP8xpOkrHYxej75WTdFzt-lkV4Dg/viewform',docId: '1mrjfYpGMSMY-Em7Y4O4m9JZgfED0gdvbdPBD9qscgcM', gid: '148992', selectedColumns: ['Employee Name', 'Leave Type', 'Reason/Purpose', 'Half Day', 'Start Date of Leave','End Date of Leave'] }
-
+      { name: 'Leave Application', formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScVKjl4j1wPbzV4QFAK9TlP8xpOkrHYxej75WTdFzt-lkV4Dg/viewform', docId: '1mrjfYpGMSMY-Em7Y4O4m9JZgfED0gdvbdPBD9qscgcM', gid: '148992', selectedColumns: ['Employee Name', 'Leave Type', 'Reason/Purpose', 'Half Day', 'Start Date of Leave','End Date of Leave'] }
     ]
   }
 ];
@@ -731,16 +685,16 @@ document.addEventListener('DOMContentLoaded', () => {
     userNameElem.innerText = userName;
   }
 
- const role = sessionStorage.getItem('loggedInUserRole');
-const systemNavBtn = document.querySelector('.nav-btn[data-target="system-view"]'); 
+  const role = sessionStorage.getItem('loggedInUserRole');
+  const systemNavBtn = document.querySelector('.nav-btn[data-target="system-view"]'); 
 
-if (systemNavBtn) {
-  if (role !== 'admin') {
-    systemNavBtn.style.display = 'none'; 
-  } else {
-    systemNavBtn.style.display = 'flex'; 
+  if (systemNavBtn) {
+    if (role !== 'admin') {
+      systemNavBtn.style.display = 'none'; 
+    } else {
+      systemNavBtn.style.display = 'flex'; 
+    }
   }
-}
 
   const accessIds = JSON.parse(sessionStorage.getItem('accessIds') || '[]');
   let displayData = employeesData;
@@ -875,15 +829,11 @@ function setupEmployeeSearch() {
   });
 }
 
-
 function openEmployeeProfile(emp) {
   activeEmployee = emp;
 
-  // १. Session मधून Login केलेल्या युजरची महिती घ्या
   const loggedInEmpId = sessionStorage.getItem('loggedInEmpId');
   const loggedInUserRole = sessionStorage.getItem('loggedInUserRole');
-
-  // २. चेक करा की युजर Admin आहे किंवा स्वतःचेच प्रोफाइल उघडत आहे का?
   const isOwnerOrAdmin = (loggedInUserRole === 'admin') || (loggedInEmpId === emp.id);
 
   const nameElem = document.getElementById('profile-name');
@@ -969,7 +919,6 @@ function openEmployeeProfile(emp) {
         const card = document.createElement('div');
         card.className = 'sheet-card';
 
-        // 🟢 जर Owner किंवा Admin असेल आणि Form Link उपलब्ध असेल तरच Form Button दाखवा
         let formBtnHtml = '';
         if (isOwnerOrAdmin && project.formUrl) {
           formBtnHtml = `
@@ -1008,42 +957,47 @@ function openEmployeeProfile(emp) {
   const sheetsGrid = document.getElementById('employee-sheets-grid');
   if (sheetsGrid) {
     sheetsGrid.innerHTML = '';
-    emp.sheets.forEach(sheet => {
-      sheet.isProject = false;
 
-      const card = document.createElement('div');
-      card.className = 'sheet-card';
+    // ==================== [NEW] RENDER DYNAMIC MIS CARD ====================
+    renderEmployeeMISCard(emp.name);
 
-      // 🟢 जर Owner किंवा Admin असेल आणि Form Link उपलब्ध असेल तरच Form Button दाखवा
-      let formBtnHtml = '';
-      if (isOwnerOrAdmin && sheet.formUrl) {
-        formBtnHtml = `
-          <a href="${escapeHtml(sheet.formUrl)}" target="_blank" class="btn-action btn-open-form" title="Open Google Form">
-            <i class="fa-solid fa-pen-to-square"></i> Open Form
-          </a>
+    if (emp.sheets && Array.isArray(emp.sheets)) {
+      emp.sheets.forEach(sheet => {
+        sheet.isProject = false;
+
+        const card = document.createElement('div');
+        card.className = 'sheet-card';
+
+        let formBtnHtml = '';
+        if (isOwnerOrAdmin && sheet.formUrl) {
+          formBtnHtml = `
+            <a href="${escapeHtml(sheet.formUrl)}" target="_blank" class="btn-action btn-open-form" title="Open Google Form">
+              <i class="fa-solid fa-pen-to-square"></i> Open Form
+            </a>
+          `;
+        }
+
+        card.innerHTML = `
+          <div class="sheet-card-title">
+            <i class="fa-solid fa-file-excel"></i>
+            <h4>${escapeHtml(sheet.name)}</h4>
+          </div>
+          <div class="sheet-card-actions">
+            <button class="btn-action btn-view-sheet">
+              <i class="fa-solid fa-table"></i> View Data
+            </button>
+            ${formBtnHtml}
+          </div>
         `;
-      }
 
-      card.innerHTML = `
-        <div class="sheet-card-title">
-          <i class="fa-solid fa-file-excel"></i>
-          <h4>${escapeHtml(sheet.name)}</h4>
-        </div>
-        <div class="sheet-card-actions">
-          <button class="btn-action btn-view-sheet">
-            <i class="fa-solid fa-table"></i> View Data
-          </button>
-          ${formBtnHtml}
-        </div>
-      `;
+        const viewDataBtn = card.querySelector('.btn-view-sheet');
+        if (viewDataBtn) {
+          viewDataBtn.onclick = () => loadSheetDataJSONP(sheet);
+        }
 
-      const viewDataBtn = card.querySelector('.btn-view-sheet');
-      if (viewDataBtn) {
-        viewDataBtn.onclick = () => loadSheetDataJSONP(sheet);
-      }
-
-      sheetsGrid.appendChild(card);
-    });
+        sheetsGrid.appendChild(card);
+      });
+    }
   }
 
   document.querySelectorAll('.content-view').forEach(v => v.classList.remove('active'));
@@ -1103,16 +1057,14 @@ window.handleGvizResponse = function(response) {
       if (!shouldIgnore) targetOwnerIndices.push(idx);
     });
     
-filteredRows = rows.filter(r => {
+    filteredRows = rows.filter(r => {
       if (!r.c) return false;
 
-      // १. आधी नाव दाखवणारा अचूक कॉलम शोधा
       const empNameIdx = allHeaders.findIndex(h => {
         const hLower = h.toLowerCase().trim();
         return hLower === 'employee name' || hLower === 'name' || hLower === 'designer' || hLower === 'project site visitor';
       });
 
-      // २. नावाचा कॉलम सापडल्यास फक्त त्यामध्येच मॅच करा
       if (empNameIdx !== -1) {
         const cell = r.c[empNameIdx];
         if (!cell || cell.v === null || cell.v === undefined) return false;
@@ -1120,7 +1072,6 @@ filteredRows = rows.filter(r => {
         return val.includes(fullName) || val.includes(firstName);
       }
 
-      // ३. नावाचा स्वतंत्र कॉलम नसल्यास इतर कॉलम्समध्ये शोधा
       return targetOwnerIndices.some(idx => {
         const cell = r.c[idx];
         if (!cell || cell.v === null || cell.v === undefined) return false;
@@ -1151,12 +1102,10 @@ filteredRows = rows.filter(r => {
     countValElem.innerText = filteredRows.length;
   }
 
-  // Check if current sheet is Site Expenses or Office Expenses
   const sheetNameLower = currentActiveSheet ? currentActiveSheet.name.toLowerCase() : '';
   const isExpenseSheet = sheetNameLower.includes('site expenses') || sheetNameLower.includes('office expenses');
 
   if (isExpenseSheet) {
-    // Find 'Amount' column index
     const amountColIdx = allHeaders.findIndex(h => h.toLowerCase().trim() === 'amount');
 
     if (amountColIdx !== -1) {
@@ -1164,7 +1113,6 @@ filteredRows = rows.filter(r => {
         const cell = r.c ? r.c[amountColIdx] : null;
         if (!cell || cell.v === null || cell.v === undefined) return sum;
         
-        // Clean numeric value (remove currency symbols or commas if text)
         const numVal = parseFloat(String(cell.v).replace(/[^0-9.-]+/g, ''));
         return sum + (isNaN(numVal) ? 0 : numVal);
       }, 0);
@@ -1258,14 +1206,11 @@ function renderModalTable(headers, rows, indices, container) {
       const val = cell && cell.f ? cell.f : (cell && cell.v !== null && cell.v !== undefined ? cell.v : '');
       const strVal = String(val);
 
-     
       const urlRegex = /(https?:\/\/[^\s,]+)/g;
       const matches = strVal.match(urlRegex);
 
       if (matches && matches.length > 0) {
-      
         let linksHtml = matches.map((url, index) => {
-        
           const cleanUrl = url.replace(/[,.]$/, '');
           const label = matches.length > 1 ? `Open Link ${index + 1}` : 'Open Link';
           
@@ -1276,7 +1221,6 @@ function renderModalTable(headers, rows, indices, container) {
 
         html += `<td>${linksHtml}</td>`;
       } else {
-     
         html += `<td>${escapeHtml(strVal)}</td>`;
       }
     });
@@ -1336,6 +1280,8 @@ function setupModalEvents() {
     if (modal) modal.classList.remove('show');
     const scriptTag = document.getElementById('jsonp-gviz-script');
     if (scriptTag) scriptTag.remove();
+    const container = document.getElementById('modal-table-container');
+    if (container) container.innerHTML = '';
   };
 
   if (closeBtn) closeBtn.onclick = closeModal;
@@ -1345,25 +1291,21 @@ function setupModalEvents() {
   };
 
   document.addEventListener('keydown', (event) => {
-  if (event.key === 'Escape' || event.key === 'Esc') {
-
-    const modal = document.getElementById('sheet-modal');
-    if (modal && modal.classList.contains('show')) {
-      modal.classList.remove('show');
-
-    
-      const scriptTag = document.getElementById('jsonp-gviz-script');
-      if (scriptTag) scriptTag.remove();
+    if (event.key === 'Escape' || event.key === 'Esc') {
+      const modal = document.getElementById('sheet-modal');
+      if (modal && modal.classList.contains('show')) {
+        modal.classList.remove('show');
+        const scriptTag = document.getElementById('jsonp-gviz-script');
+        if (scriptTag) scriptTag.remove();
+        const container = document.getElementById('modal-table-container');
+        if (container) container.innerHTML = '';
+      }
+      const activePopups = document.querySelectorAll('.image-popup.show, .popup.show, .modal.show');
+      activePopups.forEach(popup => {
+        popup.classList.remove('show');
+      });
     }
-
-   
-    const activePopups = document.querySelectorAll('.image-popup.show, .popup.show, .modal.show');
-    activePopups.forEach(popup => {
-      popup.classList.remove('show');
-    });
-  }
-});
-  
+  });
 }
 
 const SHEET_CONFIG = {
@@ -1513,35 +1455,338 @@ function parseGvizDate(cell) {
   return null;
 }
 
+document.addEventListener("DOMContentLoaded", function () {
+  if (typeof renderEmployees === 'function') {
+    renderEmployees();
+  } else if (typeof initEmployeePage === 'function') {
+    initEmployeePage();
+  }
+});
+
+function logout() {
+  sessionStorage.removeItem('isLoggedIn');
+  window.location.href = 'login.html';
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  const dateElem = document.getElementById('current-date-display');
+  if (dateElem) {
+    const options = { weekday: 'short', year: 'numeric', month: 'short', day: 'numeric' };
+    dateElem.innerText = new Date().toLocaleDateString('en-US', options);
+  }
+});
+
+const yearElem = document.getElementById("year");
+if (yearElem) {
+  yearElem.textContent = new Date().getFullYear();
+}
 
 
- document.addEventListener("DOMContentLoaded", function () {
-      if (typeof renderEmployees === 'function') {
-        renderEmployees();
-      } else if (typeof initEmployeePage === 'function') {
-        initEmployeePage();
+
+
+
+
+
+// MIS scoring
+
+const misSheetGidRegistry = {
+  "anuradha": "1649999565",
+  "harshada": "1800837815",
+  "sakshi": "1506553066",
+  "bhakti": "1835137696",
+  "sachin": "1816459295",
+  "shubham": "1203477456",
+  "saurav": "659497243",
+  "kiran chaubukswar": "415811273",
+  "kiran chabukswar": "415811273",
+  "kiran hole": "128838134",
+  "akash": "446073013",
+  "akash raut": "446073013",
+  "mahavir": "569779458",
+  "mahavir chabukswar": "569779458",
+  "namrata": "541722736",
+  "namrata raut": "541722736"
+};
+
+const MIS_SPREADSHEET_ID = "1V9R9rJ848xIzODTdFZ4f_-OJpZMNbIqpYhX_9WNLJbM";
+
+function getEmployeeMISGid(empName) {
+  if (!empName) return null;
+  const nameLower = empName.toLowerCase().trim();
+
+  if (misSheetGidRegistry[nameLower]) {
+    return misSheetGidRegistry[nameLower];
+  }
+
+  for (const [key, gid] of Object.entries(misSheetGidRegistry)) {
+    if (nameLower.includes(key) || key.includes(nameLower)) {
+      return gid;
+    }
+  }
+  return null;
+}
+
+// 1. MIS Card tayar karne (Fakt View Score button asel, Open/External link band kela ahe)
+function renderEmployeeMISCard(empName) {
+  const sheetsGrid = document.getElementById('employee-sheets-grid');
+  if (!sheetsGrid) return;
+
+  const existingCard = document.getElementById('dynamic-mis-card');
+  if (existingCard) existingCard.remove();
+
+  const gid = getEmployeeMISGid(empName);
+  if (!gid) return;
+
+  const misCard = document.createElement('div');
+  misCard.className = 'sheet-card mis-sheet-card';
+  misCard.id = 'dynamic-mis-card';
+  misCard.innerHTML = `
+    <div class="sheet-card-title">
+      <i class="fa-solid fa-chart-line" style="color: #ee941f;"></i>
+      <div>
+        <h4>Weekly MIS Scoring</h4>
+      </div>
+    </div>
+    <div class="sheet-card-actions">
+      <button type="button" class="btn-action btn-view-sheet" id="btn-view-mis-popup" style="width: 100%; flex: 1;">
+        <i class="fa-solid fa-table"></i> View Score
+      </button>
+    </div>
+  `;
+
+  sheetsGrid.prepend(misCard);
+
+  const viewBtn = misCard.querySelector('#btn-view-mis-popup');
+  if (viewBtn) {
+    viewBtn.onclick = () => {
+      fetchAndDisplayMISData(empName, gid);
+    };
+  }
+}
+
+function fetchAndDisplayMISData(empName, gid) {
+  const modal = document.getElementById('sheet-modal');
+  const title = document.getElementById('modal-sheet-title');
+  const subtitle = document.getElementById('modal-sheet-subtitle');
+  const loader = document.getElementById('modal-loader');
+  const container = document.getElementById('modal-table-container');
+  const toolbar = document.getElementById('modal-toolbar');
+
+  if (!modal) return;
+
+  if (title) title.innerText = `MIS Scoring: ${empName}`;
+  if (subtitle) subtitle.innerText = "Weekly Performance Sheet";
+  if (toolbar) toolbar.style.display = "none";
+  if (loader) {
+    loader.style.display = 'block';
+    loader.innerHTML = '<p>Fetching MIS Scoring data...</p>';
+  }
+  if (container) container.innerHTML = '';
+
+  modal.classList.add('show');
+
+  const oldScript = document.getElementById('mis-jsonp-script');
+  if (oldScript) oldScript.remove();
+
+  const script = document.createElement('script');
+  script.id = 'mis-jsonp-script';
+  script.src = `https://docs.google.com/spreadsheets/d/${MIS_SPREADSHEET_ID}/gviz/tq?gid=${gid}&headers=1&tqx=responseHandler:handleMISGvizResponse`;
+
+  script.onerror = function() {
+    if (loader) loader.style.display = 'none';
+    if (container) {
+      container.innerHTML = `
+        <div style="text-align:center; padding: 30px; color:#ef4444;">
+          <p><strong>Failed to load MIS sheet data. Krupaya sheet permission check kara.</strong></p>
+        </div>`;
+    }
+  };
+
+  document.body.appendChild(script);
+}
+window.handleMISGvizResponse = function(response) {
+  const scriptTag = document.getElementById('mis-jsonp-script');
+  if (scriptTag) scriptTag.remove();
+
+  const loader = document.getElementById('modal-loader');
+  const container = document.getElementById('modal-table-container');
+
+  if (loader) loader.style.display = 'none';
+  if (!container) return;
+
+  if (!response || response.status === 'error') {
+    const errorMsg = response?.errors?.[0]?.detailed_message || "Access Denied or Sheet is Private.";
+    container.innerHTML = `
+      <div style="text-align:center; padding: 30px; color:#ef4444;">
+        <i class="fa-solid fa-triangle-exclamation" style="font-size:2rem; margin-bottom:10px;"></i>
+        <p><strong>Error Loading MIS Sheet:</strong> ${escapeHtml(errorMsg)}</p>
+      </div>`;
+    return;
+  }
+
+  const rows = response.table ? response.table.rows : [];
+  if (!rows || rows.length === 0) {
+    container.innerHTML = `<p style="text-align:center; padding:20px;">Sheet madhe data bhetla nahi.</p>`;
+    return;
+  }
+
+  // Row cells extract karne (A to I)
+  const parsedRows = rows.map(r => {
+    const rowCells = [];
+    for (let i = 0; i < 9; i++) {
+      const cell = r.c ? r.c[i] : null;
+      let val = '';
+      if (cell) {
+        val = cell.f !== undefined && cell.f !== null ? cell.f : (cell.v !== null && cell.v !== undefined ? cell.v : '');
       }
-    });
+      rowCells.push(String(val).trim());
+    }
+    return rowCells;
+  });
 
-    function logout() {
-      sessionStorage.removeItem('isLoggedIn');
-      window.location.href = 'login.html';
+  // Data la don bhagat divide karne: 1) Main Scoring Table, 2) NA Task List Table
+  let mainScoreRows = [];
+  let naTaskRows = [];
+  let isNATaskSection = false;
+
+  parsedRows.forEach(row => {
+    const cellA = row[0];
+    const cellB = row[1];
+    const cellC = row[2];
+
+    // Check if entire row is empty
+    if (row.every(v => v === '')) return;
+
+    if (cellA.toLowerCase().includes('na task') || cellB.toLowerCase().includes('na task')) {
+      isNATaskSection = true;
+      return;
     }
 
- 
-
-    
-    document.addEventListener('DOMContentLoaded', () => {
-      const dateElem = document.getElementById('current-date-display');
-      if (dateElem) {
-        const options = { weekday: 'short', year: 'numeric', month: 'short', day: 'numeric' };
-        dateElem.innerText = new Date().toLocaleDateString('en-US', options);
+    if (isNATaskSection) {
+      if (cellA.toLowerCase() === 'task' && cellB.toLowerCase().includes('planned')) {
+        return;
       }
-    });
+      if (cellA !== '' || cellB !== '' || cellC !== '') {
+        naTaskRows.push({
+          task: cellA,
+          plannedDate: cellB,
+          status: cellC
+        });
+      }
+    } else {
+      if (cellA.toLowerCase() === 'tasks' && cellB.toLowerCase() === 'kra') return;
+      mainScoreRows.push(row);
+    }
+  });
 
-    function logout() {
-      sessionStorage.removeItem('isLoggedIn');
-      window.location.href = 'login.html';
+  let html = `
+    <div class="mis-modal-table-wrap" style="margin-bottom: 25px;">
+      <table class="mis-score-table">
+        <thead>
+          <tr>
+            <th style="width: 10%;">Tasks</th>
+            <th style="width: 20%;">KRA</th>
+            <th style="width: 16%;">KPI</th>
+            <th style="width: 8%;">Last Week<br>Actual %</th>
+            <th style="width: 8%;">Current Week<br>Planned</th>
+            <th style="width: 8%;">Current<br>Week Actual</th>
+            <th style="width: 10%;">Current Week<br>Actual %</th>
+            <th style="width: 10%;">Last Week<br>Commitment</th>
+            <th style="width: 10%;">Next Week<br>Planned</th>
+          </tr>
+        </thead>
+        <tbody>
+  `;
+
+  let currentCategory = '';
+  const categoryGroups = [];
+
+  mainScoreRows.forEach(r => {
+    if (r[0] !== '') {
+      currentCategory = r[0];
+    }
+    categoryGroups.push({
+      category: currentCategory,
+      kra: r[1],
+      kpi: r[2],
+      lastWeekActual: r[3],
+      planned: r[4],
+      actual: r[5],
+      actualPct: r[6],
+      commitment: r[7],
+      nextPlanned: r[8]
+    });
+  });
+
+  const categoryCounts = {};
+  categoryGroups.forEach(item => {
+    categoryCounts[item.category] = (categoryCounts[item.category] || 0) + 1;
+  });
+
+  const printedCategories = {};
+
+  const formatValue = (val) => {
+    if (val === '' || val === null || val === undefined) return '';
+    const num = parseFloat(val);
+    if (!isNaN(num)) {
+      if (num < 0) return `<span class="val-neg">${escapeHtml(val)}</span>`;
+      if (num === 0) return `<span class="val-zero">${escapeHtml(val)}</span>`;
+    }
+    return escapeHtml(val);
+  };
+
+  categoryGroups.forEach(item => {
+    html += `<tr>`;
+    if (!printedCategories[item.category]) {
+      const rowSpan = categoryCounts[item.category] || 1;
+      html += `<td rowspan="${rowSpan}" class="cell-task-vertical">${escapeHtml(item.category)}</td>`;
+      printedCategories[item.category] = true;
     }
 
- document.getElementById("year").textContent = new Date().getFullYear();
+    html += `
+      <td class="align-left" style="font-weight: 600;">${escapeHtml(item.kra)}</td>
+      <td class="align-left">${escapeHtml(item.kpi)}</td>
+      <td>${formatValue(item.lastWeekActual)}</td>
+      <td><strong>${escapeHtml(item.planned)}</strong></td>
+      <td><strong>${escapeHtml(item.actual)}</strong></td>
+      <td>${formatValue(item.actualPct)}</td>
+      <td>${formatValue(item.commitment)}</td>
+      <td>${escapeHtml(item.nextPlanned)}</td>
+    </tr>`;
+  });
+
+  html += `</tbody></table></div>`;
+
+  if (naTaskRows.length > 0) {
+    html += `
+      <div style="margin-top: 20px;">
+        <h3 style="font-size: 1.05rem; font-weight: 700; color: #0f172a; margin-bottom: 8px;">
+          NA Task List
+        </h3>
+        <div class="mis-modal-table-wrap" style="max-width: 550px;">
+          <table class="mis-score-table">
+            <thead>
+              <tr style="background-color: #f8fafc;">
+                <th style="text-align: left; padding-left: 14px; width: 50%;">Task</th>
+                <th style="width: 25%;">Planned Date</th>
+                <th style="width: 25%;">Status</th>
+              </tr>
+            </thead>
+            <tbody>
+    `;
+
+    naTaskRows.forEach(item => {
+      html += `
+        <tr>
+          <td class="align-left" style="font-weight: 600; padding-left: 14px;">${escapeHtml(item.task)}</td>
+          <td>${escapeHtml(item.plannedDate)}</td>
+          <td><span style="font-weight: 700; color: #ea580c;">${escapeHtml(item.status || 'NA')}</span></td>
+        </tr>
+      `;
+    });
+
+    html += `</tbody></table></div></div>`;
+  }
+
+  container.innerHTML = html;
+};
