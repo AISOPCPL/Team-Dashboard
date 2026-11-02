@@ -6,167 +6,255 @@
   <title>Company Dashboard</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" type="image/png" href="favicon/favicon-96x96.png" sizes="96x96" />
-<link rel="icon" type="image/svg+xml" href="favicon/favicon.svg" />
-<link rel="shortcut icon" href="favicon/favicon.ico" />
-<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
-<link rel="manifest" href="favicon/site.webmanifest" />
-  <!-- FontAwesome Icons -->
+  <link rel="icon" type="image/svg+xml" href="favicon/favicon.svg" />
+  <link rel="shortcut icon" href="favicon/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
+  <link rel="manifest" href="favicon/site.webmanifest" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
- 
-  #profile-view {
-    display: none;
-  }
-  #profile-view.active {
-    display: block;
-  }
+    #profile-view {
+      display: none;
+    }
+    #profile-view.active {
+      display: block;
+    }
+
+    .system-card {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 18px;
+      max-width: 380px;
+      margin-top: 15px;
+      margin-bottom: 25px;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .system-card-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .system-card-icon {
+      width: 44px;
+      height: 44px;
+      background-color: #e0f2fe;
+      color: #0284c7;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+    }
+
+    .system-card-info h3 {
+      margin: 0;
+      font-size: 1rem;
+      color: #1e293b;
+      font-weight: 600;
+    }
+
+    .system-card-info p {
+      margin: 2px 0 0 0;
+      font-size: 0.8rem;
+      color: #64748b;
+    }
+
+    .btn-open-system {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #0284c7;
+      color: #ffffff !important;
+      padding: 10px 16px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-weight: 600;
+      transition: background-color 0.2s ease;
+    }
+
+    .btn-open-system:hover {
+      background-color: #0369a1;
+    }
+
+    .sheets-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 16px;
+      margin-top: 15px;
+    }
+
+    .sheet-card {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 14px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .sheet-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    .sheet-card-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .sheet-card-title i {
+      font-size: 1.4rem;
+      color: #10b981;
+    }
+
+    .sheet-card-title h4 {
+      font-size: 0.95rem;
+      color: #1e293b;
+      margin: 0;
+      font-weight: 600;
+    }
+
+    .sheet-card-actions {
+      display: flex;
+      gap: 8px;
+    }
+
+    .btn-action {
+      flex: 1;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      padding: 8px 10px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      border-radius: 6px;
+      text-decoration: none;
+      cursor: pointer;
+      border: none;
+      transition: all 0.2s ease;
+    }
+
+    .btn-view-sheet {
+      background-color: #1e293b;
+      color: #ffffff;
+    }
+
+    .btn-view-sheet:hover {
+      background-color: #334155;
+    }
+
+    .btn-open-form {
+      background-color: #e37b0d;
+      color: #ffffff !important;
+    }
+
+    .btn-open-form:hover {
+      background-color: #d9740b;
+    }
+
+    .btn-disabled {
+      background-color: #fca119;
+      color: #f49a13 !important;
+      cursor: not-allowed;
+    }
+
+    .mis-sheet-card {
+      border: 1.5px solid #fdfbf9;
+      background: white;
+    }
+
+    .mis-iframe-container {
+      width: 100%;
+      height: 75vh;
+      border-radius: 8px;
+      overflow: hidden;
+      border: 1px solid #e2e8f0;
+      background: #ffffff;
+    }
+
+    .mis-iframe-container iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+     
+.mis-modal-table-wrap {
+  background: #ffffff;
+  border: 2px solid #334155;
+  border-radius: 6px;
+  overflow-x: auto;
+  margin: 10px 0;
+}
+
+.mis-score-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: inherit;
+  font-size: 0.88rem;
+  text-align: center;
+  background-color: #ffffff;
+}
+
+.mis-score-table th {
+  background-color: #ffffff;
+  color: #0f172a;
+  font-weight: 700;
+  padding: 12px 8px;
+  border: 1px solid #334155;
+  line-height: 1.3;
+}
+
+.mis-score-table td {
+  border: 1px solid #334155;
+  padding: 10px 8px;
+  color: #0f172a;
+  vertical-align: middle;
+}
 
  
-  .system-card {
-    background: #ffffff;
-    border: 1px solid #e2e8f0;
-    border-radius: 12px;
-    padding: 18px;
-    max-width: 380px;
-    margin-top: 15px;
-    margin-bottom: 25px;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
-  }
+.mis-score-table td.cell-task-vertical {
+  writing-mode: vertical-lr;
+  transform: rotate(180deg);
+  font-weight: 900;
+  font-size: 1.15rem;
+  letter-spacing: 1px;
+  padding: 16px 6px;
+  background-color: #ffffff;
+}
 
-  .system-card-header {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-  }
+.mis-score-table td.align-left {
+  text-align: left;
+  padding-left: 12px;
+}
 
-  .system-card-icon {
-    width: 44px;
-    height: 44px;
-    background-color: #e0f2fe;
-    color: #0284c7;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.2rem;
-  }
+ 
+.val-neg {
+  color: #dc2626;
+  font-weight: 700;
+}
 
-  .system-card-info h3 {
-    margin: 0;
-    font-size: 1rem;
-    color: #1e293b;
-    font-weight: 600;
-  }
+.val-zero {
+  color: #16a34a;
+  font-weight: 700;
+}
 
-  .system-card-info p {
-    margin: 2px 0 0 0;
-    font-size: 0.8rem;
-    color: #64748b;
-  }
-
-  .btn-open-system {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #0284c7;
-    color: #ffffff !important;
-    padding: 10px 16px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-size: 0.85rem;
-    font-weight: 600;
-    transition: background-color 0.2s ease;
-  }
-
-  .btn-open-system:hover {
-    background-color: #0369a1;
-  }
-
-  /* Sheet Card Style Enhancement (मूळ २ बटन्स) */
-  .sheets-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-    gap: 16px;
-    margin-top: 15px;
-  }
-
-  .sheet-card {
-    background: #ffffff;
-    border: 1px solid #e2e8f0;
-    border-radius: 12px;
-    padding: 16px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 14px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.04);
-  }
-
-  .sheet-card-title {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-
-  .sheet-card-title i {
-    font-size: 1.4rem;
-    color: #10b981;
-  }
-
-  .sheet-card-title h4 {
-    font-size: 0.95rem;
-    color: #1e293b;
-    margin: 0;
-    font-weight: 600;
-  }
-
-  .sheet-card-actions {
-    display: flex;
-    gap: 8px;
-  }
-
-  .btn-action {
-    flex: 1;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 6px;
-    padding: 8px 10px;
-    font-size: 0.8rem;
-    font-weight: 600;
-    border-radius: 6px;
-    text-decoration: none;
-    cursor: pointer;
-    border: none;
-    transition: all 0.2s ease;
-  }
-
-  .btn-view-sheet {
-    background-color: #1e293b;
-    color: #ffffff;
-  }
-
-  .btn-view-sheet:hover {
-    background-color: #334155;
-  }
-
-  .btn-open-form {
-    background-color: #e37b0d;
-    color: #ffffff !important;
-  }
-
-  .btn-open-form:hover {
-    background-color: #d9740b;
-  }
-
-  .btn-disabled {
-    background-color: #cbd5e1;
-    color: #64748b !important;
-    cursor: not-allowed;
-  }
+.table-section-gap {
+  height: 18px;
+  background: transparent;
+  border: none !important;
+}
   </style>
 </head>
 <body>
@@ -177,7 +265,6 @@
   </script>
 
   <div class="app-container">
-    <!-- Sidebar Navigation -->
     <aside class="sidebar">
       <div>
         <div class="sidebar-header">
@@ -200,13 +287,13 @@
                 <i class="fa-solid fa-gears"></i> <span>Systems</span>
               </a>
             </li>
-             <li>
+            <li>
               <a href="documents.html" class="nav-btn">
                 <i class="fa-solid fa-file-contract"></i> <span>Company Information</span>
               </a>
             </li>
             <li>
-              <a href="https://aisopcpl.github.io/Product-Video-Library-AISOPCPL/"  target="_blank">
+              <a href="https://aisopcpl.github.io/Product-Video-Library-AISOPCPL/" target="_blank">
                 <i class="fa-solid fa-circle-play"></i>
                 <span>Product Video Library</span>
               </a>
@@ -215,20 +302,17 @@
         </nav>
       </div>
 
-      <!-- Sign Out Button -->
       <div class="sidebar-footer">
-       <p style="font-size: 11px; margin-bottom: 6px; text-align: center;">© <span id="year"></span> Avaniysh Interior Solutions Pvt. Ltd. All Rights Reserved.</p>
-
+        <p style="font-size: 11px; margin-bottom: 6px; text-align: center;">© <span id="year"></span> Avaniysh Interior Solutions Pvt. Ltd. All Rights Reserved.</p>
         <button class="btn-logout" onclick="logout()">
           <i class="fa-solid fa-right-from-bracket"></i> <span>Sign Out</span>
         </button>
       </div>
     </aside>
 
-    <!-- Main Content Area -->
     <main class="main-content">
       
-      <!-- 1. Employee Listing View -->
+      
       <section id="employee-view" class="content-view active">
         <header class="page-header flex-header">
           <div>
@@ -241,12 +325,10 @@
           </div>
         </header>
 
-        <div id="designation-groups-container">
-          <!-- Dynamic Directory -->
-        </div>
+        <div id="designation-groups-container"></div>
       </section>
 
-      <!-- 2. Employee Detailed Profile View -->
+    
       <section id="profile-view" class="content-view">
         <button id="back-to-employees-btn" class="btn-secondary">
           <i class="fa-solid fa-arrow-left"></i> Back to Team List
@@ -261,25 +343,23 @@
           </div>
         </div>
 
-      <div id="profile-dashboard-container"></div>
-       
-<div class="section-block" id="project-list-block" style="display: none; margin-top: 20px;">
-    <h2>Project Numbering List</h2>
-    <div id="employee-projects-grid" class="sheets-grid"></div>
-  </div>
+        <div id="profile-dashboard-container"></div>
+
+        <div class="section-block" id="project-list-block" style="display: none; margin-top: 20px;">
+          <h2>Project Numbering List</h2>
+          <div id="employee-projects-grid" class="sheets-grid"></div>
+        </div>
 
         <div class="section-block">
           <h2>Assigned Worksheets</h2>
           <p class="section-subtitle">Click on any card below to view live data filtered for this team.</p>
           <div id="employee-sheets-grid" class="sheets-grid"></div>
-           <div id="profile-dashboard-container"></div>
         </div>
       </section>
 
     </main>
   </div>
 
-  <!-- Sheet Data Viewer Modal -->
   <div id="sheet-modal" class="modal">
     <div class="modal-content">
       <div class="modal-header">
@@ -297,47 +377,18 @@
         </div>
 
         <div id="modal-stats-summary"
-     style="
-       display: flex;
-       width: 100%;
-       justify-content: flex-end;
-       align-items: center;
-       gap: 15px;
-       font-weight: 600;
-       font-size: 0.95rem;
-       color: #334155;
-       box-sizing: border-box;
-       margin-left: auto;
-     ">
+             style="display: flex; width: 100%; justify-content: flex-end; align-items: center; gap: 15px; font-weight: 600; font-size: 0.95rem; color: #334155; box-sizing: border-box; margin-left: auto;">
+          <span id="stat-record-count"
+                style="padding: 6px 12px; border-radius: 6px; border: 3px solid #cbd5e1; white-space: nowrap;">
+            Total Records: <strong id="count-val" style="color: #0284c7;">0</strong>
+          </span>
 
-    <span id="stat-record-count"
-          style="
-            padding: 6px 12px;
-            border-radius: 6px;
-            border: 3px solid #cbd5e1;
-            white-space: nowrap;
-          ">
-        Total Records:
-        <strong id="count-val" style="color: #0284c7;">0</strong>
-    </span>
-
-    <span id="stat-total-amount"
-          style="
-            padding: 6px 12px;
-            border-radius: 6px;
-            border: 3px solid #fde68a;
-            display: none;
-            white-space: nowrap;
-          ">
-        Total Amount: ₹
-        <strong id="amount-val" style="color: #d97706;">0</strong>
-    </span>
-
-</div>
-
+          <span id="stat-total-amount"
+                style="padding: 6px 12px; border-radius: 6px; border: 3px solid #fde68a; display: none; white-space: nowrap;">
+            Total Amount: ₹ <strong id="amount-val" style="color: #d97706;">0</strong>
+          </span>
+        </div>
       </div>
-
-    
 
       <div class="modal-body">
         <div id="modal-loader" class="loader">
@@ -349,6 +400,5 @@
   </div>
 
   <script src="script.js"></script>
- 
 </body>
 </html>
