@@ -8,33 +8,24 @@
   <link rel="shortcut icon" href="favicon/favicon.ico" />
   <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
   <link rel="manifest" href="favicon/site.webmanifest" />
-  <title>Company Dashboard - Systems</title>
+  <title>Company Dashboard</title>
   
-  <!-- FontAwesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
   <style>
     :root {
-      /* Brand & Accent Colors (Orange Theme) */
-      --primary-accent: #f68e1f;          /* Bright Orange */
-      --primary-accent-hover: #f7a54f;    /* Darker Orange for Hover */
-      --primary-accent-light: rgba(249, 115, 22, 0.1); /* Light Orange Tint */
+      --primary-accent: #f68e1f;
+      --primary-accent-hover: #f7a54f;
+      --primary-accent-light: rgba(249, 115, 22, 0.1);
       --primary-accent-glow: rgba(249, 115, 22, 0.25);
-      
-      /* Modern Light Sidebar & Header Palette */
-      --dark-sidebar: #ffffff;            /* White Sidebar */
-      --dark-sidebar-header: #fff7ed;     /* Very Light Soft Orange Header */
-      
-      /* Typography & Main Canvas */
-      --text-dark: #1e293b;
+      --dark-sidebar: #ffffff;
+      --dark-sidebar-header: #fff7ed;
+      --text-dark: #0f172a;
       --text-muted: #64748b;
-      --bg-main: #fffaf5;                 /* Soft Warm Background */
+      --bg-main: #fffaf5;
       --card-bg: #ffffff;
-      --border-color: #fed7aa;            /* Soft Orange Border */
-      
-      /* Modern Depth & Elevation */
-      --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05), 0 1px 2px rgba(0, 0, 0, 0.03);
-      --shadow-md: 0 10px 15px -3px rgba(249, 115, 22, 0.08), 0 4px 6px -2px rgba(0, 0, 0, 0.02);
+      --border-color: #fed7aa;
+      --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05);
       --shadow-glow: 0 8px 25px -4px var(--primary-accent-glow);
     }
 
@@ -49,7 +40,6 @@
       background-color: var(--bg-main);
       color: var(--text-dark);
       overflow-x: hidden;
-      -webkit-font-smoothing: antialiased;
     }
 
     .app-container {
@@ -57,7 +47,6 @@
       min-height: 100vh;
     }
 
-    /* Sidebar Styling (Light Theme) */
     .sidebar {
       width: 260px;
       background-color: var(--dark-sidebar);
@@ -89,8 +78,7 @@
       padding: 16px 12px;
     }
 
-    .sidebar-nav a, 
-    .nav-btn {
+    .sidebar-nav a {
       display: flex;
       align-items: center;
       gap: 12px;
@@ -100,40 +88,15 @@
       font-weight: 500;
       border-radius: 8px;
       position: relative;
-      transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+      transition: all 0.2s ease;
       margin-bottom: 4px;
     }
 
-    .sidebar-nav a::before,
-    .nav-btn::before {
-      content: '';
-      position: absolute;
-      left: 0;
-      top: 50%;
-      transform: translateY(-50%) scaleY(0);
-      height: 60%;
-      width: 4px;
-      background-color: var(--primary-accent);
-      border-radius: 0 4px 4px 0;
-      transition: transform 0.2s ease;
-    }
-
     .sidebar-nav a:hover,
-    .nav-btn:hover {
-      background-color: var(--primary-accent-light);
-      color: var(--primary-accent);
-    }
-
-    .sidebar-nav a.active,
-    .nav-btn.active {
+    .sidebar-nav a.active {
       background-color: var(--primary-accent-light);
       color: var(--primary-accent);
       font-weight: 600;
-    }
-
-    .sidebar-nav a.active::before,
-    .nav-btn.active::before {
-      transform: translateY(-50%) scaleY(1);
     }
 
     .sidebar-footer {
@@ -155,7 +118,6 @@
       align-items: center;
       justify-content: center;
       gap: 0.5rem;
-      transition: all 0.2s ease;
     }
 
     .btn-logout:hover {
@@ -164,11 +126,6 @@
       border-color: #e87c08;
     }
 
-    .btn-logout:active {
-      transform: scale(0.98);
-    }
-
-    /* Main Content Area */
     .main-content {
       flex: 1;
       padding: 36px;
@@ -195,7 +152,6 @@
       border-radius: 2px;
     }
 
-    /* Search Box */
     .search-box {
       position: relative;
       display: flex;
@@ -215,18 +171,9 @@
       background-color: var(--card-bg);
       outline: none;
       width: 260px;
-      transition: all 0.25s ease;
       font-size: 0.88rem;
-      color: var(--text-dark);
     }
 
-    .search-box input:focus {
-      border-color: var(--primary-accent);
-      box-shadow: 0 0 0 3px var(--primary-accent-glow);
-      width: 310px;
-    }
-
-    /* Systems Grid Layout */
     .systems-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -244,7 +191,7 @@
       justify-content: space-between;
       gap: 16px;
       box-shadow: var(--shadow-sm);
-      transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+      transition: all 0.25s ease;
     }
 
     .system-card:hover {
@@ -269,7 +216,6 @@
       align-items: center;
       justify-content: center;
       font-size: 1.3rem;
-      flex-shrink: 0;
     }
 
     .system-card-info h3 {
@@ -295,91 +241,192 @@
       text-decoration: none;
       font-size: 0.88rem;
       font-weight: 600;
-      transition: background-color 0.2s ease, transform 0.1s ease;
+      border: none;
+      cursor: pointer;
+      width: 100%;
     }
 
-    .btn-open-system:hover {
-      background-color: var(--primary-accent-hover);
+  
+    .modal-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(15, 23, 42, 0.6);
+      backdrop-filter: blur(4px);
+      z-index: 1000;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
     }
 
-    .btn-open-system:active {
-      transform: scale(0.98);
+    .modal-card {
+      background: #ffffff;
+      border-radius: 12px;
+      width: 98vw;
+      max-width: 1160px;
+      height: 90vh;
+      display: flex;
+      flex-direction: column;
+      border: 1px solid #cbd5e1;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+      overflow: hidden;
     }
 
-    /* Keyframe Animations */
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(6px); }
-      to { opacity: 1; transform: translateY(0); }
+    .modal-header {
+      padding: 14px 20px;
+      background: #fff;
+      border-bottom: 1px solid #e2e8f0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
 
-    /* Responsive Adjustments */
-    @media (max-width: 768px) {
-      .app-container {
-        flex-direction: column;
-      }
-
-      .sidebar {
-        width: 100%;
-        height: auto;
-        position: relative;
-        border-right: none;
-        border-bottom: 1px solid var(--border-color);
-      }
-
-      .sidebar-header {
-        padding: 16px 20px;
-      }
-
-      .sidebar-nav ul {
-        display: flex;
-        overflow-x: auto;
-        padding: 10px;
-        gap: 6px;
-      }
-
-      .sidebar-nav a, 
-      .nav-btn {
-        padding: 8px 14px;
-        white-space: nowrap;
-        font-size: 0.85rem;
-        margin-bottom: 0;
-      }
-
-      .sidebar-nav a::before,
-      .nav-btn::before {
-        display: none;
-      }
-
-      .main-content {
-        max-width: 100%;
-        padding: 20px 16px;
-      }
-
-      .flex-header {
-        flex-direction: column;
-        align-items: stretch;
-      }
-
-      .search-box, 
-      .search-box input {
-        width: 100%;
-      }
-
-      .search-box input:focus {
-        width: 100%;
-      }
+    .modal-header h3 {
+      font-size: 1.1rem;
+      color: #0f172a;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 10px;
     }
 
-    @media (max-width: 480px) {
-      .systems-grid {
-        grid-template-columns: 1fr;
-      }
+    .btn-close-modal {
+      background: none;
+      border: none;
+      font-size: 1.6rem;
+      color: #64748b;
+      cursor: pointer;
+      line-height: 1;
+    }
+    .btn-close-modal:hover { color: #ef4444; }
+
+    .modal-nav-bar {
+      padding: 10px 20px;
+      background: #f8fafc;
+      border-bottom: 1px solid #e2e8f0;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .member-select {
+      padding: 6px 12px;
+      border-radius: 6px;
+      border: 1px solid #cbd5e1;
+      font-size: 0.9rem;
+      font-weight: 600;
+      background: #ffffff;
+      cursor: pointer;
+    }
+
+    .modal-body {
+      flex: 1;
+      padding: 24px;
+      overflow: auto;
+      background: #ffffff;
+    }
+
+  
+    .table-wrapper {
+      width: 100%;
+      overflow-x: auto;
+      background: #ffffff;
+    }
+
+    table.mis-custom-table {
+      width: 100%;
+      border-collapse: collapse; 
+      border: 1.5px solid #1e293b; 
+      font-family: inherit;
+    }
+
+    
+    table.mis-custom-table thead th {
+      border: 1.5px solid #1e293b;
+      padding: 14px 10px;
+      font-size: 0.95rem;
+      font-weight: 800;
+      color: #0b192c;
+      text-align: center;
+      background-color: #ffffff;
+      vertical-align: middle;
+      line-height: 1.25;
+    }
+
+    table.mis-custom-table tbody td {
+      border: 1.5px solid #1e293b; 
+      padding: 12px 14px;
+      font-size: 0.92rem;
+      vertical-align: middle;
+      background-color: #ffffff;
+    }
+
+    table.mis-custom-table td.col-task-title {
+      text-align: center;
+      font-weight: 900;
+      font-size: 1.15rem;
+      color: #0b192c;
+      letter-spacing: 0.5px;
+      width: 75px;
+      min-width: 75px;
+      padding: 10px 4px;
+      user-select: none;
+    }
+
+    .vertical-text-box {
+      writing-mode: vertical-rl;
+      transform: rotate(180deg);
+      display: inline-block;
+      white-space: nowrap;
+    }
+
+    table.mis-custom-table td.col-kra {
+      text-align: left;
+      font-weight: 600;
+      color: #0b192c;
+      min-width: 200px;
+    }
+
+    table.mis-custom-table td.col-kpi {
+      text-align: left;
+      font-weight: 400;
+      color: #334155;
+      min-width: 180px;
+    }
+
+    table.mis-custom-table td.col-val {
+      text-align: center;
+      font-weight: 800;
+      min-width: 85px;
+      font-size: 0.95rem;
+    }
+
+
+    .color-negative {
+      color: #d91b1b !important;  
+    }
+
+    .color-zero {
+      color: #109444 !important;  
+    }
+
+    .color-normal {
+      color: #0b192c !important;  
+    }
+
+    .loading-spinner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 60px 0;
+      gap: 12px;
+      color: var(--text-muted);
     }
   </style>
 </head>
 <body>
 
-  <!-- Page Access Guard -->
   <script>
     if (sessionStorage.getItem('isLoggedIn') !== 'true') {
       window.location.href = 'login.html';
@@ -387,7 +434,6 @@
   </script>
 
   <div class="app-container">
-    <!-- Sidebar Navigation -->
     <aside class="sidebar">
       <div>
         <div class="sidebar-header">
@@ -395,195 +441,330 @@
         </div>
         <nav class="sidebar-nav">
           <ul>
+            <li><a href="index.html"><i class="fa-solid fa-house"></i> <span>Home</span></a></li>
+            <li><a href="employee.html"><i class="fa-solid fa-users"></i> <span>Teams</span></a></li>
+            <li><a href="systems.html" class="active"><i class="fa-solid fa-gears"></i> <span>Systems</span></a></li>
+            <li><a href="documents.html"><i class="fa-solid fa-file-contract"></i> <span>Company Information</span></a></li>
             <li>
-              <a href="index.html">
-                <i class="fa-solid fa-house"></i> <span>Home</span>
-              </a>
-            </li>
-            <li>
-              <a href="employee.html">
-                <i class="fa-solid fa-users"></i> <span>Teams</span>
-              </a>
-            </li>
-            <li>
-              <a href="systems.html" class="active">
-                <i class="fa-solid fa-gears"></i> <span>Systems</span>
-              </a>
-            </li>
-            <li>
-              <a href="documents.html">
-                <i class="fa-solid fa-file-contract"></i> <span>Company Information</span>
-              </a>
-            </li>
-            <li>
-              <a href="https://aisopcpl.github.io/Product-Video-Library-AISOPCPL/"  target="_blank">
-                <i class="fa-solid fa-circle-play"></i>
-                <span>Product Video Library</span>
+              <a href="https://aisopcpl.github.io/Product-Video-Library-AISOPCPL/" target="_blank">
+                <i class="fa-solid fa-circle-play"></i> <span>Product Video Library</span>
               </a>
             </li>
           </ul>
         </nav>
       </div>
 
-       <div class="sidebar-footer">
-       <p style="font-size: 11px; margin-bottom: 6px; text-align: center;">© <span id="year"></span> Avaniysh Interior Solutions Pvt. Ltd. All Rights Reserved.</p>
+      <div class="sidebar-footer">
+        <p style="font-size: 11px; margin-bottom: 6px; text-align: center;">© <span id="year"></span> Avaniysh Interior Solutions Pvt. Ltd.</p>
         <button class="btn-logout" onclick="logout()">
           <i class="fa-solid fa-right-from-bracket"></i> <span>Sign Out</span>
         </button>
       </div>
     </aside>
 
-    <!-- Main Content Area -->
     <main class="main-content">
       <header class="page-header flex-header">
         <div>
           <h1 style="font-size: 1.5rem; font-weight: 700;">Systems Dashboards</h1>
           <div class="header-divider"></div>
         </div>
-        
-        <!-- Search Systems Filter -->
         <div class="search-box">
           <i class="fa-solid fa-magnifying-glass"></i>
           <input type="text" id="systemSearchInput" onkeyup="filterSystems()" placeholder="Search dashboard...">
         </div>
       </header>
 
-      <!-- Dashboard Cards Grid Section -->
       <div class="systems-grid" id="systemsGrid">
-        
-        <!-- 1. Checklist Dashboard Card -->
         <div class="system-card">
           <div class="system-card-header">
-            <div class="system-card-icon">
-              <i class="fa-solid fa-list-check"></i>
-            </div>
-            <div class="system-card-info">
-              <h3>Checklist Dashboard</h3>
-            </div>
+            <div class="system-card-icon"><i class="fa-solid fa-list-check"></i></div>
+            <div class="system-card-info"><h3>Checklist Dashboard</h3></div>
           </div>
           <a href="https://datastudio.google.com/reporting/b30bad2f-4552-4c9f-8d9d-b8afd5056244/page/gcG5F" target="_blank" class="btn-open-system">
             <span>Open Dashboard</span> <i class="fa-solid fa-arrow-up-right-from-square"></i>
           </a>
         </div>
 
-        <!-- 2. Airtech Dashboard Card -->
         <div class="system-card">
           <div class="system-card-header">
-            <div class="system-card-icon">
-              <i class="fa-solid fa-diagram-project"></i>
-            </div>
-            <div class="system-card-info">
-              <h3>Airtech Progress Dashboard</h3>
-            </div>
+            <div class="system-card-icon"><i class="fa-solid fa-diagram-project"></i></div>
+            <div class="system-card-info"><h3>Airtech Progress Dashboard</h3></div>
           </div>
           <a href="https://script.google.com/a/macros/avaniyshinterior.com/s/AKfycbxBqPiof-i02R7xg0VxjjLcl99fBL6MQZCfG0rUufBnBhAEYtJ2QIUKvrIkzFQwOIo/exec?page=pms" target="_blank" class="btn-open-system">
             <span>Open Dashboard</span> <i class="fa-solid fa-arrow-up-right-from-square"></i>
           </a>
         </div>
 
-        <!-- 3. Designer Dashboard Card -->
         <div class="system-card">
           <div class="system-card-header">
-            <div class="system-card-icon">
-              <i class="fa-solid fa-compass-drafting"></i>
-            </div>
-            <div class="system-card-info">
-              <h3>Designer Dashboard</h3>
-            </div>
+            <div class="system-card-icon"><i class="fa-solid fa-compass-drafting"></i></div>
+            <div class="system-card-info"><h3>Designer Dashboard</h3></div>
           </div>
           <a href="https://script.google.com/macros/s/AKfycbwVo7QspB47nnosKR9GW0UWxvvsK1NhuRCqUxXaVufFNNGgVY8d8RJXA-Y0VSNFoyP4pA/exec" target="_blank" class="btn-open-system">
             <span>Open Dashboard</span> <i class="fa-solid fa-arrow-up-right-from-square"></i>
           </a>
         </div>
 
-        <!-- 4. PC CRM MIS Dashboard Card -->
         <div class="system-card">
           <div class="system-card-header">
-            <div class="system-card-icon">
-              <i class="fa-solid fa-chart-pie"></i>
-            </div>
-            <div class="system-card-info">
-              <h3>PC CRM MIS Dashboard</h3>
-            </div>
+            <div class="system-card-icon"><i class="fa-solid fa-chart-pie"></i></div>
+            <div class="system-card-info"><h3>PC CRM MIS Dashboard</h3></div>
           </div>
           <a href="https://script.google.com/a/macros/avaniyshinterior.com/s/AKfycbw06lm1IWj-5Ezer7FNrj9kjb916TYuAe8sxpHPNd0mXAQSQ_qhQjGBlE6-2NZLAPER/exec" target="_blank" class="btn-open-system">
             <span>Open Dashboard</span> <i class="fa-solid fa-arrow-up-right-from-square"></i>
           </a>
         </div>
 
-        <!-- 5. Accounts Dashboard Card -->
         <div class="system-card">
           <div class="system-card-header">
-            <div class="system-card-icon">
-              <i class="fa-solid fa-file-invoice-dollar"></i>
-            </div>
-            <div class="system-card-info">
-              <h3>Accounts Dashboard</h3>
-            </div>
+            <div class="system-card-icon"><i class="fa-solid fa-file-invoice-dollar"></i></div>
+            <div class="system-card-info"><h3>Accounts Dashboard</h3></div>
           </div>
           <a href="https://script.google.com/macros/s/AKfycbylm14CrZ4cPQSO1AzCz0hmGTiM5aEWY_6KEUmngIJTNez-ZtCbBBi6CZ_K6-Y8fE2TnA/exec" target="_blank" class="btn-open-system">
             <span>Open Dashboard</span> <i class="fa-solid fa-arrow-up-right-from-square"></i>
           </a>
         </div>
 
-        <!-- 6. Team Scoring Card -->
+         
         <div class="system-card">
           <div class="system-card-header">
-            <div class="system-card-icon">
-              <i class="fa-solid fa-square-poll-vertical"></i>
-            </div>
+            <div class="system-card-icon"><i class="fa-solid fa-square-poll-vertical"></i></div>
             <div class="system-card-info">
               <h3>MIS Scoring</h3>
+              <p>Team scoring KRA/KPI dashboard</p>
             </div>
           </div>
-          <a href="https://docs.google.com/spreadsheets/d/1V9R9rJ848xIzODTdFZ4f_-OJpZMNbIqpYhX_9WNLJbM/edit?gid=1835137696#gid=1835137696" target="_blank" class="btn-open-system">
-            <span>Open Sheet</span> <i class="fa-solid fa-arrow-up-right-from-square"></i>
-          </a>
+          <button type="button" class="btn-open-system" onclick="openMisModal()">
+            <span>View Scoring Table</span> <i class="fa-solid fa-table"></i>
+          </button>
         </div>
 
-        <!-- 7. Airlife Dashboard Card -->
         <div class="system-card">
           <div class="system-card-header">
-            <div class="system-card-icon">
-              <i class="fa-solid fa-wind"></i>
-            </div>
-            <div class="system-card-info">
-              <h3>Airlife Gases Progress dashboard</h3>
-            </div>
+            <div class="system-card-icon"><i class="fa-solid fa-wind"></i></div>
+            <div class="system-card-info"><h3>Airlife Gases Progress dashboard</h3></div>
           </div>
           <a href="https://script.google.com/a/macros/avaniyshinterior.com/s/AKfycbxoo7jVxrxKUBRtqy05_b0T0EK676VBzEPpiK7ntxkTOO_LZdrN4gbEcIHECXni7wq_tg/exec" target="_blank" class="btn-open-system">
             <span>Open Dashboard</span> <i class="fa-solid fa-arrow-up-right-from-square"></i>
           </a>
         </div>
-
       </div>
     </main>
   </div>
 
+   
+  <div class="modal-overlay" id="misModal" onclick="closeMisModal(event)">
+    <div class="modal-card" onclick="event.stopPropagation()">
+      <div class="modal-header">
+        <h3><i class="fa-solid fa-square-poll-vertical" style="color: var(--primary-accent);"></i> MIS Scoring Table</h3>
+        <button type="button" class="btn-close-modal" onclick="closeMisModal()">&times;</button>
+      </div>
+
+      <div class="modal-nav-bar">
+        <label for="memberDropdown" style="font-weight: 700; color: #0f172a; font-size: 0.9rem;">Select Member:</label>
+        <select id="memberDropdown" class="member-select" onchange="onMemberSelectChange()"></select>
+        <span id="dataStatusText" style="font-size: 0.85rem; color: var(--text-muted); margin-left: auto;"></span>
+      </div>
+
+      <div class="modal-body" id="tableContainer"></div>
+    </div>
+  </div>
+
   <script>
-    // Set Current Year dynamically
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // Logout Functionality
     function logout() {
       sessionStorage.removeItem('isLoggedIn');
       window.location.href = 'login.html';
     }
 
-    // Dashboard Search Filter
     function filterSystems() {
       const input = document.getElementById('systemSearchInput').value.toLowerCase();
       const cards = document.querySelectorAll('.systems-grid .system-card');
-
       cards.forEach(card => {
         const title = card.querySelector('h3').textContent.toLowerCase();
-        const desc = card.querySelector('p').textContent.toLowerCase();
-        if (title.includes(input) || desc.includes(input)) {
-          card.style.display = "flex";
-        } else {
-          card.style.display = "none";
+        card.style.display = title.includes(input) ? "flex" : "none";
+      });
+    }
+
+    const SPREADSHEET_ID = "1V9R9rJ848xIzODTdFZ4f_-OJpZMNbIqpYhX_9WNLJbM";
+    
+    const misMembersList = [
+      { name: "Anuradha Bansode", gid: "1649999565" },
+      { name: "Harshada Shirsale", gid: "1800837815" },
+      { name: "Sakshi Makote", gid: "1506553066" },
+      { name: "Bhakti Bule", gid: "1835137696" },
+      { name: "Sachin Maharana", gid: "1816459295" },
+      { name: "Shubham Pawar", gid: "1203477456" },
+      { name: "Saurav Rathod", gid: "659497243" },
+      { name: "Kiran Chabukswar", gid: "415811273" },
+      { name: "Kiran Hole", gid: "128838134" },
+      { name: "Akash Raut", gid: "446073013" },
+      { name: "Mahavir Chabukswar", gid: "569779458" },
+      { name: "Namrata Raut", gid: "541722736" }
+    ];
+
+    function initMembersDropdown() {
+      const dropdown = document.getElementById("memberDropdown");
+      dropdown.innerHTML = "";
+      misMembersList.forEach(member => {
+        const opt = document.createElement("option");
+        opt.value = member.gid;
+        opt.textContent = member.name;
+        dropdown.appendChild(opt);
+      });
+    }
+
+    function fetchAndDisplayData(gid, memberName) {
+      const container = document.getElementById("tableContainer");
+      const statusText = document.getElementById("dataStatusText");
+
+      statusText.textContent = "Loading data...";
+      container.innerHTML = `
+        <div class="loading-spinner">
+          <i class="fa-solid fa-circle-notch fa-spin" style="font-size: 2rem; color: var(--primary-accent);"></i>
+          <span>Loading scoring table for ${memberName}...</span>
+        </div>
+      `;
+
+     
+      container.innerHTML = `
+        <iframe
+          src="https://docs.google.com/spreadsheets/d/${SPREADSHEET_ID}/htmlembed?gid=${gid}&single=true&widget=false&headers=false&chrome=false"
+          style="width: 100%; height: 100%; border: none; min-height: 520px;">
+        </iframe>
+      `;
+      statusText.textContent = `Showing: ${memberName}`;
+    }
+
+    function renderExactTable(tableData) {
+      const container = document.getElementById("tableContainer");
+ 
+      const rows = [];
+      tableData.rows.forEach(r => {
+        if (!r.c) return;
+        const vals = r.c.map(cell => (cell ? (cell.f !== undefined ? cell.f : (cell.v !== null ? cell.v : '')) : ''));
+        if (vals.some(v => v !== '')) {
+          rows.push(vals);
         }
       });
+
+    
+      let dataRows = rows;
+      if (rows.length > 0 && (String(rows[0][0]).toLowerCase().includes('task') || String(rows[0][1]).toLowerCase().includes('kra'))) {
+        dataRows = rows.slice(1);
+      }
+
+      
+      let currentTask = "";
+      let taskGroups = [];
+
+      dataRows.forEach(r => {
+        let t = String(r[0] || '').trim();
+        if (t !== "") currentTask = t;
+        taskGroups.push({ task: currentTask, row: r });
+      });
+
+      
+      let taskSpans = [];
+      let i = 0;
+      while (i < taskGroups.length) {
+        let task = taskGroups[i].task;
+        let count = 0;
+        let j = i;
+        while (j < taskGroups.length && taskGroups[j].task === task) {
+          count++;
+          j++;
+        }
+        taskSpans.push({ startIndex: i, span: count, taskName: task });
+        i = j;
+      }
+
+      const getColorClass = (val) => {
+        if (!val) return 'color-normal';
+        const str = String(val).trim();
+        if (str.startsWith('-')) return 'color-negative'; // Negative -> Red
+        if (str === '0' || str === '0%' || str === '0.00%') return 'color-zero'; // Zero -> Green
+        return 'color-normal';
+      };
+
+      let html = `
+        <div class="table-wrapper">
+          <table class="mis-custom-table">
+            <thead>
+              <tr>
+                <th style="width: 75px;">Tasks</th>
+                <th>KRA</th>
+                <th>KPI</th>
+                <th>Last<br>Week<br>Actual %</th>
+                <th>Current<br>Week<br>Planned</th>
+                <th>Current<br>Week<br>Actual</th>
+                <th>Current<br>Week<br>Actual %</th>
+                <th>Last Week<br>Commitment</th>
+                <th>Next Week<br>Planned</th>
+              </tr>
+            </thead>
+            <tbody>
+      `;
+
+      taskGroups.forEach((item, idx) => {
+        html += `<tr>`;
+
+        
+        const spanObj = taskSpans.find(s => s.startIndex === idx);
+        if (spanObj) {
+          html += `
+            <td rowspan="${spanObj.span}" class="col-task-title">
+              <span class="vertical-text-box">${spanObj.taskName}</span>
+            </td>
+          `;
+        }
+
+        const r = item.row;
+        const kra = r[1] !== undefined ? r[1] : '';
+        const kpi = r[2] !== undefined ? r[2] : '';
+        const lastWkActPct = r[3] !== undefined ? r[3] : '';
+        const curWkPlan = r[4] !== undefined ? r[4] : '';
+        const curWkAct = r[5] !== undefined ? r[5] : '';
+        const curWkActPct = r[6] !== undefined ? r[6] : '';
+        const lastWkCommit = r[7] !== undefined ? r[7] : '';
+        const nextWkPlan = r[8] !== undefined ? r[8] : '';
+
+        html += `
+          <td class="col-kra">${kra}</td>
+          <td class="col-kpi">${kpi}</td>
+          <td class="col-val ${getColorClass(lastWkActPct)}">${lastWkActPct}</td>
+          <td class="col-val color-normal">${curWkPlan}</td>
+          <td class="col-val color-normal">${curWkAct}</td>
+          <td class="col-val ${getColorClass(curWkActPct)}">${curWkActPct}</td>
+          <td class="col-val ${getColorClass(lastWkCommit)}">${lastWkCommit}</td>
+          <td class="col-val color-normal">${nextWkPlan}</td>
+        `;
+
+        html += `</tr>`;
+      });
+
+      html += `</tbody></table></div>`;
+      container.innerHTML = html;
+    }
+
+    function onMemberSelectChange() {
+      const dropdown = document.getElementById("memberDropdown");
+      fetchAndDisplayData(dropdown.value, dropdown.options[dropdown.selectedIndex].text);
+    }
+
+    function openMisModal() {
+      initMembersDropdown();
+      document.getElementById("misModal").style.display = "flex";
+      if (misMembersList.length > 0) {
+        fetchAndDisplayData(misMembersList[0].gid, misMembersList[0].name);
+      }
+    }
+
+    function closeMisModal(e) {
+      if (!e || e.target.id === "misModal" || e.target.classList.contains("btn-close-modal")) {
+        document.getElementById("misModal").style.display = "none";
+      }
     }
   </script>
 </body>
