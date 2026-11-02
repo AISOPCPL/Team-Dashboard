@@ -175,86 +175,147 @@
       background: white;
     }
 
-    .mis-iframe-container {
-      width: 100%;
-      height: 75vh;
-      border-radius: 8px;
-      overflow: hidden;
-      border: 1px solid #e2e8f0;
+    .mis-modal-table-wrap {
       background: #ffffff;
+      border: 2px solid #334155;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin: 10px 0;
     }
 
-    .mis-iframe-container iframe {
+    .mis-score-table {
       width: 100%;
-      height: 100%;
-      border: none;
+      border-collapse: collapse;
+      font-family: inherit;
+      font-size: 0.88rem;
+      text-align: center;
+      background-color: #ffffff;
     }
-     
-.mis-modal-table-wrap {
-  background: #ffffff;
-  border: 2px solid #334155;
-  border-radius: 6px;
-  overflow-x: auto;
-  margin: 10px 0;
-}
 
-.mis-score-table {
-  width: 100%;
-  border-collapse: collapse;
-  font-family: inherit;
-  font-size: 0.88rem;
-  text-align: center;
-  background-color: #ffffff;
-}
+    .mis-score-table th {
+      background-color: #ffffff;
+      color: #0f172a;
+      font-weight: 700;
+      padding: 12px 8px;
+      border: 1px solid #334155;
+      line-height: 1.3;
+    }
 
-.mis-score-table th {
-  background-color: #ffffff;
-  color: #0f172a;
-  font-weight: 700;
-  padding: 12px 8px;
-  border: 1px solid #334155;
-  line-height: 1.3;
-}
+    .mis-score-table td {
+      border: 1px solid #334155;
+      padding: 10px 8px;
+      color: #0f172a;
+      vertical-align: middle;
+    }
 
-.mis-score-table td {
-  border: 1px solid #334155;
-  padding: 10px 8px;
-  color: #0f172a;
-  vertical-align: middle;
-}
+    .mis-score-table td.cell-task-vertical {
+      writing-mode: vertical-lr;
+      transform: rotate(180deg);
+      font-weight: 900;
+      font-size: 1.15rem;
+      letter-spacing: 1px;
+      padding: 16px 6px;
+      background-color: #ffffff;
+    }
 
- 
-.mis-score-table td.cell-task-vertical {
-  writing-mode: vertical-lr;
-  transform: rotate(180deg);
-  font-weight: 900;
-  font-size: 1.15rem;
-  letter-spacing: 1px;
-  padding: 16px 6px;
-  background-color: #ffffff;
-}
+    .mis-score-table td.align-left {
+      text-align: left;
+      padding-left: 12px;
+    }
 
-.mis-score-table td.align-left {
-  text-align: left;
-  padding-left: 12px;
-}
+    .val-neg {
+      color: #dc2626;
+      font-weight: 700;
+    }
 
- 
-.val-neg {
-  color: #dc2626;
-  font-weight: 700;
-}
+    .val-zero {
+      color: #16a34a;
+      font-weight: 700;
+    }
 
-.val-zero {
-  color: #16a34a;
-  font-weight: 700;
-}
+    /* ==================== PENDING DELEGATION ALERT ==================== */
+    .delegation-alert {
+      background: #fffbeb;
+      border: 1.5px solid #f59e0b;
+      border-left: 6px solid #d97706;
+      border-radius: 10px;
+      padding: 14px 18px;
+      margin-top: 15px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 12px rgba(217, 119, 6, 0.12);
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      animation: alertSlideDown 0.3s ease-out;
+    }
 
-.table-section-gap {
-  height: 18px;
-  background: transparent;
-  border: none !important;
-}
+    @keyframes alertSlideDown {
+      from { opacity: 0; transform: translateY(-8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .delegation-alert-icon {
+      font-size: 1.6rem;
+      color: #d97706;
+      margin-top: 2px;
+    }
+
+    .delegation-alert-content {
+      flex: 1;
+    }
+
+    .delegation-alert-content h4 {
+      margin: 0 0 6px 0;
+      font-size: 1.05rem;
+      color: #92400e;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .delegation-alert-badge {
+      background-color: #dc2626;
+      color: #ffffff;
+      font-size: 0.75rem;
+      padding: 2px 10px;
+      border-radius: 20px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+
+    .delegation-alert-list {
+      margin: 8px 0 0 0;
+      padding-left: 20px;
+      color: #78350f;
+      font-size: 0.88rem;
+      line-height: 1.6;
+    }
+
+    .delegation-alert-list li strong {
+      color: #0f172a;
+    }
+
+    .delegation-view-btn {
+      background-color: #d97706;
+      color: #ffffff;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 6px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      cursor: pointer;
+      margin-top: 12px;
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      transition: background 0.2s ease;
+    }
+
+    .delegation-view-btn:hover {
+      background-color: #b45309;
+    }
   </style>
 </head>
 <body>
@@ -311,8 +372,7 @@
     </aside>
 
     <main class="main-content">
-      
-      
+
       <section id="employee-view" class="content-view active">
         <header class="page-header flex-header">
           <div>
@@ -328,12 +388,14 @@
         <div id="designation-groups-container"></div>
       </section>
 
-    
       <section id="profile-view" class="content-view">
         <button id="back-to-employees-btn" class="btn-secondary">
           <i class="fa-solid fa-arrow-left"></i> Back to Team List
         </button>
-        
+
+        <!-- PENDING DELEGATION ALERT BANNER -->
+        <div id="delegation-alert-container" style="display: none;"></div>
+
         <div class="profile-card-header">
           <img id="profile-img" src="https://via.placeholder.com/120" alt="Profile Image">
           <div class="profile-details">
