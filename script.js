@@ -670,6 +670,7 @@ const employeesData = [
 
 let activeEmployee = null;
 let currentActiveSheet = null;
+let currentDelegationSheet = null;
 
 // ==================== MAIN PAGE INITIALIZATION ====================
 document.addEventListener('DOMContentLoaded', () => {
@@ -832,6 +833,9 @@ function setupEmployeeSearch() {
 function openEmployeeProfile(emp) {
   activeEmployee = emp;
 
+  // ==================== DELEGATION PENDING NOTIFICATION CHECK ====================
+  checkAndDisplayPendingDelegation(emp);
+
   const loggedInEmpId = sessionStorage.getItem('loggedInEmpId');
   const loggedInUserRole = sessionStorage.getItem('loggedInUserRole');
   const isOwnerOrAdmin = (loggedInUserRole === 'admin') || (loggedInEmpId === emp.id);
@@ -958,7 +962,6 @@ function openEmployeeProfile(emp) {
   if (sheetsGrid) {
     sheetsGrid.innerHTML = '';
 
-    // ==================== [NEW] RENDER DYNAMIC MIS CARD ====================
     renderEmployeeMISCard(emp.name);
 
     if (emp.sheets && Array.isArray(emp.sheets)) {
@@ -1004,6 +1007,151 @@ function openEmployeeProfile(emp) {
   const profView = document.getElementById('profile-view');
   if (profView) profView.classList.add('active');
 }
+
+// ==================== DELEGATION PENDING NOTIFICATION ENGINE ====================
+function checkAndDisplayPendingDelegation(emp) {
+  const container = document.getElementById('delegation-alert-container');
+  if (!container) return;
+
+  container.innerHTML = '';
+  container.style.display = 'none';
+
+  if (!emp) return;
+
+  const allSheets = [...(emp.sheets || []), ...(emp.projects || [])];
+  const delegationSheet = allSheets.find(s => 
+    s.name && (s.name.toLowerCase().includes('delegation sheet') || s.name.toLowerCase().includes('delegation score'))
+  );
+
+  if (!delegationSheet || !delegationSheet.docId || !delegationSheet.gid) {
+    return;
+  }
+
+  currentDelegationSheet = delegationSheet;
+
+  const oldScript = document.getElementById('delegation-pending-jsonp-script');
+  if (oldScript) oldScript.remove();
+
+  const script = document.createElement('script');
+  script.id = 'delegation-pending-jsonp-script';
+  script.src = `https://docs.google.com/spreadsheets/d/${delegationSheet.docId}/gviz/tq?gid=${delegationSheet.gid}&headers=1&tqx=responseHandler:handlePendingDelegationResponse`;
+  
+  script.onerror = function() {
+    console.warn("Delegation sheet check failed.");
+  };
+
+  document.body.appendChild(script);
+}
+
+window.handlePendingDelegationResponse = function(response) {
+  const scriptTag = document.getElementById('delegation-pending-jsonp-script');
+  if (scriptTag) scriptTag.remove();
+
+  const container = document.getElementById('delegation-alert-container');
+  if (!container || !activeEmployee) return;
+
+  if (!response || response.status === 'error' || !response.table) {
+    return;
+  }
+
+  const table = response.table;
+  const cols = (table.cols || []).map(c => (c ? (c.label || c.id || '').trim().toLowerCase() : ''));
+  const rows = table.rows || [];
+
+  const nameIdx = cols.findIndex(c => c === 'name' || c === 'employee name');
+  const taskIdx = cols.findIndex(c => c === 'task');
+  const statusIdx = cols.findIndex(c => c === 'status');
+  const targetDateIdx = cols.findIndex(c => c === 'actual completion date' || c === 'first date');
+
+  if (nameIdx === -1 || statusIdx === -1) return;
+
+  const fullName = activeEmployee.name.toLowerCase().trim();
+  const firstName = fullName.split(' ')[0];
+
+  const pendingTasks = [];
+
+  rows.forEach(r => {
+    if (!r.c) return;
+
+    const nameCell = r.c[nameIdx];
+    const nameVal = String(nameCell?.v || nameCell?.f || '').toLowerCase().trim();
+
+    if (nameVal && (nameVal.includes(fullName) || nameVal.includes(firstName))) {
+      const statusCell = r.c[statusIdx];
+      const statusVal = String(statusCell?.v || statusCell?.f || '').trim();
+      const statusLower = statusVal.toLowerCase();
+
+      if (statusLower === 'pending') {
+        const taskName = taskIdx !== -1 ? String(r.c[taskIdx]?.v || r.c[taskIdx]?.f || 'No task title').trim() : 'Delegated Task';
+        
+        // Proper Date Formatting
+        let formattedDate = '';
+        if (targetDateIdx !== -1 && r.c[targetDateIdx]) {
+          const rawDateCell = r.c[targetDateIdx];
+          if (rawDateCell.f) {
+            formattedDate = rawDateCell.f;
+          } else if (rawDateCell.v) {
+            const parsed = parseGvizDate(rawDateCell);
+            if (parsed) {
+              formattedDate = parsed.toLocaleDateString('en-GB'); // DD/MM/YYYY
+            } else {
+              formattedDate = String(rawDateCell.v);
+            }
+          }
+        }
+
+        pendingTasks.push({
+          task: taskName,
+          status: statusVal,
+          date: formattedDate
+        });
+      }
+    }
+  });
+
+  if (pendingTasks.length > 0) {
+    let taskListHtml = pendingTasks.slice(0, 5).map(item => `
+      <li>
+        <strong>${escapeHtml(item.task)}</strong> 
+        ${item.date ? `<span class="delegation-date-tag">(${escapeHtml(item.date)})</span>` : ''} 
+        - <span class="delegation-status-tag">${escapeHtml(item.status)}</span>
+      </li>
+    `).join('');
+
+    if (pendingTasks.length > 5) {
+      taskListHtml += `<li style="list-style: none; color: #64748b; font-weight: 600; margin-top: 4px;">+ ${pendingTasks.length - 5} more pending tasks...</li>`;
+    }
+
+    container.innerHTML = `
+      <div class="delegation-alert">
+        <div class="delegation-alert-content">
+          <div class="delegation-alert-header">
+            <h4>
+              Delegation Pending Tasks
+              <span class="delegation-alert-badge">${pendingTasks.length} Pending</span>
+            </h4>
+          </div>
+         
+          <ul class="delegation-alert-list">
+            ${taskListHtml}
+          </ul>
+          <button type="button" class="delegation-view-btn" id="btn-open-delegation-modal">
+            <i class="fa-solid fa-table"></i> View Delegation Sheet
+          </button>
+        </div>
+      </div>
+    `;
+
+    container.style.display = 'block';
+
+    const openBtn = document.getElementById('btn-open-delegation-modal');
+    if (openBtn && currentDelegationSheet) {
+      openBtn.onclick = () => loadSheetDataJSONP(currentDelegationSheet);
+    }
+  } else {
+    container.style.display = 'none';
+  }
+};
 
 window.handleGvizResponse = function(response) {
   const scriptTag = document.getElementById('jsonp-gviz-script');
@@ -1091,7 +1239,7 @@ window.handleGvizResponse = function(response) {
     return;
   }
 
-  // ==================== STATS CALCULATION LOGIC ====================
+  // ==================== STATS SUMMARY ====================
   if (toolbar) toolbar.style.display = 'flex';
 
   const countValElem = document.getElementById('count-val');
@@ -1128,7 +1276,7 @@ window.handleGvizResponse = function(response) {
     totalAmountBox.style.display = 'none';
   }
 
-  // ==================== RENDER TABLE ====================
+  // ==================== RENDER MODAL TABLE ====================
   const selectedColsConfig = currentActiveSheet?.selectedColumns || [];
   let targetIndices = [];
   let displayHeaders = [];
@@ -1280,6 +1428,8 @@ function setupModalEvents() {
     if (modal) modal.classList.remove('show');
     const scriptTag = document.getElementById('jsonp-gviz-script');
     if (scriptTag) scriptTag.remove();
+    const misScript = document.getElementById('mis-jsonp-script');
+    if (misScript) misScript.remove();
     const container = document.getElementById('modal-table-container');
     if (container) container.innerHTML = '';
   };
@@ -1294,11 +1444,7 @@ function setupModalEvents() {
     if (event.key === 'Escape' || event.key === 'Esc') {
       const modal = document.getElementById('sheet-modal');
       if (modal && modal.classList.contains('show')) {
-        modal.classList.remove('show');
-        const scriptTag = document.getElementById('jsonp-gviz-script');
-        if (scriptTag) scriptTag.remove();
-        const container = document.getElementById('modal-table-container');
-        if (container) container.innerHTML = '';
+        closeModal();
       }
       const activePopups = document.querySelectorAll('.image-popup.show, .popup.show, .modal.show');
       activePopups.forEach(popup => {
@@ -1481,14 +1627,7 @@ if (yearElem) {
   yearElem.textContent = new Date().getFullYear();
 }
 
-
-
-
-
-
-
-// MIS scoring
-
+// ==================== MIS SCORING REGISTRY & FUNCTIONS ====================
 const misSheetGidRegistry = {
   "anuradha": "1649999565",
   "harshada": "1800837815",
@@ -1526,7 +1665,6 @@ function getEmployeeMISGid(empName) {
   return null;
 }
 
-// 1. MIS Card tayar karne (Fakt View Score button asel, Open/External link band kela ahe)
 function renderEmployeeMISCard(empName) {
   const sheetsGrid = document.getElementById('employee-sheets-grid');
   if (!sheetsGrid) return;
@@ -1604,6 +1742,7 @@ function fetchAndDisplayMISData(empName, gid) {
 
   document.body.appendChild(script);
 }
+
 window.handleMISGvizResponse = function(response) {
   const scriptTag = document.getElementById('mis-jsonp-script');
   if (scriptTag) scriptTag.remove();
@@ -1630,7 +1769,6 @@ window.handleMISGvizResponse = function(response) {
     return;
   }
 
-  // Row cells extract karne (A to I)
   const parsedRows = rows.map(r => {
     const rowCells = [];
     for (let i = 0; i < 9; i++) {
@@ -1644,7 +1782,6 @@ window.handleMISGvizResponse = function(response) {
     return rowCells;
   });
 
-  // Data la don bhagat divide karne: 1) Main Scoring Table, 2) NA Task List Table
   let mainScoreRows = [];
   let naTaskRows = [];
   let isNATaskSection = false;
@@ -1654,7 +1791,6 @@ window.handleMISGvizResponse = function(response) {
     const cellB = row[1];
     const cellC = row[2];
 
-    // Check if entire row is empty
     if (row.every(v => v === '')) return;
 
     if (cellA.toLowerCase().includes('na task') || cellB.toLowerCase().includes('na task')) {
