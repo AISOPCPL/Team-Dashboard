@@ -1131,7 +1131,7 @@ window.handlePendingDelegationResponse = function(response) {
               <span class="delegation-alert-badge">${pendingTasks.length} Pending</span>
             </h4>
           </div>
-         
+         <p>Please inform the EA once your task is completed.</p>
           <ul class="delegation-alert-list">
             ${taskListHtml}
           </ul>
