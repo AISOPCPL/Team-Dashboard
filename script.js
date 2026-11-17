@@ -1084,7 +1084,6 @@ window.handlePendingDelegationResponse = function(response) {
       if (statusLower === 'pending') {
         const taskName = taskIdx !== -1 ? String(r.c[taskIdx]?.v || r.c[taskIdx]?.f || 'No task title').trim() : 'Delegated Task';
         
-        // Proper Date Formatting
         let formattedDate = '';
         if (targetDateIdx !== -1 && r.c[targetDateIdx]) {
           const rawDateCell = r.c[targetDateIdx];
@@ -1231,6 +1230,7 @@ window.handleGvizResponse = function(response) {
 
   if (filteredRows.length === 0) {
     if (toolbar) toolbar.style.display = 'none';
+    renderExpenseFilterControls(false);
     container.innerHTML = `
       <div style="text-align:center; padding: 35px; color:#64748b;">
         <i class="fa-solid fa-folder-open" style="font-size: 2.5rem; margin-bottom: 12px; color: #cbd5e1;"></i>
@@ -1239,7 +1239,6 @@ window.handleGvizResponse = function(response) {
     return;
   }
 
-  // ==================== STATS SUMMARY ====================
   if (toolbar) toolbar.style.display = 'flex';
 
   const countValElem = document.getElementById('count-val');
@@ -1276,7 +1275,6 @@ window.handleGvizResponse = function(response) {
     totalAmountBox.style.display = 'none';
   }
 
-  // ==================== RENDER MODAL TABLE ====================
   const selectedColsConfig = currentActiveSheet?.selectedColumns || [];
   let targetIndices = [];
   let displayHeaders = [];
@@ -1297,6 +1295,8 @@ window.handleGvizResponse = function(response) {
   }
 
   renderModalTable(displayHeaders, filteredRows, targetIndices, container);
+
+  renderExpenseFilterControls(isExpenseOrPetrolSheet(currentActiveSheet));
 };
 
 function loadSheetDataJSONP(sheet) {
@@ -1316,6 +1316,7 @@ function loadSheetDataJSONP(sheet) {
   if (container) container.innerHTML = '';
   if (toolbar) toolbar.style.display = 'none';
   if (tableSearchInput) tableSearchInput.value = '';
+  renderExpenseFilterControls(false);
   
   if (modal) modal.classList.add('show');
 
@@ -1383,41 +1384,184 @@ function setupTableSearch() {
   const tableSearchInput = document.getElementById('table-search-input');
   if (!tableSearchInput) return;
 
-  tableSearchInput.addEventListener('input', (e) => {
-    const filter = e.target.value.toLowerCase().trim();
-    const table = document.getElementById('active-modal-table');
-    if (!table) return;
+  tableSearchInput.addEventListener('input', () => {
+    applyAllModalFilters();
+  });
+}
 
-    const rows = table.querySelectorAll('tbody tr');
-    let visibleCount = 0;
-    let visibleAmount = 0;
+function isExpenseOrPetrolSheet(sheet) {
+  if (!sheet || !sheet.name) return false;
+  const name = sheet.name.toLowerCase();
+  return name.includes('site expenses') || name.includes('petrol allowance');
+}
 
-    const headers = Array.from(table.querySelectorAll('thead th')).map(th => th.textContent.toLowerCase().trim());
-    const amountIdx = headers.indexOf('amount');
+function renderExpenseFilterControls(show) {
+  const toolbar = document.getElementById('modal-toolbar');
+  if (!toolbar) return;
 
-    rows.forEach(row => {
-      const text = row.textContent.toLowerCase();
-      const isVisible = text.includes(filter);
-      row.style.display = isVisible ? '' : 'none';
+  const existingControls = document.getElementById('expense-filter-export-bar');
+  if (existingControls) existingControls.remove();
 
-      if (isVisible) {
-        visibleCount++;
-        if (amountIdx !== -1) {
-          const cellText = row.children[amountIdx]?.textContent || '';
-          const num = parseFloat(cellText.replace(/[^0-9.-]+/g, ''));
-          if (!isNaN(num)) visibleAmount += num;
-        }
+  if (!show) return;
+
+  const filterBar = document.createElement('div');
+  filterBar.id = 'expense-filter-export-bar';
+
+  filterBar.innerHTML = `
+    <div class="expense-date-group">
+      <div class="date-field">
+        <label for="filter-start-date">From:</label>
+        <input type="date" id="filter-start-date">
+      </div>
+      <div class="date-field">
+        <label for="filter-end-date">To:</label>
+        <input type="date" id="filter-end-date">
+      </div>
+      <button type="button" id="btn-reset-date-filter">
+        <i class="fa-solid fa-rotate-left"></i> Reset
+      </button>
+    </div>
+    <button type="button" id="btn-export-excel">
+      <i class="fa-solid fa-file-excel"></i> Export to Excel
+    </button>
+  `;
+
+  toolbar.appendChild(filterBar);
+
+  document.getElementById('filter-start-date').addEventListener('change', applyAllModalFilters);
+  document.getElementById('filter-end-date').addEventListener('change', applyAllModalFilters);
+
+  document.getElementById('btn-reset-date-filter').addEventListener('click', () => {
+    document.getElementById('filter-start-date').value = '';
+    document.getElementById('filter-end-date').value = '';
+    const searchInput = document.getElementById('table-search-input');
+    if (searchInput) searchInput.value = '';
+    applyAllModalFilters();
+  });
+
+  document.getElementById('btn-export-excel').addEventListener('click', exportFilteredTableToExcel);
+}
+
+function applyAllModalFilters() {
+  const table = document.getElementById('active-modal-table');
+  if (!table) return;
+
+  const searchInput = document.getElementById('table-search-input');
+  const startInput = document.getElementById('filter-start-date');
+  const endInput = document.getElementById('filter-end-date');
+
+  const textFilter = searchInput ? searchInput.value.toLowerCase().trim() : '';
+  const startDateVal = startInput && startInput.value ? new Date(startInput.value + 'T00:00:00') : null;
+  const endDateVal = endInput && endInput.value ? new Date(endInput.value + 'T23:59:59') : null;
+
+  const headers = Array.from(table.querySelectorAll('thead th')).map(th => th.textContent.toLowerCase().trim());
+  const dateIdx = headers.indexOf('date');
+  const amountIdx = headers.indexOf('amount');
+
+  const rows = table.querySelectorAll('tbody tr');
+  let visibleCount = 0;
+  let visibleAmount = 0;
+
+  rows.forEach(row => {
+    const rowText = row.textContent.toLowerCase();
+    const matchesText = !textFilter || rowText.includes(textFilter);
+
+    let matchesDate = true;
+    if ((startDateVal || endDateVal) && dateIdx !== -1) {
+      const dateText = row.children[dateIdx]?.textContent.trim() || '';
+      const rowDate = parseGvizDate({ v: dateText, f: dateText });
+
+      if (rowDate && !isNaN(rowDate.getTime())) {
+        if (startDateVal && rowDate < startDateVal) matchesDate = false;
+        if (endDateVal && rowDate > endDateVal) matchesDate = false;
+      } else {
+        matchesDate = false;
       }
-    });
+    }
 
-    const countValElem = document.getElementById('count-val');
-    const amountValElem = document.getElementById('amount-val');
+    const isVisible = matchesText && matchesDate;
+    row.style.display = isVisible ? '' : 'none';
 
-    if (countValElem) countValElem.innerText = visibleCount;
-    if (amountValElem && amountIdx !== -1) {
-      amountValElem.innerText = visibleAmount.toLocaleString('en-IN', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+    if (isVisible) {
+      visibleCount++;
+      if (amountIdx !== -1) {
+        const cellText = row.children[amountIdx]?.textContent || '';
+        const num = parseFloat(cellText.replace(/[^0-9.-]+/g, ''));
+        if (!isNaN(num)) visibleAmount += num;
+      }
     }
   });
+
+  const countValElem = document.getElementById('count-val');
+  const amountValElem = document.getElementById('amount-val');
+
+  if (countValElem) countValElem.innerText = visibleCount;
+  if (amountValElem && amountIdx !== -1) {
+    amountValElem.innerText = visibleAmount.toLocaleString('en-IN', {
+      minimumFractionDigits: 2,
+      maximumFractionDigits: 2
+    });
+  }
+}
+
+function exportFilteredTableToExcel() {
+  const table = document.getElementById('active-modal-table');
+  if (!table) return;
+
+  if (typeof XLSX === 'undefined') {
+    alert('Excel export library (XLSX) is not loaded. Please include SheetJS in your HTML.');
+    return;
+  }
+
+  const headers = Array.from(table.querySelectorAll('thead th')).map(th => th.textContent.trim());
+  const visibleRows = Array.from(table.querySelectorAll('tbody tr')).filter(
+    row => row.style.display !== 'none'
+  );
+
+  if (visibleRows.length === 0) {
+    alert('No records found for the selected date range to export.');
+    return;
+  }
+
+  const excelData = [headers];
+
+  visibleRows.forEach(row => {
+    const rowData = Array.from(row.children).map(td => {
+      const anchor = td.querySelector('a');
+      if (anchor && anchor.href) {
+        return anchor.href;
+      }
+      const text = td.textContent.trim();
+      const cleanNum = text.replace(/,/g, '');
+      if (cleanNum !== '' && !isNaN(cleanNum) && !text.includes('/') && !text.includes('-')) {
+        return parseFloat(cleanNum);
+      }
+      return text;
+    });
+    excelData.push(rowData);
+  });
+
+  const worksheet = XLSX.utils.aoa_to_sheet(excelData);
+
+  worksheet['!cols'] = headers.map((h, i) => {
+    const maxLen = Math.max(
+      h.length,
+      ...excelData.slice(1).map(r => String(r[i] || '').length)
+    );
+    return { wch: Math.min(maxLen + 4, 45) };
+  });
+
+  const workbook = XLSX.utils.book_new();
+  const sheetName = (currentActiveSheet?.name || 'Expenses').slice(0, 31);
+  XLSX.utils.book_append_sheet(workbook, worksheet, sheetName);
+
+  const empSlug = (activeEmployee?.name || 'Employee').replace(/\s+/g, '_');
+  const sheetSlug = (currentActiveSheet?.name || 'Expenses').replace(/\s+/g, '_');
+  const startVal = document.getElementById('filter-start-date')?.value || 'All';
+  const endVal = document.getElementById('filter-end-date')?.value || 'All';
+  const fileName = `${empSlug}_${sheetSlug}_${startVal}_to_${endVal}.xlsx`;
+
+  XLSX.writeFile(workbook, fileName);
 }
 
 function setupModalEvents() {
@@ -1432,6 +1576,7 @@ function setupModalEvents() {
     if (misScript) misScript.remove();
     const container = document.getElementById('modal-table-container');
     if (container) container.innerHTML = '';
+    renderExpenseFilterControls(false);
   };
 
   if (closeBtn) closeBtn.onclick = closeModal;
