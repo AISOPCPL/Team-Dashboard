@@ -153,6 +153,59 @@ body {
 }
 
 
+
+/* Ensure the modal table container scrolls both horizontally and vertically */
+#modal-table-container {
+  width: 100%;
+  max-height: 60vh;
+  overflow-x: auto;
+  overflow-y: auto;
+  border: 1px solid #fed7aa;
+  border-radius: 8px;
+  position: relative;
+}
+
+/* Force table to expand based on content rather than squeezing columns */
+.custom-data-table {
+  width: 100%;
+  min-width: max-content;
+  border-collapse: collapse;
+}
+
+.custom-data-table th,
+.custom-data-table td {
+  padding: 12px 16px;
+  text-align: left;
+  white-space: nowrap;
+}
+
+/* Keep table header visible while scrolling down */
+.custom-data-table thead th {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background-color: #ffedd5;
+}
+
+/* Optional: Custom scrollbar styling to match your existing vertical scrollbar */
+#modal-table-container::-webkit-scrollbar {
+  width: 8px;
+  height: 8px; /* Controls the horizontal scrollbar thickness */
+}
+
+#modal-table-container::-webkit-scrollbar-track {
+  background: #f8fafc;
+  border-radius: 4px;
+}
+
+#modal-table-container::-webkit-scrollbar-thumb {
+  background: #94a3b8;
+  border-radius: 4px;
+}
+
+#modal-table-container::-webkit-scrollbar-thumb:hover {
+  background: #64748b;
+}
 .main-content {
   flex: 1;
   padding: 36px;
