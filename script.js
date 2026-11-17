@@ -1341,10 +1341,12 @@ function loadSheetDataJSONP(sheet) {
 }
 
 function renderModalTable(headers, rows, indices, container) {
-  let html = `<table class="custom-data-table" id="active-modal-table"><thead><tr>`;
+  let html = `<div class="table-responsive-wrapper">
+                <table class="custom-data-table" id="active-modal-table" style="min-width: max-content; width: 100%; border-collapse: collapse;">
+                  <thead><tr>`;
   
   headers.forEach(h => {
-    html += `<th>${escapeHtml(h)}</th>`;
+    html += `<th style="white-space: nowrap;">${escapeHtml(h)}</th>`;
   });
   html += `</tr></thead><tbody>`;
 
@@ -1363,20 +1365,20 @@ function renderModalTable(headers, rows, indices, container) {
           const cleanUrl = url.replace(/[,.]$/, '');
           const label = matches.length > 1 ? `Open Link ${index + 1}` : 'Open Link';
           
-          return `<a href="${escapeHtml(cleanUrl)}" target="_blank" style="color:#f38b1c; font-weight:600; margin-right: 8px; display: inline-block;">
+          return `<a href="${escapeHtml(cleanUrl)}" target="_blank" style="color:#f38b1c; font-weight:600; margin-right: 8px; display: inline-block; white-space: nowrap;">
                     <i class="fa-solid fa-arrow-up-right-from-square"></i> ${label}
                   </a>`;
         }).join(' ');
 
-        html += `<td>${linksHtml}</td>`;
+        html += `<td style="white-space: nowrap;">${linksHtml}</td>`;
       } else {
-        html += `<td>${escapeHtml(strVal)}</td>`;
+        html += `<td style="white-space: nowrap; max-width: 300px; overflow: hidden; text-overflow: ellipsis;" title="${escapeHtml(strVal)}">${escapeHtml(strVal)}</td>`;
       }
     });
     html += `</tr>`;
   });
 
-  html += `</tbody></table>`;
+  html += `</tbody></table></div>`;
   container.innerHTML = html;
 }
 
