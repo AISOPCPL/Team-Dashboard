@@ -1239,40 +1239,76 @@ window.handleGvizResponse = function(response) {
     return;
   }
 
+  // ==================== UNIVERSAL DATE DESCENDING SORT ====================
+  // Sarv sheets madhil Date / Timestamp / First Date / Leave Date column shodhne
+  const datePriorityHeaders = [
+    'date',
+    'timestamp',
+    'first date',
+    'start date of leave',
+    'extra work date',
+    'compensatory off date',
+    'planned'
+  ];
+
+  let dateColIdx = -1;
+  for (const targetHeader of datePriorityHeaders) {
+    dateColIdx = allHeaders.findIndex(h => h.toLowerCase().trim() === targetHeader);
+    if (dateColIdx !== -1) break;
+  }
+
+  // Jar exact match nahi sapadla tar kontahi column jyachya navat 'date' ahe to ghene
+  if (dateColIdx === -1) {
+    dateColIdx = allHeaders.findIndex(h => h.toLowerCase().includes('date'));
+  }
+
+  if (dateColIdx !== -1) {
+    filteredRows.sort((a, b) => {
+      const dateA = parseGvizDate(a.c ? a.c[dateColIdx] : null);
+      const dateB = parseGvizDate(b.c ? b.c[dateColIdx] : null);
+      const timeA = dateA && !isNaN(dateA.getTime()) ? dateA.getTime() : 0;
+      const timeB = dateB && !isNaN(dateB.getTime()) ? dateB.getTime() : 0;
+      return timeB - timeA; // Latest date first (Descending)
+    });
+  }
+
   if (toolbar) toolbar.style.display = 'flex';
 
   const countValElem = document.getElementById('count-val');
   const amountValElem = document.getElementById('amount-val');
   const totalAmountBox = document.getElementById('stat-total-amount');
-
-  if (countValElem) {
-    countValElem.innerText = filteredRows.length;
-  }
+  const totalCountBox = countValElem ? countValElem.parentElement : null;
 
   const sheetNameLower = currentActiveSheet ? currentActiveSheet.name.toLowerCase() : '';
-  const isExpenseSheet = sheetNameLower.includes('site expenses') || sheetNameLower.includes('office expenses')|| sheetNameLower.includes('petrol expenses');
+  const isSiteOrOfficeExpense = sheetNameLower.includes('site expenses') || sheetNameLower.includes('office expenses');
 
-  if (isExpenseSheet) {
-    const amountColIdx = allHeaders.findIndex(h => h.toLowerCase().trim() === 'amount');
+  if (isSiteOrOfficeExpense) {
+    if (totalCountBox) totalCountBox.style.display = 'none';
+    if (totalAmountBox) totalAmountBox.style.display = 'none';
+  } else {
+    if (totalCountBox) totalCountBox.style.display = '';
+    if (countValElem) countValElem.innerText = filteredRows.length;
 
-    if (amountColIdx !== -1) {
-      const totalAmount = filteredRows.reduce((sum, r) => {
-        const cell = r.c ? r.c[amountColIdx] : null;
-        if (!cell || cell.v === null || cell.v === undefined) return sum;
-        
-        const numVal = parseFloat(String(cell.v).replace(/[^0-9.-]+/g, ''));
-        return sum + (isNaN(numVal) ? 0 : numVal);
-      }, 0);
+    if (sheetNameLower.includes('petrol expenses')) {
+      const amountColIdx = allHeaders.findIndex(h => h.toLowerCase().trim() === 'amount');
+      if (amountColIdx !== -1) {
+        const totalAmount = filteredRows.reduce((sum, r) => {
+          const cell = r.c ? r.c[amountColIdx] : null;
+          if (!cell || cell.v === null || cell.v === undefined) return sum;
+          const numVal = parseFloat(String(cell.v).replace(/[^0-9.-]+/g, ''));
+          return sum + (isNaN(numVal) ? 0 : numVal);
+        }, 0);
 
-      if (amountValElem) {
-        amountValElem.innerText = totalAmount.toLocaleString('en-IN', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+        if (amountValElem) {
+          amountValElem.innerText = totalAmount.toLocaleString('en-IN', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+        }
+        if (totalAmountBox) totalAmountBox.style.display = 'inline-block';
+      } else if (totalAmountBox) {
+        totalAmountBox.style.display = 'none';
       }
-      if (totalAmountBox) totalAmountBox.style.display = 'inline-block';
     } else if (totalAmountBox) {
       totalAmountBox.style.display = 'none';
     }
-  } else if (totalAmountBox) {
-    totalAmountBox.style.display = 'none';
   }
 
   const selectedColsConfig = currentActiveSheet?.selectedColumns || [];
@@ -1461,6 +1497,9 @@ function applyAllModalFilters() {
   const startDateVal = startInput && startInput.value ? new Date(startInput.value + 'T00:00:00') : null;
   const endDateVal = endInput && endInput.value ? new Date(endInput.value + 'T23:59:59') : null;
 
+  // Konta hi filter active ahe ka te check karne
+  const isFilterActive = Boolean(textFilter || startDateVal || endDateVal);
+
   const headers = Array.from(table.querySelectorAll('thead th')).map(th => th.textContent.toLowerCase().trim());
   const dateIdx = headers.indexOf('date');
   const amountIdx = headers.indexOf('amount');
@@ -1501,13 +1540,39 @@ function applyAllModalFilters() {
 
   const countValElem = document.getElementById('count-val');
   const amountValElem = document.getElementById('amount-val');
+  const totalAmountBox = document.getElementById('stat-total-amount');
+  const totalCountBox = countValElem ? countValElem.parentElement : null;
 
-  if (countValElem) countValElem.innerText = visibleCount;
-  if (amountValElem && amountIdx !== -1) {
-    amountValElem.innerText = visibleAmount.toLocaleString('en-IN', {
-      minimumFractionDigits: 2,
-      maximumFractionDigits: 2
-    });
+  const sheetNameLower = currentActiveSheet ? currentActiveSheet.name.toLowerCase() : '';
+  const isSiteOrOfficeExpense = sheetNameLower.includes('site expenses') || sheetNameLower.includes('office expenses');
+
+  if (isSiteOrOfficeExpense) {
+    if (isFilterActive) {
+      if (totalCountBox) totalCountBox.style.display = '';
+      if (countValElem) countValElem.innerText = visibleCount;
+
+      if (amountIdx !== -1) {
+        if (totalAmountBox) totalAmountBox.style.display = 'inline-block';
+        if (amountValElem) {
+          amountValElem.innerText = visibleAmount.toLocaleString('en-IN', {
+            minimumFractionDigits: 2,
+            maximumFractionDigits: 2
+          });
+        }
+      }
+    } else {
+      // Filter reset/empty aslyas parat hide karne
+      if (totalCountBox) totalCountBox.style.display = 'none';
+      if (totalAmountBox) totalAmountBox.style.display = 'none';
+    }
+  } else {
+    if (countValElem) countValElem.innerText = visibleCount;
+    if (amountValElem && amountIdx !== -1) {
+      amountValElem.innerText = visibleAmount.toLocaleString('en-IN', {
+        minimumFractionDigits: 2,
+        maximumFractionDigits: 2
+      });
+    }
   }
 }
 
