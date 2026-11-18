@@ -1393,7 +1393,12 @@ function setupTableSearch() {
 function isExpenseOrPetrolSheet(sheet) {
   if (!sheet || !sheet.name) return false;
   const name = sheet.name.toLowerCase();
-  return name.includes('site expenses') || name.includes('petrol allowance');
+  return (
+    name.includes('site expenses') ||
+    name.includes('office expenses') ||
+    name.includes('petrol allowance') ||
+    name.includes('office allowance')
+  );
 }
 
 function renderExpenseFilterControls(show) {
