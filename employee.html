@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Company Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" href="favicon/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="favicon/favicon.svg" />
+  <link rel="shortcut icon" href="favicon/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
+  <link rel="manifest" href="favicon/site.webmanifest" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+ 
+</head>
+<body>
+  <script>
+    if (sessionStorage.getItem('isLoggedIn') !== 'true') {
+      window.location.href = 'login.html';
+    }
+  </script>
+
+  <div class="app-container">
+    <aside class="sidebar">
+      <div>
+        <div class="sidebar-header">
+          <img src="LOGO.png" alt="Company Logo" class="logo" onerror="this.src='https://via.placeholder.com/180x50?text=Avaniysh+Interior'">
+        </div>
+        <nav class="sidebar-nav">
+          <ul>
+            <li>
+              <a href="index.html" class="nav-btn">
+                <i class="fa-solid fa-house"></i> <span>Home</span>
+              </a>
+            </li>
+            <li>
+              <a href="employee.html" class="nav-btn active">
+                <i class="fa-solid fa-users"></i> <span>Teams</span>
+              </a>
+            </li>
+            <li>
+              <a href="systems.html" class="nav-btn" data-target="system-view">
+                <i class="fa-solid fa-gears"></i> <span>Systems</span>
+              </a>
+            </li>
+            <li>
+              <a href="documents.html" class="nav-btn">
+                <i class="fa-solid fa-file-contract"></i> <span>Company Information</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://aisopcpl.github.io/Product-Video-Library-AISOPCPL/" target="_blank">
+                <i class="fa-solid fa-circle-play"></i>
+                <span>Product Video Library</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="sidebar-footer">
+        <p style="font-size: 11px; margin-bottom: 6px; text-align: center;">© <span id="year"></span> Avaniysh Interior Solutions Pvt. Ltd. All Rights Reserved.</p>
+        <button class="btn-logout" onclick="logout()">
+          <i class="fa-solid fa-right-from-bracket"></i> <span>Sign Out</span>
+        </button>
+      </div>
+    </aside>
+
+    <main class="main-content">
+
+      <section id="employee-view" class="content-view active">
+        <header class="page-header flex-header">
+          <div>
+            <h1>Our Team</h1>
+            <div class="header-divider"></div>
+          </div>
+          <div class="search-box">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" id="employee-search-input" placeholder="Search employee name or role...">
+          </div>
+        </header>
+
+        <div id="designation-groups-container"></div>
+      </section>
+
+      <section id="profile-view" class="content-view">
+        <button id="back-to-employees-btn" class="btn-secondary">
+          <i class="fa-solid fa-arrow-left"></i> Back to Team List
+        </button>
+
+        <!-- PENDING DELEGATION ALERT BANNER -->
+        <div id="delegation-alert-container" style="display: none;"></div>
+
+        <div class="profile-card-header">
+          <img id="profile-img" src="https://via.placeholder.com/120" alt="Profile Image">
+          <div class="profile-details">
+            <h1 id="profile-name">Team Name</h1>
+            <p><i class="fa-solid fa-briefcase"></i> <strong>Designation:</strong> <span id="profile-designation">-</span></p>
+            <p><i class="fa-solid fa-envelope"></i> <strong>Email ID:</strong> <span id="profile-email">-</span></p>
+          </div>
+        </div>
+
+        <div id="profile-dashboard-container"></div>
+
+        <div class="section-block" id="project-list-block" style="display: none; margin-top: 20px;">
+          <h2>Project Numbering List</h2>
+          <div id="employee-projects-grid" class="sheets-grid"></div>
+        </div>
+
+        <div class="section-block">
+          <h2>Assigned Worksheets</h2>
+          <p class="section-subtitle">Click on any card below to view live data filtered for this team.</p>
+          <div id="employee-sheets-grid" class="sheets-grid"></div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <div id="sheet-modal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div>
+          <h2 id="modal-sheet-title">Sheet Data</h2>
+          <p id="modal-sheet-subtitle" class="subtitle"></p>
+        </div>
+        <button class="close-modal-btn" id="close-modal-x">&times;</button>
+      </div>
+
+      <div class="modal-toolbar" id="modal-toolbar" style="display: none; gap: 15px;">
+        <div class="search-box table-search">
+          <i class="fa-solid fa-filter"></i>
+          <input type="text" id="table-search-input" placeholder="Filter sheet data...">
+        </div>
+
+        <div id="modal-stats-summary"
+             style="display: flex; width: 100%; justify-content: flex-end; align-items: center; gap: 15px; font-weight: 600; font-size: 0.95rem; color: #334155; box-sizing: border-box; margin-left: auto;">
+          <span id="stat-record-count"
+                style="padding: 6px 12px; border-radius: 6px; border: 3px solid #cbd5e1; white-space: nowrap;">
+            Total Records: <strong id="count-val" style="color: #0284c7;">0</strong>
+          </span>
+
+          <span id="stat-total-amount"
+                style="padding: 6px 12px; border-radius: 6px; border: 3px solid #fde68a; display: none; white-space: nowrap;">
+            Total Amount: ₹ <strong id="amount-val" style="color: #d97706;">0</strong>
+          </span>
+        </div>
+      </div>
+
+      <div class="modal-body">
+        <div id="modal-loader" class="loader">
+          <p>Fetching filtered Google Sheet data...</p>
+        </div>
+        <div id="modal-table-container" class="table-responsive"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+    <script src="https://cdn.sheetjs.com/xlsx-0.20.2/package/dist/xlsx.full.min.js"></script>
+
+</body>
+</html>
