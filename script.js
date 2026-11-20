@@ -1,0 +1,2150 @@
+// ==================== EMPLOYEE DATABASE ====================
+const employeesData = [
+  {
+    id: 'akash-r',
+    name: 'Akash Raut',
+    designation: 'Project Head',
+    email: 'designhead.aisopcpl@gmail.com',
+    photo: 'https://lh3.googleusercontent.com/d/1J0fEgUfvhprW7toPDCCWNswE___LjMge',
+    dashboards: [
+      {
+        title: 'Airtech Progress Dashboard',
+        url: 'https://script.google.com/a/macros/avaniyshinterior.com/s/AKfycbxBqPiof-i02R7xg0VxjjLcl99fBL6MQZCfG0rUufBnBhAEYtJ2QIUKvrIkzFQwOIo/exec?page=pms'
+      },
+      {
+        title: 'Airtech Material Checklist',
+        url: 'https://script.google.com/macros/s/AKfycbyj1PuG5FaR1jtF-BA_DUe2klBDSWKDWYavXVAji0v7V7gY5aXYvk5hR7UF6QBWSQYsfw/exec'
+      },
+      {
+        title: 'Airtech Schedular',
+        url: 'https://script.google.com/a/macros/avaniyshinterior.com/s/AKfycbxBqPiof-i02R7xg0VxjjLcl99fBL6MQZCfG0rUufBnBhAEYtJ2QIUKvrIkzFQwOIo/exec?page=fitout'
+      },
+      {
+        title: 'Designer Dashboard',
+        url: 'https://script.google.com/a/macros/avaniyshinterior.com/s/AKfycbxh54vuyFmTtDvJwXY88cnHYDAaZptFX063acXGG-9LAT_r3_GUQu1oCZmeM4gMRpnNXA/exec'
+      },
+      {
+        title: 'Checklist Dashboard',
+        url: 'https://datastudio.google.com/reporting/b30bad2f-4552-4c9f-8d9d-b8afd5056244/page/gcG5F'
+      }
+    ],
+    projects: [
+      { 
+        name: 'AISPL Client PO', 
+        docId: '1JZaXvcCxkq0jj4PETPWuwhRza570xBVIa3YBnxqEW8Y', 
+        gid: '0', 
+        selectedColumns: ['Sr.No.', 'Project No.', 'Project Name','Documents'] 
+      },
+      { 
+        name: 'AISPL Proforma Invoice', 
+        docId: '1JZaXvcCxkq0jj4PETPWuwhRza570xBVIa3YBnxqEW8Y', 
+        gid: '1013826524', 
+        selectedColumns: ['Sr.No.', 'Proforma Invoice No.', 'Project Name','Authorized Signatory','Documents'] 
+      },
+      { 
+        name: 'AISPL Tax Invoice', 
+        docId: '1JZaXvcCxkq0jj4PETPWuwhRza570xBVIa3YBnxqEW8Y', 
+        gid: '665653959', 
+        selectedColumns: ['Sr.No.', 'Tax Invoice No.', 'Project Name','Authorized Signatory','Documents'] 
+      },
+      { 
+        name: 'AISPL PO To Vendor', 
+        docId: '1JZaXvcCxkq0jj4PETPWuwhRza570xBVIa3YBnxqEW8Y', 
+        gid: '286319358', 
+        selectedColumns: ['Sr.No.', 'PO No.','Vendor Name', 'Project Name','Remarks','Created By','Documents'] 
+      },
+      { 
+        name: 'Modulariti Client PO', 
+        docId: '1u8sqdtEeklS9AVx91oZVXMulcY73IGwQ4N6CHokeBFQ', 
+        gid: '0', 
+        selectedColumns: ['Sr.No.', 'Project No.', 'Project Name','Documents'] 
+      },
+      { 
+        name: 'Modulariti Proforma Invoice', 
+        docId: '1u8sqdtEeklS9AVx91oZVXMulcY73IGwQ4N6CHokeBFQ', 
+        gid: '1541680899', 
+        selectedColumns: ['Sr.No.', 'Proforma Invoice No.', 'Project Name','Documents'] 
+      },
+      { 
+        name: 'Modulariti Tax Invoice', 
+        docId: '1u8sqdtEeklS9AVx91oZVXMulcY73IGwQ4N6CHokeBFQ', 
+        gid: '842646558', 
+        selectedColumns: ['Sr.No.', 'Tax Invoice No.', 'Project Name','Documents'] 
+      },
+      { 
+        name: 'Modulariti PO To Vendor', 
+        docId: '1u8sqdtEeklS9AVx91oZVXMulcY73IGwQ4N6CHokeBFQ', 
+        gid: '1879062090', 
+        selectedColumns: ['Sr.No.', 'PO No.','Vendor Name', 'Project Name','Documents'] 
+      },
+      { 
+        name: 'Modulariti Delivery Challan', 
+        docId: '1u8sqdtEeklS9AVx91oZVXMulcY73IGwQ4N6CHokeBFQ', 
+        gid: '1982685191', 
+        selectedColumns: ['Sr.No.', 'Challan No.', 'Project Name','Documents'] 
+      }
+    ],
+    sheets: [
+      { name: 'Enquiry Captured Sheet', docId: '1EM9IhC4KAjI51aZF0mc6_gGI3ZnQzLiGMRsVYBauitg', gid: '810897741', selectedColumns: ['AISPL - Project Head', 'Project Name','Client Name',  'Location', 'Quoted Amount','Stage'] },
+      { name: 'Project Visit', formUrl:'https://forms.gle/ZRpDTA4KUkGnbwtX8', docId: '11TLkJxGV3EFz4ZdVqKpuX3O-8FV4TrlMIYjxyAZ0lqY', gid: '2045538987', selectedColumns: ['Date', 'Project Site Visitor', 'Project Name', 'Location', 'Visit Purpose', 'Observation'] },
+      { name: 'Office Expenses', formUrl:'https://docs.google.com/forms/d/e/1FAIpQLSeFG1ZBY4mstlGPDpcNhUb9vi2WiJGBr3aG2cuTtYqPNXf4Nw/viewform?usp=header', docId: '1N2DF6vzSoJcIxwL2makablsGtDlMB-rxhcWT3_VLHBY', gid: '1016529559', selectedColumns: ['Date', 'Paid to', 'Amount', 'Reason', 'Categories','URD Purchase','Tax Invoice'] },
+      { name: 'Site Expenses', formUrl:'https://forms.gle/9uuXgx6oF3okLmxb7', docId: '13Vo3YIrbPT06a4ClN-BS-eO1DOCSNzo5dnn-XfO0Tds', gid: '494863087', selectedColumns: ['Date', 'Project Name', 'Paid to', 'Amount', 'Reason','Tax Invoice','URD Purchase'] },
+      { name: 'Project Specification Changes', formUrl:'https://forms.gle/2Zew9NZYBjbF32bE6', docId: '1oOS8lE1JviRkNhbM7FP_0VUxPV9FZgMU70t_j0A_N2A', gid: '944341180', selectedColumns: ['Date', 'Project Name', 'Specific Changes / Additional Work', 'Cost Change (If Any)', 'Requested / Instructed By', 'Approval Status'] },
+      { name: 'Delegation Score PH', docId: '1JsKyve_bNF80c-D-jvLAmFGfDKE6xLzYBtiFep0UXlc', gid: '1184708924', selectedColumns: ['Name', 'Task', 'First Date', 'Revision 1','Revision 2', 'Total Revision','Status','Actual Completion Date'] },
+      { name: 'Checklist', docId: '1m_P5_eP9FvD9eaYvanmLlV833cscTvk2xJk_c39cbZw', gid: '2092959791', selectedColumns: ['Task', 'Doer', 'Planned', 'Actual', 'Status'] },
+      { name: 'Daily Video Call', docId: '1SRpvwpmsFH4xMU9Ntj_oyu-jUjb0Ky0D9VRseh1hu9o', gid: '2092959791', selectedColumns: ['Name', 'Task', 'Planned', 'Actual', 'Status'] },
+      { name: 'Leave Application', formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScVKjl4j1wPbzV4QFAK9TlP8xpOkrHYxej75WTdFzt-lkV4Dg/viewform', docId: '1mrjfYpGMSMY-Em7Y4O4m9JZgfED0gdvbdPBD9qscgcM', gid: '148992', selectedColumns: ['Employee Name', 'Leave Type', 'Reason/Purpose', 'Half Day', 'Start Date of Leave','End Date of Leave'] }
+    ]
+  },
+  {
+    id: 'mahavir-c',
+    name: 'Mahavir Chabukswar',
+    designation: 'Project Head',
+    email: 'projecthead.aisopcpl@gmail.com',
+    photo: 'https://lh3.googleusercontent.com/d/1-fJug9Xn7MBNGbl7M57Ap4YL_SFvzExN',
+    dashboards: [
+      {
+        title: 'Airlife Gases Pvt. Ltd. Progress Dashboard',
+        url: 'https://script.google.com/a/macros/avaniyshinterior.com/s/AKfycbxoo7jVxrxKUBRtqy05_b0T0EK676VBzEPpiK7ntxkTOO_LZdrN4gbEcIHECXni7wq_tg/exec'
+      },
+      {
+        title: 'Checklist Dashboard',
+        url: 'https://datastudio.google.com/reporting/b30bad2f-4552-4c9f-8d9d-b8afd5056244/page/gcG5F'
+      }
+    ],
+    projects: [
+      { 
+        name: 'AISPL Client PO', 
+        docId: '1JZaXvcCxkq0jj4PETPWuwhRza570xBVIa3YBnxqEW8Y', 
+        gid: '0', 
+        selectedColumns: ['Sr.No.', 'Project No.', 'Project Name','Documents'] 
+      },
+      { 
+        name: 'AISPL Proforma Invoice', 
+        docId: '1JZaXvcCxkq0jj4PETPWuwhRza570xBVIa3YBnxqEW8Y', 
+        gid: '1013826524', 
+        selectedColumns: ['Sr.No.', 'Proforma Invoice No.', 'Project Name','Authorized Signatory','Documents'] 
+      },
+      { 
+        name: 'AISPL Tax Invoice', 
+        docId: '1JZaXvcCxkq0jj4PETPWuwhRza570xBVIa3YBnxqEW8Y', 
+        gid: '665653959', 
+        selectedColumns: ['Sr.No.', 'Tax Invoice No.', 'Project Name','Authorized Signatory','Documents'] 
+      },
+      { 
+        name: 'AISPL PO To Vendor', 
+        docId: '1JZaXvcCxkq0jj4PETPWuwhRza570xBVIa3YBnxqEW8Y', 
+        gid: '286319358', 
+        selectedColumns: ['Sr.No.', 'PO No.','Vendor Name', 'Project Name','Remarks','Created By','Documents'] 
+      },
+      { 
+        name: 'Modulariti Client PO', 
+        docId: '1u8sqdtEeklS9AVx91oZVXMulcY73IGwQ4N6CHokeBFQ', 
+        gid: '0', 
+        selectedColumns: ['Sr.No.', 'Project No.', 'Project Name','Documents'] 
+      },
+      { 
+        name: 'Modulariti Proforma Invoice', 
+        docId: '1u8sqdtEeklS9AVx91oZVXMulcY73IGwQ4N6CHokeBFQ', 
+        gid: '1541680899', 
+        selectedColumns: ['Sr.No.', 'Proforma Invoice No.', 'Project Name','Documents'] 
+      },
+      { 
+        name: 'Modulariti Tax Invoice', 
+        docId: '1u8sqdtEeklS9AVx91oZVXMulcY73IGwQ4N6CHokeBFQ', 
+        gid: '842646558', 
+        selectedColumns: ['Sr.No.', 'Tax Invoice No.', 'Project Name','Documents'] 
+      },
+      { 
+        name: 'Modulariti PO To Vendor', 
+        docId: '1u8sqdtEeklS9AVx91oZVXMulcY73IGwQ4N6CHokeBFQ', 
+        gid: '1879062090', 
+        selectedColumns: ['Sr.No.', 'PO No.','Vendor Name', 'Project Name','Documents'] 
+      },
+      { 
+        name: 'Modulariti Delivery Challan', 
+        docId: '1u8sqdtEeklS9AVx91oZVXMulcY73IGwQ4N6CHokeBFQ', 
+        gid: '1982685191', 
+        selectedColumns: ['Sr.No.', 'Challan No.', 'Project Name','Documents'] 
+      }
+    ],
+    sheets: [
+            { name: 'Enquiry Captured Sheet', docId: '1EM9IhC4KAjI51aZF0mc6_gGI3ZnQzLiGMRsVYBauitg', gid: '810897741', selectedColumns: ['AISPL - Project Head', 'Project Name','Client Name',  'Location', 'Quoted Amount','Stage'] },
+      { name: 'Project Visit', formUrl:'https://forms.gle/ZRpDTA4KUkGnbwtX8', docId: '11TLkJxGV3EFz4ZdVqKpuX3O-8FV4TrlMIYjxyAZ0lqY', gid: '2045538987', selectedColumns: ['Date', 'Project Site Visitor', 'Project Name', 'Location', 'Visit Purpose', 'Observation'] },
+      { name: 'Office Expenses', formUrl:'https://docs.google.com/forms/d/e/1FAIpQLSeFG1ZBY4mstlGPDpcNhUb9vi2WiJGBr3aG2cuTtYqPNXf4Nw/viewform?usp=header', docId: '1N2DF6vzSoJcIxwL2makablsGtDlMB-rxhcWT3_VLHBY', gid: '1016529559', selectedColumns: ['Date', 'Paid to', 'Amount', 'Reason', 'Categories','URD Purchase'] },
+      { name: 'Site Expenses', formUrl:'https://forms.gle/9uuXgx6oF3okLmxb7', docId: '13Vo3YIrbPT06a4ClN-BS-eO1DOCSNzo5dnn-XfO0Tds', gid: '494863087', selectedColumns: ['Date', 'Project Name', 'Paid to', 'Amount', 'Reason','Tax Invoice','URD Purchase'] },
+      { name: 'Project Specification Changes', formUrl:'https://forms.gle/2Zew9NZYBjbF32bE6', docId: '1oOS8lE1JviRkNhbM7FP_0VUxPV9FZgMU70t_j0A_N2A', gid: '944341180', selectedColumns: ['Date', 'Project Name', 'Specific Changes / Additional Work', 'Cost Change (If Any)', 'Requested / Instructed By', 'Approval Status'] },
+      { name: 'Delegation Score PH', docId: '1JsKyve_bNF80c-D-jvLAmFGfDKE6xLzYBtiFep0UXlc', gid: '1184708924', selectedColumns: ['Name', 'Task', 'First Date', 'Revision 1','Revision 2', 'Total Revision','Status','Actual Completion Date'] },
+      { name: 'Checklist', docId: '1m_P5_eP9FvD9eaYvanmLlV833cscTvk2xJk_c39cbZw', gid: '2092959791', selectedColumns: ['Task', 'Doer', 'Planned', 'Actual', 'Status'] },
+      { name: 'Leave Application', formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScVKjl4j1wPbzV4QFAK9TlP8xpOkrHYxej75WTdFzt-lkV4Dg/viewform', docId: '1mrjfYpGMSMY-Em7Y4O4m9JZgfED0gdvbdPBD9qscgcM', gid: '148992', selectedColumns: ['Employee Name', 'Leave Type', 'Reason/Purpose', 'Half Day', 'Start Date of Leave','End Date of Leave'] }
+    ]
+  },
+  {
+    id: 'sachin-m',
+    name: 'Sachin Maharana',
+    designation: 'Project Manager',
+    email: 'pm1.aisopcpl@gmail.com',
+    photo: 'https://lh3.googleusercontent.com/d/18zLmgSBmGprsf970P_iaZK-k_2UD0R-8',
+    dashboards: [
+      {
+        title: 'Airtech Progress Dashboard',
+        url: 'https://script.google.com/a/macros/avaniyshinterior.com/s/AKfycbxBqPiof-i02R7xg0VxjjLcl99fBL6MQZCfG0rUufBnBhAEYtJ2QIUKvrIkzFQwOIo/exec?page=pms'
+      },
+      {
+        title: 'Checklist Dashboard',
+        url: 'https://datastudio.google.com/reporting/b30bad2f-4552-4c9f-8d9d-b8afd5056244/page/gcG5F'
+      }
+    ],
+    projects: [
+      { 
+        name: 'AISPL Client PO', 
+        docId: '1JZaXvcCxkq0jj4PETPWuwhRza570xBVIa3YBnxqEW8Y', 
+        gid: '0', 
+        selectedColumns: ['Sr.No.', 'Project No.', 'Project Name','Documents'] 
+      },
+      { 
+        name: 'AISPL Proforma Invoice', 
+        docId: '1JZaXvcCxkq0jj4PETPWuwhRza570xBVIa3YBnxqEW8Y', 
+        gid: '1013826524', 
+        selectedColumns: ['Sr.No.', 'Proforma Invoice No.', 'Project Name','Authorized Signatory','Documents'] 
+      },
+      { 
+        name: 'AISPL Tax Invoice', 
+        docId: '1JZaXvcCxkq0jj4PETPWuwhRza570xBVIa3YBnxqEW8Y', 
+        gid: '665653959', 
+        selectedColumns: ['Sr.No.', 'Tax Invoice No.', 'Project Name','Authorized Signatory','Documents'] 
+      },
+      { 
+        name: 'AISPL PO To Vendor', 
+        docId: '1JZaXvcCxkq0jj4PETPWuwhRza570xBVIa3YBnxqEW8Y', 
+        gid: '286319358', 
+        selectedColumns: ['Sr.No.', 'PO No.','Vendor Name', 'Project Name','Remarks','Created By','Documents'] 
+      }
+    ],
+    sheets: [
+      { name: 'Daily Report', formUrl:'https://forms.gle/YUV27rV5kPXKyn799', docId: '1mrjfYpGMSMY-Em7Y4O4m9JZgfED0gdvbdPBD9qscgcM', gid: '799922129', selectedColumns: ['Date', 'Project Co-Ordinator','Project Name', 'Location', 'In - Time ', 'Out- Time', 'Have you done site visit?','Described Days Activities (Mentioned by Points) In Office','Described Days Activities (Mentioned by Points) In Site'] },
+      { name: 'Daily Video Call', docId: '1SRpvwpmsFH4xMU9Ntj_oyu-jUjb0Ky0D9VRseh1hu9o', gid: '2092959791', selectedColumns: ['Name', 'Task', 'Planned', 'Actual', 'Status'] },
+      { name: 'Petrol Allowance', formUrl:'https://forms.gle/2EmAJQdZ7f2BwMLF9', docId: '1qbbbN4uU0x1UFC3rIzkO6lekrFw3A7XD1lx7zZYxSxE', gid: '1385008698', selectedColumns: ['Date', 'Name', 'From', 'To', 'Km','Others','Upload'] },
+      { name: 'Safety Check', formUrl:'https://forms.gle/gRj1gRTZSnvygyVV6', docId: '1Lub7fEdgOKBjfuLDpMhYQ4do78_DamGxLasxjIbf9Vo', gid: '1997998379', selectedColumns: ['Date', 'Project Member', 'Project Name', 'Location', 'Agency Name', 'Total Labour Count', 'PPE Kit', 'Upload Photo'] },
+      { name: 'Delivery Challan', formUrl:'https://forms.gle/EuBCvSYkfQVYjBYw7', docId: '1ssmVTMIvMmNcqm5oloGabxX6XrWd-qMWCxzb5QYdc6s', gid: '1102974409', selectedColumns: ['Date', 'Project Name', 'Name', 'Work', 'Challan', 'Returnable Materials List', 'Reason'] },
+      { name: 'Project Visit', formUrl:'https://forms.gle/ZRpDTA4KUkGnbwtX8', docId: '11TLkJxGV3EFz4ZdVqKpuX3O-8FV4TrlMIYjxyAZ0lqY', gid: '2045538987', selectedColumns: ['Date', 'Project Site Visitor', 'Project Name', 'Location', 'Visit Purpose', 'Observation'] },
+      { name: 'Site Expenses', formUrl:'https://forms.gle/9uuXgx6oF3okLmxb7', docId: '13Vo3YIrbPT06a4ClN-BS-eO1DOCSNzo5dnn-XfO0Tds', gid: '494863087', selectedColumns: ['Date', 'Project Name', 'Paid to', 'Amount', 'Reason','Tax Invoice','URD Purchase'] },
+      { name: 'Upload URD', formUrl:'https://forms.gle/ojbkRA6NZ92w96mZ9', docId: '1ezKQET2dMdSkJ_rUmbMiWxFA0wSVmDrwM8XGDaajkF8', gid: '1029448347', selectedColumns: ['Date', 'Name', 'Project Name', 'Tax Invoice', 'URD Purchase'] },
+      { name: 'Site Inspection Checklist', formUrl:'https://forms.gle/qfXppXnNK4JDP3tc8', docId: '1zpPnIESV3EBTrrGKMpjW2UNsbouv3bTA88YuN4XZEgs', gid: '1839387537', selectedColumns: ['Date', 'Name', 'Project Name', 'Work Activity', 'Upload'] },
+      { name: 'Debit Note', formUrl:'https://forms.gle/RGcNHw5EjYBrrbfv9', docId: '1rc9AKbkiagJLYpNXvaxbzAhVAWhGJH4AuTENu1NknB0', gid: '12767300', selectedColumns: ['Date', 'Name', 'Project Name', 'Vendor Name', 'Debit To (Worker Name)', 'Reason', 'Amount', 'Approved By'] },
+      { name: 'Delegation Sheet Team', docId: '1680NhH8rKFTKeY3HSZGV_izgEi4QieHiirbcbRi7hTA', gid: '1184708924', selectedColumns: ['Name', 'Task', 'First Date', 'Revision 1','Revision 2', 'Total Revision','Status','Actual Completion Date'] },
+      { name: 'Help Slip', formUrl:'https://forms.gle/naMThh9BWnzcAme38', docId: '16R8q7J5kc3GYXgZC1q6KS4nVJyMIaHqfleFnT3l7v_4', gid: '1930440204', selectedColumns: ['Timestamp', 'Employee Name', 'Department', 'Required From', 'Challenge / Question', 'Solution 1'] },
+      { name: 'Checklist', docId: '1m_P5_eP9FvD9eaYvanmLlV833cscTvk2xJk_c39cbZw', gid: '2092959791', selectedColumns: ['Task', 'Doer', 'Planned', 'Actual', 'Status'] },
+      { name: 'Project Specification Changes', formUrl:'https://forms.gle/2Zew9NZYBjbF32bE6', docId: '1oOS8lE1JviRkNhbM7FP_0VUxPV9FZgMU70t_j0A_N2A', gid: '944341180', selectedColumns: ['Date', 'Project Name', 'Specific Changes / Additional Work', 'Cost Change (If Any)', 'Requested / Instructed By', 'Approval Status'] },
+      { name: 'Leave Application', formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScVKjl4j1wPbzV4QFAK9TlP8xpOkrHYxej75WTdFzt-lkV4Dg/viewform', docId: '1mrjfYpGMSMY-Em7Y4O4m9JZgfED0gdvbdPBD9qscgcM', gid: '148992', selectedColumns: ['Employee Name', 'Leave Type', 'Reason/Purpose', 'Half Day', 'Start Date of Leave','End Date of Leave'] },
+      { name: 'Extra Work Approval', formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScYU-9h_f34xuHdSKpz5L3zTcu2VGWO9A5wqge_XL4KbW-3YA/viewform', docId: '1md6KnXHf-_70ndOwakmAD6ksWjd4xwglMJKBEMIzI8o', gid: '1681660272', selectedColumns: ['Employee Name','Extra Work Date', 'In Time', 'Out Time','Reason'] },
+      { name: 'Compensate Off', formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScc8kN-AbggkeAGHPIPaxMv4i8g5O9fs_tNKN39_SOXQ92e4w/viewform', docId: '14HlbjtN6USi61CfUJVAHZvfKA3jODWKDng8zbCuxoRg', gid: '544867416', selectedColumns: ['Employee Name','Compensatory Off Date','Extra Work Done Date', 'Reason'] }
+    ]
+  },
+  {
+    id: 'shubham-p',
+    name: 'Shubham Pawar',
+    designation: 'Project Manager',
+    email: 'pm2.aisopcpl@gmail.com',
+    photo: 'https://lh3.googleusercontent.com/d/1vUHQd3U07-6NieBDnLPeDlTKkseCbGxd',
+    dashboards: [
+      {
+        title: 'Airlife Gases Pvt. Ltd. Progress Dashboard',
+        url: 'https://script.google.com/a/macros/avaniyshinterior.com/s/AKfycbxoo7jVxrxKUBRtqy05_b0T0EK676VBzEPpiK7ntxkTOO_LZdrN4gbEcIHECXni7wq_tg/exec'
+      },
+      {
+        title: 'Checklist Dashboard',
+        url: 'https://datastudio.google.com/reporting/b30bad2f-4552-4c9f-8d9d-b8afd5056244/page/gcG5F'
+      }
+    ],
+    projects: [
+      { 
+        name: 'AISPL Client PO', 
+        docId: '1JZaXvcCxkq0jj4PETPWuwhRza570xBVIa3YBnxqEW8Y', 
+        gid: '0', 
+        selectedColumns: ['Sr.No.', 'Project No.', 'Project Name','Documents'] 
+      },
+      { 
+        name: 'AISPL Proforma Invoice', 
+        docId: '1JZaXvcCxkq0jj4PETPWuwhRza570xBVIa3YBnxqEW8Y', 
+        gid: '1013826524', 
+        selectedColumns: ['Sr.No.', 'Proforma Invoice No.', 'Project Name','Authorized Signatory','Documents'] 
+      },
+      { 
+        name: 'AISPL Tax Invoice', 
+        docId: '1JZaXvcCxkq0jj4PETPWuwhRza570xBVIa3YBnxqEW8Y', 
+        gid: '665653959', 
+        selectedColumns: ['Sr.No.', 'Tax Invoice No.', 'Project Name','Authorized Signatory','Documents'] 
+      },
+      { 
+        name: 'AISPL PO To Vendor', 
+        docId: '1JZaXvcCxkq0jj4PETPWuwhRza570xBVIa3YBnxqEW8Y', 
+        gid: '286319358', 
+        selectedColumns: ['Sr.No.', 'PO No.','Vendor Name', 'Project Name','Remarks','Created By','Documents'] 
+      }
+    ],
+    sheets: [
+      { name: 'Daily Report', formUrl:'https://forms.gle/YUV27rV5kPXKyn799', docId: '1mrjfYpGMSMY-Em7Y4O4m9JZgfED0gdvbdPBD9qscgcM', gid: '799922129', selectedColumns: ['Date', 'Project Co-Ordinator','Project Name', 'Location', 'In - Time ', 'Out- Time', 'Have you done site visit?','Described Days Activities (Mentioned by Points) In Office','Described Days Activities (Mentioned by Points) In Site'] },
+      { name: 'Petrol Allowance', formUrl:'https://forms.gle/2EmAJQdZ7f2BwMLF9', docId: '1qbbbN4uU0x1UFC3rIzkO6lekrFw3A7XD1lx7zZYxSxE', gid: '1385008698', selectedColumns: ['Date', 'Name', 'From', 'To', 'Km','Others','Upload'] },
+      { name: 'Safety Check', formUrl:'https://forms.gle/gRj1gRTZSnvygyVV6', docId: '1Lub7fEdgOKBjfuLDpMhYQ4do78_DamGxLasxjIbf9Vo', gid: '1997998379', selectedColumns: ['Date', 'Project Member', 'Project Name', 'Location', 'Agency Name', 'Total Labour Count', 'PPE Kit', 'Upload Photo'] },
+      { name: 'Delivery Challan', formUrl:'https://forms.gle/EuBCvSYkfQVYjBYw7', docId: '1ssmVTMIvMmNcqm5oloGabxX6XrWd-qMWCxzb5QYdc6s', gid: '1102974409', selectedColumns: ['Date', 'Project Name', 'Name', 'Work', 'Challan', 'Returnable Materials List', 'Reason'] },
+      { name: 'Project Visit', formUrl:'https://forms.gle/ZRpDTA4KUkGnbwtX8', docId: '11TLkJxGV3EFz4ZdVqKpuX3O-8FV4TrlMIYjxyAZ0lqY', gid: '2045538987', selectedColumns: ['Date', 'Project Site Visitor', 'Project Name', 'Location', 'Visit Purpose', 'Observation'] },
+      { name: 'Site Expenses', formUrl:'https://forms.gle/9uuXgx6oF3okLmxb7', docId: '13Vo3YIrbPT06a4ClN-BS-eO1DOCSNzo5dnn-XfO0Tds', gid: '494863087', selectedColumns: ['Date', 'Project Name', 'Paid to', 'Amount', 'Reason','Tax Invoice','URD Purchase'] },
+      { name: 'Upload URD', formUrl:'https://forms.gle/ojbkRA6NZ92w96mZ9', docId: '1ezKQET2dMdSkJ_rUmbMiWxFA0wSVmDrwM8XGDaajkF8', gid: '1029448347', selectedColumns: ['Date', 'Name', 'Project Name', 'Tax Invoice', 'URD Purchase'] },
+      { name: 'Site Inspection Checklist', formUrl:'https://forms.gle/qfXppXnNK4JDP3tc8', docId: '1zpPnIESV3EBTrrGKMpjW2UNsbouv3bTA88YuN4XZEgs', gid: '1839387537', selectedColumns: ['Date', 'Name', 'Project Name', 'Work Activity', 'Upload'] },
+      { name: 'Debit Note', formUrl:'https://forms.gle/RGcNHw5EjYBrrbfv9', docId: '1rc9AKbkiagJLYpNXvaxbzAhVAWhGJH4AuTENu1NknB0', gid: '12767300', selectedColumns: ['Date', 'Name', 'Project Name', 'Vendor Name', 'Debit To (Worker Name)', 'Reason', 'Amount', 'Approved By'] },
+      { name: 'Delegation Sheet Team', docId: '1680NhH8rKFTKeY3HSZGV_izgEi4QieHiirbcbRi7hTA', gid: '1184708924', selectedColumns: ['Name', 'Task', 'First Date', 'Revision 1','Revision 2', 'Total Revision','Status','Actual Completion Date'] },
+      { name: 'Help Slip', formUrl:'https://forms.gle/naMThh9BWnzcAme38', docId: '16R8q7J5kc3GYXgZC1q6KS4nVJyMIaHqfleFnT3l7v_4', gid: '1930440204', selectedColumns: ['Timestamp', 'Employee Name', 'Department', 'Required From', 'Challenge / Question', 'Solution 1'] },
+      { name: 'Checklist', docId: '1m_P5_eP9FvD9eaYvanmLlV833cscTvk2xJk_c39cbZw', gid: '2092959791', selectedColumns: ['Task', 'Doer', 'Planned', 'Actual', 'Status'] },
+      { name: 'Project Specification Changes', formUrl:'https://forms.gle/2Zew9NZYBjbF32bE6', docId: '1oOS8lE1JviRkNhbM7FP_0VUxPV9FZgMU70t_j0A_N2A', gid: '944341180', selectedColumns: ['Date', 'Project Name', 'Specific Changes / Additional Work', 'Cost Change (If Any)', 'Requested / Instructed By', 'Approval Status'] },
+      { name: 'Leave Application', formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScVKjl4j1wPbzV4QFAK9TlP8xpOkrHYxej75WTdFzt-lkV4Dg/viewform', docId: '1mrjfYpGMSMY-Em7Y4O4m9JZgfED0gdvbdPBD9qscgcM', gid: '148992', selectedColumns: ['Employee Name', 'Leave Type', 'Reason/Purpose', 'Half Day', 'Start Date of Leave','End Date of Leave'] },
+      { name: 'Extra Work Approval', formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScYU-9h_f34xuHdSKpz5L3zTcu2VGWO9A5wqge_XL4KbW-3YA/viewform', docId: '1md6KnXHf-_70ndOwakmAD6ksWjd4xwglMJKBEMIzI8o', gid: '1681660272', selectedColumns: ['Employee Name','Extra Work Date', 'In Time', 'Out Time','Reason'] },
+      { name: 'Compensate Off', formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScc8kN-AbggkeAGHPIPaxMv4i8g5O9fs_tNKN39_SOXQ92e4w/viewform', docId: '14HlbjtN6USi61CfUJVAHZvfKA3jODWKDng8zbCuxoRg', gid: '544867416', selectedColumns: ['Employee Name','Compensatory Off Date','Extra Work Done Date', 'Reason'] }
+    ]
+  },
+  {
+    id: 'saurav-r',
+    name: 'Saurav Rathod',
+    designation: 'Project Coordinator',
+    email: 'pc2.aisopcpl@gmail.com',
+    photo: 'https://lh3.googleusercontent.com/d/1AIjrFcKQZSCFbXTrc0dmqG0RVgJyXvun',
+    dashboards: [
+      {
+        title: 'Checklist Dashboard',
+        url: 'https://datastudio.google.com/reporting/b30bad2f-4552-4c9f-8d9d-b8afd5056244/page/gcG5F'
+      }
+    ],
+    sheets: [
+      { name: 'Daily Report', formUrl:'https://forms.gle/YUV27rV5kPXKyn799', docId: '1mrjfYpGMSMY-Em7Y4O4m9JZgfED0gdvbdPBD9qscgcM', gid: '799922129', selectedColumns: ['Date', 'Project Co-Ordinator','Project Name', 'Location', 'In - Time ', 'Out- Time', 'Have you done site visit?','Described Days Activities (Mentioned by Points) In Site','Described Days Activities (Mentioned by Points) In Office'] },
+      { name: 'Petrol Allowance', formUrl:'https://forms.gle/2EmAJQdZ7f2BwMLF9', docId: '1qbbbN4uU0x1UFC3rIzkO6lekrFw3A7XD1lx7zZYxSxE', gid: '1385008698', selectedColumns: ['Date', 'Name', 'From', 'To', 'Km','Others','Upload'] },
+      { name: 'Site Expenses', formUrl:'https://forms.gle/9uuXgx6oF3okLmxb7', docId: '13Vo3YIrbPT06a4ClN-BS-eO1DOCSNzo5dnn-XfO0Tds', gid: '494863087', selectedColumns: ['Date', 'Project Name', 'Paid to', 'Amount', 'Reason','Tax Invoice','URD Purchase'] },
+      { name: 'Safety Check', formUrl:'https://forms.gle/gRj1gRTZSnvygyVV6', docId: '1Lub7fEdgOKBjfuLDpMhYQ4do78_DamGxLasxjIbf9Vo', gid: '1997998379', selectedColumns: ['Date', 'Project Member', 'Project Name', 'Location', 'Agency Name', 'Total Labour Count', 'PPE Kit', 'Upload Photo'] },
+      { name: 'Delivery Challan', formUrl:'https://forms.gle/EuBCvSYkfQVYjBYw7', docId: '1ssmVTMIvMmNcqm5oloGabxX6XrWd-qMWCxzb5QYdc6s', gid: '1102974409', selectedColumns: ['Date', 'Project Name', 'Name', 'Work', 'Challan', 'Returnable Materials List', 'Reason'] }, 
+      { name: 'Daily Video Call', docId: '1SRpvwpmsFH4xMU9Ntj_oyu-jUjb0Ky0D9VRseh1hu9o', gid: '2092959791', selectedColumns: ['Name', 'Task', 'Planned', 'Actual', 'Status'] },
+      { name: 'Upload URD', formUrl:'https://forms.gle/ojbkRA6NZ92w96mZ9', docId: '1ezKQET2dMdSkJ_rUmbMiWxFA0wSVmDrwM8XGDaajkF8', gid: '1029448347', selectedColumns: ['Date', 'Name', 'Project Name', 'Tax Invoice', 'URD Purchase'] },
+      { name: 'Site Inspection Checklist', formUrl:'https://forms.gle/qfXppXnNK4JDP3tc8', docId: '1zpPnIESV3EBTrrGKMpjW2UNsbouv3bTA88YuN4XZEgs', gid: '1839387537', selectedColumns: ['Date', 'Name', 'Project Name', 'Work Activity', 'Upload'] },
+      { name: 'Debit Note', formUrl:'https://forms.gle/RGcNHw5EjYBrrbfv9', docId: '1rc9AKbkiagJLYpNXvaxbzAhVAWhGJH4AuTENu1NknB0', gid: '12767300', selectedColumns: ['Date', 'Name', 'Project Name', 'Vendor Name', 'Debit To (Worker Name)', 'Reason', 'Amount', 'Approved By'] },
+      { name: 'Delegation Sheet Team', docId: '1680NhH8rKFTKeY3HSZGV_izgEi4QieHiirbcbRi7hTA', gid: '1184708924', selectedColumns: ['Name', 'Task', 'First Date', 'Revision 1','Revision 2', 'Total Revision','Status','Actual Completion Date'] },
+      { name: 'Help Slip', formUrl:'https://forms.gle/naMThh9BWnzcAme38', docId: '16R8q7J5kc3GYXgZC1q6KS4nVJyMIaHqfleFnT3l7v_4', gid: '1930440204', selectedColumns: ['Timestamp', 'Employee Name', 'Department', 'Required From', 'Challenge / Question', 'Solution 1'] },
+      { name: 'Checklist', docId: '1m_P5_eP9FvD9eaYvanmLlV833cscTvk2xJk_c39cbZw', gid: '2092959791', selectedColumns: ['Task', 'Doer', 'Planned', 'Actual', 'Status'] },
+      { name: 'Leave Application', formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScVKjl4j1wPbzV4QFAK9TlP8xpOkrHYxej75WTdFzt-lkV4Dg/viewform', docId: '1mrjfYpGMSMY-Em7Y4O4m9JZgfED0gdvbdPBD9qscgcM', gid: '148992', selectedColumns: ['Employee Name', 'Leave Type', 'Reason/Purpose', 'Half Day', 'Start Date of Leave','End Date of Leave'] },
+      { name: 'Extra Work Approval', formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScYU-9h_f34xuHdSKpz5L3zTcu2VGWO9A5wqge_XL4KbW-3YA/viewform', docId: '1md6KnXHf-_70ndOwakmAD6ksWjd4xwglMJKBEMIzI8o', gid: '1681660272', selectedColumns: ['Employee Name','Extra Work Date', 'In Time', 'Out Time','Reason'] },
+      { name: 'Compensate Off', formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScc8kN-AbggkeAGHPIPaxMv4i8g5O9fs_tNKN39_SOXQ92e4w/viewform', docId: '14HlbjtN6USi61CfUJVAHZvfKA3jODWKDng8zbCuxoRg', gid: '544867416', selectedColumns: ['Employee Name','Compensatory Off Date','Extra Work Done Date', 'Reason'] }
+    ]
+  },
+  {
+    id: 'kiran-c',
+    name: 'Kiran Chabukswar',
+    designation: 'Project Coordinator',
+    email: 'pc1.aisopcpl@gmail.com',
+    photo: 'https://lh3.googleusercontent.com/d/1ZGkkyPPLjQ6ZQjufHvY39lSgpxkdFEwZ',
+    dashboards: [
+      {
+        title: 'Checklist Dashboard',
+        url: 'https://datastudio.google.com/reporting/b30bad2f-4552-4c9f-8d9d-b8afd5056244/page/gcG5F'
+      }
+    ],
+    sheets: [
+      { name: 'Daily Report', formUrl:'https://forms.gle/YUV27rV5kPXKyn799', docId: '1mrjfYpGMSMY-Em7Y4O4m9JZgfED0gdvbdPBD9qscgcM', gid: '799922129', selectedColumns: ['Date', 'Project Co-Ordinator','Project Name', 'Location', 'In - Time ', 'Out- Time', 'Have you done site visit?','Described Days Activities (Mentioned by Points) In Office','Described Days Activities (Mentioned by Points) In Site'] },
+      { name: 'Petrol Allowance', formUrl:'https://forms.gle/2EmAJQdZ7f2BwMLF9', docId: '1qbbbN4uU0x1UFC3rIzkO6lekrFw3A7XD1lx7zZYxSxE', gid: '1385008698', selectedColumns: ['Date', 'Name', 'From', 'To', 'Km','Others','Upload'] },
+      { name: 'Site Expenses', formUrl:'https://forms.gle/9uuXgx6oF3okLmxb7', docId: '13Vo3YIrbPT06a4ClN-BS-eO1DOCSNzo5dnn-XfO0Tds', gid: '494863087', selectedColumns: ['Date', 'Project Name', 'Paid to', 'Amount', 'Reason','Tax Invoice','URD Purchase'] },
+      { name: 'Safety Check', formUrl:'https://forms.gle/gRj1gRTZSnvygyVV6', docId: '1Lub7fEdgOKBjfuLDpMhYQ4do78_DamGxLasxjIbf9Vo', gid: '1997998379', selectedColumns: ['Date', 'Project Member', 'Project Name', 'Location', 'Agency Name', 'Total Labour Count', 'PPE Kit', 'Upload Photo'] },
+      { name: 'Delivery Challan', formUrl:'https://forms.gle/EuBCvSYkfQVYjBYw7', docId: '1ssmVTMIvMmNcqm5oloGabxX6XrWd-qMWCxzb5QYdc6s', gid: '1102974409', selectedColumns: ['Date', 'Project Name', 'Name', 'Work', 'Challan', 'Returnable Materials List', 'Reason'] }, 
+      { name: 'Upload URD', formUrl:'https://forms.gle/ojbkRA6NZ92w96mZ9', docId: '1ezKQET2dMdSkJ_rUmbMiWxFA0wSVmDrwM8XGDaajkF8', gid: '1029448347', selectedColumns: ['Date', 'Name', 'Project Name', 'Tax Invoice', 'URD Purchase'] },
+      { name: 'Site Inspection Checklist', formUrl:'https://forms.gle/qfXppXnNK4JDP3tc8', docId: '1zpPnIESV3EBTrrGKMpjW2UNsbouv3bTA88YuN4XZEgs', gid: '1839387537', selectedColumns: ['Date', 'Name', 'Project Name', 'Work Activity', 'Upload'] },
+      { name: 'Debit Note', formUrl:'https://forms.gle/RGcNHw5EjYBrrbfv9', docId: '1rc9AKbkiagJLYpNXvaxbzAhVAWhGJH4AuTENu1NknB0', gid: '12767300', selectedColumns: ['Date', 'Name', 'Project Name', 'Vendor Name', 'Debit To (Worker Name)', 'Reason', 'Amount', 'Approved By'] },
+      { name: 'Delegation Sheet Team', docId: '1680NhH8rKFTKeY3HSZGV_izgEi4QieHiirbcbRi7hTA', gid: '1184708924', selectedColumns: ['Name', 'Task', 'First Date', 'Revision 1','Revision 2', 'Total Revision','Status','Actual Completion Date'] },
+      { name: 'Help Slip', formUrl:'https://forms.gle/naMThh9BWnzcAme38', docId: '16R8q7J5kc3GYXgZC1q6KS4nVJyMIaHqfleFnT3l7v_4', gid: '1930440204', selectedColumns: ['Timestamp', 'Employee Name', 'Department', 'Required From', 'Challenge / Question', 'Solution 1'] },
+      { name: 'Checklist', docId: '1m_P5_eP9FvD9eaYvanmLlV833cscTvk2xJk_c39cbZw', gid: '2092959791', selectedColumns: ['Task', 'Doer', 'Planned', 'Actual', 'Status'] },
+      { name: 'Leave Application', formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScVKjl4j1wPbzV4QFAK9TlP8xpOkrHYxej75WTdFzt-lkV4Dg/viewform', docId: '1mrjfYpGMSMY-Em7Y4O4m9JZgfED0gdvbdPBD9qscgcM', gid: '148992', selectedColumns: ['Employee Name', 'Leave Type', 'Reason/Purpose', 'Half Day', 'Start Date of Leave','End Date of Leave'] },
+      { name: 'Extra Work Approval', formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScYU-9h_f34xuHdSKpz5L3zTcu2VGWO9A5wqge_XL4KbW-3YA/viewform', docId: '1md6KnXHf-_70ndOwakmAD6ksWjd4xwglMJKBEMIzI8o', gid: '1681660272', selectedColumns: ['Employee Name','Extra Work Date', 'In Time', 'Out Time','Reason'] },
+      { name: 'Compensate Off', formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScc8kN-AbggkeAGHPIPaxMv4i8g5O9fs_tNKN39_SOXQ92e4w/viewform', docId: '14HlbjtN6USi61CfUJVAHZvfKA3jODWKDng8zbCuxoRg', gid: '544867416', selectedColumns: ['Employee Name','Compensatory Off Date','Extra Work Done Date', 'Reason'] }
+    ]
+  },
+  {
+    id: 'bhakti-b',
+    name: 'Bhakti Bule',
+    designation: 'Designer',
+    email: 'designer1.aisopcpl@gmail.com',
+    photo: 'https://lh3.googleusercontent.com/d/1VLQ_MT-ER1OQqio7Nzx28VZ6WYUxd39m',
+    dashboards: [
+      {
+        title: 'Checklist Dashboard',
+        url: 'https://datastudio.google.com/reporting/b30bad2f-4552-4c9f-8d9d-b8afd5056244/page/gcG5F'
+      },
+      {
+        title: 'Designer Dashboard',
+        url: 'https://script.google.com/macros/s/AKfycbwVo7QspB47nnosKR9GW0UWxvvsK1NhuRCqUxXaVufFNNGgVY8d8RJXA-Y0VSNFoyP4pA/exec'
+      }
+    ],
+    sheets: [
+      { name: 'Designer Work Schedule', docId: '1iPP_fqIffhzZJyqaPyinIRc0Zhlgtvn37m92LqONBoA', gid: '0', selectedColumns: ['Doer', 'Project', 'Description', 'Planned Start Date', 'Planned Finish Date','Status','Actual Completion Date'] },
+
+      { name: 'Daily Report', formUrl:'https://docs.google.com/forms/d/e/1FAIpQLSf7y6FpZ4Ff4Ihi7Jq6SyqMXHEnvXkaWSQ24v6RPQCMcuqcGw/viewform', docId: '1mrjfYpGMSMY-Em7Y4O4m9JZgfED0gdvbdPBD9qscgcM', gid: '1518539535', selectedColumns: ['Date','Designer', 'Project', 'Location', 'In-Time', 'Out-time'] },
+      { name: 'Daily Video Call', docId: '1SRpvwpmsFH4xMU9Ntj_oyu-jUjb0Ky0D9VRseh1hu9o', gid: '2092959791', selectedColumns: ['Name', 'Task', 'Planned', 'Actual', 'Status'] },
+      { name: 'Petrol Allowance', formUrl:'https://forms.gle/2EmAJQdZ7f2BwMLF9', docId: '1qbbbN4uU0x1UFC3rIzkO6lekrFw3A7XD1lx7zZYxSxE', gid: '1385008698', selectedColumns: ['Date', 'Name', 'From', 'To', 'Km','Others','Upload'] },
+      { name: 'Site Expenses', formUrl:'https://forms.gle/9uuXgx6oF3okLmxb7', docId: '13Vo3YIrbPT06a4ClN-BS-eO1DOCSNzo5dnn-XfO0Tds', gid: '494863087', selectedColumns: ['Date', 'Project Name', 'Paid to', 'Amount', 'Reason','Tax Invoice','URD Purchase'] },
+      { name: 'Delegation Sheet Team', docId: '1680NhH8rKFTKeY3HSZGV_izgEi4QieHiirbcbRi7hTA', gid: '1184708924', selectedColumns: ['Name', 'Task', 'First Date', 'Revision 1','Revision 2', 'Total Revision','Status','Actual Completion Date'] },
+      { name: 'Checklist', docId: '1m_P5_eP9FvD9eaYvanmLlV833cscTvk2xJk_c39cbZw', gid: '2092959791', selectedColumns: ['Task', 'Doer', 'Planned', 'Actual', 'Status'] },
+      { name: 'Help Slip', formUrl:'https://forms.gle/naMThh9BWnzcAme38', docId: '16R8q7J5kc3GYXgZC1q6KS4nVJyMIaHqfleFnT3l7v_4', gid: '1930440204', selectedColumns: ['Timestamp', 'Employee Name', 'Department', 'Required From', 'Challenge / Question', 'Solution 1'] },
+      { name: 'Leave Application', formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScVKjl4j1wPbzV4QFAK9TlP8xpOkrHYxej75WTdFzt-lkV4Dg/viewform', docId: '1mrjfYpGMSMY-Em7Y4O4m9JZgfED0gdvbdPBD9qscgcM', gid: '148992', selectedColumns: ['Employee Name', 'Leave Type', 'Reason/Purpose', 'Half Day', 'Start Date of Leave','End Date of Leave'] },
+      { name: 'Extra Work Approval', formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScYU-9h_f34xuHdSKpz5L3zTcu2VGWO9A5wqge_XL4KbW-3YA/viewform', docId: '1md6KnXHf-_70ndOwakmAD6ksWjd4xwglMJKBEMIzI8o', gid: '1681660272', selectedColumns: ['Employee Name','Extra Work Date', 'In Time', 'Out Time','Reason'] },
+      { name: 'Compensate Off', formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScc8kN-AbggkeAGHPIPaxMv4i8g5O9fs_tNKN39_SOXQ92e4w/viewform', docId: '14HlbjtN6USi61CfUJVAHZvfKA3jODWKDng8zbCuxoRg', gid: '544867416', selectedColumns: ['Employee Name','Compensatory Off Date','Extra Work Done Date', 'Reason'] }
+    ]
+  },
+  {
+    id: 'sakshi-b',
+    name: 'Sakshi Makote',
+    designation: 'Designer',
+    email: 'designer2.aisopcpl@gmail.com',
+    photo: 'https://lh3.googleusercontent.com/d/10KJzpS3TIVgGh6DgQMW4mm6vz30fxInI',
+    dashboards: [
+      {
+        title: 'Checklist Dashboard',
+        url: 'https://datastudio.google.com/reporting/b30bad2f-4552-4c9f-8d9d-b8afd5056244/page/gcG5F'
+      },
+      {
+        title: 'Designer Dashboard',
+        url: 'https://script.google.com/macros/s/AKfycbwVo7QspB47nnosKR9GW0UWxvvsK1NhuRCqUxXaVufFNNGgVY8d8RJXA-Y0VSNFoyP4pA/exec'
+      }
+    ],
+    sheets: [
+      { name: 'Designer Work Schedule', docId: '1iPP_fqIffhzZJyqaPyinIRc0Zhlgtvn37m92LqONBoA', gid: '0', selectedColumns: ['Doer', 'Project', 'Description', 'Planned Start Date', 'Planned Finish Date','Status','Actual Completion Date'] },
+      { name: 'Daily Report', formUrl:'https://docs.google.com/forms/d/e/1FAIpQLSf7y6FpZ4Ff4Ihi7Jq6SyqMXHEnvXkaWSQ24v6RPQCMcuqcGw/viewform', docId: '1mrjfYpGMSMY-Em7Y4O4m9JZgfED0gdvbdPBD9qscgcM', gid: '1518539535', selectedColumns: ['Date','Designer', 'Project', 'Location', 'In-Time', 'Out-time'] },
+      { name: 'Petrol Allowance', formUrl:'https://forms.gle/2EmAJQdZ7f2BwMLF9', docId: '1qbbbN4uU0x1UFC3rIzkO6lekrFw3A7XD1lx7zZYxSxE', gid: '1385008698', selectedColumns: ['Date', 'Name', 'From', 'To', 'Km','Others','Upload'] },
+      { name: 'Site Expenses', formUrl:'https://forms.gle/9uuXgx6oF3okLmxb7', docId: '13Vo3YIrbPT06a4ClN-BS-eO1DOCSNzo5dnn-XfO0Tds', gid: '494863087', selectedColumns: ['Date', 'Project Name', 'Paid to', 'Amount', 'Reason','Tax Invoice','URD Purchase'] },
+      { name: 'Delegation Sheet Team', docId: '1680NhH8rKFTKeY3HSZGV_izgEi4QieHiirbcbRi7hTA', gid: '1184708924', selectedColumns: ['Name', 'Task', 'First Date', 'Revision 1','Revision 2', 'Total Revision','Status','Actual Completion Date'] },
+      { name: 'Checklist', docId: '1m_P5_eP9FvD9eaYvanmLlV833cscTvk2xJk_c39cbZw', gid: '2092959791', selectedColumns: ['Task', 'Doer', 'Planned', 'Actual', 'Status'] },
+      { name: 'Help Slip', formUrl:'https://forms.gle/naMThh9BWnzcAme38', docId: '16R8q7J5kc3GYXgZC1q6KS4nVJyMIaHqfleFnT3l7v_4', gid: '1930440204', selectedColumns: ['Timestamp', 'Employee Name', 'Department', 'Required From', 'Challenge / Question', 'Solution 1'] },
+      { name: 'Leave Application', formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScVKjl4j1wPbzV4QFAK9TlP8xpOkrHYxej75WTdFzt-lkV4Dg/viewform', docId: '1mrjfYpGMSMY-Em7Y4O4m9JZgfED0gdvbdPBD9qscgcM', gid: '148992', selectedColumns: ['Employee Name', 'Leave Type', 'Reason/Purpose', 'Half Day', 'Start Date of Leave','End Date of Leave'] },
+      { name: 'Extra Work Approval', formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScYU-9h_f34xuHdSKpz5L3zTcu2VGWO9A5wqge_XL4KbW-3YA/viewform', docId: '1md6KnXHf-_70ndOwakmAD6ksWjd4xwglMJKBEMIzI8o', gid: '1681660272', selectedColumns: ['Employee Name','Extra Work Date', 'In Time', 'Out Time','Reason'] },
+      { name: 'Compensate Off', formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScc8kN-AbggkeAGHPIPaxMv4i8g5O9fs_tNKN39_SOXQ92e4w/viewform', docId: '14HlbjtN6USi61CfUJVAHZvfKA3jODWKDng8zbCuxoRg', gid: '544867416', selectedColumns: ['Employee Name','Compensatory Off Date','Extra Work Done Date', 'Reason'] }
+    ]
+  },
+  {
+    id: 'namrata-r',
+    name: 'Namrata Raut',
+    designation: 'Executive Assistant',
+    email: 'eaataisopcpl@gmail.com',
+    photo: 'https://lh3.googleusercontent.com/d/10owEBw3gPnFrCn7jYKFFI3UOvwHlVgxk',
+    dashboards: [
+      {
+        title: 'AISPL Checklist Dashboard',
+        url: 'https://datastudio.google.com/reporting/b30bad2f-4552-4c9f-8d9d-b8afd5056244/page/gcG5F'
+      },
+      {
+        title: 'Accounts Dashboard',
+        url: 'https://script.google.com/a/macros/avaniyshinterior.com/s/AKfycbylm14CrZ4cPQSO1AzCz0hmGTiM5aEWY_6KEUmngIJTNez-ZtCbBBi6CZ_K6-Y8fE2TnA/exec'
+      },
+      {
+        title: 'Modulariti Checklist Dashboard',
+        url: 'https://datastudio.google.com/reporting/70796c57-2040-4126-82bd-41cc0bca2ccd'
+      }
+    ],
+    projects: [
+      { 
+        name: 'AISPL Client PO', 
+        docId: '1JZaXvcCxkq0jj4PETPWuwhRza570xBVIa3YBnxqEW8Y', 
+        gid: '0', 
+        selectedColumns: ['Sr.No.', 'Project No.', 'Project Name','Documents'] 
+      },
+      { 
+        name: 'AISPL Proforma Invoice', 
+        docId: '1JZaXvcCxkq0jj4PETPWuwhRza570xBVIa3YBnxqEW8Y', 
+        gid: '1013826524', 
+        selectedColumns: ['Sr.No.', 'Proforma Invoice No.', 'Project Name','Authorized Signatory','Documents'] 
+      },
+      { 
+        name: 'AISPL Tax Invoice', 
+        docId: '1JZaXvcCxkq0jj4PETPWuwhRza570xBVIa3YBnxqEW8Y', 
+        gid: '665653959', 
+        selectedColumns: ['Sr.No.', 'Tax Invoice No.', 'Project Name','Authorized Signatory','Documents'] 
+      },
+      { 
+        name: 'AISPL PO To Vendor', 
+        docId: '1JZaXvcCxkq0jj4PETPWuwhRza570xBVIa3YBnxqEW8Y', 
+        gid: '286319358', 
+        selectedColumns: ['Sr.No.', 'PO No.','Vendor Name', 'Project Name','Remarks','Created By','Documents'] 
+      },
+      { 
+        name: 'Insurance Checklist', 
+        docId: '1g6ZEWY32KmJlRhoBoxdEolQP_SPjwDbLlWCvmy7vPuk', 
+        gid: '2092959791', 
+        selectedColumns: ['Name','Task', 'Doer', 'Planned', 'Actual', 'Status'] 
+      },
+      { 
+        name: 'Modulariti Client PO', 
+        docId: '1u8sqdtEeklS9AVx91oZVXMulcY73IGwQ4N6CHokeBFQ', 
+        gid: '0', 
+        selectedColumns: ['Sr.No.', 'Project No.', 'Project Name','Documents'] 
+      },
+      { 
+        name: 'Modulariti Proforma Invoice', 
+        docId: '1u8sqdtEeklS9AVx91oZVXMulcY73IGwQ4N6CHokeBFQ', 
+        gid: '1541680899', 
+        selectedColumns: ['Sr.No.', 'Proforma Invoice No.', 'Project Name','Documents'] 
+      },
+      { 
+        name: 'Modulariti Tax Invoice', 
+        docId: '1u8sqdtEeklS9AVx91oZVXMulcY73IGwQ4N6CHokeBFQ', 
+        gid: '842646558', 
+        selectedColumns: ['Sr.No.', 'Tax Invoice No.', 'Project Name','Documents'] 
+      },
+      { 
+        name: 'Modulariti PO To Vendor', 
+        docId: '1u8sqdtEeklS9AVx91oZVXMulcY73IGwQ4N6CHokeBFQ', 
+        gid: '1879062090', 
+        selectedColumns: ['Sr.No.', 'PO No.','Vendor Name', 'Project Name','Documents'] 
+      },
+      { 
+        name: 'Modulariti Delivery Challan', 
+        docId: '1u8sqdtEeklS9AVx91oZVXMulcY73IGwQ4N6CHokeBFQ', 
+        gid: '1982685191', 
+        selectedColumns: ['Sr.No.', 'Challan No.', 'Project Name','Documents'] 
+      },
+      { 
+        name: 'Delegation Sheet Team',
+        formUrl:'https://script.google.com/macros/s/AKfycbzC5FlAOwLsVB_FtxxqWfv4LwicmnUip04VkOu_Suu0yBvaL5lYvfLi0Lh_gC2b_uUj/exec', 
+        docId: '1680NhH8rKFTKeY3HSZGV_izgEi4QieHiirbcbRi7hTA', 
+        gid: '1184708924', 
+        selectedColumns: ['Name', 'Task', 'First Date', 'Revision 1','Revision 2', 'Total Revision','Status','Actual Completion Date'] 
+      },
+      { 
+        name: 'Delegation Sheet PH',
+        formUrl:'https://script.google.com/macros/s/AKfycbz4qv33ACzgoPFqJPE54Y7fTU_ivcBU7wQ2026MVZXglVMF0uqJcAdWGw5m8UP68QfZMA/exec', 
+        docId: '1JsKyve_bNF80c-D-jvLAmFGfDKE6xLzYBtiFep0UXlc', 
+        gid: '1184708924', 
+        selectedColumns: ['Name', 'Task', 'First Date', 'Revision 1','Revision 2', 'Total Revision','Status','Actual Completion Date'] 
+      } 
+    ],
+    sheets: [
+      { name: 'Office Expenses', formUrl:'https://docs.google.com/forms/d/e/1FAIpQLSeFG1ZBY4mstlGPDpcNhUb9vi2WiJGBr3aG2cuTtYqPNXf4Nw/viewform?usp=header', docId: '1N2DF6vzSoJcIxwL2makablsGtDlMB-rxhcWT3_VLHBY', gid: '1016529559', selectedColumns: ['Date', 'Paid to', 'Amount', 'Reason', 'Categories','URD Purchase'] },
+      { 
+        name: 'Checklist', 
+        docId: '1m_P5_eP9FvD9eaYvanmLlV833cscTvk2xJk_c39cbZw', 
+        gid: '2092959791', 
+        selectedColumns: ['Task', 'Doer', 'Planned', 'Actual', 'Status'] 
+      },
+      { name: 'Leave Application', formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScVKjl4j1wPbzV4QFAK9TlP8xpOkrHYxej75WTdFzt-lkV4Dg/viewform', docId: '1mrjfYpGMSMY-Em7Y4O4m9JZgfED0gdvbdPBD9qscgcM', gid: '148992', selectedColumns: ['Employee Name', 'Leave Type', 'Reason/Purpose', 'Half Day', 'Start Date of Leave','End Date of Leave'] },
+      { name: 'Extra Work Approval', formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScYU-9h_f34xuHdSKpz5L3zTcu2VGWO9A5wqge_XL4KbW-3YA/viewform', docId: '1md6KnXHf-_70ndOwakmAD6ksWjd4xwglMJKBEMIzI8o', gid: '1681660272', selectedColumns: ['Employee Name','Extra Work Date', 'In Time', 'Out Time','Reason'] },
+      { name: 'Compensate Off', formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScc8kN-AbggkeAGHPIPaxMv4i8g5O9fs_tNKN39_SOXQ92e4w/viewform', docId: '14HlbjtN6USi61CfUJVAHZvfKA3jODWKDng8zbCuxoRg', gid: '544867416', selectedColumns: ['Employee Name','Compensatory Off Date','Extra Work Done Date', 'Reason'] }
+    ]
+  },
+  {
+    id: 'anuradha-s',
+    name: 'Anuradha Bansode',
+    designation: 'MIS Executive',
+    email: 'mis.aisopcpl@gmail.com',
+    photo: 'https://lh3.googleusercontent.com/d/1CITTMe060N0kMHO8SVGXomLI_US1yqpn',
+    dashboards: [
+      {
+        title: 'Checklist Dashboard',
+        url: 'https://datastudio.google.com/reporting/b30bad2f-4552-4c9f-8d9d-b8afd5056244/page/gcG5F'
+      },
+      {
+        title: 'System Checklist Dashboard',
+        url: 'https://datastudio.google.com/u/0/reporting/195d25b9-fb7c-43cc-ad29-16f042bd4135/page/mrw8F'
+      },
+      {
+        title: 'Modulariti Checklist Dashboard',
+        url: 'https://datastudio.google.com/u/0/reporting/70796c57-2040-4126-82bd-41cc0bca2ccd/page/i877F'
+      }    
+    ],
+    sheets: [
+      { name: 'Daily Report', formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScRyy4LtikZcJkmYYeaypXJJkR_pbR1YSz0Iso0N6f-L_hfDw/viewform', docId: '1mrjfYpGMSMY-Em7Y4O4m9JZgfED0gdvbdPBD9qscgcM', gid: '827729352', selectedColumns: ['Date','Name', 'In-Time', 'Out-time','Work Done Yesterday','Work Planned for Today'] },
+      { name: 'Site Expenses', formUrl:'https://forms.gle/9uuXgx6oF3okLmxb7', docId: '13Vo3YIrbPT06a4ClN-BS-eO1DOCSNzo5dnn-XfO0Tds', gid: '494863087', selectedColumns: ['Date', 'Project Name', 'Paid to', 'Amount', 'Reason','Tax Invoice','URD Purchase'] },
+      { name: 'Checklist', docId: '1m_P5_eP9FvD9eaYvanmLlV833cscTvk2xJk_c39cbZw', gid: '2092959791', selectedColumns: ['Task', 'Doer', 'Planned', 'Actual', 'Status'] },
+      { name: 'Delegation Sheet Team', docId: '1680NhH8rKFTKeY3HSZGV_izgEi4QieHiirbcbRi7hTA', gid: '1184708924', selectedColumns: ['Name', 'Task', 'First Date', 'Revision 1','Revision 2', 'Total Revision','Status','Actual Completion Date'] },
+      { name: 'Help Slip', formUrl:'https://forms.gle/naMThh9BWnzcAme38', docId: '16R8q7J5kc3GYXgZC1q6KS4nVJyMIaHqfleFnT3l7v_4', gid: '1930440204', selectedColumns: ['Timestamp', 'Employee Name', 'Department', 'Required From', 'Challenge / Question', 'Solution 1'] },
+      { name: 'Leave Application', formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScVKjl4j1wPbzV4QFAK9TlP8xpOkrHYxej75WTdFzt-lkV4Dg/viewform', docId: '1mrjfYpGMSMY-Em7Y4O4m9JZgfED0gdvbdPBD9qscgcM', gid: '148992', selectedColumns: ['Employee Name', 'Leave Type', 'Reason/Purpose', 'Half Day', 'Start Date of Leave','End Date of Leave'] },
+      { name: 'Extra Work Approval', formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScYU-9h_f34xuHdSKpz5L3zTcu2VGWO9A5wqge_XL4KbW-3YA/viewform', docId: '1md6KnXHf-_70ndOwakmAD6ksWjd4xwglMJKBEMIzI8o', gid: '1681660272', selectedColumns: ['Employee Name','Extra Work Date', 'In Time', 'Out Time','Reason'] },
+      { name: 'Compensate Off', formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScc8kN-AbggkeAGHPIPaxMv4i8g5O9fs_tNKN39_SOXQ92e4w/viewform', docId: '14HlbjtN6USi61CfUJVAHZvfKA3jODWKDng8zbCuxoRg', gid: '544867416', selectedColumns: ['Employee Name','Compensatory Off Date','Extra Work Done Date', 'Reason'] }
+    ]
+  },
+  {
+    id: 'harshada-s', 
+    name: 'Harshada Shirsale',
+    designation: 'CRM & PC',
+    email: 'crm.aisopcpl@gmail.com',
+    photo: 'https://lh3.googleusercontent.com/d/1Cvdn631tScsIiJkwYCRM6aJC60bRlR8d',
+    dashboards: [
+      {
+        title: 'Checklist Dashboard',
+        url: 'https://datastudio.google.com/reporting/b30bad2f-4552-4c9f-8d9d-b8afd5056244/page/gcG5F'
+      },
+      {
+        title: 'System Checklist Dashboard',
+        url: 'https://datastudio.google.com/u/0/reporting/195d25b9-fb7c-43cc-ad29-16f042bd4135/page/mrw8F'
+      },
+      {
+        title: 'Modulariti Checklist Dashboard',
+        url: 'https://datastudio.google.com/u/0/reporting/70796c57-2040-4126-82bd-41cc0bca2ccd/page/i877F'
+      }
+    ],
+    sheets: [
+      { name: 'Daily Report', formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScRyy4LtikZcJkmYYeaypXJJkR_pbR1YSz0Iso0N6f-L_hfDw/viewform', docId: '1mrjfYpGMSMY-Em7Y4O4m9JZgfED0gdvbdPBD9qscgcM', gid: '827729352', selectedColumns: ['Date','Name', 'In-Time', 'Out-time','Work Done Yesterday','Work Planned for Today'] },
+      { name: 'Site Expenses', formUrl:'https://forms.gle/9uuXgx6oF3okLmxb7', docId: '13Vo3YIrbPT06a4ClN-BS-eO1DOCSNzo5dnn-XfO0Tds', gid: '494863087', selectedColumns: ['Date', 'Project Name', 'Paid to', 'Amount', 'Reason','Tax Invoice','URD Purchase'] },
+      { name: 'Checklist', docId: '1m_P5_eP9FvD9eaYvanmLlV833cscTvk2xJk_c39cbZw', gid: '2092959791', selectedColumns: ['Task', 'Doer', 'Planned', 'Actual', 'Status'] },
+      { name: 'Delegation Sheet Team', docId: '1680NhH8rKFTKeY3HSZGV_izgEi4QieHiirbcbRi7hTA', gid: '1184708924', selectedColumns: ['Name', 'Task', 'First Date', 'Revision 1','Revision 2', 'Total Revision','Status','Actual Completion Date'] },
+      { name: 'Help Slip', formUrl:'https://forms.gle/naMThh9BWnzcAme38', docId: '16R8q7J5kc3GYXgZC1q6KS4nVJyMIaHqfleFnT3l7v_4', gid: '1930440204', selectedColumns: ['Timestamp', 'Employee Name', 'Department', 'Required From', 'Challenge / Question', 'Solution 1'] },
+      { name: 'Leave Application', formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScVKjl4j1wPbzV4QFAK9TlP8xpOkrHYxej75WTdFzt-lkV4Dg/viewform', docId: '1mrjfYpGMSMY-Em7Y4O4m9JZgfED0gdvbdPBD9qscgcM', gid: '148992', selectedColumns: ['Employee Name', 'Leave Type', 'Reason/Purpose', 'Half Day', 'Start Date of Leave','End Date of Leave'] },
+      { name: 'Extra Work Approval', formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScYU-9h_f34xuHdSKpz5L3zTcu2VGWO9A5wqge_XL4KbW-3YA/viewform', docId: '1md6KnXHf-_70ndOwakmAD6ksWjd4xwglMJKBEMIzI8o', gid: '1681660272', selectedColumns: ['Employee Name','Extra Work Date', 'In Time', 'Out Time','Reason'] },
+      { name: 'Compensate Off', formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScc8kN-AbggkeAGHPIPaxMv4i8g5O9fs_tNKN39_SOXQ92e4w/viewform', docId: '14HlbjtN6USi61CfUJVAHZvfKA3jODWKDng8zbCuxoRg', gid: '544867416', selectedColumns: ['Employee Name','Compensatory Off Date','Extra Work Done Date', 'Reason'] }
+    ]
+  },
+  {
+    id: 'accounts-team',
+    name: 'Kiran Hole',
+    designation: 'Accounts',
+    email: 'accounts.aisopcpl@gmail.com',
+    photo: 'https://lh3.googleusercontent.com/d/1gZ5VMVCvdmH4PjVik-qxWXH9ooSVJFcB',
+    dashboards: [
+      {
+        title: 'Checklist Dashboard',
+        url: 'https://datastudio.google.com/reporting/b30bad2f-4552-4c9f-8d9d-b8afd5056244/page/gcG5F'
+      },
+      {
+        title: 'Accounts Dashboard',
+        url: 'https://script.google.com/a/macros/avaniyshinterior.com/s/AKfycbylm14CrZ4cPQSO1AzCz0hmGTiM5aEWY_6KEUmngIJTNez-ZtCbBBi6CZ_K6-Y8fE2TnA/exec'
+      }
+    ],
+    projects: [
+      { 
+        name: 'AISPL Client PO', 
+        docId: '1JZaXvcCxkq0jj4PETPWuwhRza570xBVIa3YBnxqEW8Y', 
+        gid: '0', 
+        selectedColumns: ['Sr.No.', 'Project No.', 'Project Name','Documents'] 
+      },
+      { 
+        name: 'AISPL Proforma Invoice', 
+        docId: '1JZaXvcCxkq0jj4PETPWuwhRza570xBVIa3YBnxqEW8Y', 
+        gid: '1013826524', 
+        selectedColumns: ['Sr.No.', 'Proforma Invoice No.', 'Project Name','Authorized Signatory','Documents'] 
+      },
+      { 
+        name: 'AISPL Tax Invoice', 
+        docId: '1JZaXvcCxkq0jj4PETPWuwhRza570xBVIa3YBnxqEW8Y', 
+        gid: '665653959', 
+        selectedColumns: ['Sr.No.', 'Tax Invoice No.', 'Project Name','Authorized Signatory','Documents'] 
+      },
+      { 
+        name: 'AISPL PO To Vendor', 
+        docId: '1JZaXvcCxkq0jj4PETPWuwhRza570xBVIa3YBnxqEW8Y', 
+        gid: '286319358', 
+        selectedColumns: ['Sr.No.', 'PO No.','Vendor Name', 'Project Name','Remarks','Created By','Documents'] 
+      },
+      { 
+        name: 'Modulariti Client PO', 
+        docId: '1u8sqdtEeklS9AVx91oZVXMulcY73IGwQ4N6CHokeBFQ', 
+        gid: '0', 
+        selectedColumns: ['Sr.No.', 'Project No.', 'Project Name','Documents'] 
+      },
+      { 
+        name: 'Modulariti Proforma Invoice', 
+        docId: '1u8sqdtEeklS9AVx91oZVXMulcY73IGwQ4N6CHokeBFQ', 
+        gid: '1541680899', 
+        selectedColumns: ['Sr.No.', 'Proforma Invoice No.', 'Project Name','Documents'] 
+      },
+      { 
+        name: 'Modulariti Tax Invoice', 
+        docId: '1u8sqdtEeklS9AVx91oZVXMulcY73IGwQ4N6CHokeBFQ', 
+        gid: '842646558', 
+        selectedColumns: ['Sr.No.', 'Tax Invoice No.', 'Project Name','Documents'] 
+      },
+      { 
+        name: 'Modulariti PO To Vendor', 
+        docId: '1u8sqdtEeklS9AVx91oZVXMulcY73IGwQ4N6CHokeBFQ', 
+        gid: '1879062090', 
+        selectedColumns: ['Sr.No.', 'PO No.','Vendor Name', 'Project Name','Documents'] 
+      },
+      { 
+        name: 'Modulariti Delivery Challan', 
+        docId: '1u8sqdtEeklS9AVx91oZVXMulcY73IGwQ4N6CHokeBFQ', 
+        gid: '1982685191', 
+        selectedColumns: ['Sr.No.', 'Challan No.', 'Project Name','Documents'] 
+      }
+    ],
+    sheets: [
+      { name: 'Office Expenses', formUrl:'https://docs.google.com/forms/d/e/1FAIpQLSeFG1ZBY4mstlGPDpcNhUb9vi2WiJGBr3aG2cuTtYqPNXf4Nw/viewform?usp=header', docId: '1N2DF6vzSoJcIxwL2makablsGtDlMB-rxhcWT3_VLHBY', gid: '1016529559', selectedColumns: ['Date', 'Paid to', 'Amount', 'Reason', 'Categories','URD Purchase'] },
+      { name: 'Delegation Score PH', docId: '1JsKyve_bNF80c-D-jvLAmFGfDKE6xLzYBtiFep0UXlc', gid: '1184708924', selectedColumns: ['Name', 'Task', 'First Date', 'Revision 1','Revision 2', 'Total Revision','Status','Actual Completion Date'] },
+      { name: 'Checklist', docId: '1m_P5_eP9FvD9eaYvanmLlV833cscTvk2xJk_c39cbZw', gid: '2092959791', selectedColumns: ['Task', 'Doer', 'Planned', 'Actual', 'Status'] },
+      { name: 'Leave Application', formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScVKjl4j1wPbzV4QFAK9TlP8xpOkrHYxej75WTdFzt-lkV4Dg/viewform', docId: '1mrjfYpGMSMY-Em7Y4O4m9JZgfED0gdvbdPBD9qscgcM', gid: '148992', selectedColumns: ['Employee Name', 'Leave Type', 'Reason/Purpose', 'Half Day', 'Start Date of Leave','End Date of Leave'] }
+    ]
+  }
+];
+
+let activeEmployee = null;
+let currentActiveSheet = null;
+let currentDelegationSheet = null;
+
+// ==================== MAIN PAGE INITIALIZATION ====================
+document.addEventListener('DOMContentLoaded', () => {
+  const isLoggedIn = sessionStorage.getItem('isLoggedIn');
+  if (isLoggedIn !== 'true') {
+    window.location.href = 'login.html';
+    return;
+  }
+
+  const userName = sessionStorage.getItem('loggedInUserName') || 'User';
+  const userNameElem = document.getElementById('logged-in-user-name');
+  if (userNameElem) {
+    userNameElem.innerText = userName;
+  }
+
+  const role = sessionStorage.getItem('loggedInUserRole');
+  const systemNavBtn = document.querySelector('.nav-btn[data-target="system-view"]'); 
+
+  if (systemNavBtn) {
+    if (role !== 'admin') {
+      systemNavBtn.style.display = 'none'; 
+    } else {
+      systemNavBtn.style.display = 'flex'; 
+    }
+  }
+
+  const accessIds = JSON.parse(sessionStorage.getItem('accessIds') || '[]');
+  let displayData = employeesData;
+
+  if (role && role !== 'admin') {
+    displayData = employeesData.filter(emp => accessIds.includes(emp.id));
+  }
+
+  setupNavigation();
+
+  const empContainer = document.getElementById('designation-groups-container');
+  if (empContainer) {
+    renderEmployeeDirectory(displayData);
+    setupEmployeeSearch();
+  }
+
+  setupTableSearch();
+  setupModalEvents();
+
+  const totalEmpElem = document.getElementById('total-employees');
+  if (totalEmpElem) {
+    totalEmpElem.innerText = displayData.length;
+  }
+
+  const pcTable = document.getElementById('data-table');
+  if (pcTable) {
+    loadSheetDataPC('airlife');
+  }
+});
+
+function setupNavigation() {
+  const navBtns = document.querySelectorAll('.nav-btn');
+  const views = document.querySelectorAll('.content-view');
+
+  navBtns.forEach(btn => {
+    btn.onclick = (e) => {
+      const href = btn.getAttribute('href');
+      if (href && href !== '#' && href.endsWith('.html')) {
+        return true; 
+      }
+
+      e.preventDefault();
+      const targetView = btn.getAttribute('data-target');
+      if (!targetView) return;
+
+      navBtns.forEach(b => b.classList.remove('active'));
+      views.forEach(v => v.classList.remove('active'));
+
+      btn.classList.add('active');
+      const targetElem = document.getElementById(targetView);
+      if (targetElem) targetElem.classList.add('active');
+    };
+  });
+
+  const backBtn = document.getElementById('back-to-employees-btn');
+  if (backBtn) {
+    backBtn.onclick = () => {
+      views.forEach(v => v.classList.remove('active'));
+      const empView = document.getElementById('employee-view');
+      if (empView) empView.classList.add('active');
+    };
+  }
+}
+
+function renderEmployeeDirectory(data) {
+  const container = document.getElementById('designation-groups-container');
+  if (!container) return;
+  container.innerHTML = '';
+
+  if (!data || data.length === 0) {
+    container.innerHTML = `<div class="placeholder-box"><p>No employees match your search or access profile.</p></div>`;
+    return;
+  }
+
+  const groups = {};
+  data.forEach(emp => {
+    if (!groups[emp.designation]) {
+      groups[emp.designation] = [];
+    }
+    groups[emp.designation].push(emp);
+  });
+
+  Object.keys(groups).forEach(designation => {
+    const groupSection = document.createElement('div');
+    groupSection.className = 'designation-group';
+
+    const title = document.createElement('h2');
+    title.className = 'designation-title';
+    title.innerText = designation;
+    groupSection.appendChild(title);
+
+    const cardsGrid = document.createElement('div');
+    cardsGrid.className = 'cards-grid';
+
+    groups[designation].forEach(emp => {
+      const card = document.createElement('div');
+      card.className = 'employee-card';
+      card.innerHTML = `
+        <img src="${emp.photo}" alt="${emp.name}" onerror="this.src='https://via.placeholder.com/85?text=User'">
+        <h3>${escapeHtml(emp.name)}</h3>
+        <p>${escapeHtml(emp.designation)}</p>
+      `;
+      card.onclick = () => openEmployeeProfile(emp);
+      cardsGrid.appendChild(card);
+    });
+
+    groupSection.appendChild(cardsGrid);
+    container.appendChild(groupSection);
+  });
+}
+
+function setupEmployeeSearch() {
+  const searchInput = document.getElementById('employee-search-input');
+  if (!searchInput) return;
+
+  const role = sessionStorage.getItem('loggedInUserRole');
+  const loggedInEmpId = sessionStorage.getItem('loggedInEmpId');
+
+  searchInput.addEventListener('input', (e) => {
+    const term = e.target.value.toLowerCase().trim();
+    
+    let baseData = employeesData;
+    if (role && role !== 'admin') {
+      baseData = employeesData.filter(emp => emp.id === loggedInEmpId);
+    }
+
+    const filtered = baseData.filter(emp => 
+      emp.name.toLowerCase().includes(term) || 
+      emp.designation.toLowerCase().includes(term)
+    );
+    renderEmployeeDirectory(filtered);
+  });
+}
+
+function openEmployeeProfile(emp) {
+  activeEmployee = emp;
+
+  // ==================== DELEGATION PENDING NOTIFICATION CHECK ====================
+  checkAndDisplayPendingDelegation(emp);
+
+  const loggedInEmpId = sessionStorage.getItem('loggedInEmpId');
+  const loggedInUserRole = sessionStorage.getItem('loggedInUserRole');
+  const isOwnerOrAdmin = (loggedInUserRole === 'admin') || (loggedInEmpId === emp.id);
+
+  const nameElem = document.getElementById('profile-name');
+  const desigElem = document.getElementById('profile-designation');
+  const emailElem = document.getElementById('profile-email');
+  
+  if (nameElem) nameElem.innerText = emp.name;
+  if (desigElem) desigElem.innerText = emp.designation;
+  if (emailElem) emailElem.innerText = emp.email;
+  
+  const imgElem = document.getElementById('profile-img');
+  if (imgElem) {
+    imgElem.src = emp.photo;
+    imgElem.onerror = () => { imgElem.src = 'https://via.placeholder.com/120?text=User'; };
+  }
+
+  // ==================== DASHBOARDS SECTION ====================
+  const dashContainer = document.getElementById('profile-dashboard-container');
+  if (dashContainer) {
+    dashContainer.innerHTML = ''; 
+
+    if (emp.dashboards && emp.dashboards.length > 0) {
+      let html = '<div class="dashboards-grid" style="display: flex; gap: 15px; flex-wrap: wrap;">';
+      
+      emp.dashboards.forEach(dash => {
+        html += `
+          <div class="system-card" style="flex: 1; min-width: 280px; margin-bottom: 15px;">
+            <div class="system-card-header">
+              <div class="system-card-icon" style="background-color: #fff7ed; color: #ea580c;">
+                <i class="fa-solid fa-chart-line"></i>
+              </div>
+              <div class="system-card-info">
+                <h3>${escapeHtml(dash.title || 'Dashboard')}</h3>
+              </div>
+            </div>
+            <a href="${escapeHtml(dash.url)}" target="_blank" class="btn-open-system" style="background-color: #e37b0d;">
+              <span>Open Dashboard</span> <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+          </div>
+        `;
+      });
+
+      html += '</div>';
+      dashContainer.innerHTML = html;
+      dashContainer.style.display = 'block';
+
+    } else if (emp.dashboard) {
+      dashContainer.innerHTML = `
+        <div class="system-card">
+          <div class="system-card-header">
+            <div class="system-card-icon" style="background-color: #fff7ed; color: #ea580c;">
+              <i class="fa-solid fa-chart-line"></i>
+            </div>
+            <div class="system-card-info">
+              <h3>${escapeHtml(emp.dashboardTitle || 'Dashboard')}</h3>
+              <p>Project Management System</p>
+            </div>
+          </div>
+          <a href="${escapeHtml(emp.dashboard)}" target="_blank" class="btn-open-system" style="background-color: #e37b0d;">
+            <span>Open Dashboard</span> <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </a>
+        </div>
+      `;
+      dashContainer.style.display = 'block';
+    } else {
+      dashContainer.style.display = 'none';
+    }
+  }
+
+  // ==================== PROJECTS SECTION ====================
+  const projectsGrid = document.getElementById('employee-projects-grid');
+  const projectBlock = document.getElementById('project-list-block');
+
+  if (projectsGrid && projectBlock) {
+    projectsGrid.innerHTML = '';
+
+    if (emp.projects && Array.isArray(emp.projects) && emp.projects.length > 0) {
+      projectBlock.style.display = 'block'; 
+
+      emp.projects.forEach(project => {
+        project.isProject = true;
+
+        const card = document.createElement('div');
+        card.className = 'sheet-card';
+
+        let formBtnHtml = '';
+        if (isOwnerOrAdmin && project.formUrl) {
+          formBtnHtml = `
+            <a href="${escapeHtml(project.formUrl)}" target="_blank" class="btn-action btn-open-form" title="Open Google Form">
+              <i class="fa-solid fa-pen-to-square"></i> Open Form
+            </a>
+          `;
+        }
+
+        card.innerHTML = `
+          <div class="sheet-card-title">
+            <i class="fa-solid fa-folder-closed" style="color: #0284c7;"></i>
+            <h4>${escapeHtml(project.name)}</h4>
+          </div>
+          <div class="sheet-card-actions">
+            <button class="btn-action btn-view-sheet">
+              <i class="fa-solid fa-table"></i> View Data
+            </button>
+            ${formBtnHtml}
+          </div>
+        `;
+
+        const viewDataBtn = card.querySelector('.btn-view-sheet');
+        if (viewDataBtn) {
+          viewDataBtn.onclick = () => loadSheetDataJSONP(project);
+        }
+
+        projectsGrid.appendChild(card);
+      });
+    } else {
+      projectBlock.style.display = 'none'; 
+    }
+  }
+
+  // ==================== SHEETS SECTION ====================
+  const sheetsGrid = document.getElementById('employee-sheets-grid');
+  if (sheetsGrid) {
+    sheetsGrid.innerHTML = '';
+
+    renderEmployeeMISCard(emp.name);
+
+    if (emp.sheets && Array.isArray(emp.sheets)) {
+      emp.sheets.forEach(sheet => {
+        sheet.isProject = false;
+
+        const card = document.createElement('div');
+        card.className = 'sheet-card';
+
+        let formBtnHtml = '';
+        if (isOwnerOrAdmin && sheet.formUrl) {
+          formBtnHtml = `
+            <a href="${escapeHtml(sheet.formUrl)}" target="_blank" class="btn-action btn-open-form" title="Open Google Form">
+              <i class="fa-solid fa-pen-to-square"></i> Open Form
+            </a>
+          `;
+        }
+
+        card.innerHTML = `
+          <div class="sheet-card-title">
+            <i class="fa-solid fa-file-excel"></i>
+            <h4>${escapeHtml(sheet.name)}</h4>
+          </div>
+          <div class="sheet-card-actions">
+            <button class="btn-action btn-view-sheet">
+              <i class="fa-solid fa-table"></i> View Data
+            </button>
+            ${formBtnHtml}
+          </div>
+        `;
+
+        const viewDataBtn = card.querySelector('.btn-view-sheet');
+        if (viewDataBtn) {
+          viewDataBtn.onclick = () => loadSheetDataJSONP(sheet);
+        }
+
+        sheetsGrid.appendChild(card);
+      });
+    }
+  }
+
+  document.querySelectorAll('.content-view').forEach(v => v.classList.remove('active'));
+  const profView = document.getElementById('profile-view');
+  if (profView) profView.classList.add('active');
+}
+
+// ==================== DELEGATION PENDING NOTIFICATION ENGINE ====================
+function checkAndDisplayPendingDelegation(emp) {
+  const container = document.getElementById('delegation-alert-container');
+  if (!container) return;
+
+  container.innerHTML = '';
+  container.style.display = 'none';
+
+  if (!emp) return;
+
+  const allSheets = [...(emp.sheets || []), ...(emp.projects || [])];
+  const delegationSheet = allSheets.find(s => 
+    s.name && (s.name.toLowerCase().includes('delegation sheet') || s.name.toLowerCase().includes('delegation score'))
+  );
+
+  if (!delegationSheet || !delegationSheet.docId || !delegationSheet.gid) {
+    return;
+  }
+
+  currentDelegationSheet = delegationSheet;
+
+  const oldScript = document.getElementById('delegation-pending-jsonp-script');
+  if (oldScript) oldScript.remove();
+
+  const script = document.createElement('script');
+  script.id = 'delegation-pending-jsonp-script';
+  script.src = `https://docs.google.com/spreadsheets/d/${delegationSheet.docId}/gviz/tq?gid=${delegationSheet.gid}&headers=1&tqx=responseHandler:handlePendingDelegationResponse`;
+  
+  script.onerror = function() {
+    console.warn("Delegation sheet check failed.");
+  };
+
+  document.body.appendChild(script);
+}
+
+window.handlePendingDelegationResponse = function(response) {
+  const scriptTag = document.getElementById('delegation-pending-jsonp-script');
+  if (scriptTag) scriptTag.remove();
+
+  const container = document.getElementById('delegation-alert-container');
+  if (!container || !activeEmployee) return;
+
+  if (!response || response.status === 'error' || !response.table) {
+    return;
+  }
+
+  const table = response.table;
+  const cols = (table.cols || []).map(c => (c ? (c.label || c.id || '').trim().toLowerCase() : ''));
+  const rows = table.rows || [];
+
+  const nameIdx = cols.findIndex(c => c === 'name' || c === 'employee name');
+  const taskIdx = cols.findIndex(c => c === 'task');
+  const statusIdx = cols.findIndex(c => c === 'status');
+  const targetDateIdx = cols.findIndex(c => c === 'actual completion date' || c === 'first date');
+
+  if (nameIdx === -1 || statusIdx === -1) return;
+
+  const fullName = activeEmployee.name.toLowerCase().trim();
+  const firstName = fullName.split(' ')[0];
+
+  const pendingTasks = [];
+
+  rows.forEach(r => {
+    if (!r.c) return;
+
+    const nameCell = r.c[nameIdx];
+    const nameVal = String(nameCell?.v || nameCell?.f || '').toLowerCase().trim();
+
+    if (nameVal && (nameVal.includes(fullName) || nameVal.includes(firstName))) {
+      const statusCell = r.c[statusIdx];
+      const statusVal = String(statusCell?.v || statusCell?.f || '').trim();
+      const statusLower = statusVal.toLowerCase();
+
+      if (statusLower === 'pending') {
+        const taskName = taskIdx !== -1 ? String(r.c[taskIdx]?.v || r.c[taskIdx]?.f || 'No task title').trim() : 'Delegated Task';
+        
+        let formattedDate = '';
+        if (targetDateIdx !== -1 && r.c[targetDateIdx]) {
+          const rawDateCell = r.c[targetDateIdx];
+          if (rawDateCell.f) {
+            formattedDate = rawDateCell.f;
+          } else if (rawDateCell.v) {
+            const parsed = parseGvizDate(rawDateCell);
+            if (parsed) {
+              formattedDate = parsed.toLocaleDateString('en-GB'); // DD/MM/YYYY
+            } else {
+              formattedDate = String(rawDateCell.v);
+            }
+          }
+        }
+
+        pendingTasks.push({
+          task: taskName,
+          status: statusVal,
+          date: formattedDate
+        });
+      }
+    }
+  });
+
+  if (pendingTasks.length > 0) {
+    let taskListHtml = pendingTasks.slice(0, 5).map(item => `
+      <li>
+        <strong>${escapeHtml(item.task)}</strong> 
+        ${item.date ? `<span class="delegation-date-tag">(${escapeHtml(item.date)})</span>` : ''} 
+        - <span class="delegation-status-tag">${escapeHtml(item.status)}</span>
+      </li>
+    `).join('');
+
+    if (pendingTasks.length > 5) {
+      taskListHtml += `<li style="list-style: none; color: #64748b; font-weight: 600; margin-top: 4px;">+ ${pendingTasks.length - 5} more pending tasks...</li>`;
+    }
+
+    container.innerHTML = `
+      <div class="delegation-alert">
+        <div class="delegation-alert-content">
+          <div class="delegation-alert-header">
+            <h4>
+              Delegation Pending Tasks
+              <span class="delegation-alert-badge">${pendingTasks.length} Pending</span>
+            </h4>
+          </div>
+         <p>Please inform the EA once your task is completed.</p>
+          <ul class="delegation-alert-list">
+            ${taskListHtml}
+          </ul>
+          <button type="button" class="delegation-view-btn" id="btn-open-delegation-modal">
+            <i class="fa-solid fa-table"></i> View Delegation Sheet
+          </button>
+        </div>
+      </div>
+    `;
+
+    container.style.display = 'block';
+
+    const openBtn = document.getElementById('btn-open-delegation-modal');
+    if (openBtn && currentDelegationSheet) {
+      openBtn.onclick = () => loadSheetDataJSONP(currentDelegationSheet);
+    }
+  } else {
+    container.style.display = 'none';
+  }
+};
+
+window.handleGvizResponse = function(response) {
+  const scriptTag = document.getElementById('jsonp-gviz-script');
+  if (scriptTag) scriptTag.remove();
+
+  const loader = document.getElementById('modal-loader');
+  const container = document.getElementById('modal-table-container');
+  const toolbar = document.getElementById('modal-toolbar');
+
+  if (loader) loader.style.display = 'none';
+  if (!container) return;
+
+  if (!response || response.status === 'error') {
+    const errorMsg = response?.errors?.[0]?.detailed_message || "Access denied or Sheet Not Shared publicly.";
+    container.innerHTML = `
+      <div style="text-align:center; padding: 30px; color:#ef4444;">
+        <i class="fa-solid fa-triangle-exclamation" style="font-size:2rem; margin-bottom:10px;"></i>
+        <p><strong>Error Loading Sheet:</strong> ${escapeHtml(errorMsg)}</p>
+      </div>`;
+    return;
+  }
+
+  const table = response.table;
+  if (!table || !table.cols) {
+    container.innerHTML = `<p style="text-align:center; padding:20px;">No data structure found in sheet.</p>`;
+    return;
+  }
+
+  const allHeaders = table.cols.map(c => c ? (c.label || c.id || '').trim() : '');
+  const rows = table.rows || [];
+
+  let filteredRows = [];
+  const isProjectSheet = currentActiveSheet && currentActiveSheet.isProject === true;
+
+  if (isProjectSheet) {
+    filteredRows = rows;
+  } else {
+    const firstName = activeEmployee ? activeEmployee.name.split(' ')[0].toLowerCase() : '';
+    const fullName = activeEmployee ? activeEmployee.name.toLowerCase() : '';
+
+    const ignoreHeaders = [
+      'approved from', 'approved by', 'paid to', 'debit to (worker name)', 
+      'required from (person name)', 'name of colleague work handover', 
+      'reporting to', 'required from', 'mention others employee name'
+    ];
+
+    const targetOwnerIndices = [];
+    allHeaders.forEach((header, idx) => {
+      const headerLower = header.toLowerCase().trim();
+      const shouldIgnore = ignoreHeaders.some(ig => headerLower.includes(ig));
+      if (!shouldIgnore) targetOwnerIndices.push(idx);
+    });
+    
+    filteredRows = rows.filter(r => {
+      if (!r.c) return false;
+
+      const empNameIdx = allHeaders.findIndex(h => {
+        const hLower = h.toLowerCase().trim();
+        return hLower === 'employee name' || hLower === 'name' || hLower === 'designer' || hLower === 'project site visitor'|| hLower === 'aispl-project head'|| hLower === 'doer';
+      });
+
+      if (empNameIdx !== -1) {
+        const cell = r.c[empNameIdx];
+        if (!cell || cell.v === null || cell.v === undefined) return false;
+        const val = String(cell.v).toLowerCase().trim();
+        return val.includes(fullName) || val.includes(firstName);
+      }
+
+      return targetOwnerIndices.some(idx => {
+        const cell = r.c[idx];
+        if (!cell || cell.v === null || cell.v === undefined) return false;
+        const val = String(cell.v).toLowerCase().trim();
+        return val.includes(fullName);
+      });
+    });
+  }
+
+  if (filteredRows.length === 0) {
+    if (toolbar) toolbar.style.display = 'none';
+    renderExpenseFilterControls(false);
+    container.innerHTML = `
+      <div style="text-align:center; padding: 35px; color:#64748b;">
+        <i class="fa-solid fa-folder-open" style="font-size: 2.5rem; margin-bottom: 12px; color: #cbd5e1;"></i>
+        <p>No data found for <strong>${escapeHtml(activeEmployee ? activeEmployee.name : '')}</strong>.</p>
+      </div>`;
+    return;
+  }
+
+  // ==================== UNIVERSAL DATE DESCENDING SORT ====================
+  // Sarv sheets madhil Date / Timestamp / First Date / Leave Date column shodhne
+  const datePriorityHeaders = [
+    'date',
+    'timestamp',
+    'first date',
+    'start date of leave',
+    'extra work date',
+    'compensatory off date',
+    'planned'
+  ];
+
+  let dateColIdx = -1;
+  for (const targetHeader of datePriorityHeaders) {
+    dateColIdx = allHeaders.findIndex(h => h.toLowerCase().trim() === targetHeader);
+    if (dateColIdx !== -1) break;
+  }
+
+  // Jar exact match nahi sapadla tar kontahi column jyachya navat 'date' ahe to ghene
+  if (dateColIdx === -1) {
+    dateColIdx = allHeaders.findIndex(h => h.toLowerCase().includes('date'));
+  }
+
+  if (dateColIdx !== -1) {
+    filteredRows.sort((a, b) => {
+      const dateA = parseGvizDate(a.c ? a.c[dateColIdx] : null);
+      const dateB = parseGvizDate(b.c ? b.c[dateColIdx] : null);
+      const timeA = dateA && !isNaN(dateA.getTime()) ? dateA.getTime() : 0;
+      const timeB = dateB && !isNaN(dateB.getTime()) ? dateB.getTime() : 0;
+      return timeB - timeA; // Latest date first (Descending)
+    });
+  }
+
+  if (toolbar) toolbar.style.display = 'flex';
+
+  const countValElem = document.getElementById('count-val');
+  const amountValElem = document.getElementById('amount-val');
+  const totalAmountBox = document.getElementById('stat-total-amount');
+  const totalCountBox = countValElem ? countValElem.parentElement : null;
+
+  const sheetNameLower = currentActiveSheet ? currentActiveSheet.name.toLowerCase() : '';
+  const isSiteOrOfficeExpense = sheetNameLower.includes('site expenses') || sheetNameLower.includes('office expenses');
+
+  if (isSiteOrOfficeExpense) {
+    if (totalCountBox) totalCountBox.style.display = 'none';
+    if (totalAmountBox) totalAmountBox.style.display = 'none';
+  } else {
+    if (totalCountBox) totalCountBox.style.display = '';
+    if (countValElem) countValElem.innerText = filteredRows.length;
+
+    if (sheetNameLower.includes('petrol expenses')) {
+      const amountColIdx = allHeaders.findIndex(h => h.toLowerCase().trim() === 'amount');
+      if (amountColIdx !== -1) {
+        const totalAmount = filteredRows.reduce((sum, r) => {
+          const cell = r.c ? r.c[amountColIdx] : null;
+          if (!cell || cell.v === null || cell.v === undefined) return sum;
+          const numVal = parseFloat(String(cell.v).replace(/[^0-9.-]+/g, ''));
+          return sum + (isNaN(numVal) ? 0 : numVal);
+        }, 0);
+
+        if (amountValElem) {
+          amountValElem.innerText = totalAmount.toLocaleString('en-IN', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+        }
+        if (totalAmountBox) totalAmountBox.style.display = 'inline-block';
+      } else if (totalAmountBox) {
+        totalAmountBox.style.display = 'none';
+      }
+    } else if (totalAmountBox) {
+      totalAmountBox.style.display = 'none';
+    }
+  }
+
+  const selectedColsConfig = currentActiveSheet?.selectedColumns || [];
+  let targetIndices = [];
+  let displayHeaders = [];
+
+  if (selectedColsConfig.length > 0) {
+    selectedColsConfig.forEach(sc => {
+      const idx = allHeaders.findIndex(h => h.toLowerCase() === sc.trim().toLowerCase());
+      if (idx !== -1) {
+        targetIndices.push(idx);
+        displayHeaders.push(allHeaders[idx]);
+      }
+    });
+  }
+
+  if (targetIndices.length === 0) {
+    targetIndices = allHeaders.map((_, i) => i);
+    displayHeaders = allHeaders.map((h, i) => h || `Column ${i + 1}`);
+  }
+
+  renderModalTable(displayHeaders, filteredRows, targetIndices, container);
+
+  renderExpenseFilterControls(isExpenseOrPetrolSheet(currentActiveSheet));
+};
+
+function loadSheetDataJSONP(sheet) {
+  currentActiveSheet = sheet;
+
+  const modal = document.getElementById('sheet-modal');
+  const title = document.getElementById('modal-sheet-title');
+  const subtitle = document.getElementById('modal-sheet-subtitle');
+  const loader = document.getElementById('modal-loader');
+  const container = document.getElementById('modal-table-container');
+  const toolbar = document.getElementById('modal-toolbar');
+  const tableSearchInput = document.getElementById('table-search-input');
+
+  if (title) title.innerText = sheet.name;
+  if (subtitle) subtitle.innerText = `Filtered for: ${activeEmployee ? activeEmployee.name : ''}`;
+  if (loader) loader.style.display = 'block';
+  if (container) container.innerHTML = '';
+  if (toolbar) toolbar.style.display = 'none';
+  if (tableSearchInput) tableSearchInput.value = '';
+  renderExpenseFilterControls(false);
+  
+  if (modal) modal.classList.add('show');
+
+  const oldScript = document.getElementById('jsonp-gviz-script');
+  if (oldScript) oldScript.remove();
+
+  const script = document.createElement('script');
+  script.id = 'jsonp-gviz-script';
+  script.src = `https://docs.google.com/spreadsheets/d/${sheet.docId}/gviz/tq?gid=${sheet.gid}&headers=1&tqx=responseHandler:handleGvizResponse`;
+
+  script.onerror = function() {
+    if (loader) loader.style.display = 'none';
+    if (container) {
+      container.innerHTML = `
+        <div style="text-align:center; padding: 30px; color:#ef4444;">
+          <p><strong>Failed to reach Google Sheet. Please check your internet connection.</strong></p>
+        </div>`;
+    }
+  };
+
+  document.body.appendChild(script);
+}
+
+function renderModalTable(headers, rows, indices, container) {
+  let html = `<div class="table-responsive-wrapper">
+                <table class="custom-data-table" id="active-modal-table" style="min-width: max-content; width: 100%; border-collapse: collapse;">
+                  <thead><tr>`;
+  
+  headers.forEach(h => {
+    html += `<th style="white-space: nowrap;">${escapeHtml(h)}</th>`;
+  });
+  html += `</tr></thead><tbody>`;
+
+  rows.forEach(r => {
+    html += `<tr>`;
+    indices.forEach(idx => {
+      const cell = r.c ? r.c[idx] : null;
+      const val = cell && cell.f ? cell.f : (cell && cell.v !== null && cell.v !== undefined ? cell.v : '');
+      const strVal = String(val);
+
+      const urlRegex = /(https?:\/\/[^\s,]+)/g;
+      const matches = strVal.match(urlRegex);
+
+      if (matches && matches.length > 0) {
+        let linksHtml = matches.map((url, index) => {
+          const cleanUrl = url.replace(/[,.]$/, '');
+          const label = matches.length > 1 ? `Open Link ${index + 1}` : 'Open Link';
+          
+          return `<a href="${escapeHtml(cleanUrl)}" target="_blank" style="color:#f38b1c; font-weight:600; margin-right: 8px; display: inline-block; white-space: nowrap;">
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i> ${label}
+                  </a>`;
+        }).join(' ');
+
+        html += `<td style="white-space: nowrap;">${linksHtml}</td>`;
+      } else {
+        html += `<td style="white-space: nowrap; max-width: 300px; overflow: hidden; text-overflow: ellipsis;" title="${escapeHtml(strVal)}">${escapeHtml(strVal)}</td>`;
+      }
+    });
+    html += `</tr>`;
+  });
+
+  html += `</tbody></table></div>`;
+  container.innerHTML = html;
+}
+
+function setupTableSearch() {
+  const tableSearchInput = document.getElementById('table-search-input');
+  if (!tableSearchInput) return;
+
+  tableSearchInput.addEventListener('input', () => {
+    applyAllModalFilters();
+  });
+}
+
+function isExpenseOrPetrolSheet(sheet) {
+  if (!sheet || !sheet.name) return false;
+  const name = sheet.name.toLowerCase();
+  return (
+    name.includes('site expenses') ||
+    name.includes('office expenses') ||
+    name.includes('petrol allowance') ||
+    name.includes('office allowance')
+  );
+}
+
+function renderExpenseFilterControls(show) {
+  const toolbar = document.getElementById('modal-toolbar');
+  if (!toolbar) return;
+
+  const existingControls = document.getElementById('expense-filter-export-bar');
+  if (existingControls) existingControls.remove();
+
+  if (!show) return;
+
+  const filterBar = document.createElement('div');
+  filterBar.id = 'expense-filter-export-bar';
+
+  filterBar.innerHTML = `
+    <div class="expense-date-group">
+      <div class="date-field">
+        <label for="filter-start-date">From:</label>
+        <input type="date" id="filter-start-date">
+      </div>
+      <div class="date-field">
+        <label for="filter-end-date">To:</label>
+        <input type="date" id="filter-end-date">
+      </div>
+      <button type="button" id="btn-reset-date-filter">
+        <i class="fa-solid fa-rotate-left"></i> Reset
+      </button>
+    </div>
+    <button type="button" id="btn-export-excel">
+      <i class="fa-solid fa-file-excel"></i> Export to Excel
+    </button>
+  `;
+
+  toolbar.appendChild(filterBar);
+
+  document.getElementById('filter-start-date').addEventListener('change', applyAllModalFilters);
+  document.getElementById('filter-end-date').addEventListener('change', applyAllModalFilters);
+
+  document.getElementById('btn-reset-date-filter').addEventListener('click', () => {
+    document.getElementById('filter-start-date').value = '';
+    document.getElementById('filter-end-date').value = '';
+    const searchInput = document.getElementById('table-search-input');
+    if (searchInput) searchInput.value = '';
+    applyAllModalFilters();
+  });
+
+  document.getElementById('btn-export-excel').addEventListener('click', exportFilteredTableToExcel);
+}
+
+function applyAllModalFilters() {
+  const table = document.getElementById('active-modal-table');
+  if (!table) return;
+
+  const searchInput = document.getElementById('table-search-input');
+  const startInput = document.getElementById('filter-start-date');
+  const endInput = document.getElementById('filter-end-date');
+
+  const textFilter = searchInput ? searchInput.value.toLowerCase().trim() : '';
+  const startDateVal = startInput && startInput.value ? new Date(startInput.value + 'T00:00:00') : null;
+  const endDateVal = endInput && endInput.value ? new Date(endInput.value + 'T23:59:59') : null;
+
+  // Konta hi filter active ahe ka te check karne
+  const isFilterActive = Boolean(textFilter || startDateVal || endDateVal);
+
+  const headers = Array.from(table.querySelectorAll('thead th')).map(th => th.textContent.toLowerCase().trim());
+  const dateIdx = headers.indexOf('date');
+  const amountIdx = headers.indexOf('amount');
+
+  const rows = table.querySelectorAll('tbody tr');
+  let visibleCount = 0;
+  let visibleAmount = 0;
+
+  rows.forEach(row => {
+    const rowText = row.textContent.toLowerCase();
+    const matchesText = !textFilter || rowText.includes(textFilter);
+
+    let matchesDate = true;
+    if ((startDateVal || endDateVal) && dateIdx !== -1) {
+      const dateText = row.children[dateIdx]?.textContent.trim() || '';
+      const rowDate = parseGvizDate({ v: dateText, f: dateText });
+
+      if (rowDate && !isNaN(rowDate.getTime())) {
+        if (startDateVal && rowDate < startDateVal) matchesDate = false;
+        if (endDateVal && rowDate > endDateVal) matchesDate = false;
+      } else {
+        matchesDate = false;
+      }
+    }
+
+    const isVisible = matchesText && matchesDate;
+    row.style.display = isVisible ? '' : 'none';
+
+    if (isVisible) {
+      visibleCount++;
+      if (amountIdx !== -1) {
+        const cellText = row.children[amountIdx]?.textContent || '';
+        const num = parseFloat(cellText.replace(/[^0-9.-]+/g, ''));
+        if (!isNaN(num)) visibleAmount += num;
+      }
+    }
+  });
+
+  const countValElem = document.getElementById('count-val');
+  const amountValElem = document.getElementById('amount-val');
+  const totalAmountBox = document.getElementById('stat-total-amount');
+  const totalCountBox = countValElem ? countValElem.parentElement : null;
+
+  const sheetNameLower = currentActiveSheet ? currentActiveSheet.name.toLowerCase() : '';
+  const isSiteOrOfficeExpense = sheetNameLower.includes('site expenses') || sheetNameLower.includes('office expenses');
+
+  if (isSiteOrOfficeExpense) {
+    if (isFilterActive) {
+      if (totalCountBox) totalCountBox.style.display = '';
+      if (countValElem) countValElem.innerText = visibleCount;
+
+      if (amountIdx !== -1) {
+        if (totalAmountBox) totalAmountBox.style.display = 'inline-block';
+        if (amountValElem) {
+          amountValElem.innerText = visibleAmount.toLocaleString('en-IN', {
+            minimumFractionDigits: 2,
+            maximumFractionDigits: 2
+          });
+        }
+      }
+    } else {
+      // Filter reset/empty aslyas parat hide karne
+      if (totalCountBox) totalCountBox.style.display = 'none';
+      if (totalAmountBox) totalAmountBox.style.display = 'none';
+    }
+  } else {
+    if (countValElem) countValElem.innerText = visibleCount;
+    if (amountValElem && amountIdx !== -1) {
+      amountValElem.innerText = visibleAmount.toLocaleString('en-IN', {
+        minimumFractionDigits: 2,
+        maximumFractionDigits: 2
+      });
+    }
+  }
+}
+
+function exportFilteredTableToExcel() {
+  const table = document.getElementById('active-modal-table');
+  if (!table) return;
+
+  if (typeof XLSX === 'undefined') {
+    alert('Excel export library (XLSX) is not loaded. Please include SheetJS in your HTML.');
+    return;
+  }
+
+  const headers = Array.from(table.querySelectorAll('thead th')).map(th => th.textContent.trim());
+  const visibleRows = Array.from(table.querySelectorAll('tbody tr')).filter(
+    row => row.style.display !== 'none'
+  );
+
+  if (visibleRows.length === 0) {
+    alert('No records found for the selected date range to export.');
+    return;
+  }
+
+  const excelData = [headers];
+
+  visibleRows.forEach(row => {
+    const rowData = Array.from(row.children).map(td => {
+      const anchor = td.querySelector('a');
+      if (anchor && anchor.href) {
+        return anchor.href;
+      }
+      const text = td.textContent.trim();
+      const cleanNum = text.replace(/,/g, '');
+      if (cleanNum !== '' && !isNaN(cleanNum) && !text.includes('/') && !text.includes('-')) {
+        return parseFloat(cleanNum);
+      }
+      return text;
+    });
+    excelData.push(rowData);
+  });
+
+  const worksheet = XLSX.utils.aoa_to_sheet(excelData);
+
+  worksheet['!cols'] = headers.map((h, i) => {
+    const maxLen = Math.max(
+      h.length,
+      ...excelData.slice(1).map(r => String(r[i] || '').length)
+    );
+    return { wch: Math.min(maxLen + 4, 45) };
+  });
+
+  const workbook = XLSX.utils.book_new();
+  const sheetName = (currentActiveSheet?.name || 'Expenses').slice(0, 31);
+  XLSX.utils.book_append_sheet(workbook, worksheet, sheetName);
+
+  const empSlug = (activeEmployee?.name || 'Employee').replace(/\s+/g, '_');
+  const sheetSlug = (currentActiveSheet?.name || 'Expenses').replace(/\s+/g, '_');
+  const startVal = document.getElementById('filter-start-date')?.value || 'All';
+  const endVal = document.getElementById('filter-end-date')?.value || 'All';
+  const fileName = `${empSlug}_${sheetSlug}_${startVal}_to_${endVal}.xlsx`;
+
+  XLSX.writeFile(workbook, fileName);
+}
+
+function setupModalEvents() {
+  const modal = document.getElementById('sheet-modal');
+  const closeBtn = document.getElementById('close-modal-x');
+
+  const closeModal = () => {
+    if (modal) modal.classList.remove('show');
+    const scriptTag = document.getElementById('jsonp-gviz-script');
+    if (scriptTag) scriptTag.remove();
+    const misScript = document.getElementById('mis-jsonp-script');
+    if (misScript) misScript.remove();
+    const container = document.getElementById('modal-table-container');
+    if (container) container.innerHTML = '';
+    renderExpenseFilterControls(false);
+  };
+
+  if (closeBtn) closeBtn.onclick = closeModal;
+
+  window.onclick = (event) => {
+    if (event.target === modal) closeModal();
+  };
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' || event.key === 'Esc') {
+      const modal = document.getElementById('sheet-modal');
+      if (modal && modal.classList.contains('show')) {
+        closeModal();
+      }
+      const activePopups = document.querySelectorAll('.image-popup.show, .popup.show, .modal.show');
+      activePopups.forEach(popup => {
+        popup.classList.remove('show');
+      });
+    }
+  });
+}
+
+const SHEET_CONFIG = {
+  airlife: {
+    sheetId: '1mdlwmrJtiK4UgtWRGXhnV4ooIu9ZKOq4upgm7V8DbQg',
+    gid: '0',
+    selectedColumns: [0, 1, 3, 4, 5] 
+  },
+  airtech: {
+    sheetId: '18HE85rKQRsC70A37F6c1LCFSzCGpme3v_tceQMC3BxY',
+    gid: '0',
+    selectedColumns: [1, 2, 3, 4, 5] 
+  },
+  checklist: {
+    sheetId: '1m_P5_eP9FvD9eaYvanmLlV833cscTvk2xJk_c39cbZw',
+    gid: '2092959791',
+    selectedColumns: [1, 5, 6, 7] 
+  }
+};
+
+let currentTab = 'airlife';
+
+function switchTab(event, tabKey) {
+  currentTab = tabKey;
+
+  document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+  if (event && event.target) {
+    event.target.classList.add('active');
+  }
+  
+  loadSheetDataPC(tabKey);
+}
+
+window.handlePCGvizResponse = function(response) {
+  const scriptTag = document.getElementById('pc-jsonp-script');
+  if (scriptTag) scriptTag.remove();
+
+  const spinner = document.getElementById('loading-spinner');
+  const table = document.getElementById('data-table');
+  const thead = document.getElementById('table-head');
+  const tbody = document.getElementById('table-body');
+
+  const config = SHEET_CONFIG[currentTab];
+
+  if (!response || response.status === 'error') {
+    const errorMsg = response?.errors?.[0]?.detailed_message || "Access Denied or Sheet is Private.";
+    if (spinner) spinner.innerText = 'Error loading sheet: ' + errorMsg;
+    return;
+  }
+
+  const cols = response.table ? response.table.cols : [];
+  const rows = response.table ? response.table.rows : [];
+
+  if (thead) {
+    thead.innerHTML = '<tr>' + 
+      config.selectedColumns.map(colIndex => {
+        const label = cols[colIndex] ? (cols[colIndex].label || `Col ${colIndex + 1}`) : '';
+        return `<th>${escapeHtml(label)}</th>`;
+      }).join('') + 
+      '</tr>';
+  }
+
+  if (tbody) {
+    tbody.innerHTML = '';
+    const fragment = document.createDocumentFragment();
+
+    rows.forEach(row => {
+      const tr = document.createElement('tr');
+      tr.innerHTML = config.selectedColumns.map(colIndex => {
+        const cell = row.c ? row.c[colIndex] : null;
+        const cellValue = cell ? (cell.f || (cell.v !== null && cell.v !== undefined ? cell.v : '')) : '';
+        return `<td>${escapeHtml(String(cellValue))}</td>`;
+      }).join('');
+      fragment.appendChild(tr);
+    });
+
+    tbody.appendChild(fragment);
+  }
+
+  if (spinner) spinner.style.display = 'none';
+  if (table) table.style.display = 'table';
+};
+
+function loadSheetDataPC(tabKey) {
+  currentTab = tabKey;
+  const config = SHEET_CONFIG[tabKey];
+  const spinner = document.getElementById('loading-spinner');
+  const table = document.getElementById('data-table');
+
+  if (!config) return;
+
+  if (spinner) {
+    spinner.style.display = 'block';
+    spinner.innerText = 'Loading...';
+  }
+  if (table) table.style.display = 'none';
+
+  const oldScript = document.getElementById('pc-jsonp-script');
+  if (oldScript) oldScript.remove();
+
+  const script = document.createElement('script');
+  script.id = 'pc-jsonp-script';
+  script.src = `https://docs.google.com/spreadsheets/d/${config.sheetId}/gviz/tq?gid=${config.gid}&headers=1&tqx=responseHandler:handlePCGvizResponse`;
+
+  script.onerror = function() {
+    if (spinner) {
+      spinner.innerText = 'Error: Failed to fetch sheet. Check your internet or Sheet Link.';
+    }
+  };
+
+  document.body.appendChild(script);
+}
+
+function escapeHtml(str) {
+  return (str || '')
+    .toString()
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#039;");
+}
+
+function parseGvizDate(cell) {
+  if (!cell) return null;
+  
+  if (typeof cell.v === 'string' && cell.v.startsWith('Date(')) {
+    const parts = cell.v.match(/\d+/g);
+    if (parts && parts.length >= 3) {
+      return new Date(parseInt(parts[0]), parseInt(parts[1]), parseInt(parts[2]));
+    }
+  }
+  
+  if (cell.v instanceof Date) return cell.v;
+
+  const valStr = String(cell.f || cell.v || '').trim();
+  if (!valStr) return null;
+
+  const ddmmyyyy = valStr.match(/^(\d{1,2})[\/\-](\d{1,2})[\/\-](\d{4})$/);
+  if (ddmmyyyy) {
+    return new Date(parseInt(ddmmyyyy[3]), parseInt(ddmmyyyy[2]) - 1, parseInt(ddmmyyyy[1]));
+  }
+
+  const parsed = Date.parse(valStr);
+  if (!isNaN(parsed)) return new Date(parsed);
+
+  return null;
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  if (typeof renderEmployees === 'function') {
+    renderEmployees();
+  } else if (typeof initEmployeePage === 'function') {
+    initEmployeePage();
+  }
+});
+
+function logout() {
+  sessionStorage.removeItem('isLoggedIn');
+  window.location.href = 'login.html';
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  const dateElem = document.getElementById('current-date-display');
+  if (dateElem) {
+    const options = { weekday: 'short', year: 'numeric', month: 'short', day: 'numeric' };
+    dateElem.innerText = new Date().toLocaleDateString('en-US', options);
+  }
+});
+
+const yearElem = document.getElementById("year");
+if (yearElem) {
+  yearElem.textContent = new Date().getFullYear();
+}
+
+// ==================== MIS SCORING REGISTRY & FUNCTIONS ====================
+const misSheetGidRegistry = {
+  "anuradha": "1649999565",
+  "harshada": "1800837815",
+  "sakshi": "1506553066",
+  "bhakti": "1835137696",
+  "sachin": "1816459295",
+  "shubham": "1203477456",
+  "saurav": "659497243",
+  
+  "kiran chabukswar": "415811273",
+  "kiran hole": "128838134",
+
+  "akash raut": "446073013",
+
+  "mahavir chabukswar": "569779458",
+
+  "namrata raut": "541722736"
+};
+
+const MIS_SPREADSHEET_ID = "1V9R9rJ848xIzODTdFZ4f_-OJpZMNbIqpYhX_9WNLJbM";
+
+function getEmployeeMISGid(empName) {
+  if (!empName) return null;
+  const nameLower = empName.toLowerCase().trim();
+
+  if (misSheetGidRegistry[nameLower]) {
+    return misSheetGidRegistry[nameLower];
+  }
+
+  for (const [key, gid] of Object.entries(misSheetGidRegistry)) {
+    if (nameLower.includes(key) || key.includes(nameLower)) {
+      return gid;
+    }
+  }
+  return null;
+}
+
+function renderEmployeeMISCard(empName) {
+  const sheetsGrid = document.getElementById('employee-sheets-grid');
+  if (!sheetsGrid) return;
+
+  const existingCard = document.getElementById('dynamic-mis-card');
+  if (existingCard) existingCard.remove();
+
+  const gid = getEmployeeMISGid(empName);
+  if (!gid) return;
+
+  const misCard = document.createElement('div');
+  misCard.className = 'sheet-card mis-sheet-card';
+  misCard.id = 'dynamic-mis-card';
+  misCard.innerHTML = `
+    <div class="sheet-card-title">
+      <i class="fa-solid fa-chart-line" style="color: #ee941f;"></i>
+      <div>
+        <h4>Weekly MIS Scoring</h4>
+      </div>
+    </div>
+    <div class="sheet-card-actions">
+      <button type="button" class="btn-action btn-view-sheet" id="btn-view-mis-popup" style="width: 100%; flex: 1;">
+        <i class="fa-solid fa-table"></i> View Score
+      </button>
+    </div>
+  `;
+
+  sheetsGrid.prepend(misCard);
+
+  const viewBtn = misCard.querySelector('#btn-view-mis-popup');
+  if (viewBtn) {
+    viewBtn.onclick = () => {
+      fetchAndDisplayMISData(empName, gid);
+    };
+  }
+}
+
+function fetchAndDisplayMISData(empName, gid) {
+  const modal = document.getElementById('sheet-modal');
+  const title = document.getElementById('modal-sheet-title');
+  const subtitle = document.getElementById('modal-sheet-subtitle');
+  const loader = document.getElementById('modal-loader');
+  const container = document.getElementById('modal-table-container');
+  const toolbar = document.getElementById('modal-toolbar');
+
+  if (!modal) return;
+
+  if (title) title.innerText = `MIS Scoring: ${empName}`;
+  if (subtitle) subtitle.innerText = "Weekly Performance Sheet";
+  if (toolbar) toolbar.style.display = "none";
+  if (loader) {
+    loader.style.display = 'block';
+    loader.innerHTML = '<p>Fetching MIS Scoring data...</p>';
+  }
+  if (container) container.innerHTML = '';
+
+  modal.classList.add('show');
+
+  const oldScript = document.getElementById('mis-jsonp-script');
+  if (oldScript) oldScript.remove();
+
+  const script = document.createElement('script');
+  script.id = 'mis-jsonp-script';
+  script.src = `https://docs.google.com/spreadsheets/d/${MIS_SPREADSHEET_ID}/gviz/tq?gid=${gid}&headers=1&tqx=responseHandler:handleMISGvizResponse`;
+
+  script.onerror = function() {
+    if (loader) loader.style.display = 'none';
+    if (container) {
+      container.innerHTML = `
+        <div style="text-align:center; padding: 30px; color:#ef4444;">
+          <p><strong>Failed to load MIS sheet data. Krupaya sheet permission check kara.</strong></p>
+        </div>`;
+    }
+  };
+
+  document.body.appendChild(script);
+}
+
+window.handleMISGvizResponse = function(response) {
+  const scriptTag = document.getElementById('mis-jsonp-script');
+  if (scriptTag) scriptTag.remove();
+
+  const loader = document.getElementById('modal-loader');
+  const container = document.getElementById('modal-table-container');
+
+  if (loader) loader.style.display = 'none';
+  if (!container) return;
+
+  if (!response || response.status === 'error') {
+    const errorMsg = response?.errors?.[0]?.detailed_message || "Access Denied or Sheet is Private.";
+    container.innerHTML = `
+      <div style="text-align:center; padding: 30px; color:#ef4444;">
+        <i class="fa-solid fa-triangle-exclamation" style="font-size:2rem; margin-bottom:10px;"></i>
+        <p><strong>Error Loading MIS Sheet:</strong> ${escapeHtml(errorMsg)}</p>
+      </div>`;
+    return;
+  }
+
+  const rows = response.table ? response.table.rows : [];
+  if (!rows || rows.length === 0) {
+    container.innerHTML = `<p style="text-align:center; padding:20px;">Sheet madhe data bhetla nahi.</p>`;
+    return;
+  }
+
+  const parsedRows = rows.map(r => {
+    const rowCells = [];
+    for (let i = 0; i < 9; i++) {
+      const cell = r.c ? r.c[i] : null;
+      let val = '';
+      if (cell) {
+        val = cell.f !== undefined && cell.f !== null ? cell.f : (cell.v !== null && cell.v !== undefined ? cell.v : '');
+      }
+      rowCells.push(String(val).trim());
+    }
+    return rowCells;
+  });
+
+  let mainScoreRows = [];
+  let naTaskRows = [];
+  let isNATaskSection = false;
+
+  parsedRows.forEach(row => {
+    const cellA = row[0];
+    const cellB = row[1];
+    const cellC = row[2];
+
+    if (row.every(v => v === '')) return;
+
+    if (cellA.toLowerCase().includes('na task') || cellB.toLowerCase().includes('na task')) {
+      isNATaskSection = true;
+      return;
+    }
+
+    if (isNATaskSection) {
+      if (cellA.toLowerCase() === 'task' && cellB.toLowerCase().includes('planned')) {
+        return;
+      }
+      if (cellA !== '' || cellB !== '' || cellC !== '') {
+        naTaskRows.push({
+          task: cellA,
+          plannedDate: cellB,
+          status: cellC
+        });
+      }
+    } else {
+      if (cellA.toLowerCase() === 'tasks' && cellB.toLowerCase() === 'kra') return;
+      mainScoreRows.push(row);
+    }
+  });
+
+  let html = `
+    <div class="mis-modal-table-wrap" style="margin-bottom: 25px;">
+      <table class="mis-score-table">
+        <thead>
+          <tr>
+            <th style="width: 10%;">Tasks</th>
+            <th style="width: 20%;">KRA</th>
+            <th style="width: 16%;">KPI</th>
+            <th style="width: 8%;">Last Week<br>Actual %</th>
+            <th style="width: 8%;">Current Week<br>Planned</th>
+            <th style="width: 8%;">Current<br>Week Actual</th>
+            <th style="width: 10%;">Current Week<br>Actual %</th>
+            <th style="width: 10%;">Last Week<br>Commitment</th>
+            <th style="width: 10%;">Next Week<br>Planned</th>
+          </tr>
+        </thead>
+        <tbody>
+  `;
+
+  let currentCategory = '';
+  const categoryGroups = [];
+
+  mainScoreRows.forEach(r => {
+    if (r[0] !== '') {
+      currentCategory = r[0];
+    }
+    categoryGroups.push({
+      category: currentCategory,
+      kra: r[1],
+      kpi: r[2],
+      lastWeekActual: r[3],
+      planned: r[4],
+      actual: r[5],
+      actualPct: r[6],
+      commitment: r[7],
+      nextPlanned: r[8]
+    });
+  });
+
+  const categoryCounts = {};
+  categoryGroups.forEach(item => {
+    categoryCounts[item.category] = (categoryCounts[item.category] || 0) + 1;
+  });
+
+  const printedCategories = {};
+
+  const formatValue = (val) => {
+    if (val === '' || val === null || val === undefined) return '';
+    const num = parseFloat(val);
+    if (!isNaN(num)) {
+      if (num < 0) return `<span class="val-neg">${escapeHtml(val)}</span>`;
+      if (num === 0) return `<span class="val-zero">${escapeHtml(val)}</span>`;
+    }
+    return escapeHtml(val);
+  };
+
+  categoryGroups.forEach(item => {
+    html += `<tr>`;
+    if (!printedCategories[item.category]) {
+      const rowSpan = categoryCounts[item.category] || 1;
+      html += `<td rowspan="${rowSpan}" class="cell-task-vertical">${escapeHtml(item.category)}</td>`;
+      printedCategories[item.category] = true;
+    }
+
+    html += `
+      <td class="align-left" style="font-weight: 600;">${escapeHtml(item.kra)}</td>
+      <td class="align-left">${escapeHtml(item.kpi)}</td>
+      <td>${formatValue(item.lastWeekActual)}</td>
+      <td><strong>${escapeHtml(item.planned)}</strong></td>
+      <td><strong>${escapeHtml(item.actual)}</strong></td>
+      <td>${formatValue(item.actualPct)}</td>
+      <td>${formatValue(item.commitment)}</td>
+      <td>${escapeHtml(item.nextPlanned)}</td>
+    </tr>`;
+  });
+
+  html += `</tbody></table></div>`;
+
+  if (naTaskRows.length > 0) {
+    html += `
+      <div style="margin-top: 20px;">
+        <h3 style="font-size: 1.05rem; font-weight: 700; color: #0f172a; margin-bottom: 8px;">
+          NA Task List
+        </h3>
+        <div class="mis-modal-table-wrap" style="max-width: 550px;">
+          <table class="mis-score-table">
+            <thead>
+              <tr style="background-color: #f8fafc;">
+                <th style="text-align: left; padding-left: 14px; width: 50%;">Task</th>
+                <th style="width: 25%;">Planned Date</th>
+                <th style="width: 25%;">Status</th>
+              </tr>
+            </thead>
+            <tbody>
+    `;
+
+    naTaskRows.forEach(item => {
+      html += `
+        <tr>
+          <td class="align-left" style="font-weight: 600; padding-left: 14px;">${escapeHtml(item.task)}</td>
+          <td>${escapeHtml(item.plannedDate)}</td>
+          <td><span style="font-weight: 700; color: #ea580c;">${escapeHtml(item.status || 'NA')}</span></td>
+        </tr>
+      `;
+    });
+
+    html += `</tbody></table></div></div>`;
+  }
+
+  container.innerHTML = html;
+};
