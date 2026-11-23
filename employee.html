@@ -11,7 +11,7 @@
   <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
   <link rel="manifest" href="favicon/site.webmanifest" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
- 
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
 </head>
 <body>
   <script>
@@ -92,16 +92,25 @@
         <div id="delegation-alert-container" style="display: none;"></div>
 
         <div class="profile-card-header">
+          
           <img id="profile-img" src="https://via.placeholder.com/120" alt="Profile Image">
           <div class="profile-details">
             <h1 id="profile-name">Team Name</h1>
             <p><i class="fa-solid fa-briefcase"></i> <strong>Designation:</strong> <span id="profile-designation">-</span></p>
             <p><i class="fa-solid fa-envelope"></i> <strong>Email ID:</strong> <span id="profile-email">-</span></p>
           </div>
+
+          <div class="delegation-pie-card" style="margin-left:auto; width:260px; background:#fff; border:1px solid #e2e8f0; border-radius:10px; padding:10px 10px;">
+  <h3 style="margin:0 0 8px; font-size:0.95rem; color:#000000;"> Delegation Status</h3>
+  <div style="position:relative; height:120px;">
+    <canvas id="delegationPieChart"></canvas>
+  </div>
+  <p id="delegation-pie-empty" style="display:none; text-align:center; color:#64748b; margin:0;">No delegations</p>
+</div>
+
         </div>
 
         <div id="profile-dashboard-container"></div>
-
         <div class="section-block" id="project-list-block" style="display: none; margin-top: 20px;">
           <h2>Project Numbering List</h2>
           <div id="employee-projects-grid" class="sheets-grid"></div>
