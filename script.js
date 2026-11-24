@@ -91,7 +91,7 @@ const employeesData = [
       { name: 'Enquiry Captured Sheet', docId: '1EM9IhC4KAjI51aZF0mc6_gGI3ZnQzLiGMRsVYBauitg', gid: '810897741', selectedColumns: ['AISPL - Project Head', 'Project Name','Client Name',  'Location', 'Quoted Amount','Stage'] },
       { name: 'Project Visit', formUrl:'https://forms.gle/ZRpDTA4KUkGnbwtX8', docId: '11TLkJxGV3EFz4ZdVqKpuX3O-8FV4TrlMIYjxyAZ0lqY', gid: '2045538987', selectedColumns: ['Date', 'Project Site Visitor', 'Project Name', 'Location', 'Visit Purpose', 'Observation'] },
       { name: 'Office Expenses', formUrl:'https://docs.google.com/forms/d/e/1FAIpQLSeFG1ZBY4mstlGPDpcNhUb9vi2WiJGBr3aG2cuTtYqPNXf4Nw/viewform?usp=header', docId: '1N2DF6vzSoJcIxwL2makablsGtDlMB-rxhcWT3_VLHBY', gid: '1016529559', selectedColumns: ['Date', 'Paid to', 'Amount', 'Reason', 'Categories','URD Purchase','Tax Invoice'] },
-      { name: 'Site Expenses', formUrl:'https://forms.gle/9uuXgx6oF3okLmxb7', docId: '13Vo3YIrbPT06a4ClN-BS-eO1DOCSNzo5dnn-XfO0Tds', gid: '494863087', selectedColumns: ['Date', 'Project Name', 'Paid to', 'Amount', 'Reason','Tax Invoice','URD Purchase'] },
+      { name: 'Site Expenses', formUrl:'https://forms.gle/9uuXgx6oF3okLmxb7', docId: '13Vo3YIrbPT06a4ClN-BS-eO1DOCSNzo5dnn-XfO0Tds', gid: '494863087', selectedColumns: ['Date','Name', 'Project Name','Others', 'Paid to', 'Amount', 'Reason','Tax Invoice','URD Purchase'] },
       { name: 'Project Specification Changes', formUrl:'https://forms.gle/2Zew9NZYBjbF32bE6', docId: '1oOS8lE1JviRkNhbM7FP_0VUxPV9FZgMU70t_j0A_N2A', gid: '944341180', selectedColumns: ['Date', 'Project Name', 'Specific Changes / Additional Work', 'Cost Change (If Any)', 'Requested / Instructed By', 'Approval Status'] },
       { name: 'Leave Application', formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScVKjl4j1wPbzV4QFAK9TlP8xpOkrHYxej75WTdFzt-lkV4Dg/viewform', docId: '1mrjfYpGMSMY-Em7Y4O4m9JZgfED0gdvbdPBD9qscgcM', gid: '148992', selectedColumns: ['Employee Name', 'Leave Type', 'Reason/Purpose', 'Half Day', 'Start Date of Leave','End Date of Leave'] }
     ]
@@ -174,7 +174,7 @@ const employeesData = [
       { name: 'Enquiry Captured Sheet', docId: '1EM9IhC4KAjI51aZF0mc6_gGI3ZnQzLiGMRsVYBauitg', gid: '810897741', selectedColumns: ['AISPL - Project Head', 'Project Name','Client Name',  'Location', 'Quoted Amount','Stage'] },
       { name: 'Project Visit', formUrl:'https://forms.gle/ZRpDTA4KUkGnbwtX8', docId: '11TLkJxGV3EFz4ZdVqKpuX3O-8FV4TrlMIYjxyAZ0lqY', gid: '2045538987', selectedColumns: ['Date', 'Project Site Visitor', 'Project Name', 'Location', 'Visit Purpose', 'Observation'] },
       { name: 'Office Expenses', formUrl:'https://docs.google.com/forms/d/e/1FAIpQLSeFG1ZBY4mstlGPDpcNhUb9vi2WiJGBr3aG2cuTtYqPNXf4Nw/viewform?usp=header', docId: '1N2DF6vzSoJcIxwL2makablsGtDlMB-rxhcWT3_VLHBY', gid: '1016529559', selectedColumns: ['Date', 'Paid to', 'Amount', 'Reason', 'Categories','URD Purchase','Tax Invoice'] },
-      { name: 'Site Expenses', formUrl:'https://forms.gle/9uuXgx6oF3okLmxb7', docId: '13Vo3YIrbPT06a4ClN-BS-eO1DOCSNzo5dnn-XfO0Tds', gid: '494863087', selectedColumns: ['Date', 'Project Name', 'Paid to', 'Amount', 'Reason','Tax Invoice','URD Purchase'] },
+      { name: 'Site Expenses', formUrl:'https://forms.gle/9uuXgx6oF3okLmxb7', docId: '13Vo3YIrbPT06a4ClN-BS-eO1DOCSNzo5dnn-XfO0Tds', gid: '494863087', selectedColumns: ['Date','Name', 'Project Name','Others', 'Paid to', 'Amount', 'Reason','Tax Invoice','URD Purchase'] },
       { name: 'Project Specification Changes', formUrl:'https://forms.gle/2Zew9NZYBjbF32bE6', docId: '1oOS8lE1JviRkNhbM7FP_0VUxPV9FZgMU70t_j0A_N2A', gid: '944341180', selectedColumns: ['Date', 'Project Name', 'Specific Changes / Additional Work', 'Cost Change (If Any)', 'Requested / Instructed By', 'Approval Status'] },
       { name: 'Leave Application', formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScVKjl4j1wPbzV4QFAK9TlP8xpOkrHYxej75WTdFzt-lkV4Dg/viewform', docId: '1mrjfYpGMSMY-Em7Y4O4m9JZgfED0gdvbdPBD9qscgcM', gid: '148992', selectedColumns: ['Employee Name', 'Leave Type', 'Reason/Purpose', 'Half Day', 'Start Date of Leave','End Date of Leave'] }
     ]
@@ -228,8 +228,8 @@ const employeesData = [
       { name: 'Daily Video Call', docId: '1SRpvwpmsFH4xMU9Ntj_oyu-jUjb0Ky0D9VRseh1hu9o', gid: '2092959791', selectedColumns: ['Name', 'Task', 'Planned', 'Actual', 'Status'] },
       { name: 'Project Visit', formUrl:'https://forms.gle/ZRpDTA4KUkGnbwtX8', docId: '11TLkJxGV3EFz4ZdVqKpuX3O-8FV4TrlMIYjxyAZ0lqY', gid: '2045538987', selectedColumns: ['Date', 'Project Site Visitor', 'Project Name', 'Location', 'Visit Purpose', 'Observation'] },
       { name: 'Site Inspection Checklist', formUrl:'https://forms.gle/qfXppXnNK4JDP3tc8', docId: '1zpPnIESV3EBTrrGKMpjW2UNsbouv3bTA88YuN4XZEgs', gid: '1839387537', selectedColumns: ['Date', 'Name', 'Project Name', 'Work Activity', 'Upload'] },
-      { name: 'Site Expenses', formUrl:'https://forms.gle/9uuXgx6oF3okLmxb7', docId: '13Vo3YIrbPT06a4ClN-BS-eO1DOCSNzo5dnn-XfO0Tds', gid: '494863087', selectedColumns: ['Date', 'Project Name', 'Paid to', 'Amount', 'Reason','Tax Invoice','URD Purchase'] },
-      { name: 'Petrol Allowance', formUrl:'https://forms.gle/2EmAJQdZ7f2BwMLF9', docId: '1qbbbN4uU0x1UFC3rIzkO6lekrFw3A7XD1lx7zZYxSxE', gid: '1385008698', selectedColumns: ['Date', 'Name', 'From', 'To', 'Km','Others','Upload'] },
+      { name: 'Site Expenses', formUrl:'https://forms.gle/9uuXgx6oF3okLmxb7', docId: '13Vo3YIrbPT06a4ClN-BS-eO1DOCSNzo5dnn-XfO0Tds', gid: '494863087', selectedColumns: ['Date','Name', 'Project Name','Others', 'Paid to', 'Amount', 'Reason','Tax Invoice','URD Purchase'] },
+      { name: 'Petrol Allowance', formUrl:'https://forms.gle/2EmAJQdZ7f2BwMLF9', docId: '1qbbbN4uU0x1UFC3rIzkO6lekrFw3A7XD1lx7zZYxSxE', gid: '1385008698', selectedColumns: ['Date', 'Name', 'From', 'To','Others', 'Km','Others','Upload'] },
       { name: 'Upload URD Purchase / Tax Invoice', formUrl:'https://forms.gle/ojbkRA6NZ92w96mZ9', docId: '1ezKQET2dMdSkJ_rUmbMiWxFA0wSVmDrwM8XGDaajkF8', gid: '1029448347', selectedColumns: ['Date', 'Name', 'Project Name', 'Tax Invoice', 'URD Purchase'] },
       { name: 'Delivery Challan', formUrl:'https://forms.gle/EuBCvSYkfQVYjBYw7', docId: '1ssmVTMIvMmNcqm5oloGabxX6XrWd-qMWCxzb5QYdc6s', gid: '1102974409', selectedColumns: ['Date', 'Project Name', 'Name', 'Work', 'Challan', 'Returnable Materials List', 'Reason'] },
       { name: 'Project Specification Changes', formUrl:'https://forms.gle/2Zew9NZYBjbF32bE6', docId: '1oOS8lE1JviRkNhbM7FP_0VUxPV9FZgMU70t_j0A_N2A', gid: '944341180', selectedColumns: ['Date', 'Project Name', 'Specific Changes / Additional Work', 'Cost Change (If Any)', 'Requested / Instructed By', 'Approval Status'] },
@@ -289,8 +289,8 @@ const employeesData = [
       { name: 'Daily Report', formUrl:'https://forms.gle/YUV27rV5kPXKyn799', docId: '1mrjfYpGMSMY-Em7Y4O4m9JZgfED0gdvbdPBD9qscgcM', gid: '799922129', selectedColumns: ['Date', 'Project Co-Ordinator','Project Name', 'Location', 'In - Time ', 'Out- Time', 'Have you done site visit?','Described Days Activities (Mentioned by Points) In Office','Described Days Activities (Mentioned by Points) In Site'] },
       { name: 'Project Visit', formUrl:'https://forms.gle/ZRpDTA4KUkGnbwtX8', docId: '11TLkJxGV3EFz4ZdVqKpuX3O-8FV4TrlMIYjxyAZ0lqY', gid: '2045538987', selectedColumns: ['Date', 'Project Site Visitor', 'Project Name', 'Location', 'Visit Purpose', 'Observation'] },
       { name: 'Site Inspection Checklist', formUrl:'https://forms.gle/qfXppXnNK4JDP3tc8', docId: '1zpPnIESV3EBTrrGKMpjW2UNsbouv3bTA88YuN4XZEgs', gid: '1839387537', selectedColumns: ['Date', 'Name', 'Project Name', 'Work Activity', 'Upload'] },
-      { name: 'Site Expenses', formUrl:'https://forms.gle/9uuXgx6oF3okLmxb7', docId: '13Vo3YIrbPT06a4ClN-BS-eO1DOCSNzo5dnn-XfO0Tds', gid: '494863087', selectedColumns: ['Date', 'Project Name', 'Paid to', 'Amount', 'Reason','Tax Invoice','URD Purchase'] },
-      { name: 'Petrol Allowance', formUrl:'https://forms.gle/2EmAJQdZ7f2BwMLF9', docId: '1qbbbN4uU0x1UFC3rIzkO6lekrFw3A7XD1lx7zZYxSxE', gid: '1385008698', selectedColumns: ['Date', 'Name', 'From', 'To', 'Km','Others','Upload'] },
+      { name: 'Site Expenses', formUrl:'https://forms.gle/9uuXgx6oF3okLmxb7', docId: '13Vo3YIrbPT06a4ClN-BS-eO1DOCSNzo5dnn-XfO0Tds', gid: '494863087', selectedColumns: ['Date','Name', 'Project Name','Others', 'Paid to', 'Amount', 'Reason','Tax Invoice','URD Purchase'] },
+      { name: 'Petrol Allowance', formUrl:'https://forms.gle/2EmAJQdZ7f2BwMLF9', docId: '1qbbbN4uU0x1UFC3rIzkO6lekrFw3A7XD1lx7zZYxSxE', gid: '1385008698', selectedColumns: ['Date', 'Name', 'From', 'To','Others', 'Km','Upload'] },
       { name: 'Upload URD Purchase / Tax Invoice', formUrl:'https://forms.gle/ojbkRA6NZ92w96mZ9', docId: '1ezKQET2dMdSkJ_rUmbMiWxFA0wSVmDrwM8XGDaajkF8', gid: '1029448347', selectedColumns: ['Date', 'Name', 'Project Name', 'Tax Invoice', 'URD Purchase'] },
       { name: 'Delivery Challan', formUrl:'https://forms.gle/EuBCvSYkfQVYjBYw7', docId: '1ssmVTMIvMmNcqm5oloGabxX6XrWd-qMWCxzb5QYdc6s', gid: '1102974409', selectedColumns: ['Date', 'Project Name', 'Name', 'Work', 'Challan', 'Returnable Materials List', 'Reason'] },
       { name: 'Project Specification Changes', formUrl:'https://forms.gle/2Zew9NZYBjbF32bE6', docId: '1oOS8lE1JviRkNhbM7FP_0VUxPV9FZgMU70t_j0A_N2A', gid: '944341180', selectedColumns: ['Date', 'Project Name', 'Specific Changes / Additional Work', 'Cost Change (If Any)', 'Requested / Instructed By', 'Approval Status'] },
@@ -321,7 +321,7 @@ const employeesData = [
       { name: 'Site Video Call', docId: '1SRpvwpmsFH4xMU9Ntj_oyu-jUjb0Ky0D9VRseh1hu9o', gid: '2092959791', selectedColumns: ['Name', 'Task', 'Planned', 'Actual', 'Status'] },
       { name: 'Project Visit', formUrl:'https://forms.gle/ZRpDTA4KUkGnbwtX8', docId: '11TLkJxGV3EFz4ZdVqKpuX3O-8FV4TrlMIYjxyAZ0lqY', gid: '2045538987', selectedColumns: ['Date', 'Project Site Visitor', 'Project Name', 'Location', 'Visit Purpose', 'Observation'] },
       { name: 'Site Inspection Checklist', formUrl:'https://forms.gle/qfXppXnNK4JDP3tc8', docId: '1zpPnIESV3EBTrrGKMpjW2UNsbouv3bTA88YuN4XZEgs', gid: '1839387537', selectedColumns: ['Date', 'Name', 'Project Name', 'Work Activity', 'Upload'] },
-      { name: 'Site Expenses', formUrl:'https://forms.gle/9uuXgx6oF3okLmxb7', docId: '13Vo3YIrbPT06a4ClN-BS-eO1DOCSNzo5dnn-XfO0Tds', gid: '494863087', selectedColumns: ['Date', 'Project Name', 'Paid to', 'Amount', 'Reason','Tax Invoice','URD Purchase'] },
+      { name: 'Site Expenses', formUrl:'https://forms.gle/9uuXgx6oF3okLmxb7', docId: '13Vo3YIrbPT06a4ClN-BS-eO1DOCSNzo5dnn-XfO0Tds', gid: '494863087', selectedColumns: ['Date','Name', 'Project Name','Others', 'Paid to', 'Amount', 'Reason','Tax Invoice','URD Purchase'] },
       { name: 'Petrol Allowance', formUrl:'https://forms.gle/2EmAJQdZ7f2BwMLF9', docId: '1qbbbN4uU0x1UFC3rIzkO6lekrFw3A7XD1lx7zZYxSxE', gid: '1385008698', selectedColumns: ['Date', 'Name', 'From', 'To', 'Km','Others','Upload'] },
       { name: 'Upload URD Purchase / Tax Invoice', formUrl:'https://forms.gle/ojbkRA6NZ92w96mZ9', docId: '1ezKQET2dMdSkJ_rUmbMiWxFA0wSVmDrwM8XGDaajkF8', gid: '1029448347', selectedColumns: ['Date', 'Name', 'Project Name', 'Tax Invoice', 'URD Purchase'] },
       { name: 'Delivery Challan', formUrl:'https://forms.gle/EuBCvSYkfQVYjBYw7', docId: '1ssmVTMIvMmNcqm5oloGabxX6XrWd-qMWCxzb5QYdc6s', gid: '1102974409', selectedColumns: ['Date', 'Project Name', 'Name', 'Work', 'Challan', 'Returnable Materials List', 'Reason'] },
@@ -351,7 +351,7 @@ const employeesData = [
       { name: 'Daily Report', formUrl:'https://forms.gle/YUV27rV5kPXKyn799', docId: '1mrjfYpGMSMY-Em7Y4O4m9JZgfED0gdvbdPBD9qscgcM', gid: '799922129', selectedColumns: ['Date', 'Project Co-Ordinator','Project Name', 'Location', 'In - Time ', 'Out- Time', 'Have you done site visit?','Described Days Activities (Mentioned by Points) In Office','Described Days Activities (Mentioned by Points) In Site'] },
       { name: 'Project Visit', formUrl:'https://forms.gle/ZRpDTA4KUkGnbwtX8', docId: '11TLkJxGV3EFz4ZdVqKpuX3O-8FV4TrlMIYjxyAZ0lqY', gid: '2045538987', selectedColumns: ['Date', 'Project Site Visitor', 'Project Name', 'Location', 'Visit Purpose', 'Observation'] },
       { name: 'Site Inspection Checklist', formUrl:'https://forms.gle/qfXppXnNK4JDP3tc8', docId: '1zpPnIESV3EBTrrGKMpjW2UNsbouv3bTA88YuN4XZEgs', gid: '1839387537', selectedColumns: ['Date', 'Name', 'Project Name', 'Work Activity', 'Upload'] },
-      { name: 'Site Expenses', formUrl:'https://forms.gle/9uuXgx6oF3okLmxb7', docId: '13Vo3YIrbPT06a4ClN-BS-eO1DOCSNzo5dnn-XfO0Tds', gid: '494863087', selectedColumns: ['Date', 'Project Name', 'Paid to', 'Amount', 'Reason','Tax Invoice','URD Purchase'] },
+      { name: 'Site Expenses', formUrl:'https://forms.gle/9uuXgx6oF3okLmxb7', docId: '13Vo3YIrbPT06a4ClN-BS-eO1DOCSNzo5dnn-XfO0Tds', gid: '494863087', selectedColumns: ['Date','Name', 'Project Name','Others', 'Paid to', 'Amount', 'Reason','Tax Invoice','URD Purchase'] },
       { name: 'Petrol Allowance', formUrl:'https://forms.gle/2EmAJQdZ7f2BwMLF9', docId: '1qbbbN4uU0x1UFC3rIzkO6lekrFw3A7XD1lx7zZYxSxE', gid: '1385008698', selectedColumns: ['Date', 'Name', 'From', 'To', 'Km','Others','Upload'] },
       { name: 'Upload URD Purchase / Tax Invoice', formUrl:'https://forms.gle/ojbkRA6NZ92w96mZ9', docId: '1ezKQET2dMdSkJ_rUmbMiWxFA0wSVmDrwM8XGDaajkF8', gid: '1029448347', selectedColumns: ['Date', 'Name', 'Project Name', 'Tax Invoice', 'URD Purchase'] },
       { name: 'Delivery Challan', formUrl:'https://forms.gle/EuBCvSYkfQVYjBYw7', docId: '1ssmVTMIvMmNcqm5oloGabxX6XrWd-qMWCxzb5QYdc6s', gid: '1102974409', selectedColumns: ['Date', 'Project Name', 'Name', 'Work', 'Challan', 'Returnable Materials List', 'Reason'] },
@@ -386,7 +386,7 @@ const employeesData = [
       { name: 'Checklist', docId: '1m_P5_eP9FvD9eaYvanmLlV833cscTvk2xJk_c39cbZw', gid: '2092959791', selectedColumns: ['Task', 'Doer', 'Planned', 'Actual', 'Status'] },
       { name: 'Daily Report', formUrl:'https://docs.google.com/forms/d/e/1FAIpQLSf7y6FpZ4Ff4Ihi7Jq6SyqMXHEnvXkaWSQ24v6RPQCMcuqcGw/viewform', docId: '1mrjfYpGMSMY-Em7Y4O4m9JZgfED0gdvbdPBD9qscgcM', gid: '1518539535', selectedColumns: ['Date','Designer', 'Project', 'Location', 'In-Time', 'Out-time'] },
       { name: 'Daily Video Call', docId: '1SRpvwpmsFH4xMU9Ntj_oyu-jUjb0Ky0D9VRseh1hu9o', gid: '2092959791', selectedColumns: ['Name', 'Task', 'Planned', 'Actual', 'Status'] },
-      { name: 'Site Expenses', formUrl:'https://forms.gle/9uuXgx6oF3okLmxb7', docId: '13Vo3YIrbPT06a4ClN-BS-eO1DOCSNzo5dnn-XfO0Tds', gid: '494863087', selectedColumns: ['Date', 'Project Name', 'Paid to', 'Amount', 'Reason','Tax Invoice','URD Purchase'] },
+      { name: 'Site Expenses', formUrl:'https://forms.gle/9uuXgx6oF3okLmxb7', docId: '13Vo3YIrbPT06a4ClN-BS-eO1DOCSNzo5dnn-XfO0Tds', gid: '494863087', selectedColumns: ['Date','Name', 'Project Name','Others', 'Paid to', 'Amount', 'Reason','Tax Invoice','URD Purchase'] },
       { name: 'Petrol Allowance', formUrl:'https://forms.gle/2EmAJQdZ7f2BwMLF9', docId: '1qbbbN4uU0x1UFC3rIzkO6lekrFw3A7XD1lx7zZYxSxE', gid: '1385008698', selectedColumns: ['Date', 'Name', 'From', 'To', 'Km','Others','Upload'] },
       { name: 'Help Slip', formUrl:'https://forms.gle/naMThh9BWnzcAme38', docId: '16R8q7J5kc3GYXgZC1q6KS4nVJyMIaHqfleFnT3l7v_4', gid: '1930440204', selectedColumns: ['Timestamp', 'Employee Name', 'Department', 'Required From', 'Challenge / Question', 'Solution 1'] },
       { name: 'Leave Application', formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScVKjl4j1wPbzV4QFAK9TlP8xpOkrHYxej75WTdFzt-lkV4Dg/viewform', docId: '1mrjfYpGMSMY-Em7Y4O4m9JZgfED0gdvbdPBD9qscgcM', gid: '148992', selectedColumns: ['Employee Name', 'Leave Type', 'Reason/Purpose', 'Half Day', 'Start Date of Leave','End Date of Leave'] },
@@ -416,7 +416,7 @@ const employeesData = [
       { name: 'Checklist', docId: '1m_P5_eP9FvD9eaYvanmLlV833cscTvk2xJk_c39cbZw', gid: '2092959791', selectedColumns: ['Task', 'Doer', 'Planned', 'Actual', 'Status'] },
       { name: 'Daily Report', formUrl:'https://docs.google.com/forms/d/e/1FAIpQLSf7y6FpZ4Ff4Ihi7Jq6SyqMXHEnvXkaWSQ24v6RPQCMcuqcGw/viewform', docId: '1mrjfYpGMSMY-Em7Y4O4m9JZgfED0gdvbdPBD9qscgcM', gid: '1518539535', selectedColumns: ['Date','Designer', 'Project', 'Location', 'In-Time', 'Out-time'] },
       { name: 'Daily Video Call', docId: '1SRpvwpmsFH4xMU9Ntj_oyu-jUjb0Ky0D9VRseh1hu9o', gid: '2092959791', selectedColumns: ['Name', 'Task', 'Planned', 'Actual', 'Status'] },
-      { name: 'Site Expenses', formUrl:'https://forms.gle/9uuXgx6oF3okLmxb7', docId: '13Vo3YIrbPT06a4ClN-BS-eO1DOCSNzo5dnn-XfO0Tds', gid: '494863087', selectedColumns: ['Date', 'Project Name', 'Paid to', 'Amount', 'Reason','Tax Invoice','URD Purchase'] },
+      { name: 'Site Expenses', formUrl:'https://forms.gle/9uuXgx6oF3okLmxb7', docId: '13Vo3YIrbPT06a4ClN-BS-eO1DOCSNzo5dnn-XfO0Tds', gid: '494863087', selectedColumns: ['Date','Name', 'Project Name','Others', 'Paid to', 'Amount', 'Reason','Tax Invoice','URD Purchase'] },
       { name: 'Petrol Allowance', formUrl:'https://forms.gle/2EmAJQdZ7f2BwMLF9', docId: '1qbbbN4uU0x1UFC3rIzkO6lekrFw3A7XD1lx7zZYxSxE', gid: '1385008698', selectedColumns: ['Date', 'Name', 'From', 'To', 'Km','Others','Upload'] },
       { name: 'Help Slip', formUrl:'https://forms.gle/naMThh9BWnzcAme38', docId: '16R8q7J5kc3GYXgZC1q6KS4nVJyMIaHqfleFnT3l7v_4', gid: '1930440204', selectedColumns: ['Timestamp', 'Employee Name', 'Department', 'Required From', 'Challenge / Question', 'Solution 1'] },
       { name: 'Leave Application', formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScVKjl4j1wPbzV4QFAK9TlP8xpOkrHYxej75WTdFzt-lkV4Dg/viewform', docId: '1mrjfYpGMSMY-Em7Y4O4m9JZgfED0gdvbdPBD9qscgcM', gid: '148992', selectedColumns: ['Employee Name', 'Leave Type', 'Reason/Purpose', 'Half Day', 'Start Date of Leave','End Date of Leave'] },
@@ -558,7 +558,7 @@ const employeesData = [
       { name: 'Delegation Sheet Team', docId: '1680NhH8rKFTKeY3HSZGV_izgEi4QieHiirbcbRi7hTA', gid: '1184708924', selectedColumns: ['Name', 'Task', 'First Date', 'Revision 1','Revision 2', 'Total Revision','Status','Actual Completion Date'] },
       { name: 'Checklist', docId: '1m_P5_eP9FvD9eaYvanmLlV833cscTvk2xJk_c39cbZw', gid: '2092959791', selectedColumns: ['Task', 'Doer', 'Planned', 'Actual', 'Status'] },
       { name: 'Daily Report', formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScRyy4LtikZcJkmYYeaypXJJkR_pbR1YSz0Iso0N6f-L_hfDw/viewform', docId: '1mrjfYpGMSMY-Em7Y4O4m9JZgfED0gdvbdPBD9qscgcM', gid: '827729352', selectedColumns: ['Date','Name', 'In-Time', 'Out-time','Work Done Yesterday','Work Planned for Today'] },
-      { name: 'Site Expenses', formUrl:'https://forms.gle/9uuXgx6oF3okLmxb7', docId: '13Vo3YIrbPT06a4ClN-BS-eO1DOCSNzo5dnn-XfO0Tds', gid: '494863087', selectedColumns: ['Date', 'Project Name', 'Paid to', 'Amount', 'Reason','Tax Invoice','URD Purchase'] },
+      { name: 'Site Expenses', formUrl:'https://forms.gle/9uuXgx6oF3okLmxb7', docId: '13Vo3YIrbPT06a4ClN-BS-eO1DOCSNzo5dnn-XfO0Tds', gid: '494863087', selectedColumns: ['Date','Name', 'Project Name','Others', 'Paid to', 'Amount', 'Reason','Tax Invoice','URD Purchase'] },
       { name: 'Help Slip', formUrl:'https://forms.gle/naMThh9BWnzcAme38', docId: '16R8q7J5kc3GYXgZC1q6KS4nVJyMIaHqfleFnT3l7v_4', gid: '1930440204', selectedColumns: ['Timestamp', 'Employee Name', 'Department', 'Required From', 'Challenge / Question', 'Solution 1'] },
       { name: 'Leave Application', formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScVKjl4j1wPbzV4QFAK9TlP8xpOkrHYxej75WTdFzt-lkV4Dg/viewform', docId: '1mrjfYpGMSMY-Em7Y4O4m9JZgfED0gdvbdPBD9qscgcM', gid: '148992', selectedColumns: ['Employee Name', 'Leave Type', 'Reason/Purpose', 'Half Day', 'Start Date of Leave','End Date of Leave'] },
       { name: 'Extra Work Approval', formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScYU-9h_f34xuHdSKpz5L3zTcu2VGWO9A5wqge_XL4KbW-3YA/viewform', docId: '1md6KnXHf-_70ndOwakmAD6ksWjd4xwglMJKBEMIzI8o', gid: '1681660272', selectedColumns: ['Employee Name','Extra Work Date', 'In Time', 'Out Time','Reason'] },
@@ -589,7 +589,7 @@ const employeesData = [
      { name: 'Delegation Sheet Team', docId: '1680NhH8rKFTKeY3HSZGV_izgEi4QieHiirbcbRi7hTA', gid: '1184708924', selectedColumns: ['Name', 'Task', 'First Date', 'Revision 1','Revision 2', 'Total Revision','Status','Actual Completion Date'] },
       { name: 'Checklist', docId: '1m_P5_eP9FvD9eaYvanmLlV833cscTvk2xJk_c39cbZw', gid: '2092959791', selectedColumns: ['Task', 'Doer', 'Planned', 'Actual', 'Status'] },
       { name: 'Daily Report', formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScRyy4LtikZcJkmYYeaypXJJkR_pbR1YSz0Iso0N6f-L_hfDw/viewform', docId: '1mrjfYpGMSMY-Em7Y4O4m9JZgfED0gdvbdPBD9qscgcM', gid: '827729352', selectedColumns: ['Date','Name', 'In-Time', 'Out-time','Work Done Yesterday','Work Planned for Today'] },
-      { name: 'Site Expenses', formUrl:'https://forms.gle/9uuXgx6oF3okLmxb7', docId: '13Vo3YIrbPT06a4ClN-BS-eO1DOCSNzo5dnn-XfO0Tds', gid: '494863087', selectedColumns: ['Date', 'Project Name', 'Paid to', 'Amount', 'Reason','Tax Invoice','URD Purchase'] },
+      { name: 'Site Expenses', formUrl:'https://forms.gle/9uuXgx6oF3okLmxb7', docId: '13Vo3YIrbPT06a4ClN-BS-eO1DOCSNzo5dnn-XfO0Tds', gid: '494863087', selectedColumns: ['Date','Name', 'Project Name','Others', 'Paid to', 'Amount', 'Reason','Tax Invoice','URD Purchase'] },
       { name: 'Help Slip', formUrl:'https://forms.gle/naMThh9BWnzcAme38', docId: '16R8q7J5kc3GYXgZC1q6KS4nVJyMIaHqfleFnT3l7v_4', gid: '1930440204', selectedColumns: ['Timestamp', 'Employee Name', 'Department', 'Required From', 'Challenge / Question', 'Solution 1'] },
       { name: 'Leave Application', formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScVKjl4j1wPbzV4QFAK9TlP8xpOkrHYxej75WTdFzt-lkV4Dg/viewform', docId: '1mrjfYpGMSMY-Em7Y4O4m9JZgfED0gdvbdPBD9qscgcM', gid: '148992', selectedColumns: ['Employee Name', 'Leave Type', 'Reason/Purpose', 'Half Day', 'Start Date of Leave','End Date of Leave'] },
       { name: 'Extra Work Approval', formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScYU-9h_f34xuHdSKpz5L3zTcu2VGWO9A5wqge_XL4KbW-3YA/viewform', docId: '1md6KnXHf-_70ndOwakmAD6ksWjd4xwglMJKBEMIzI8o', gid: '1681660272', selectedColumns: ['Employee Name','Extra Work Date', 'In Time', 'Out Time','Reason'] },
@@ -669,9 +669,11 @@ const employeesData = [
       }
     ],
     sheets: [
-            { name: 'Delegation Score PH', docId: '1JsKyve_bNF80c-D-jvLAmFGfDKE6xLzYBtiFep0UXlc', gid: '1184708924', selectedColumns: ['Name', 'Task', 'First Date', 'Revision 1','Revision 2', 'Total Revision','Status','Actual Completion Date'] },
+      { name: 'Delegation Score PH', docId: '1JsKyve_bNF80c-D-jvLAmFGfDKE6xLzYBtiFep0UXlc', gid: '1184708924', selectedColumns: ['Name', 'Task', 'First Date', 'Revision 1','Revision 2', 'Total Revision','Status','Actual Completion Date'] },
       { name: 'Checklist', docId: '1m_P5_eP9FvD9eaYvanmLlV833cscTvk2xJk_c39cbZw', gid: '2092959791', selectedColumns: ['Task', 'Doer', 'Planned', 'Actual', 'Status'] },
-      { name: 'Office Expenses', formUrl:'https://docs.google.com/forms/d/e/1FAIpQLSeFG1ZBY4mstlGPDpcNhUb9vi2WiJGBr3aG2cuTtYqPNXf4Nw/viewform?usp=header', docId: '1N2DF6vzSoJcIxwL2makablsGtDlMB-rxhcWT3_VLHBY', gid: '1016529559', selectedColumns: ['Date', 'Paid to', 'Amount', 'Reason', 'Categories','URD Purchase'] },
+      { name: 'Office Expenses', formUrl:'https://docs.google.com/forms/d/e/1FAIpQLSeFG1ZBY4mstlGPDpcNhUb9vi2WiJGBr3aG2cuTtYqPNXf4Nw/viewform?usp=header', docId: '1N2DF6vzSoJcIxwL2makablsGtDlMB-rxhcWT3_VLHBY', gid: '1016529559', selectedColumns: ['Date','Name', 'Paid to', 'Amount', 'Reason', 'Categories','URD Purchase'] },
+      { name: 'Site Expenses', formUrl:'https://forms.gle/9uuXgx6oF3okLmxb7', docId: '13Vo3YIrbPT06a4ClN-BS-eO1DOCSNzo5dnn-XfO0Tds', gid: '494863087', selectedColumns: ['Date','Name', 'Project Name','Others', 'Paid to', 'Amount', 'Reason','Tax Invoice','URD Purchase'] },
+      { name: 'Petrol Allowance', formUrl:'https://forms.gle/2EmAJQdZ7f2BwMLF9', docId: '1qbbbN4uU0x1UFC3rIzkO6lekrFw3A7XD1lx7zZYxSxE', gid: '1385008698', selectedColumns: ['Date', 'Name', 'From', 'To', 'Km','Others','Upload'] },
       { name: 'Leave Application', formUrl:'https://docs.google.com/forms/d/e/1FAIpQLScVKjl4j1wPbzV4QFAK9TlP8xpOkrHYxej75WTdFzt-lkV4Dg/viewform', docId: '1mrjfYpGMSMY-Em7Y4O4m9JZgfED0gdvbdPBD9qscgcM', gid: '148992', selectedColumns: ['Employee Name', 'Leave Type', 'Reason/Purpose', 'Half Day', 'Start Date of Leave','End Date of Leave'] }
     ]
   }
@@ -1215,8 +1217,18 @@ window.handleGvizResponse = function(response) {
 
   let filteredRows = [];
   const isProjectSheet = currentActiveSheet && currentActiveSheet.isProject === true;
+  const sheetNameLowerForAccess = currentActiveSheet ? currentActiveSheet.name.toLowerCase() : '';
 
-  if (isProjectSheet) {
+  const isAccountsAllExpensesView =
+    activeEmployee &&
+    activeEmployee.id === 'accounts-team' &&
+    (
+      sheetNameLowerForAccess.includes('site expenses') ||
+      sheetNameLowerForAccess.includes('office expenses') ||
+      sheetNameLowerForAccess.includes('petrol allowance')
+    );
+
+  if (isProjectSheet || isAccountsAllExpensesView) {
     filteredRows = rows;
   } else {
     const firstName = activeEmployee ? activeEmployee.name.split(' ')[0].toLowerCase() : '';
