@@ -381,7 +381,7 @@ const employeesData = [
       }
     ],
     sheets: [
-      { name: 'Designer Work Schedule', docId: '1iPP_fqIffhzZJyqaPyinIRc0Zhlgtvn37m92LqONBoA', gid: '0', selectedColumns: ['Doer', 'Project', 'Description', 'Planned Start Date', 'Planned Finish Date','Status','Actual Completion Date'] },
+      { name: 'Designer Work Schedule', docId: '1iPP_fqIffhzZJyqaPyinIRc0Zhlgtvn37m92LqONBoA', gid: '0', selectedColumns: ['Doer', 'Project', 'Description', 'Planned Start Date', 'Planned Finish Date','Status','Actual Completion Date','Working Hours'] },
      { name: 'Delegation Sheet Team', docId: '1680NhH8rKFTKeY3HSZGV_izgEi4QieHiirbcbRi7hTA', gid: '1184708924', selectedColumns: ['Name', 'Task', 'First Date', 'Revision 1','Revision 2', 'Total Revision','Status','Actual Completion Date'] },
       { name: 'Checklist', docId: '1m_P5_eP9FvD9eaYvanmLlV833cscTvk2xJk_c39cbZw', gid: '2092959791', selectedColumns: ['Task', 'Doer', 'Planned', 'Actual', 'Status'] },
       { name: 'Daily Report', formUrl:'https://docs.google.com/forms/d/e/1FAIpQLSf7y6FpZ4Ff4Ihi7Jq6SyqMXHEnvXkaWSQ24v6RPQCMcuqcGw/viewform', docId: '1mrjfYpGMSMY-Em7Y4O4m9JZgfED0gdvbdPBD9qscgcM', gid: '1518539535', selectedColumns: ['Date','Designer', 'Project', 'Location', 'In-Time', 'Out-time'] },
@@ -411,7 +411,7 @@ const employeesData = [
       }
     ],
     sheets: [
-      { name: 'Designer Work Schedule', docId: '1iPP_fqIffhzZJyqaPyinIRc0Zhlgtvn37m92LqONBoA', gid: '0', selectedColumns: ['Doer', 'Project', 'Description', 'Planned Start Date', 'Planned Finish Date','Status','Actual Completion Date'] },
+      { name: 'Designer Work Schedule', docId: '1iPP_fqIffhzZJyqaPyinIRc0Zhlgtvn37m92LqONBoA', gid: '0', selectedColumns: ['Doer', 'Project', 'Description', 'Planned Start Date', 'Planned Finish Date','Status','Actual Completion Date','Working Hours'] },
      { name: 'Delegation Sheet Team', docId: '1680NhH8rKFTKeY3HSZGV_izgEi4QieHiirbcbRi7hTA', gid: '1184708924', selectedColumns: ['Name', 'Task', 'First Date', 'Revision 1','Revision 2', 'Total Revision','Status','Actual Completion Date'] },
       { name: 'Checklist', docId: '1m_P5_eP9FvD9eaYvanmLlV833cscTvk2xJk_c39cbZw', gid: '2092959791', selectedColumns: ['Task', 'Doer', 'Planned', 'Actual', 'Status'] },
       { name: 'Daily Report', formUrl:'https://docs.google.com/forms/d/e/1FAIpQLSf7y6FpZ4Ff4Ihi7Jq6SyqMXHEnvXkaWSQ24v6RPQCMcuqcGw/viewform', docId: '1mrjfYpGMSMY-Em7Y4O4m9JZgfED0gdvbdPBD9qscgcM', gid: '1518539535', selectedColumns: ['Date','Designer', 'Project', 'Location', 'In-Time', 'Out-time'] },
