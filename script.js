@@ -107,9 +107,14 @@ const employeesData = [
         title: 'Airlife Gases Pvt. Ltd. Progress Dashboard',
         url: 'https://script.google.com/a/macros/avaniyshinterior.com/s/AKfycbxoo7jVxrxKUBRtqy05_b0T0EK676VBzEPpiK7ntxkTOO_LZdrN4gbEcIHECXni7wq_tg/exec'
       },
+      
       {
         title: 'Checklist Dashboard',
         url: 'https://datastudio.google.com/reporting/b30bad2f-4552-4c9f-8d9d-b8afd5056244/page/gcG5F'
+      },
+      {
+        title: 'Designer Dashboard',
+        url: 'https://script.google.com/a/macros/avaniyshinterior.com/s/AKfycbxh54vuyFmTtDvJwXY88cnHYDAaZptFX063acXGG-9LAT_r3_GUQu1oCZmeM4gMRpnNXA/exec'
       }
     ],
     projects: [
