@@ -107,7 +107,6 @@ const employeesData = [
         title: 'Airlife Gases Pvt. Ltd. Progress Dashboard',
         url: 'https://script.google.com/a/macros/avaniyshinterior.com/s/AKfycbxoo7jVxrxKUBRtqy05_b0T0EK676VBzEPpiK7ntxkTOO_LZdrN4gbEcIHECXni7wq_tg/exec'
       },
-      
       {
         title: 'Checklist Dashboard',
         url: 'https://datastudio.google.com/reporting/b30bad2f-4552-4c9f-8d9d-b8afd5056244/page/gcG5F'
@@ -386,7 +385,7 @@ const employeesData = [
       }
     ],
     sheets: [
-      { name: 'Designer Work Schedule', docId: '1iPP_fqIffhzZJyqaPyinIRc0Zhlgtvn37m92LqONBoA', gid: '0', selectedColumns: ['Doer', 'Project', 'Description', 'Planned Start Date', 'Planned Finish Date','Status','Actual Completion Date','Working Hours'] },
+      { name: 'Designer Work Schedule', docId: '1iPP_fqIffhzZJyqaPyinIRc0Zhlgtvn37m92LqONBoA', gid: '0', selectedColumns: ['Doer', 'Project', 'Description', 'Planned Start Date', 'Planned Finish Date','Status','Actual Completion Date'] },
      { name: 'Delegation Sheet Team', docId: '1680NhH8rKFTKeY3HSZGV_izgEi4QieHiirbcbRi7hTA', gid: '1184708924', selectedColumns: ['Name', 'Task', 'First Date', 'Revision 1','Revision 2', 'Total Revision','Status','Actual Completion Date'] },
       { name: 'Checklist', docId: '1m_P5_eP9FvD9eaYvanmLlV833cscTvk2xJk_c39cbZw', gid: '2092959791', selectedColumns: ['Task', 'Doer', 'Planned', 'Actual', 'Status'] },
       { name: 'Daily Report', formUrl:'https://docs.google.com/forms/d/e/1FAIpQLSf7y6FpZ4Ff4Ihi7Jq6SyqMXHEnvXkaWSQ24v6RPQCMcuqcGw/viewform', docId: '1mrjfYpGMSMY-Em7Y4O4m9JZgfED0gdvbdPBD9qscgcM', gid: '1518539535', selectedColumns: ['Date','Designer', 'Project', 'Location', 'In-Time', 'Out-time'] },
@@ -416,7 +415,7 @@ const employeesData = [
       }
     ],
     sheets: [
-      { name: 'Designer Work Schedule', docId: '1iPP_fqIffhzZJyqaPyinIRc0Zhlgtvn37m92LqONBoA', gid: '0', selectedColumns: ['Doer', 'Project', 'Description', 'Planned Start Date', 'Planned Finish Date','Status','Actual Completion Date','Working Hours'] },
+      { name: 'Designer Work Schedule', docId: '1iPP_fqIffhzZJyqaPyinIRc0Zhlgtvn37m92LqONBoA', gid: '0', selectedColumns: ['Doer', 'Project', 'Description', 'Planned Start Date', 'Planned Finish Date','Status','Actual Completion Date'] },
      { name: 'Delegation Sheet Team', docId: '1680NhH8rKFTKeY3HSZGV_izgEi4QieHiirbcbRi7hTA', gid: '1184708924', selectedColumns: ['Name', 'Task', 'First Date', 'Revision 1','Revision 2', 'Total Revision','Status','Actual Completion Date'] },
       { name: 'Checklist', docId: '1m_P5_eP9FvD9eaYvanmLlV833cscTvk2xJk_c39cbZw', gid: '2092959791', selectedColumns: ['Task', 'Doer', 'Planned', 'Actual', 'Status'] },
       { name: 'Daily Report', formUrl:'https://docs.google.com/forms/d/e/1FAIpQLSf7y6FpZ4Ff4Ihi7Jq6SyqMXHEnvXkaWSQ24v6RPQCMcuqcGw/viewform', docId: '1mrjfYpGMSMY-Em7Y4O4m9JZgfED0gdvbdPBD9qscgcM', gid: '1518539535', selectedColumns: ['Date','Designer', 'Project', 'Location', 'In-Time', 'Out-time'] },
@@ -1436,11 +1435,27 @@ function renderModalTable(headers, rows, indices, container) {
 
   rows.forEach(r => {
     html += `<tr>`;
-    indices.forEach(idx => {
+    indices.forEach((idx, colPos) => {
       const cell = r.c ? r.c[idx] : null;
-      const val = cell && cell.f ? cell.f : (cell && cell.v !== null && cell.v !== undefined ? cell.v : '');
-      const strVal = String(val);
+      const headerName = (headers[colPos] || '').toLowerCase().trim();
 
+      let val = cell && cell.f ? cell.f : (cell && cell.v !== null && cell.v !== undefined ? cell.v : '');
+
+      // Date / Timestamp columns nehmi DD/MM/YYYY format madhe convert karne
+      const isDateColumn =
+        headerName.includes('date') ||
+        headerName.includes('timestamp') ||
+        headerName === 'planned' ||
+        headerName === 'actual';
+
+      if (cell && isDateColumn) {
+        const parsedDate = parseGvizDate(cell);
+        if (parsedDate && !isNaN(parsedDate.getTime())) {
+          val = formatDateToDDMMYYYY(parsedDate);
+        }
+      }
+
+      const strVal = String(val);
       const urlRegex = /(https?:\/\/[^\s,]+)/g;
       const matches = strVal.match(urlRegex);
 
@@ -1563,7 +1578,10 @@ function applyAllModalFilters() {
     let matchesDate = true;
     if ((startDateVal || endDateVal) && dateIdx !== -1) {
       const dateText = row.children[dateIdx]?.textContent.trim() || '';
-      const rowDate = parseGvizDate({ v: dateText, f: dateText });
+      const parts = dateText.split('/');
+const rowDate = parts.length === 3
+  ? new Date(parseInt(parts[2], 10), parseInt(parts[1], 10) - 1, parseInt(parts[0], 10))
+  : parseGvizDate({ v: dateText, f: dateText });
 
       if (rowDate && !isNaN(rowDate.getTime())) {
         if (startDateVal && rowDate < startDateVal) matchesDate = false;
@@ -1842,28 +1860,47 @@ function escapeHtml(str) {
 
 function parseGvizDate(cell) {
   if (!cell) return null;
-  
+
+  // 1. Google Sheets raw Date(YYYY, M, D) object (sarvat achuk)
   if (typeof cell.v === 'string' && cell.v.startsWith('Date(')) {
     const parts = cell.v.match(/\d+/g);
     if (parts && parts.length >= 3) {
-      return new Date(parseInt(parts[0]), parseInt(parts[1]), parseInt(parts[2]));
+      return new Date(parseInt(parts[0], 10), parseInt(parts[1], 10), parseInt(parts[2], 10));
     }
   }
-  
+
   if (cell.v instanceof Date) return cell.v;
 
-  const valStr = String(cell.f || cell.v || '').trim();
+  // 2. String format (MM/DD/YYYY kinva DD/MM/YYYY)
+  const valStr = String(cell.f || cell.v || '').trim().split(' ')[0];
   if (!valStr) return null;
 
-  const ddmmyyyy = valStr.match(/^(\d{1,2})[\/\-](\d{1,2})[\/\-](\d{4})$/);
-  if (ddmmyyyy) {
-    return new Date(parseInt(ddmmyyyy[3]), parseInt(ddmmyyyy[2]) - 1, parseInt(ddmmyyyy[1]));
+  const match = valStr.match(/^(\d{1,2})[\/\-](\d{1,2})[\/\-](\d{4})$/);
+  if (match) {
+    const p1 = parseInt(match[1], 10);
+    const p2 = parseInt(match[2], 10);
+    const year = parseInt(match[3], 10);
+
+    // Jar pahila ank > 12 asel tar nakki DD/MM/YYYY aahe (e.g. 28/11/2026)
+    if (p1 > 12) {
+      return new Date(year, p2 - 1, p1);
+    }
+    // Baki sarv cases madhe Google Form cha MM/DD/YYYY format ghene (e.g. 11/28/2026 -> 28 Nov)
+    return new Date(year, p1 - 1, p2);
   }
 
   const parsed = Date.parse(valStr);
   if (!isNaN(parsed)) return new Date(parsed);
 
   return null;
+}
+
+function formatDateToDDMMYYYY(dateObj) {
+  if (!dateObj || isNaN(dateObj.getTime())) return '';
+  const dd = String(dateObj.getDate()).padStart(2, '0');
+  const mm = String(dateObj.getMonth() + 1).padStart(2, '0');
+  const yyyy = dateObj.getFullYear();
+  return `${dd}/${mm}/${yyyy}`;
 }
 
 document.addEventListener("DOMContentLoaded", function () {
